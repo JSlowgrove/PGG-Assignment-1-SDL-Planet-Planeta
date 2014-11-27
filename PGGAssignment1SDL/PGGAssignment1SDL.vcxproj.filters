@@ -30,6 +30,9 @@
     <ClCompile Include="turret.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="building.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="texture.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="turret.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="building.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
