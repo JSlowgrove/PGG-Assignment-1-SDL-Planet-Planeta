@@ -15,7 +15,7 @@ public:
 	Constructs Building object
 	Constructs a Building object.
 	*/
-	Building();
+	Building(Texture * , int, int, int, int);
 
 	/**
 	De-constructs a Building object

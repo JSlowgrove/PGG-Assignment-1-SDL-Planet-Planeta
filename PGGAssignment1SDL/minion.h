@@ -21,11 +21,16 @@ public:
 	/**
 	Constructs Minion object
 	Constructs a Minion object
+	@param Texture* a pointer to the spritesheet
 	@param int the inputed attack
 	@param float the inputed speed
 	@param float the inputed radius
+	@int the number of the sprite in the spritesheet along the x axis
+	@int the number of the sprite in the spritesheet along the y axis
+	@int the inputed width of the sprite to be scaled to
+	@int the inputed height of the sprite to be scaled to
 	*/
-	Minion(int, float, float);
+	Minion(Texture *, int, float, float, int, int, int, int);
 
 	/**
 	De-constructs a Minion object

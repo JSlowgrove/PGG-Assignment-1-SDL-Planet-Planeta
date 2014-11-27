@@ -1,8 +1,10 @@
 #include <SDL.h>
 #include <iostream>
 #include "texture.h"
+#include "minion.h"
+#include "building.h"
 
-void update(unsigned int &, SDL_Renderer *);
+void update(unsigned int &, SDL_Renderer *, Minion *, Building *, Building *);
 
 int main(int argc, char *argv[])
 {
@@ -30,6 +32,14 @@ int main(int argc, char *argv[])
 	/*Create Renderer from the window*/
 	SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);
 
+	/*initalise spritesheet*/
+	Texture * spritesheet = new Texture("img/spritesheet88x108.bmp", renderer, true);
+
+	/*intalise entities*/
+	Building * base = new Building(spritesheet, 0, 1, 88, 108);
+	Building * power = new Building(spritesheet, 0, 2, 44, 54);
+	Minion * engineer = new Minion(spritesheet, 10, 200.0f, 1.5f, 0, 3, 22, 27);
+
 	/*Start Game Loop*/
 	bool go = true;
 	while (go)
@@ -48,7 +58,7 @@ int main(int argc, char *argv[])
 			}
 		}
 
-		update(lastTime, renderer); /*Update the Window (pbRef, pbPointer)*/
+		update(lastTime, renderer, engineer, base, power); /*Update the Window (pbRef, pbPointer)*/
 	}
 	/*uninitalise data*/
 	SDL_DestroyWindow(window);
@@ -60,7 +70,7 @@ int main(int argc, char *argv[])
 
 
 /*Update Window (pbRef, pbPointer)*/
-void update(unsigned int &lastTime, SDL_Renderer * renderer)
+void update(unsigned int &lastTime, SDL_Renderer * renderer, Minion * engineer, Building * base, Building * power)
 {
 	/*Time Check*/
 	unsigned int current = SDL_GetTicks();
@@ -68,10 +78,23 @@ void update(unsigned int &lastTime, SDL_Renderer * renderer)
 	lastTime = current;
 
 	/*set draw colour to white*/
-	SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+	SDL_SetRenderDrawColor(renderer, 0x00, 0x64, 0x00, 0x00);
 
 	/*Clear the entire screen to the set colour*/
 	SDL_RenderClear(renderer);
+	
+	/*set inital positions TEMP*/
+	power->setX(300.0f);
+	power->setY(300.0f);
+	base->setX(200.0f);
+	base->setY(200.0f);
+	engineer->setX(100.0f);
+	engineer->setY(100.0f);
+
+	/*push entities to the renderer*/
+	power->display(renderer);
+	base->display(renderer);
+	engineer->display(renderer);
 
 	/*display renderer*/
 	SDL_RenderPresent(renderer);
