@@ -85,6 +85,7 @@
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="minion.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="turret.cpp" />
   </ItemGroup>
@@ -92,6 +93,7 @@
     <ClInclude Include="building.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="minion.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="texture.h" />
     <ClInclude Include="turret.h" />
   </ItemGroup>
