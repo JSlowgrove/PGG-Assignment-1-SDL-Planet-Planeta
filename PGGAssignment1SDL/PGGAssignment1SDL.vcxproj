@@ -85,11 +85,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="minion.cpp" />
     <ClCompile Include="texture.cpp" />
+    <ClCompile Include="turret.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entity.h" />
     <ClInclude Include="minion.h" />
     <ClInclude Include="texture.h" />
+    <ClInclude Include="turret.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
