@@ -3,8 +3,9 @@
 #include "texture.h"
 #include "minion.h"
 #include "building.h"
+#include "turret.h"
 
-void update(unsigned int &, SDL_Renderer *, Minion *, Building *, Building *);
+void update(unsigned int &, SDL_Renderer *, Minion *, Minion *, Turret *, Building *, Building *, Building *, float, float);
 
 int main(int argc, char *argv[])
 {
@@ -36,9 +37,16 @@ int main(int argc, char *argv[])
 	Texture * spritesheet = new Texture("img/spritesheet88x108.bmp", renderer, true);
 
 	/*intalise entities*/
-	Building * base = new Building(spritesheet, 0, 1, 88, 108);
-	Building * power = new Building(spritesheet, 0, 2, 44, 54);
-	Minion * engineer = new Minion(spritesheet, 10, 200.0f, 1.5f, 0, 3, 22, 27);
+	Building * base = new Building(spritesheet, 0, 1);
+	Building * power = new Building(spritesheet, 0, 2);
+	Building * resource = new Building(spritesheet, 0, 5);
+	Minion * engineer = new Minion(spritesheet, 10, 200.0f, 1.5f, 0, 3);
+	Minion * soldier = new Minion(spritesheet, 10, 200.0f, 1.5f, 0, 4);
+	Turret * turret = new Turret(spritesheet, 10, 1.5f, 0, 0);
+
+	/*mouseClickPosition*/
+	float x = 100.0f;
+	float y = 100.0f;
 
 	/*Start Game Loop*/
 	bool go = true;
@@ -55,10 +63,24 @@ int main(int argc, char *argv[])
 
 				go = false;
 				break;
+
+			case SDL_MOUSEBUTTONDOWN:
+				if (incomingEvent.button.button == SDL_BUTTON_LEFT)
+				{
+					x = ((float) incomingEvent.motion.x) - 22;
+					y = ((float) incomingEvent.motion.y) - 27;
+				}
+				break;
+
+			case SDL_MOUSEBUTTONUP:
+				if (incomingEvent.button.button == SDL_BUTTON_LEFT)
+				{
+				}
+				break;
 			}
 		}
 
-		update(lastTime, renderer, engineer, base, power); /*Update the Window (pbRef, pbPointer)*/
+		update(lastTime, renderer, engineer, soldier, turret, base, power, resource, x, y); /*Update the Window (pbRef, pbPointer)*/
 	}
 	/*uninitalise data*/
 	SDL_DestroyWindow(window);
@@ -70,7 +92,7 @@ int main(int argc, char *argv[])
 
 
 /*Update Window (pbRef, pbPointer)*/
-void update(unsigned int &lastTime, SDL_Renderer * renderer, Minion * engineer, Building * base, Building * power)
+void update(unsigned int &lastTime, SDL_Renderer * renderer, Minion * engineer, Minion * soldier, Turret * turret, Building * base, Building * power, Building * resource, float x, float y)
 {
 	/*Time Check*/
 	unsigned int current = SDL_GetTicks();
@@ -86,15 +108,24 @@ void update(unsigned int &lastTime, SDL_Renderer * renderer, Minion * engineer, 
 	/*set inital positions TEMP*/
 	power->setX(300.0f);
 	power->setY(300.0f);
+	resource->setX(300.0f);
+	resource->setY(100.0f);
 	base->setX(200.0f);
 	base->setY(200.0f);
-	engineer->setX(100.0f);
-	engineer->setY(100.0f);
+	engineer->setX(x);
+	engineer->setY(y);
+	soldier->setX(100.0f);
+	soldier->setY(300.0f);
+	turret->setX(400.0f);
+	turret->setY(400.0f);
 
 	/*push entities to the renderer*/
 	power->display(renderer);
+	resource->display(renderer);
 	base->display(renderer);
 	engineer->display(renderer);
+	soldier->display(renderer);
+	turret->display(renderer);
 
 	/*display renderer*/
 	SDL_RenderPresent(renderer);

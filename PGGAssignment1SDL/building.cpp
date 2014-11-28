@@ -3,7 +3,7 @@
 /**************************************************************************************************************/
 
 /*Constructs the building object*/
-Building::Building(Texture * inputTexture, int spriteXNum, int spriteYNum, int scaledX, int scaledY)
+Building::Building(Texture * inputTexture, int spriteXNum, int spriteYNum)
 {
 	/*sets the texture*/
 	texture = inputTexture;
@@ -18,9 +18,9 @@ Building::Building(Texture * inputTexture, int spriteXNum, int spriteYNum, int s
 	srcX = srcWidth * spriteXNum;
 	srcY = srcHeight * spriteYNum;
 
-	/*sets the scaled size of the image to be 32x32*/
-	width = scaledX;
-	height = scaledY;
+	/*sets the scaled size of the image*/
+	width = srcWidth;
+	height = srcHeight;
 	
 }
 

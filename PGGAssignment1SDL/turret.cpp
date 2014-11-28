@@ -3,15 +3,28 @@
 /**************************************************************************************************************/
 
 /*Constructs the turret object*/
-Turret::Turret(int, float)
+Turret::Turret(Texture * inputTexture, int inAttack, float radius, int spriteXNum, int spriteYNum)
 {
-	/*sets the scaled size of the image to be 32x32*/
-	width = 32;
-	height = 32;
+	/*sets the texture*/
+	texture = inputTexture;
 
-	/*sets the details of the Minion*/
-	attack;
-	sightRadius;
+	/*sets the inital posisiton to 0,0*/
+	x = 0.0f;
+	y = 0.0f;
+
+	/*sets the source dimensions*/
+	srcWidth = 88;
+	srcHeight = 108;
+	srcX = srcWidth * spriteXNum;
+	srcY = srcHeight * spriteYNum;
+
+	/*sets the scaled size of the image to be 44x54*/
+	width = 44;
+	height = 54;
+
+	/*sets the turrets details*/
+	attack = inAttack;
+	sightRadius = radius;
 }
 
 /**************************************************************************************************************/

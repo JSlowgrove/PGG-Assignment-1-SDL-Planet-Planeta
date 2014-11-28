@@ -14,8 +14,12 @@ public:
 	/**
 	Constructs Building object
 	Constructs a Building object.
+	inputTexture, int spriteXNum, int spriteYNum
+	@param Texture* a pointer to the spritesheet
+	@int the number of the sprite in the spritesheet along the x axis
+	@int the number of the sprite in the spritesheet along the y axis
 	*/
-	Building(Texture * , int, int, int, int);
+	Building(Texture * , int, int);
 
 	/**
 	De-constructs a Building object

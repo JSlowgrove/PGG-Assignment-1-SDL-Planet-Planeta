@@ -27,10 +27,8 @@ public:
 	@param float the inputed radius
 	@int the number of the sprite in the spritesheet along the x axis
 	@int the number of the sprite in the spritesheet along the y axis
-	@int the inputed width of the sprite to be scaled to
-	@int the inputed height of the sprite to be scaled to
 	*/
-	Minion(Texture *, int, float, float, int, int, int, int);
+	Minion(Texture *, int, float, float, int, int);
 
 	/**
 	De-constructs a Minion object

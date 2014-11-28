@@ -17,10 +17,13 @@ public:
 	/**
 	Constructs Turret object
 	Constructs a Turret object
+	@param Texture* a pointer to the spritesheet
 	@param int the inputed attack
 	@param float the inputed radius
+	@int the number of the sprite in the spritesheet along the x axis
+	@int the number of the sprite in the spritesheet along the y axis
 	*/
-	Turret(int, float);
+	Turret(Texture *, int, float, int, int);
 
 	/**
 	De-constructs a Turret object

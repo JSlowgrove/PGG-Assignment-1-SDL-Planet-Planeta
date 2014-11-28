@@ -3,7 +3,7 @@
 /**************************************************************************************************************/
 
 /*Constructs the minion object*/
-Minion::Minion(Texture * inputTexture, int inAttack, float inSpeed, float radius, int spriteXNum, int spriteYNum, int scaledX, int scaledY)
+Minion::Minion(Texture * inputTexture, int inAttack, float inSpeed, float radius, int spriteXNum, int spriteYNum)
 {
 	/*sets the texture*/
 	texture = inputTexture;
@@ -18,9 +18,9 @@ Minion::Minion(Texture * inputTexture, int inAttack, float inSpeed, float radius
 	srcX = srcWidth * spriteXNum;
 	srcY = srcHeight * spriteYNum;
 
-	/*sets the scaled size of the image to be 32x32*/
-	width = scaledX;
-	height = scaledY;
+	/*sets the scaled size of the image to be 44x54*/
+	width = 44;
+	height = 54;
 
 	/*sets the initial velocitys to 0*/
 	velocityX = 0.0f;
