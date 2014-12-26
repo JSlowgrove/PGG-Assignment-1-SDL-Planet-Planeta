@@ -25,9 +25,6 @@ protected:
 	/*position*/
 	float x;
 	float y;
-	/*entity details*/
-	int health;
-	int cost;
 public:
 	/**
 	Constructs an Entity object
@@ -73,31 +70,5 @@ public:
 	Returns the y position of the Entity object.
 	*/
 	float getY();
-
-	/**
-	Setter # health
-	Sets the health of the Entity object.
-	@param int the inputed health
-	*/
-	void setHealth(int);
-
-	/**
-	Getter # health
-	Returns the health of the Entity object.
-	*/
-	int getHealth();
-
-	/**
-	Setter # cost
-	Sets the cost of the Entity object.
-	@param int the inputed cost
-	*/
-	void setCost(int);
-
-	/**
-	Getter # cost
-	Returns the cost of the Entity object.
-	*/
-	int getCost();
 };
 #endif

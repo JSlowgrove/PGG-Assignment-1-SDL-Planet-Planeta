@@ -2,7 +2,6 @@
 #include <iostream>
 #include <time.h>
 #include "texture.h"
-#include "minion.h"
 #include "building.h"
 #include "turret.h"
 #include "background.h"
@@ -40,15 +39,13 @@ int main(int argc, char *argv[])
 
 	/*initialise spritesheets*/
 	Texture * backgrounds = new Texture("img/backgrounds231x63.bmp", renderer, false);
-	Texture * spritesheet = new Texture("img/spritesheet88x108.bmp", renderer, true);
+	Texture * spritesheet = new Texture("img/spritesheet21x21.bmp", renderer, true);
 
 	/*initialise entities*/
 	Background * background = new Background(backgrounds, (rand() % 3));
 	Building * base = new Building(spritesheet, 0, 1);
 	Building * power = new Building(spritesheet, 0, 2);
 	Building * resource = new Building(spritesheet, 0, 5);
-	Minion * engineer = new Minion(spritesheet, 10, 200.0f, 1.5f, 0, 3);
-	Minion * soldier = new Minion(spritesheet, 10, 200.0f, 1.5f, 0, 4);
 	Turret * turret = new Turret(spritesheet, 10, 1.5f, 0, 0);
 
 	/*mouseClickPosition*/

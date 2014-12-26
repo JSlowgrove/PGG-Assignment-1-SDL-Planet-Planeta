@@ -58,38 +58,3 @@ float Entity::getY()
 	/*returns the y position*/
 	return y;
 }
-/**************************************************************************************************************/
-
-/*sets the health of the entity*/
-void Entity::setHealth(int inputHealth)
-{
-	/*sets the health to the value of the inputed health*/
-	health = inputHealth;
-}
-
-/**************************************************************************************************************/
-
-/*returns the health*/
-int Entity::getHealth()
-{
-	/*returns the health*/
-	return health;
-}
-
-/**************************************************************************************************************/
-
-/*sets the cost of the entity*/
-void Entity::setCost(int inputCost)
-{
-	/*sets the cost to the value of the inputed cost*/
-	cost = inputCost;
-}
-
-/**************************************************************************************************************/
-
-/*returns the Cost*/
-int Entity::getCost()
-{
-	/*returns the health*/
-	return cost;
-}
