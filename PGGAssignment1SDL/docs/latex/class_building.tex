@@ -19,7 +19,11 @@ Inheritance diagram for Building\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_building_ab570ec0a203ee621f9f522c678a147d9}{Building} ()
+\hyperlink{class_building_a87b35657776dd85a29f7aed5f631cf79}{Building} (\hyperlink{class_texture}{Texture} $\ast$, int, int)
+\item 
+\hyperlink{class_building_ab675c6a382e110b84031956cda708439}{$\sim$\+Building} ()
+\item 
+\hyperlink{class_building_a87b35657776dd85a29f7aed5f631cf79}{Building} (\hyperlink{class_texture}{Texture} $\ast$, int, int)
 \item 
 \hyperlink{class_building_ab675c6a382e110b84031956cda708439}{$\sim$\+Building} ()
 \end{DoxyCompactItemize}
@@ -30,14 +34,42 @@ Inheritance diagram for Building\+:\begin{figure}[H]
 Creates a \hyperlink{class_building}{Building} object that inherits \hyperlink{class_entity}{Entity}. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_building_ab570ec0a203ee621f9f522c678a147d9}{\index{Building@{Building}!Building@{Building}}
+\hypertarget{class_building_a87b35657776dd85a29f7aed5f631cf79}{\index{Building@{Building}!Building@{Building}}
 \index{Building@{Building}!Building@{Building}}
 \subsubsection[{Building}]{\setlength{\rightskip}{0pt plus 5cm}Building\+::\+Building (
 \begin{DoxyParamCaption}
+\item[{{\bf Texture} $\ast$}]{input\+Texture, }
+\item[{int}]{sprite\+X\+Num, }
+\item[{int}]{sprite\+Y\+Num}
+\end{DoxyParamCaption}
+)}}\label{class_building_a87b35657776dd85a29f7aed5f631cf79}
+Constructs \hyperlink{class_building}{Building} object Constructs a \hyperlink{class_building}{Building} object. input\+Texture, int sprite\+X\+Num, int sprite\+Y\+Num 
+\begin{DoxyParams}{Parameters}
+{\em Texture$\ast$} & a pointer to the spritesheet  the number of the sprite in the spritesheet along the x axis  the number of the sprite in the spritesheet along the y axis \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_building_ab675c6a382e110b84031956cda708439}{\index{Building@{Building}!````~Building@{$\sim$\+Building}}
+\index{````~Building@{$\sim$\+Building}!Building@{Building}}
+\subsubsection[{$\sim$\+Building}]{\setlength{\rightskip}{0pt plus 5cm}Building\+::$\sim$\+Building (
+\begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_building_ab570ec0a203ee621f9f522c678a147d9}
-Constructs \hyperlink{class_building}{Building} object Constructs a \hyperlink{class_building}{Building} object. \hypertarget{class_building_ab675c6a382e110b84031956cda708439}{\index{Building@{Building}!````~Building@{$\sim$\+Building}}
+)}}\label{class_building_ab675c6a382e110b84031956cda708439}
+De-\/constructs a \hyperlink{class_building}{Building} object De-\/constructs the \hyperlink{class_building}{Building} object \hypertarget{class_building_a87b35657776dd85a29f7aed5f631cf79}{\index{Building@{Building}!Building@{Building}}
+\index{Building@{Building}!Building@{Building}}
+\subsubsection[{Building}]{\setlength{\rightskip}{0pt plus 5cm}Building\+::\+Building (
+\begin{DoxyParamCaption}
+\item[{{\bf Texture} $\ast$}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{class_building_a87b35657776dd85a29f7aed5f631cf79}
+Constructs \hyperlink{class_building}{Building} object Constructs a \hyperlink{class_building}{Building} object. input\+Texture, int sprite\+X\+Num, int sprite\+Y\+Num 
+\begin{DoxyParams}{Parameters}
+{\em Texture$\ast$} & a pointer to the spritesheet  the number of the sprite in the spritesheet along the x axis  the number of the sprite in the spritesheet along the y axis \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_building_ab675c6a382e110b84031956cda708439}{\index{Building@{Building}!````~Building@{$\sim$\+Building}}
 \index{````~Building@{$\sim$\+Building}!Building@{Building}}
 \subsubsection[{$\sim$\+Building}]{\setlength{\rightskip}{0pt plus 5cm}Building\+::$\sim$\+Building (
 \begin{DoxyParamCaption}
@@ -49,4 +81,5 @@ De-\/constructs a \hyperlink{class_building}{Building} object De-\/constructs th
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 P\+G\+G\+Assignment1\+S\+D\+L/building.\+h\item 
+P\+G\+G\+Assignment1\+S\+D\+L/main\+Menu.\+h\item 
 P\+G\+G\+Assignment1\+S\+D\+L/building.\+cpp\end{DoxyCompactItemize}

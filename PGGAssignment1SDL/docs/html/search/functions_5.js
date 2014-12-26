@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['player',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player']]],
-  ['pushspritetoscreen',['pushSpriteToScreen',['../class_texture.html#a703db8963b46b751b8affce1807725b7',1,'Texture::pushSpriteToScreen(SDL_Renderer *, int, int, int, int, int, int)'],['../class_texture.html#a105a3aba66afb7d223ac086aa465b70d',1,'Texture::pushSpriteToScreen(SDL_Renderer *, int, int, int, int, int, int, int, int)']]],
-  ['pushtoscreen',['pushToScreen',['../class_texture.html#aec498f1f84eb10bb60d3c3117884e70f',1,'Texture::pushToScreen(SDL_Renderer *, int, int)'],['../class_texture.html#ab3b1f6aa29a50ef2c012fbc9d0cb8bd8',1,'Texture::pushToScreen(SDL_Renderer *, int, int, int, int)']]]
+  ['leaving',['leaving',['../class_game_state.html#a604127103f564a3ab1ba6b75ecf5e19a',1,'GameState::leaving()'],['../class_menu_state.html#a76cb5a0029b67ea326afd46f7f11a6df',1,'MenuState::leaving()'],['../class_state.html#a7bd375faa48fc63c7c70ca3e3845a5cb',1,'State::leaving()']]]
 ];

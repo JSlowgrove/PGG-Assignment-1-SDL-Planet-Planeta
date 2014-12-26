@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['updatex',['updateX',['../class_minion.html#a78414b6e3f07224891df1861855fafc5',1,'Minion']]],
-  ['updatey',['updateY',['../class_minion.html#aca2aca7539fa65d04b651bf5d8e8b2f1',1,'Minion']]]
+  ['player',['Player',['../class_player.html',1,'Player'],['../class_player.html#a73d9a9d1017a68d6de107bbfb0a0c486',1,'Player::Player()']]],
+  ['pushspritetoscreen',['pushSpriteToScreen',['../class_texture.html#a703db8963b46b751b8affce1807725b7',1,'Texture::pushSpriteToScreen(SDL_Renderer *, int, int, int, int, int, int)'],['../class_texture.html#a105a3aba66afb7d223ac086aa465b70d',1,'Texture::pushSpriteToScreen(SDL_Renderer *, int, int, int, int, int, int, int, int)']]],
+  ['pushtoscreen',['pushToScreen',['../class_texture.html#aec498f1f84eb10bb60d3c3117884e70f',1,'Texture::pushToScreen(SDL_Renderer *, int, int)'],['../class_texture.html#ab3b1f6aa29a50ef2c012fbc9d0cb8bd8',1,'Texture::pushToScreen(SDL_Renderer *, int, int, int, int)']]]
 ];

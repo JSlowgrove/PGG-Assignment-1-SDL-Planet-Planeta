@@ -108,50 +108,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/*position*/</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">float</span> x;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> y;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">/*entity details*/</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> health;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> cost;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a2224871711ac97a54af338ddefc25ac9">display</a>(SDL_Renderer *);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a38e2f110d39426ba4823296b4294dd74">setX</a>(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a8896110a266bdec69b14d34ec6374df8">setY</a>(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_entity.html#abc5b6d26c039bf3bf6faa766990768b4">getX</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b">getY</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a0c4ef1c69d6054cebf71445d98bb3afc">setHealth</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_entity.html#a2b0140ae8c77c0e3654b070ee3c7fe57">getHealth</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a008de3cd38f0a2d2533c3384e54569cc">setCost</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_entity.html#a57cbd6215579c3181414c352a920ba10">getCost</a>();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a2224871711ac97a54af338ddefc25ac9">display</a>(SDL_Renderer *);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a38e2f110d39426ba4823296b4294dd74">setX</a>(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a8896110a266bdec69b14d34ec6374df8">setY</a>(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_entity.html#abc5b6d26c039bf3bf6faa766990768b4">getX</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b">getY</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_entity_html_abc5b6d26c039bf3bf6faa766990768b4"><div class="ttname"><a href="class_entity.html#abc5b6d26c039bf3bf6faa766990768b4">Entity::getX</a></div><div class="ttdeci">float getX()</div><div class="ttdef"><b>Definition:</b> entity.cpp:47</div></div>
 <div class="ttc" id="class_entity_html_a8896110a266bdec69b14d34ec6374df8"><div class="ttname"><a href="class_entity.html#a8896110a266bdec69b14d34ec6374df8">Entity::setY</a></div><div class="ttdeci">void setY(float)</div><div class="ttdef"><b>Definition:</b> entity.cpp:38</div></div>
 <div class="ttc" id="class_entity_html_a38e2f110d39426ba4823296b4294dd74"><div class="ttname"><a href="class_entity.html#a38e2f110d39426ba4823296b4294dd74">Entity::setX</a></div><div class="ttdeci">void setX(float)</div><div class="ttdef"><b>Definition:</b> entity.cpp:29</div></div>
-<div class="ttc" id="class_entity_html_a0c4ef1c69d6054cebf71445d98bb3afc"><div class="ttname"><a href="class_entity.html#a0c4ef1c69d6054cebf71445d98bb3afc">Entity::setHealth</a></div><div class="ttdeci">void setHealth(int)</div><div class="ttdef"><b>Definition:</b> entity.cpp:64</div></div>
 <div class="ttc" id="class_entity_html_a980f368aa07ce358583982821533a54a"><div class="ttname"><a href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity::Entity</a></div><div class="ttdeci">Entity()</div><div class="ttdef"><b>Definition:</b> entity.cpp:6</div></div>
 <div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdoc">Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...</div><div class="ttdef"><b>Definition:</b> entity.h:13</div></div>
-<div class="ttc" id="class_entity_html_a57cbd6215579c3181414c352a920ba10"><div class="ttname"><a href="class_entity.html#a57cbd6215579c3181414c352a920ba10">Entity::getCost</a></div><div class="ttdeci">int getCost()</div><div class="ttdef"><b>Definition:</b> entity.cpp:91</div></div>
 <div class="ttc" id="class_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
 <div class="ttc" id="class_entity_html_adf6d3f7cb1b2ba029b6b048a395cc8ae"><div class="ttname"><a href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">Entity::~Entity</a></div><div class="ttdeci">~Entity()</div><div class="ttdef"><b>Definition:</b> entity.cpp:13</div></div>
 <div class="ttc" id="class_entity_html_a2224871711ac97a54af338ddefc25ac9"><div class="ttname"><a href="class_entity.html#a2224871711ac97a54af338ddefc25ac9">Entity::display</a></div><div class="ttdeci">void display(SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> entity.cpp:20</div></div>
 <div class="ttc" id="class_entity_html_ab6dd7b404c13754202acfe3d2c65c77b"><div class="ttname"><a href="class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b">Entity::getY</a></div><div class="ttdeci">float getY()</div><div class="ttdef"><b>Definition:</b> entity.cpp:56</div></div>
-<div class="ttc" id="class_entity_html_a2b0140ae8c77c0e3654b070ee3c7fe57"><div class="ttname"><a href="class_entity.html#a2b0140ae8c77c0e3654b070ee3c7fe57">Entity::getHealth</a></div><div class="ttdeci">int getHealth()</div><div class="ttdef"><b>Definition:</b> entity.cpp:73</div></div>
-<div class="ttc" id="class_entity_html_a008de3cd38f0a2d2533c3384e54569cc"><div class="ttname"><a href="class_entity.html#a008de3cd38f0a2d2533c3384e54569cc">Entity::setCost</a></div><div class="ttdeci">void setCost(int)</div><div class="ttdef"><b>Definition:</b> entity.cpp:82</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 27 2014 04:27:02 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 26 2014 22:56:49 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

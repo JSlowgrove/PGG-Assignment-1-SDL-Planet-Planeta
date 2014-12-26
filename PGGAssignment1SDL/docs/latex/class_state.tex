@@ -1,0 +1,93 @@
+\hypertarget{class_state}{\section{State Class Reference}
+\label{class_state}\index{State@{State}}
+}
+Inheritance diagram for State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_state_ab91bb1dd5aa6260ab2a456581daf9ec2}{State} ()
+\item 
+\hyperlink{class_state_afab438d92b90dc18d194dbd9c9c8bab3}{$\sim$\+State} ()
+\item 
+virtual void \hyperlink{class_state_aef81b6e3521b704e88bf1e3cf6a5eea2}{entered} ()
+\item 
+virtual void \hyperlink{class_state_a7bd375faa48fc63c7c70ca3e3845a5cb}{leaving} ()
+\item 
+virtual void \hyperlink{class_state_a8daaaca43cbb3059a6d4afae42287adc}{obscuring} ()
+\item 
+virtual void \hyperlink{class_state_a35fed944f50b9ed0ed0f3ab69a931377}{revealed} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_state_ab91bb1dd5aa6260ab2a456581daf9ec2}{\index{State@{State}!State@{State}}
+\index{State@{State}!State@{State}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}State\+::\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_state_ab91bb1dd5aa6260ab2a456581daf9ec2}
+Constructs a \hyperlink{class_state}{State} object Constructs a \hyperlink{class_state}{State} object \hypertarget{class_state_afab438d92b90dc18d194dbd9c9c8bab3}{\index{State@{State}!````~State@{$\sim$\+State}}
+\index{````~State@{$\sim$\+State}!State@{State}}
+\subsubsection[{$\sim$\+State}]{\setlength{\rightskip}{0pt plus 5cm}State\+::$\sim$\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_state_afab438d92b90dc18d194dbd9c9c8bab3}
+De-\/constructs a \hyperlink{class_state}{State} object De-\/constructs the \hyperlink{class_state}{State} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_state_aef81b6e3521b704e88bf1e3cf6a5eea2}{\index{State@{State}!entered@{entered}}
+\index{entered@{entered}!State@{State}}
+\subsubsection[{entered}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\+::entered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_aef81b6e3521b704e88bf1e3cf6a5eea2}
+Called after the \hyperlink{class_state}{State} has been placed in the \hyperlink{class_state_manager}{State\+Manager}. 
+
+Reimplemented in \hyperlink{class_game_state_a74ff91dece6aea2f96ad9e4980b1d08d}{Game\+State}, and \hyperlink{class_menu_state_a46418226e09211231edd8aec9cb339c9}{Menu\+State}.
+
+\hypertarget{class_state_a7bd375faa48fc63c7c70ca3e3845a5cb}{\index{State@{State}!leaving@{leaving}}
+\index{leaving@{leaving}!State@{State}}
+\subsubsection[{leaving}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\+::leaving (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_a7bd375faa48fc63c7c70ca3e3845a5cb}
+Called right before the \hyperlink{class_state}{State} is removed from the \hyperlink{class_state_manager}{State\+Manager}. 
+
+Reimplemented in \hyperlink{class_game_state_a604127103f564a3ab1ba6b75ecf5e19a}{Game\+State}, and \hyperlink{class_menu_state_a76cb5a0029b67ea326afd46f7f11a6df}{Menu\+State}.
+
+\hypertarget{class_state_a8daaaca43cbb3059a6d4afae42287adc}{\index{State@{State}!obscuring@{obscuring}}
+\index{obscuring@{obscuring}!State@{State}}
+\subsubsection[{obscuring}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\+::obscuring (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_a8daaaca43cbb3059a6d4afae42287adc}
+Called right before another \hyperlink{class_state}{State} is stacked on top of this one. 
+
+Reimplemented in \hyperlink{class_game_state_aa64650e6a0d7db95d014135929351e7c}{Game\+State}, and \hyperlink{class_menu_state_a457fc15afc90cf97b8a7bba4ee946fc7}{Menu\+State}.
+
+\hypertarget{class_state_a35fed944f50b9ed0ed0f3ab69a931377}{\index{State@{State}!revealed@{revealed}}
+\index{revealed@{revealed}!State@{State}}
+\subsubsection[{revealed}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\+::revealed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_a35fed944f50b9ed0ed0f3ab69a931377}
+Called after the \hyperlink{class_state}{State} has become the topmost \hyperlink{class_state}{State} on the stack again. 
+
+Reimplemented in \hyperlink{class_game_state_a5d616fb3ecae1e94da4db55eae806cfb}{Game\+State}, and \hyperlink{class_menu_state_adf42864e4f79ee30d23d1b54847b8dfc}{Menu\+State}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+G\+G\+Assignment1\+S\+D\+L/state.\+h\end{DoxyCompactItemize}

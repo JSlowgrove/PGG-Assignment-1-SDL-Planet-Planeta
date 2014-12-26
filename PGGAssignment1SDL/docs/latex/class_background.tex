@@ -1,0 +1,91 @@
+\hypertarget{class_background}{\section{Background Class Reference}
+\label{class_background}\index{Background@{Background}}
+}
+
+
+Creates a \hyperlink{class_background}{Background} object that inherits \hyperlink{class_entity}{Entity}. Creates a \hyperlink{class_background}{Background} object with a velocity, and position check. It also has a \hyperlink{class_texture}{Texture} (including variables for the source and destination dimensions), position and velocity in entity.  
+
+
+
+
+{\ttfamily \#include $<$background.\+h$>$}
+
+Inheritance diagram for Background\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_background}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_background_a31d67c19cf5dd14c0f07b91e89c8b1f8}{Background} (\hyperlink{class_texture}{Texture} $\ast$, int)
+\item 
+\hyperlink{class_background_a36754df1deb720393217ade59da41557}{$\sim$\+Background} ()
+\item 
+void \hyperlink{class_background_a9b358e049be63be31b9241410288514f}{set\+Velocity} (float)
+\item 
+void \hyperlink{class_background_a1cb5afc5d8857ec4db6c6d393375a4c2}{update\+X} (float)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_background}{Background} object that inherits \hyperlink{class_entity}{Entity}. Creates a \hyperlink{class_background}{Background} object with a velocity, and position check. It also has a \hyperlink{class_texture}{Texture} (including variables for the source and destination dimensions), position and velocity in entity. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_background_a31d67c19cf5dd14c0f07b91e89c8b1f8}{\index{Background@{Background}!Background@{Background}}
+\index{Background@{Background}!Background@{Background}}
+\subsubsection[{Background}]{\setlength{\rightskip}{0pt plus 5cm}Background\+::\+Background (
+\begin{DoxyParamCaption}
+\item[{{\bf Texture} $\ast$}]{input\+Texture, }
+\item[{int}]{background\+Type}
+\end{DoxyParamCaption}
+)}}\label{class_background_a31d67c19cf5dd14c0f07b91e89c8b1f8}
+Constructs a \hyperlink{class_background}{Background} object Constructs a \hyperlink{class_background}{Background} object using the input \hyperlink{class_texture}{Texture} and background type. All of the other variables are automatically initialized to defaults. 
+\begin{DoxyParams}{Parameters}
+{\em Texture$\ast$} & a pointer to a \hyperlink{class_texture}{Texture} loaded into memory. \\
+\hline
+{\em int} & an number between 0 an 2 that sets which of the 3 backgrounds is loaded from the texture. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_background_a36754df1deb720393217ade59da41557}{\index{Background@{Background}!````~Background@{$\sim$\+Background}}
+\index{````~Background@{$\sim$\+Background}!Background@{Background}}
+\subsubsection[{$\sim$\+Background}]{\setlength{\rightskip}{0pt plus 5cm}Background\+::$\sim$\+Background (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_background_a36754df1deb720393217ade59da41557}
+De-\/constructs a \hyperlink{class_background}{Background} object De-\/constructs the \hyperlink{class_background}{Background} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_background_a9b358e049be63be31b9241410288514f}{\index{Background@{Background}!set\+Velocity@{set\+Velocity}}
+\index{set\+Velocity@{set\+Velocity}!Background@{Background}}
+\subsubsection[{set\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Background\+::set\+Velocity (
+\begin{DoxyParamCaption}
+\item[{float}]{input\+Velocity}
+\end{DoxyParamCaption}
+)}}\label{class_background_a9b358e049be63be31b9241410288514f}
+Setter \# velocity Sets the velocity of the \hyperlink{class_background}{Background} to the inputed velocity. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the inputed velocity \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_background_a1cb5afc5d8857ec4db6c6d393375a4c2}{\index{Background@{Background}!update\+X@{update\+X}}
+\index{update\+X@{update\+X}!Background@{Background}}
+\subsubsection[{update\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Background\+::update\+X (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_background_a1cb5afc5d8857ec4db6c6d393375a4c2}
+Updates the x position of the \hyperlink{class_background}{Background} Performers a check on the updated position of the x to see if it within boundaries. If it is within boundaries then it updates the x position using the velocity and the inputed delta\+Time. If it is not within boundaries then it resets the x position to the boundaries. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the inputed delta\+Time \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+P\+G\+G\+Assignment1\+S\+D\+L/background.\+h\item 
+P\+G\+G\+Assignment1\+S\+D\+L/background.\+cpp\end{DoxyCompactItemize}

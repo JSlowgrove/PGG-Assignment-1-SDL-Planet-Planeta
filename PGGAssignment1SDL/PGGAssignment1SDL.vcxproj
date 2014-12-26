@@ -95,7 +95,11 @@
     <ClInclude Include="building.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="creature.h" />
+    <ClInclude Include="gameState.h" />
+    <ClInclude Include="menuState.h" />
     <ClInclude Include="player.h" />
+    <ClInclude Include="state.h" />
+    <ClInclude Include="stateManager.h" />
     <ClInclude Include="texture.h" />
     <ClInclude Include="enemy.h" />
   </ItemGroup>

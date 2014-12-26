@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['minion',['Minion',['../class_minion.html',1,'']]]
+  ['enemy',['Enemy',['../class_enemy.html',1,'']]],
+  ['entity',['Entity',['../class_entity.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entity',['Entity',['../class_entity.html',1,'Entity'],['../class_entity.html#a980f368aa07ce358583982821533a54a',1,'Entity::Entity()']]]
+  ['display',['display',['../class_entity.html#a2224871711ac97a54af338ddefc25ac9',1,'Entity']]]
 ];

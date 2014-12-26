@@ -100,9 +100,12 @@ Inheritance diagram for Entity:</div>
  <div class="center">
   <img src="class_entity.png" usemap="#Entity_map" alt=""/>
   <map id="Entity_map" name="Entity_map">
-<area href="class_building.html" title="Creates a Building object that inherits Entity. " alt="Building" shape="rect" coords="0,56,57,80"/>
-<area href="class_minion.html" title="Creates a Minion object that inherits Entity. " alt="Minion" shape="rect" coords="67,56,124,80"/>
-<area href="class_turret.html" title="Creates a Turret object that inherits Entity. " alt="Turret" shape="rect" coords="134,56,191,80"/>
+<area href="class_background.html" title="Creates a Background object that inherits Entity. Creates a Background object with a velocity..." alt="Background" shape="rect" coords="0,56,80,80"/>
+<area href="class_building.html" title="Creates a Building object that inherits Entity. " alt="Building" shape="rect" coords="90,56,170,80"/>
+<area href="class_building.html" title="Creates a Building object that inherits Entity. " alt="Building" shape="rect" coords="180,56,260,80"/>
+<area href="class_creature.html" title="Creates a Creature object that inherits Entity. " alt="Creature" shape="rect" coords="270,56,350,80"/>
+<area href="class_enemy.html" title="Creates an Enemy object that inherits Creature which in turn inherits Entity. " alt="Enemy" shape="rect" coords="225,112,305,136"/>
+<area href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. " alt="Player" shape="rect" coords="315,112,395,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -122,14 +125,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abc5b6d26c039bf3bf6faa766990768b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6dd7b404c13754202acfe3d2c65c77b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b">getY</a> ()</td></tr>
 <tr class="separator:ab6dd7b404c13754202acfe3d2c65c77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c4ef1c69d6054cebf71445d98bb3afc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a0c4ef1c69d6054cebf71445d98bb3afc">setHealth</a> (int)</td></tr>
-<tr class="separator:a0c4ef1c69d6054cebf71445d98bb3afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b0140ae8c77c0e3654b070ee3c7fe57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a2b0140ae8c77c0e3654b070ee3c7fe57">getHealth</a> ()</td></tr>
-<tr class="separator:a2b0140ae8c77c0e3654b070ee3c7fe57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a008de3cd38f0a2d2533c3384e54569cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a008de3cd38f0a2d2533c3384e54569cc">setCost</a> (int)</td></tr>
-<tr class="separator:a008de3cd38f0a2d2533c3384e54569cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57cbd6215579c3181414c352a920ba10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a57cbd6215579c3181414c352a920ba10">getCost</a> ()</td></tr>
-<tr class="separator:a57cbd6215579c3181414c352a920ba10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -160,12 +155,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
 <tr class="memitem:af4966f81d91cc8f8d5eb9e9002240c49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4966f81d91cc8f8d5eb9e9002240c49"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 <tr class="separator:af4966f81d91cc8f8d5eb9e9002240c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5bf0c97620636e04b271601e2133884"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5bf0c97620636e04b271601e2133884"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>health</b></td></tr>
-<tr class="separator:ab5bf0c97620636e04b271601e2133884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0d86b6186484391164c2572c4a1be64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0d86b6186484391164c2572c4a1be64"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cost</b></td></tr>
-<tr class="separator:af0d86b6186484391164c2572c4a1be64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates an <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object Creates an <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object with a <a class="el" href="class_texture.html" title="Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...">Texture</a> (including variables for the source and destination dimensions) and position. </p>
@@ -225,38 +214,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>cost</b></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a57cbd6215579c3181414c352a920ba10"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Entity::getCost </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Getter # cost Returns the cost of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </p>
-
-</div>
-</div>
-<a class="anchor" id="a2b0140ae8c77c0e3654b070ee3c7fe57"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Entity::getHealth </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Getter # health Returns the health of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </p>
-
-</div>
-</div>
 <a class="anchor" id="abc5b6d26c039bf3bf6faa766990768b4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -269,7 +226,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>cost</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getter # x position Returns the x position of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </p>
+<p>Getter # x position </p><dl class="section return"><dt>Returns</dt><dd>the x position of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </dd></dl>
 
 </div>
 </div>
@@ -285,51 +242,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>cost</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getter # y position Returns the y position of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </p>
-
-</div>
-</div>
-<a class="anchor" id="a008de3cd38f0a2d2533c3384e54569cc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Entity::setCost </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>inputCost</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Setter # cost Sets the cost of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">int</td><td>the inputed cost </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a0c4ef1c69d6054cebf71445d98bb3afc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Entity::setHealth </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>inputHealth</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Setter # health Sets the health of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">int</td><td>the inputed health </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Getter # y position </p><dl class="section return"><dt>Returns</dt><dd>the y position of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </dd></dl>
 
 </div>
 </div>
@@ -384,7 +297,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>cost</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 27 2014 04:27:02 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 26 2014 22:56:50 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,0 +1,93 @@
+\hypertarget{class_game_state}{\section{Game\+State Class Reference}
+\label{class_game_state}\index{Game\+State@{Game\+State}}
+}
+Inheritance diagram for Game\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_state_a4fa0a2bf50315c4a35a3890a0adcee5c}{Game\+State} ()
+\item 
+\hyperlink{class_game_state_ae623df5042cd0c17daa3394fdcb397b3}{$\sim$\+Game\+State} ()
+\item 
+void \hyperlink{class_game_state_a74ff91dece6aea2f96ad9e4980b1d08d}{entered} ()
+\item 
+void \hyperlink{class_game_state_a604127103f564a3ab1ba6b75ecf5e19a}{leaving} ()
+\item 
+void \hyperlink{class_game_state_aa64650e6a0d7db95d014135929351e7c}{obscuring} ()
+\item 
+void \hyperlink{class_game_state_a5d616fb3ecae1e94da4db55eae806cfb}{revealed} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_state_a4fa0a2bf50315c4a35a3890a0adcee5c}{\index{Game\+State@{Game\+State}!Game\+State@{Game\+State}}
+\index{Game\+State@{Game\+State}!Game\+State@{Game\+State}}
+\subsubsection[{Game\+State}]{\setlength{\rightskip}{0pt plus 5cm}Game\+State\+::\+Game\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_a4fa0a2bf50315c4a35a3890a0adcee5c}
+Constructs a \hyperlink{class_game_state}{Game\+State} object Constructs a \hyperlink{class_game_state}{Game\+State} object \hypertarget{class_game_state_ae623df5042cd0c17daa3394fdcb397b3}{\index{Game\+State@{Game\+State}!````~Game\+State@{$\sim$\+Game\+State}}
+\index{````~Game\+State@{$\sim$\+Game\+State}!Game\+State@{Game\+State}}
+\subsubsection[{$\sim$\+Game\+State}]{\setlength{\rightskip}{0pt plus 5cm}Game\+State\+::$\sim$\+Game\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_ae623df5042cd0c17daa3394fdcb397b3}
+De-\/constructs a \hyperlink{class_game_state}{Game\+State} object De-\/constructs the \hyperlink{class_game_state}{Game\+State} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_state_a74ff91dece6aea2f96ad9e4980b1d08d}{\index{Game\+State@{Game\+State}!entered@{entered}}
+\index{entered@{entered}!Game\+State@{Game\+State}}
+\subsubsection[{entered}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+::entered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_a74ff91dece6aea2f96ad9e4980b1d08d}
+Called after the \hyperlink{class_game_state}{Game\+State} has been placed in the \hyperlink{class_state_manager}{State\+Manager}. 
+
+Reimplemented from \hyperlink{class_state_aef81b6e3521b704e88bf1e3cf6a5eea2}{State}.
+
+\hypertarget{class_game_state_a604127103f564a3ab1ba6b75ecf5e19a}{\index{Game\+State@{Game\+State}!leaving@{leaving}}
+\index{leaving@{leaving}!Game\+State@{Game\+State}}
+\subsubsection[{leaving}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+::leaving (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_a604127103f564a3ab1ba6b75ecf5e19a}
+Called right before the \hyperlink{class_game_state}{Game\+State} is removed from the \hyperlink{class_state_manager}{State\+Manager}. 
+
+Reimplemented from \hyperlink{class_state_a7bd375faa48fc63c7c70ca3e3845a5cb}{State}.
+
+\hypertarget{class_game_state_aa64650e6a0d7db95d014135929351e7c}{\index{Game\+State@{Game\+State}!obscuring@{obscuring}}
+\index{obscuring@{obscuring}!Game\+State@{Game\+State}}
+\subsubsection[{obscuring}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+::obscuring (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_aa64650e6a0d7db95d014135929351e7c}
+Called right before another \hyperlink{class_game_state}{Game\+State} is stacked on top of this one. 
+
+Reimplemented from \hyperlink{class_state_a8daaaca43cbb3059a6d4afae42287adc}{State}.
+
+\hypertarget{class_game_state_a5d616fb3ecae1e94da4db55eae806cfb}{\index{Game\+State@{Game\+State}!revealed@{revealed}}
+\index{revealed@{revealed}!Game\+State@{Game\+State}}
+\subsubsection[{revealed}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+State\+::revealed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_state_a5d616fb3ecae1e94da4db55eae806cfb}
+Called after the \hyperlink{class_game_state}{Game\+State} has become the topmost \hyperlink{class_state}{State} on the stack again. 
+
+Reimplemented from \hyperlink{class_state_a35fed944f50b9ed0ed0f3ab69a931377}{State}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+G\+G\+Assignment1\+S\+D\+L/game\+State.\+h\end{DoxyCompactItemize}

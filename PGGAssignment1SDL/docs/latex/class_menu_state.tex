@@ -1,0 +1,93 @@
+\hypertarget{class_menu_state}{\section{Menu\+State Class Reference}
+\label{class_menu_state}\index{Menu\+State@{Menu\+State}}
+}
+Inheritance diagram for Menu\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_menu_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_menu_state_aa8c0b7495397c6c46d137f6c5b3167d3}{Menu\+State} ()
+\item 
+\hyperlink{class_menu_state_a58aea91a44436c5bba575c5de755a5bc}{$\sim$\+Menu\+State} ()
+\item 
+void \hyperlink{class_menu_state_a46418226e09211231edd8aec9cb339c9}{entered} ()
+\item 
+void \hyperlink{class_menu_state_a76cb5a0029b67ea326afd46f7f11a6df}{leaving} ()
+\item 
+void \hyperlink{class_menu_state_a457fc15afc90cf97b8a7bba4ee946fc7}{obscuring} ()
+\item 
+void \hyperlink{class_menu_state_adf42864e4f79ee30d23d1b54847b8dfc}{revealed} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_menu_state_aa8c0b7495397c6c46d137f6c5b3167d3}{\index{Menu\+State@{Menu\+State}!Menu\+State@{Menu\+State}}
+\index{Menu\+State@{Menu\+State}!Menu\+State@{Menu\+State}}
+\subsubsection[{Menu\+State}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+State\+::\+Menu\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_state_aa8c0b7495397c6c46d137f6c5b3167d3}
+Constructs a \hyperlink{class_menu_state}{Menu\+State} object Constructs a \hyperlink{class_menu_state}{Menu\+State} object \hypertarget{class_menu_state_a58aea91a44436c5bba575c5de755a5bc}{\index{Menu\+State@{Menu\+State}!````~Menu\+State@{$\sim$\+Menu\+State}}
+\index{````~Menu\+State@{$\sim$\+Menu\+State}!Menu\+State@{Menu\+State}}
+\subsubsection[{$\sim$\+Menu\+State}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+State\+::$\sim$\+Menu\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_state_a58aea91a44436c5bba575c5de755a5bc}
+De-\/constructs a \hyperlink{class_menu_state}{Menu\+State} object De-\/constructs the \hyperlink{class_menu_state}{Menu\+State} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_menu_state_a46418226e09211231edd8aec9cb339c9}{\index{Menu\+State@{Menu\+State}!entered@{entered}}
+\index{entered@{entered}!Menu\+State@{Menu\+State}}
+\subsubsection[{entered}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::entered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_a46418226e09211231edd8aec9cb339c9}
+Called after the \hyperlink{class_menu_state}{Menu\+State} has been placed in the \hyperlink{class_state_manager}{State\+Manager}. 
+
+Reimplemented from \hyperlink{class_state_aef81b6e3521b704e88bf1e3cf6a5eea2}{State}.
+
+\hypertarget{class_menu_state_a76cb5a0029b67ea326afd46f7f11a6df}{\index{Menu\+State@{Menu\+State}!leaving@{leaving}}
+\index{leaving@{leaving}!Menu\+State@{Menu\+State}}
+\subsubsection[{leaving}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::leaving (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_a76cb5a0029b67ea326afd46f7f11a6df}
+Called right before the \hyperlink{class_menu_state}{Menu\+State} is removed from the \hyperlink{class_state_manager}{State\+Manager}. 
+
+Reimplemented from \hyperlink{class_state_a7bd375faa48fc63c7c70ca3e3845a5cb}{State}.
+
+\hypertarget{class_menu_state_a457fc15afc90cf97b8a7bba4ee946fc7}{\index{Menu\+State@{Menu\+State}!obscuring@{obscuring}}
+\index{obscuring@{obscuring}!Menu\+State@{Menu\+State}}
+\subsubsection[{obscuring}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::obscuring (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_a457fc15afc90cf97b8a7bba4ee946fc7}
+Called right before another \hyperlink{class_menu_state}{Menu\+State} is stacked on top of this one. 
+
+Reimplemented from \hyperlink{class_state_a8daaaca43cbb3059a6d4afae42287adc}{State}.
+
+\hypertarget{class_menu_state_adf42864e4f79ee30d23d1b54847b8dfc}{\index{Menu\+State@{Menu\+State}!revealed@{revealed}}
+\index{revealed@{revealed}!Menu\+State@{Menu\+State}}
+\subsubsection[{revealed}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::revealed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_adf42864e4f79ee30d23d1b54847b8dfc}
+Called after the \hyperlink{class_menu_state}{Menu\+State} has become the topmost \hyperlink{class_state}{State} on the stack again. 
+
+Reimplemented from \hyperlink{class_state_a35fed944f50b9ed0ed0f3ab69a931377}{State}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+G\+G\+Assignment1\+S\+D\+L/menu\+State.\+h\end{DoxyCompactItemize}

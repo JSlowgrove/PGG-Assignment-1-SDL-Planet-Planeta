@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['texture',['Texture',['../class_texture.html#a6edf59e3b10e474356e8a7878af56b83',1,'Texture']]],
-  ['turret',['Turret',['../class_turret.html#a29d44eb8c797714c03a61563ddc1330d',1,'Turret']]]
+  ['obscuring',['obscuring',['../class_game_state.html#aa64650e6a0d7db95d014135929351e7c',1,'GameState::obscuring()'],['../class_menu_state.html#a457fc15afc90cf97b8a7bba4ee946fc7',1,'MenuState::obscuring()'],['../class_state.html#a8daaaca43cbb3059a6d4afae42287adc',1,'State::obscuring()']]]
 ];

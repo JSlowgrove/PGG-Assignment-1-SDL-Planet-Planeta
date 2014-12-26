@@ -89,50 +89,160 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Creates a <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object.  
+<p>Creates a <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> object that inherits <a class="el" href="class_creature.html" title="Creates a Creature object that inherits Entity. ">Creature</a> which in turn inherits <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a>.  
  <a href="class_player.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="player_8h_source.html">player.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Player:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_player.png" usemap="#Player_map" alt=""/>
+  <map id="Player_map" name="Player_map">
+<area href="class_creature.html" title="Creates a Creature object that inherits Entity. " alt="Creature" shape="rect" coords="0,56,62,80"/>
+<area href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ..." alt="Entity" shape="rect" coords="0,0,62,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> ()</td></tr>
-<tr class="separator:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d9a9d1017a68d6de107bbfb0a0c486"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a73d9a9d1017a68d6de107bbfb0a0c486">Player</a> (<a class="el" href="class_texture.html">Texture</a> *, float, float, int, int)</td></tr>
+<tr class="separator:a73d9a9d1017a68d6de107bbfb0a0c486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
 <tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff31d77f567d626635cb7ba85c32dca2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aff31d77f567d626635cb7ba85c32dca2">setResources</a> (int)</td></tr>
-<tr class="separator:aff31d77f567d626635cb7ba85c32dca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73f33ca00cc6565617f7a1c4246abdd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a73f33ca00cc6565617f7a1c4246abdd1">setPower</a> (int)</td></tr>
-<tr class="separator:a73f33ca00cc6565617f7a1c4246abdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9d9f66e7d43c5ceaa5b3686e45406bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aa9d9f66e7d43c5ceaa5b3686e45406bb">setMinions</a> (int)</td></tr>
-<tr class="separator:aa9d9f66e7d43c5ceaa5b3686e45406bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fb31b221607f6fd9bb974554c120483"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a6fb31b221607f6fd9bb974554c120483">setMaxMinions</a> (int)</td></tr>
-<tr class="separator:a6fb31b221607f6fd9bb974554c120483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac490c43e4a19418771dc448e71e00044"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac490c43e4a19418771dc448e71e00044">getResources</a> ()</td></tr>
-<tr class="separator:ac490c43e4a19418771dc448e71e00044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ccd486aecc86f5ad1d2a819293437f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a9ccd486aecc86f5ad1d2a819293437f9">getPower</a> ()</td></tr>
-<tr class="separator:a9ccd486aecc86f5ad1d2a819293437f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64cf326408edb0841c92f2e531dba3d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a64cf326408edb0841c92f2e531dba3d5">getMinions</a> ()</td></tr>
-<tr class="separator:a64cf326408edb0841c92f2e531dba3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fcbf1e4bd1319f43bacd0140b8749f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7fcbf1e4bd1319f43bacd0140b8749f5">getMaxMinions</a> ()</td></tr>
-<tr class="separator:a7fcbf1e4bd1319f43bacd0140b8749f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565d4df3c32d00243b1ef16dfd6e5e03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a565d4df3c32d00243b1ef16dfd6e5e03">setLives</a> (int)</td></tr>
+<tr class="separator:a565d4df3c32d00243b1ef16dfd6e5e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af56ac33b9b2ebd9f97c8a6f485cf2d47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af56ac33b9b2ebd9f97c8a6f485cf2d47">getLives</a> ()</td></tr>
+<tr class="separator:af56ac33b9b2ebd9f97c8a6f485cf2d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa054ea95ca73dd19036d2917b29ab021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aa054ea95ca73dd19036d2917b29ab021">setScore</a> (int)</td></tr>
+<tr class="separator:aa054ea95ca73dd19036d2917b29ab021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e5447778ae6c384eedc532dcd8431d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a97e5447778ae6c384eedc532dcd8431d">getScore</a> ()</td></tr>
+<tr class="separator:a97e5447778ae6c384eedc532dcd8431d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_creature"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_creature')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_creature.html">Creature</a></td></tr>
+<tr class="memitem:a597cc3b08ee17de46c3e7ec3cf0d9b58 inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#a597cc3b08ee17de46c3e7ec3cf0d9b58">Creature</a> ()</td></tr>
+<tr class="separator:a597cc3b08ee17de46c3e7ec3cf0d9b58 inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa991b23f4813fbdb6f875204ed49814d inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#aa991b23f4813fbdb6f875204ed49814d">~Creature</a> ()</td></tr>
+<tr class="separator:aa991b23f4813fbdb6f875204ed49814d inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ad7544f3c7fd24829c8c28ea5c667f inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#ab2ad7544f3c7fd24829c8c28ea5c667f">setVelocityX</a> (float)</td></tr>
+<tr class="separator:ab2ad7544f3c7fd24829c8c28ea5c667f inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa971df9bf484d62fbe6413f01a661b inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#a5aa971df9bf484d62fbe6413f01a661b">setVelocityY</a> (float)</td></tr>
+<tr class="separator:a5aa971df9bf484d62fbe6413f01a661b inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10e36c59bd7ec83708b46235aefbc33 inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#ac10e36c59bd7ec83708b46235aefbc33">updateX</a> (float)</td></tr>
+<tr class="separator:ac10e36c59bd7ec83708b46235aefbc33 inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bdf6ddfe183c828761bae1da81be47 inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#ab2bdf6ddfe183c828761bae1da81be47">updateY</a> (float)</td></tr>
+<tr class="separator:ab2bdf6ddfe183c828761bae1da81be47 inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405b16c27bc5617e9c37ac01e166c785 inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#a405b16c27bc5617e9c37ac01e166c785">getVelocityX</a> ()</td></tr>
+<tr class="separator:a405b16c27bc5617e9c37ac01e166c785 inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca2c7cccf8c8182dcad7a3b6737380b inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#a0ca2c7cccf8c8182dcad7a3b6737380b">getVelocityY</a> ()</td></tr>
+<tr class="separator:a0ca2c7cccf8c8182dcad7a3b6737380b inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
+<tr class="memitem:a980f368aa07ce358583982821533a54a inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a> ()</td></tr>
+<tr class="separator:a980f368aa07ce358583982821533a54a inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6d3f7cb1b2ba029b6b048a395cc8ae inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a> ()</td></tr>
+<tr class="separator:adf6d3f7cb1b2ba029b6b048a395cc8ae inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2224871711ac97a54af338ddefc25ac9 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a2224871711ac97a54af338ddefc25ac9">display</a> (SDL_Renderer *)</td></tr>
+<tr class="separator:a2224871711ac97a54af338ddefc25ac9 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e2f110d39426ba4823296b4294dd74 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a38e2f110d39426ba4823296b4294dd74">setX</a> (float)</td></tr>
+<tr class="separator:a38e2f110d39426ba4823296b4294dd74 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8896110a266bdec69b14d34ec6374df8 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a8896110a266bdec69b14d34ec6374df8">setY</a> (float)</td></tr>
+<tr class="separator:a8896110a266bdec69b14d34ec6374df8 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5b6d26c039bf3bf6faa766990768b4 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#abc5b6d26c039bf3bf6faa766990768b4">getX</a> ()</td></tr>
+<tr class="separator:abc5b6d26c039bf3bf6faa766990768b4 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6dd7b404c13754202acfe3d2c65c77b inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b">getY</a> ()</td></tr>
+<tr class="separator:ab6dd7b404c13754202acfe3d2c65c77b inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_creature"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_creature')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_creature.html">Creature</a></td></tr>
+<tr class="memitem:a6e857406fb17f893ebace230ff8aa05f inherit pro_attribs_class_creature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e857406fb17f893ebace230ff8aa05f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>velocityX</b></td></tr>
+<tr class="separator:a6e857406fb17f893ebace230ff8aa05f inherit pro_attribs_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3cb01fd7b9d05372749fc9e04ab8dd inherit pro_attribs_class_creature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a3cb01fd7b9d05372749fc9e04ab8dd"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>velocityY</b></td></tr>
+<tr class="separator:a8a3cb01fd7b9d05372749fc9e04ab8dd inherit pro_attribs_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
+<tr class="memitem:a94c6b2b4a46ea4885b5fa5859d7d68e7 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94c6b2b4a46ea4885b5fa5859d7d68e7"></a>
+<a class="el" href="class_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></td></tr>
+<tr class="separator:a94c6b2b4a46ea4885b5fa5859d7d68e7 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a44ea56b660b9ac701d32931a066dce inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a44ea56b660b9ac701d32931a066dce"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>srcWidth</b></td></tr>
+<tr class="separator:a8a44ea56b660b9ac701d32931a066dce inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98172dbf203df1a9a7279a5e005eae08 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98172dbf203df1a9a7279a5e005eae08"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>srcHeight</b></td></tr>
+<tr class="separator:a98172dbf203df1a9a7279a5e005eae08 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2871ef137e228ba7d431d5c65abcfd5c inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2871ef137e228ba7d431d5c65abcfd5c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>srcX</b></td></tr>
+<tr class="separator:a2871ef137e228ba7d431d5c65abcfd5c inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a5a921e7adf221357a6afd5ce5ec75 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24a5a921e7adf221357a6afd5ce5ec75"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>srcY</b></td></tr>
+<tr class="separator:a24a5a921e7adf221357a6afd5ce5ec75 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58bf3e06b7431307e26c4adccae8cf11 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58bf3e06b7431307e26c4adccae8cf11"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
+<tr class="separator:a58bf3e06b7431307e26c4adccae8cf11 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5591f1e3ea630c4d8063038728587ab8 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5591f1e3ea630c4d8063038728587ab8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="separator:a5591f1e3ea630c4d8063038728587ab8 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc2d19ee6ff26b8520428894da6a8f68 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc2d19ee6ff26b8520428894da6a8f68"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
+<tr class="separator:abc2d19ee6ff26b8520428894da6a8f68 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4966f81d91cc8f8d5eb9e9002240c49 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4966f81d91cc8f8d5eb9e9002240c49"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="separator:af4966f81d91cc8f8d5eb9e9002240c49 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Creates a <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object. </p>
+<div class="textblock"><p>Creates a <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> object that inherits <a class="el" href="class_creature.html" title="Creates a Creature object that inherits Entity. ">Creature</a> which in turn inherits <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="affe0cc3cb714f6deb4e62f0c0d3f1fd8"></a>
+<a class="anchor" id="a73d9a9d1017a68d6de107bbfb0a0c486"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Player::Player </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>inputTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>inputX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>inputY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spriteSheetNumberX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spriteSheetNumberY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object Constructs a <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object </p>
+<p>Constructs a <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> object Constructs the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Texture*</td><td>a pointer to a <a class="el" href="class_texture.html" title="Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...">Texture</a> loaded into memory. </td></tr>
+    <tr><td class="paramname">float</td><td>initial x position. </td></tr>
+    <tr><td class="paramname">float</td><td>initial y position. </td></tr>
+    <tr><td class="paramname">float</td><td>the sprite sheet x number. </td></tr>
+    <tr><td class="paramname">float</td><td>the sprite sheet y number. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -148,157 +258,81 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>De-constructs a <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object De-constructs the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object </p>
+<p>De-constructs a <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> object De-constructs the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> object </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a7fcbf1e4bd1319f43bacd0140b8749f5"></a>
+<a class="anchor" id="af56ac33b9b2ebd9f97c8a6f485cf2d47"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Player::getMaxMinions </td>
+          <td class="memname">int Player::getLives </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getter # max number of minions Returns the max number of minions the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> can have. </p>
+<p>Getter # lives </p><dl class="section return"><dt>Returns</dt><dd>the number of lives the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> has. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a64cf326408edb0841c92f2e531dba3d5"></a>
+<a class="anchor" id="a97e5447778ae6c384eedc532dcd8431d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Player::getMinions </td>
+          <td class="memname">int Player::getScore </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getter # minions Returns the number of minions the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> has. </p>
+<p>Getter # score </p><dl class="section return"><dt>Returns</dt><dd>the score the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> has. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a9ccd486aecc86f5ad1d2a819293437f9"></a>
+<a class="anchor" id="a565d4df3c32d00243b1ef16dfd6e5e03"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Player::getPower </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Getter # power Returns the amount of power of the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac490c43e4a19418771dc448e71e00044"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Player::getResources </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Getter # resources Returns the number of resources the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> has. </p>
-
-</div>
-</div>
-<a class="anchor" id="a6fb31b221607f6fd9bb974554c120483"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::setMaxMinions </td>
+          <td class="memname">void Player::setLives </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>inputMax</em></td><td>)</td>
+          <td class="paramname"><em>inputLives</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setter # max number of minions Sets the max number of minions of the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object to the inputed max number of minions. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Setter # lives Sets the number of lives of the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> object to the inputed number. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">int</td><td>the inputed max number of minions </td></tr>
+    <tr><td class="paramname">int</td><td>the inputed number of lives </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="aa9d9f66e7d43c5ceaa5b3686e45406bb"></a>
+<a class="anchor" id="aa054ea95ca73dd19036d2917b29ab021"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Player::setMinions </td>
+          <td class="memname">void Player::setScore </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>inputMinions</em></td><td>)</td>
+          <td class="paramname"><em>inputScore</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setter # minions Sets the number of minions of the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object to the inputed number of minions. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Setter # score Sets the score of the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> object to the inputed number. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">int</td><td>the inputed minions </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a73f33ca00cc6565617f7a1c4246abdd1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::setPower </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>inputPower</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Setter # power Sets the amount of power of the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> to the inputed amount of power. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">int</td><td>the inputed power </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aff31d77f567d626635cb7ba85c32dca2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::setResources </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>inputResources</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Setter # resources Sets the number of resources of the <a class="el" href="class_player.html" title="Creates a Player object. ">Player</a> object to the inputed number of resources. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">int</td><td>the inputed resources </td></tr>
+    <tr><td class="paramname">int</td><td>the inputed score </td></tr>
   </table>
   </dd>
 </dl>
@@ -312,7 +346,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 27 2014 04:27:02 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 26 2014 22:56:50 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

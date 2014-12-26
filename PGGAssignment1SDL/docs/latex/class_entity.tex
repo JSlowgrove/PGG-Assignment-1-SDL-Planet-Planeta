@@ -13,7 +13,7 @@ Creates an \hyperlink{class_entity}{Entity} object Creates an \hyperlink{class_e
 Inheritance diagram for Entity\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_entity}
+\includegraphics[height=3.000000cm]{class_entity}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -32,14 +32,6 @@ void \hyperlink{class_entity_a8896110a266bdec69b14d34ec6374df8}{set\+Y} (float)
 float \hyperlink{class_entity_abc5b6d26c039bf3bf6faa766990768b4}{get\+X} ()
 \item 
 float \hyperlink{class_entity_ab6dd7b404c13754202acfe3d2c65c77b}{get\+Y} ()
-\item 
-void \hyperlink{class_entity_a0c4ef1c69d6054cebf71445d98bb3afc}{set\+Health} (int)
-\item 
-int \hyperlink{class_entity_a2b0140ae8c77c0e3654b070ee3c7fe57}{get\+Health} ()
-\item 
-void \hyperlink{class_entity_a008de3cd38f0a2d2533c3384e54569cc}{set\+Cost} (int)
-\item 
-int \hyperlink{class_entity_a57cbd6215579c3181414c352a920ba10}{get\+Cost} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -69,12 +61,6 @@ int \hyperlink{class_entity_a57cbd6215579c3181414c352a920ba10}{get\+Cost} ()
 
 \item 
 \hypertarget{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}{float {\bfseries y}}\label{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}
-
-\item 
-\hypertarget{class_entity_ab5bf0c97620636e04b271601e2133884}{int {\bfseries health}}\label{class_entity_ab5bf0c97620636e04b271601e2133884}
-
-\item 
-\hypertarget{class_entity_af0d86b6186484391164c2572c4a1be64}{int {\bfseries cost}}\label{class_entity_af0d86b6186484391164c2572c4a1be64}
 
 \end{DoxyCompactItemize}
 
@@ -112,58 +98,26 @@ Displays the modified \hyperlink{class_texture}{Texture} renderer Pushes the tex
 {\em S\+D\+L\+\_\+\+Renderer$\ast$} & The renderer. \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_entity_a57cbd6215579c3181414c352a920ba10}{\index{Entity@{Entity}!get\+Cost@{get\+Cost}}
-\index{get\+Cost@{get\+Cost}!Entity@{Entity}}
-\subsubsection[{get\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}int Entity\+::get\+Cost (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_entity_a57cbd6215579c3181414c352a920ba10}
-Getter \# cost Returns the cost of the \hyperlink{class_entity}{Entity} object. \hypertarget{class_entity_a2b0140ae8c77c0e3654b070ee3c7fe57}{\index{Entity@{Entity}!get\+Health@{get\+Health}}
-\index{get\+Health@{get\+Health}!Entity@{Entity}}
-\subsubsection[{get\+Health}]{\setlength{\rightskip}{0pt plus 5cm}int Entity\+::get\+Health (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_entity_a2b0140ae8c77c0e3654b070ee3c7fe57}
-Getter \# health Returns the health of the \hyperlink{class_entity}{Entity} object. \hypertarget{class_entity_abc5b6d26c039bf3bf6faa766990768b4}{\index{Entity@{Entity}!get\+X@{get\+X}}
+\hypertarget{class_entity_abc5b6d26c039bf3bf6faa766990768b4}{\index{Entity@{Entity}!get\+X@{get\+X}}
 \index{get\+X@{get\+X}!Entity@{Entity}}
 \subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Entity\+::get\+X (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{class_entity_abc5b6d26c039bf3bf6faa766990768b4}
-Getter \# x position Returns the x position of the \hyperlink{class_entity}{Entity} object. \hypertarget{class_entity_ab6dd7b404c13754202acfe3d2c65c77b}{\index{Entity@{Entity}!get\+Y@{get\+Y}}
+Getter \# x position \begin{DoxyReturn}{Returns}
+the x position of the \hyperlink{class_entity}{Entity} object. 
+\end{DoxyReturn}
+\hypertarget{class_entity_ab6dd7b404c13754202acfe3d2c65c77b}{\index{Entity@{Entity}!get\+Y@{get\+Y}}
 \index{get\+Y@{get\+Y}!Entity@{Entity}}
 \subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Entity\+::get\+Y (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{class_entity_ab6dd7b404c13754202acfe3d2c65c77b}
-Getter \# y position Returns the y position of the \hyperlink{class_entity}{Entity} object. \hypertarget{class_entity_a008de3cd38f0a2d2533c3384e54569cc}{\index{Entity@{Entity}!set\+Cost@{set\+Cost}}
-\index{set\+Cost@{set\+Cost}!Entity@{Entity}}
-\subsubsection[{set\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\+::set\+Cost (
-\begin{DoxyParamCaption}
-\item[{int}]{input\+Cost}
-\end{DoxyParamCaption}
-)}}\label{class_entity_a008de3cd38f0a2d2533c3384e54569cc}
-Setter \# cost Sets the cost of the \hyperlink{class_entity}{Entity} object. 
-\begin{DoxyParams}{Parameters}
-{\em int} & the inputed cost \\
-\hline
-\end{DoxyParams}
-\hypertarget{class_entity_a0c4ef1c69d6054cebf71445d98bb3afc}{\index{Entity@{Entity}!set\+Health@{set\+Health}}
-\index{set\+Health@{set\+Health}!Entity@{Entity}}
-\subsubsection[{set\+Health}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\+::set\+Health (
-\begin{DoxyParamCaption}
-\item[{int}]{input\+Health}
-\end{DoxyParamCaption}
-)}}\label{class_entity_a0c4ef1c69d6054cebf71445d98bb3afc}
-Setter \# health Sets the health of the \hyperlink{class_entity}{Entity} object. 
-\begin{DoxyParams}{Parameters}
-{\em int} & the inputed health \\
-\hline
-\end{DoxyParams}
+Getter \# y position \begin{DoxyReturn}{Returns}
+the y position of the \hyperlink{class_entity}{Entity} object. 
+\end{DoxyReturn}
 \hypertarget{class_entity_a38e2f110d39426ba4823296b4294dd74}{\index{Entity@{Entity}!set\+X@{set\+X}}
 \index{set\+X@{set\+X}!Entity@{Entity}}
 \subsubsection[{set\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\+::set\+X (

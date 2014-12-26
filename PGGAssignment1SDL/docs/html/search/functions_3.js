@@ -1,19 +1,6 @@
 var searchData=
 [
-  ['getattack',['getAttack',['../class_minion.html#a0decd33b01b59bc3a3b67d3cc04c8160',1,'Minion::getAttack()'],['../class_turret.html#a9020a9725e9de7c8c415ed5716883883',1,'Turret::getAttack()']]],
-  ['getcost',['getCost',['../class_entity.html#a57cbd6215579c3181414c352a920ba10',1,'Entity']]],
-  ['gethealth',['getHealth',['../class_entity.html#a2b0140ae8c77c0e3654b070ee3c7fe57',1,'Entity']]],
-  ['getheight',['getHeight',['../class_texture.html#a80e143905655b173df5994300088ce35',1,'Texture']]],
-  ['getmaxminions',['getMaxMinions',['../class_player.html#a7fcbf1e4bd1319f43bacd0140b8749f5',1,'Player']]],
-  ['getminions',['getMinions',['../class_player.html#a64cf326408edb0841c92f2e531dba3d5',1,'Player']]],
-  ['getpower',['getPower',['../class_player.html#a9ccd486aecc86f5ad1d2a819293437f9',1,'Player']]],
-  ['getresources',['getResources',['../class_player.html#ac490c43e4a19418771dc448e71e00044',1,'Player']]],
-  ['getsightradius',['getSightRadius',['../class_minion.html#ada02622b43c158d5da9aa7d21bf64c71',1,'Minion::getSightRadius()'],['../class_turret.html#a5f9bb5c3726369bc39a514f657e58e4e',1,'Turret::getSightRadius()']]],
-  ['getspeed',['getSpeed',['../class_minion.html#ad55df66c5c1c32816da63d7a013491bb',1,'Minion']]],
-  ['gettexture',['getTexture',['../class_texture.html#a77a1ae0043a4b318a60df3b02ef2d3f6',1,'Texture']]],
-  ['getvelocityx',['getVelocityX',['../class_minion.html#adb0e43ad9ab1ce04824984bb04741dcb',1,'Minion']]],
-  ['getvelocityy',['getVelocityY',['../class_minion.html#a3fa211c53ef3c00caef82a9ec710b566',1,'Minion']]],
-  ['getwidth',['getWidth',['../class_texture.html#a91a6fd3355bc870194851514194daaab',1,'Texture']]],
-  ['getx',['getX',['../class_entity.html#abc5b6d26c039bf3bf6faa766990768b4',1,'Entity']]],
-  ['gety',['getY',['../class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b',1,'Entity']]]
+  ['enemy',['Enemy',['../class_enemy.html#a94f30d348b6d2840fd71675472ba38dd',1,'Enemy']]],
+  ['entered',['entered',['../class_game_state.html#a74ff91dece6aea2f96ad9e4980b1d08d',1,'GameState::entered()'],['../class_menu_state.html#a46418226e09211231edd8aec9cb339c9',1,'MenuState::entered()'],['../class_state.html#aef81b6e3521b704e88bf1e3cf6a5eea2',1,'State::entered()']]],
+  ['entity',['Entity',['../class_entity.html#a980f368aa07ce358583982821533a54a',1,'Entity']]]
 ];

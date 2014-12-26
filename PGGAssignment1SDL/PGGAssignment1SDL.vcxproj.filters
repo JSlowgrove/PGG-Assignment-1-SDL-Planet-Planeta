@@ -62,5 +62,17 @@
     <ClInclude Include="enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="stateManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menuState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
