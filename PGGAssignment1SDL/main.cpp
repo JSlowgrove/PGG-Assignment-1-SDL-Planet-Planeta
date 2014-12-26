@@ -1,21 +1,26 @@
 #include <SDL.h>
 #include <iostream>
+#include <time.h>
 #include "texture.h"
 #include "minion.h"
 #include "building.h"
 #include "turret.h"
+#include "background.h"
 
-void update(unsigned int &, SDL_Renderer *, Minion *, Minion *, Turret *, Building *, Building *, Building *, float, float);
+void update(unsigned int &, SDL_Renderer *, Background *, float, float);
 
 int main(int argc, char *argv[])
 {
-	/*Initilise SDL*/
+	/*Initialise SDL*/
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) /*Check SDL initialisation*/
 	{
 		/*Failed initialisation*/
 		std::cout << "Failed to initialise SDL" << std::endl;
 		return -1;
 	}
+
+	/*initialize random seed: */
+	srand(time(NULL));
 
 	/*Time Check*/
 	unsigned int lastTime = SDL_GetTicks();
@@ -33,10 +38,12 @@ int main(int argc, char *argv[])
 	/*Create Renderer from the window*/
 	SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);
 
-	/*initalise spritesheet*/
+	/*initialise spritesheets*/
+	Texture * backgrounds = new Texture("img/backgrounds231x63.bmp", renderer, false);
 	Texture * spritesheet = new Texture("img/spritesheet88x108.bmp", renderer, true);
 
-	/*intalise entities*/
+	/*initialise entities*/
+	Background * background = new Background(backgrounds, (rand() % 3));
 	Building * base = new Building(spritesheet, 0, 1);
 	Building * power = new Building(spritesheet, 0, 2);
 	Building * resource = new Building(spritesheet, 0, 5);
@@ -47,6 +54,9 @@ int main(int argc, char *argv[])
 	/*mouseClickPosition*/
 	float x = 100.0f;
 	float y = 100.0f;
+
+	/*set Background velocity TMP*/
+	background->setVelocity(-100.0f);
 
 	/*Start Game Loop*/
 	bool go = true;
@@ -80,7 +90,7 @@ int main(int argc, char *argv[])
 			}
 		}
 
-		update(lastTime, renderer, engineer, soldier, turret, base, power, resource, x, y); /*Update the Window (pbRef, pbPointer)*/
+		update(lastTime, renderer, background, x, y); /*Update the Window (pbRef, pbPointer)*/
 	}
 	/*uninitalise data*/
 	SDL_DestroyWindow(window);
@@ -92,11 +102,11 @@ int main(int argc, char *argv[])
 
 
 /*Update Window (pbRef, pbPointer)*/
-void update(unsigned int &lastTime, SDL_Renderer * renderer, Minion * engineer, Minion * soldier, Turret * turret, Building * base, Building * power, Building * resource, float x, float y)
+void update(unsigned int &lastTime, SDL_Renderer * renderer, Background * background, float x, float y)
 {
 	/*Time Check*/
 	unsigned int current = SDL_GetTicks();
-	float deltaTs = (float)(current - lastTime) / 1000.0f;
+	float deltaTime = (float)(current - lastTime) / 1000.0f;
 	lastTime = current;
 
 	/*set draw colour to white*/
@@ -104,35 +114,19 @@ void update(unsigned int &lastTime, SDL_Renderer * renderer, Minion * engineer, 
 
 	/*Clear the entire screen to the set colour*/
 	SDL_RenderClear(renderer);
-	
-	/*set inital positions TEMP*/
-	power->setX(300.0f);
-	power->setY(300.0f);
-	resource->setX(300.0f);
-	resource->setY(100.0f);
-	base->setX(200.0f);
-	base->setY(200.0f);
-	engineer->setX(x);
-	engineer->setY(y);
-	soldier->setX(100.0f);
-	soldier->setY(300.0f);
-	turret->setX(400.0f);
-	turret->setY(400.0f);
 
-	/*push entities to the renderer*/
-	power->display(renderer);
-	resource->display(renderer);
-	base->display(renderer);
-	engineer->display(renderer);
-	soldier->display(renderer);
-	turret->display(renderer);
+	/*Update Background*/
+	background->updateX(deltaTime);
+
+	/*display the background*/
+	background->display(renderer);
 
 	/*display renderer*/
 	SDL_RenderPresent(renderer);
 
 	/*Time Limiter*/
-	if (deltaTs < (1.0f / 50.0f))
+	if (deltaTime < (1.0f / 50.0f))
 	{
-		SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTs)*1000.0f));
+		SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTime)*1000.0f));
 	}
 }
