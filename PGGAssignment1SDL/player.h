@@ -2,23 +2,28 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "creature.h"
+
 /**
-@brief Creates a Player object.
+@brief Creates a Player object that inherits Creature which in turn inherits Entity.
 */
-class Player
+class Player : public Creature
 {
 private:
 	/*the Player details*/
-	int resources;
-	int power;
-	int minionNumber;
-	int maxMinions;
+	int lives;
+	int score;
 public:
 	/**
-	Constructs Player object
 	Constructs a Player object
+	Constructs the Player object.
+	@param Texture* a pointer to a Texture loaded into memory.
+	@param float initial x position.
+	@param float initial y position.
+	@param float the sprite sheet x number.
+	@param float the sprite sheet y number.
 	*/
-	Player();
+	Player(Texture *, float, float, int, int);
 
 	/**
 	De-constructs a Player object
@@ -27,55 +32,29 @@ public:
 	~Player();
 
 	/**
-	Setter # resources
-	Sets the number of resources of the Player object to the inputed number of resources.
-	@param int the inputed resources
+	Setter # lives
+	Sets the number of lives of the Player object to the inputed number.
+	@param int the inputed number of lives
 	*/
-	void setResources(int);
+	void setLives(int);
 
 	/**
-	Setter # power
-	Sets the amount of power of the Player to the inputed amount of power.
-	@param int the inputed power
+	Getter # lives
+	@returns the number of lives the Player has.
 	*/
-	void setPower(int);
+	int getLives();
 
 	/**
-	Setter # minions
-	Sets the number of minions of the Player object to the inputed number of minions.
-	@param int the inputed minions
+	Setter # score
+	Sets the score of the Player object to the inputed number.
+	@param int the inputed score
 	*/
-	void setMinions(int);
+	void setScore(int);
 
 	/**
-	Setter # max number of minions
-	Sets the max number of minions of the Player object to the inputed max number of minions.
-	@param int the inputed max number of minions
+	Getter # score
+	@returns the score the Player has.
 	*/
-	void setMaxMinions(int);
-
-	/**
-	Getter # resources
-	Returns the number of resources the Player has.
-	*/
-	int getResources();
-
-	/**
-	Getter # power
-	Returns the amount of power of the Player.
-	*/
-	int getPower();
-
-	/**
-	Getter # minions
-	Returns the number of minions the Player has.
-	*/
-	int getMinions();
-
-	/**
-	Getter # max number of minions
-	Returns the max number of minions the Player can have.
-	*/
-	int getMaxMinions();
+	int getScore();
 };
 #endif

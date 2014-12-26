@@ -2,11 +2,10 @@
 #include <iostream>
 #include <time.h>
 #include "texture.h"
-#include "building.h"
-#include "turret.h"
 #include "background.h"
+#include "player.h"
 
-void update(unsigned int &, SDL_Renderer *, Background *, float, float);
+void update(unsigned int &, SDL_Renderer *, Background *, Player *, float, float);
 
 int main(int argc, char *argv[])
 {
@@ -43,10 +42,7 @@ int main(int argc, char *argv[])
 
 	/*initialise entities*/
 	Background * background = new Background(backgrounds, (rand() % 3));
-	Building * base = new Building(spritesheet, 0, 1);
-	Building * power = new Building(spritesheet, 0, 2);
-	Building * resource = new Building(spritesheet, 0, 5);
-	Turret * turret = new Turret(spritesheet, 10, 1.5f, 0, 0);
+	Player * player = new Player(spritesheet, 100.0f, 100.0f, 19, 0);
 
 	/*mouseClickPosition*/
 	float x = 100.0f;
@@ -87,7 +83,7 @@ int main(int argc, char *argv[])
 			}
 		}
 
-		update(lastTime, renderer, background, x, y); /*Update the Window (pbRef, pbPointer)*/
+		update(lastTime, renderer, background, player, x, y); /*Update the Window (pbRef, pbPointer)*/
 	}
 	/*uninitalise data*/
 	SDL_DestroyWindow(window);
@@ -99,7 +95,7 @@ int main(int argc, char *argv[])
 
 
 /*Update Window (pbRef, pbPointer)*/
-void update(unsigned int &lastTime, SDL_Renderer * renderer, Background * background, float x, float y)
+void update(unsigned int &lastTime, SDL_Renderer * renderer, Background * background, Player * player, float x, float y)
 {
 	/*Time Check*/
 	unsigned int current = SDL_GetTicks();
@@ -117,6 +113,9 @@ void update(unsigned int &lastTime, SDL_Renderer * renderer, Background * backgr
 
 	/*display the background*/
 	background->display(renderer);
+
+	/*display the player*/
+	player->display(renderer);
 
 	/*display renderer*/
 	SDL_RenderPresent(renderer);

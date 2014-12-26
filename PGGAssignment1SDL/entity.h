@@ -61,13 +61,13 @@ public:
 
 	/**
 	Getter # x position
-	Returns the x position of the Entity object.
+	@returns the x position of the Entity object.
 	*/
 	float getX();
 
 	/**
 	Getter # y position
-	Returns the y position of the Entity object.
+	@returns the y position of the Entity object.
 	*/
 	float getY();
 };

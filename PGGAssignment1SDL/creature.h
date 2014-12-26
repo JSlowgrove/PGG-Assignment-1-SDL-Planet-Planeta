@@ -54,13 +54,13 @@ public:
 
 	/**
 	Getter # x velocity
-	Returns the x velocity of the Creature object.
+	@returns the x velocity of the Creature object.
 	*/
 	float getVelocityX();
 
 	/**
 	Getter # y velocity
-	Returns the y velocity of the Creature object.
+	@returns the y velocity of the Creature object.
 	*/
 	float getVelocityY();
 };

@@ -3,13 +3,21 @@
 /**************************************************************************************************************/
 
 /*Constructs the player object*/
-Player::Player()
+Player::Player(Texture * inputTexture, float inputX, float inputY, int spriteSheetNumberX, int spriteSheetNumberY)
 {
-	/*sets the initial variables*/
-	resources = 0;
-	power = 0;
-	minionNumber = 0;
-	maxMinions = 20;
+	texture = inputTexture; /*sets the texture to the inputed texture*/
+	srcWidth = 21; /*sets the srcWidth to 21, the width of the player sprite*/
+	srcHeight = 21; /*sets the srcHeight to 21, the width of the player sprite*/
+	srcX = (23 * spriteSheetNumberX) + 2; /*sets the srcX to the x position of the player sprite*/
+	srcY = (23 * spriteSheetNumberY) + 2; /*sets the srcY to the y position of the player sprite*/
+
+	/*sets the initial position of the player to the input positions*/
+	x = inputX;
+	y = inputY;
+
+	/*sets the initial player details*/
+	score = 0;
+	lives = 3;
 }
 
 /**************************************************************************************************************/
@@ -21,72 +29,36 @@ Player::~Player()
 
 /**************************************************************************************************************/
 
-/*sets the number of the resources*/
-void Player::setResources(int inputResources)
+/*sets the lives of the player*/
+void Player::setLives(int inputLives)
 {
-	/*sets the number of the resources to the value of the inputed resources*/
-	resources = inputResources;
+	/*sets the number of lives to the value of the inputed lives*/
+	lives = inputLives;
 }
 
 /**************************************************************************************************************/
 
-/*returns the number of resources*/
-int Player::getResources()
+/*returns the lives*/
+int Player::getLives()
 {
-	/*returns the number of resources*/
-	return resources;
+	/*returns the lives*/
+	return lives;
 }
 
 /**************************************************************************************************************/
 
-/*sets the amount of power*/
-void Player::setPower(int inputPower)
+/*sets the score*/
+void Player::setScore(int inputScore)
 {
-	/*sets the amount of power to the value of the inputed power*/
-	power = inputPower;
+	/*sets the score to the value of the input score*/
+	score = inputScore;
 }
 
 /**************************************************************************************************************/
 
-/*returns the amount of power*/
-int Player::getPower()
+/*returns the score*/
+int Player::getScore()
 {
-	/*returns the amount of power*/
-	return power;
-}
-
-/**************************************************************************************************************/
-
-/*sets the number of the minions*/
-void Player::setMinions(int inputMinions)
-{
-	/*sets the number of the minions to the value of the inputed minions*/
-	minionNumber = inputMinions;
-}
-
-/**************************************************************************************************************/
-
-/*returns the number of minions*/
-int Player::getMinions()
-{
-	/*returns the number of minions*/
-	return minionNumber;
-}
-
-/**************************************************************************************************************/
-
-/*sets the max number of minions*/
-void Player::setMaxMinions(int inputMax)
-{
-	/*sets the max number of minions to the value of the inputed max*/
-	maxMinions = inputMax;
-}
-
-/**************************************************************************************************************/
-
-/*returns the max number of minions*/
-int Player::getMaxMinions()
-{
-	/*returns the max number of minions*/
-	return maxMinions;
+	/*returns the score*/
+	return score;
 }

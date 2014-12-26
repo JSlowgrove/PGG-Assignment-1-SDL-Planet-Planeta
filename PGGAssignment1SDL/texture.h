@@ -37,19 +37,19 @@ public:
 
 	/**
 	Getter # Returns a pointer to the Texture
-	Returns a pointer to the Texture data.
+	@returns a pointer to the Texture data.
 	*/
 	SDL_Texture* getTexture();
 
 	/**
 	Getter # Returns textureWidth
-	Returns the value of textureWidth.
+	@returns the value of textureWidth.
 	*/
 	int getWidth();
 
 	/**
 	Getter # Returns textureHeight
-	Returns the value of textureHeight.
+	@returns the value of textureHeight.
 	*/
 	int getHeight();
 
