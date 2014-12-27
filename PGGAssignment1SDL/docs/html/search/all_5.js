@@ -3,6 +3,7 @@ var searchData=
   ['gamestate',['GameState',['../class_game_state.html',1,'GameState'],['../class_game_state.html#a0e812c09d724c03147ad6721b4d7bd73',1,'GameState::GameState()']]],
   ['getheight',['getHeight',['../class_texture.html#a80e143905655b173df5994300088ce35',1,'Texture']]],
   ['getlives',['getLives',['../class_player.html#af56ac33b9b2ebd9f97c8a6f485cf2d47',1,'Player']]],
+  ['getname',['getName',['../class_state_manager.html#afc67a8f9404b7c92237a654630eb7516',1,'StateManager']]],
   ['getscore',['getScore',['../class_player.html#a97e5447778ae6c384eedc532dcd8431d',1,'Player']]],
   ['getstatename',['GetStateName',['../class_state.html#ab7a5d1c1837b4b44b3563897777fcb26',1,'State']]],
   ['gettexture',['getTexture',['../class_texture.html#a77a1ae0043a4b318a60df3b02ef2d3f6',1,'Texture']]],
