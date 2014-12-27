@@ -4,7 +4,7 @@
 /**************************************************************************************************************/
 
 /*Constructs the menu state object*/
-GameState::GameState(StateManager * inStateManager, SDL_Renderer* renderer)	: State(inStateManager, renderer)
+GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer)	: State(inStateManager, inRenderer)
 {
 	/*set state name*/
 	name = "game";

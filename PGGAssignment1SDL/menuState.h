@@ -15,9 +15,16 @@ class MenuState : public State
 private:
 	/*background*/
 	Texture * background;
+	Texture * menuKeys;
 	/*mouseClickPosition*/
 	float x;
 	float y;
+	/*int variables for if menu keys are highlighted, can be 0 or 1*/
+	int playKey;
+	int credKey;
+	int exitKey;
+	/*which key is pressed, 0 for none*/
+	int pressed;
 public:
 	/**
 	Constructs a MenuState object
