@@ -1,46 +1,67 @@
-/*Made using information from the following link : http://blog.nuclex-games.com/tutorials/cxx/game-state-management/*/
-
 #pragma once
 #ifndef STATE_H
 #define STATE_H
 
+#include <SDL.h>
+#include <iostream>
+#include <string.h>
+
+/*forward declaration of StateManager for the pointer to the StateManager*/
+class StateManager;
+
 /**
-@brief
+@brief Creates a State object.
+Creates a State object to be inherited.
+Made using information from http://blog.nuclex-games.com/tutorials/cxx/game-state-management/ and Peter Allen
 */
 class State
 {
-private:
+protected:
+	/*A pointer to the state manager*/
+	StateManager * stateManager;
+	/*The render to display to*/
+	SDL_Renderer * renderer;
+	/*The name of the State*/
+	std::string name;
 public:
 	/**
 	Constructs a State object
 	Constructs a State object
+	@param StateManager * a pointer to the StateManager
+	@param SDL_Renderer * a pointer to the renderer in use.
 	*/
-	State();
+	State(StateManager *, SDL_Renderer *);
 
 	/**
-	De-constructs a State object
-	De-constructs the State object
+	A virtual destructor for the State object
+	A virtual destructor for the State object
 	*/
-	~State();
+	virtual ~State();
 
 	/**
-	Called after the State has been placed in the StateManager.
+	A virtual function to handle the SDL events
+	A virtual function to handle the SDL events for use with the State
+	@returns bool if false then quit State
 	*/
-	virtual void entered();
+	virtual bool HandleSDLEvents() = 0;
 
 	/**
-	Called right before the State is removed from the StateManager.
+	A virtual function to update the State
+	A virtual function to update the State to allow the State to run
+	@param float the delta time
 	*/
-	virtual void leaving();
+	virtual void Update(float deltaTime) = 0;
 
 	/**
-	Called right before another State is stacked on top of this one.
+	A virtual function to draw to the screen
+	A virtual function to draw to the screen using the renderer
 	*/
-	virtual void obscuring();
+	virtual void Draw() = 0;
 
 	/**
-	Called after the State has become the topmost State on the stack again.
+	Getter # State name
+	@returns the name of the State.
 	*/
-	virtual void revealed();
+	std::string GetStateName();
 };
 #endif

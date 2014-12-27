@@ -1,6 +1,15 @@
 \hypertarget{class_menu_state}{\section{Menu\+State Class Reference}
 \label{class_menu_state}\index{Menu\+State@{Menu\+State}}
 }
+
+
+Creates a \hyperlink{class_menu_state}{Menu\+State} object. Creates a \hyperlink{class_menu_state}{Menu\+State} object that inherits \hyperlink{class_state}{State}.  
+
+
+
+
+{\ttfamily \#include $<$menu\+State.\+h$>$}
+
 Inheritance diagram for Menu\+State\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,29 +19,39 @@ Inheritance diagram for Menu\+State\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_menu_state_aa8c0b7495397c6c46d137f6c5b3167d3}{Menu\+State} ()
+\hyperlink{class_menu_state_a0cfcaba0ed63cdbcaf2d517e6bfbd2a2}{Menu\+State} (\hyperlink{class_state_manager}{State\+Manager} $\ast$, S\+D\+L\+\_\+\+Renderer $\ast$)
 \item 
 \hyperlink{class_menu_state_a58aea91a44436c5bba575c5de755a5bc}{$\sim$\+Menu\+State} ()
 \item 
-void \hyperlink{class_menu_state_a46418226e09211231edd8aec9cb339c9}{entered} ()
+bool \hyperlink{class_menu_state_abab3b8017d47c6d6134cbdfb8e0c7580}{Handle\+S\+D\+L\+Events} ()
 \item 
-void \hyperlink{class_menu_state_a76cb5a0029b67ea326afd46f7f11a6df}{leaving} ()
+void \hyperlink{class_menu_state_a2ee9793bd50c42d8c7ce4cab62fbeba6}{Update} (float delta\+Time)
 \item 
-void \hyperlink{class_menu_state_a457fc15afc90cf97b8a7bba4ee946fc7}{obscuring} ()
-\item 
-void \hyperlink{class_menu_state_adf42864e4f79ee30d23d1b54847b8dfc}{revealed} ()
+void \hyperlink{class_menu_state_a0fc92c6a39ef316552f1308c188871c6}{Draw} ()
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_menu_state}{Menu\+State} object. Creates a \hyperlink{class_menu_state}{Menu\+State} object that inherits \hyperlink{class_state}{State}. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_menu_state_aa8c0b7495397c6c46d137f6c5b3167d3}{\index{Menu\+State@{Menu\+State}!Menu\+State@{Menu\+State}}
+\hypertarget{class_menu_state_a0cfcaba0ed63cdbcaf2d517e6bfbd2a2}{\index{Menu\+State@{Menu\+State}!Menu\+State@{Menu\+State}}
 \index{Menu\+State@{Menu\+State}!Menu\+State@{Menu\+State}}
 \subsubsection[{Menu\+State}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+State\+::\+Menu\+State (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf State\+Manager} $\ast$}]{in\+State\+Manager, }
+\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer}
 \end{DoxyParamCaption}
-)}}\label{class_menu_state_aa8c0b7495397c6c46d137f6c5b3167d3}
-Constructs a \hyperlink{class_menu_state}{Menu\+State} object Constructs a \hyperlink{class_menu_state}{Menu\+State} object \hypertarget{class_menu_state_a58aea91a44436c5bba575c5de755a5bc}{\index{Menu\+State@{Menu\+State}!````~Menu\+State@{$\sim$\+Menu\+State}}
+)}}\label{class_menu_state_a0cfcaba0ed63cdbcaf2d517e6bfbd2a2}
+Constructs a \hyperlink{class_menu_state}{Menu\+State} object Constructs a \hyperlink{class_menu_state}{Menu\+State} object 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_state_manager}{State\+Manager}} & $\ast$ a pointer to the \hyperlink{class_state_manager}{State\+Manager} \\
+\hline
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$ a pointer to the renderer in use. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_menu_state_a58aea91a44436c5bba575c5de755a5bc}{\index{Menu\+State@{Menu\+State}!````~Menu\+State@{$\sim$\+Menu\+State}}
 \index{````~Menu\+State@{$\sim$\+Menu\+State}!Menu\+State@{Menu\+State}}
 \subsubsection[{$\sim$\+Menu\+State}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+State\+::$\sim$\+Menu\+State (
 \begin{DoxyParamCaption}
@@ -42,52 +61,50 @@ Constructs a \hyperlink{class_menu_state}{Menu\+State} object Constructs a \hype
 De-\/constructs a \hyperlink{class_menu_state}{Menu\+State} object De-\/constructs the \hyperlink{class_menu_state}{Menu\+State} object 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_menu_state_a46418226e09211231edd8aec9cb339c9}{\index{Menu\+State@{Menu\+State}!entered@{entered}}
-\index{entered@{entered}!Menu\+State@{Menu\+State}}
-\subsubsection[{entered}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::entered (
+\hypertarget{class_menu_state_a0fc92c6a39ef316552f1308c188871c6}{\index{Menu\+State@{Menu\+State}!Draw@{Draw}}
+\index{Draw@{Draw}!Menu\+State@{Menu\+State}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::\+Draw (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_a46418226e09211231edd8aec9cb339c9}
-Called after the \hyperlink{class_menu_state}{Menu\+State} has been placed in the \hyperlink{class_state_manager}{State\+Manager}. 
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_a0fc92c6a39ef316552f1308c188871c6}
+A function to draw to the screen A function to draw to the screen using the renderer 
 
-Reimplemented from \hyperlink{class_state_aef81b6e3521b704e88bf1e3cf6a5eea2}{State}.
+Implements \hyperlink{class_state_a8b0cdb0e7450a9bb3580a33dfbe4d981}{State}.
 
-\hypertarget{class_menu_state_a76cb5a0029b67ea326afd46f7f11a6df}{\index{Menu\+State@{Menu\+State}!leaving@{leaving}}
-\index{leaving@{leaving}!Menu\+State@{Menu\+State}}
-\subsubsection[{leaving}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::leaving (
+\hypertarget{class_menu_state_abab3b8017d47c6d6134cbdfb8e0c7580}{\index{Menu\+State@{Menu\+State}!Handle\+S\+D\+L\+Events@{Handle\+S\+D\+L\+Events}}
+\index{Handle\+S\+D\+L\+Events@{Handle\+S\+D\+L\+Events}!Menu\+State@{Menu\+State}}
+\subsubsection[{Handle\+S\+D\+L\+Events}]{\setlength{\rightskip}{0pt plus 5cm}bool Menu\+State\+::\+Handle\+S\+D\+L\+Events (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_a76cb5a0029b67ea326afd46f7f11a6df}
-Called right before the \hyperlink{class_menu_state}{Menu\+State} is removed from the \hyperlink{class_state_manager}{State\+Manager}. 
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_abab3b8017d47c6d6134cbdfb8e0c7580}
+A function to handle the S\+D\+L events A function to handle the S\+D\+L events for use with the \hyperlink{class_menu_state}{Menu\+State} \begin{DoxyReturn}{Returns}
+bool if false then quit \hyperlink{class_menu_state}{Menu\+State} 
+\end{DoxyReturn}
 
-Reimplemented from \hyperlink{class_state_a7bd375faa48fc63c7c70ca3e3845a5cb}{State}.
 
-\hypertarget{class_menu_state_a457fc15afc90cf97b8a7bba4ee946fc7}{\index{Menu\+State@{Menu\+State}!obscuring@{obscuring}}
-\index{obscuring@{obscuring}!Menu\+State@{Menu\+State}}
-\subsubsection[{obscuring}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::obscuring (
+Implements \hyperlink{class_state_a648d9182cab9aeb914ef778f94e2b437}{State}.
+
+\hypertarget{class_menu_state_a2ee9793bd50c42d8c7ce4cab62fbeba6}{\index{Menu\+State@{Menu\+State}!Update@{Update}}
+\index{Update@{Update}!Menu\+State@{Menu\+State}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::\+Update (
 \begin{DoxyParamCaption}
-{}
+\item[{float}]{delta\+Time}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_a457fc15afc90cf97b8a7bba4ee946fc7}
-Called right before another \hyperlink{class_menu_state}{Menu\+State} is stacked on top of this one. 
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_a2ee9793bd50c42d8c7ce4cab62fbeba6}
+A function to update the \hyperlink{class_menu_state}{Menu\+State} A function to update the \hyperlink{class_menu_state}{Menu\+State} to allow the \hyperlink{class_menu_state}{Menu\+State} to run 
+\begin{DoxyParams}{Parameters}
+{\em float} & the delta time \\
+\hline
+\end{DoxyParams}
 
-Reimplemented from \hyperlink{class_state_a8daaaca43cbb3059a6d4afae42287adc}{State}.
 
-\hypertarget{class_menu_state_adf42864e4f79ee30d23d1b54847b8dfc}{\index{Menu\+State@{Menu\+State}!revealed@{revealed}}
-\index{revealed@{revealed}!Menu\+State@{Menu\+State}}
-\subsubsection[{revealed}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+State\+::revealed (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_state_adf42864e4f79ee30d23d1b54847b8dfc}
-Called after the \hyperlink{class_menu_state}{Menu\+State} has become the topmost \hyperlink{class_state}{State} on the stack again. 
-
-Reimplemented from \hyperlink{class_state_a35fed944f50b9ed0ed0f3ab69a931377}{State}.
+Implements \hyperlink{class_state_a770f40188fdfc64bc95a5166fef12e02}{State}.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-P\+G\+G\+Assignment1\+S\+D\+L/menu\+State.\+h\end{DoxyCompactItemize}
+P\+G\+G\+Assignment1\+S\+D\+L/menu\+State.\+h\item 
+P\+G\+G\+Assignment1\+S\+D\+L/menu\+State.\+cpp\end{DoxyCompactItemize}

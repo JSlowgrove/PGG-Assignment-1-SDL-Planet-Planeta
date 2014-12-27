@@ -1,6 +1,15 @@
 \hypertarget{class_state_manager}{\section{State\+Manager Class Reference}
 \label{class_state_manager}\index{State\+Manager@{State\+Manager}}
 }
+
+
+Creates a \hyperlink{class_state}{State} manager object. Creates a \hyperlink{class_state}{State} manager object to be inherited. Made using information from \href{http://blog.nuclex-games.com/tutorials/cxx/game-state-management/}{\tt http\+://blog.\+nuclex-\/games.\+com/tutorials/cxx/game-\/state-\/management/} and Peter Allen.  
+
+
+
+
+{\ttfamily \#include $<$state\+Manager.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -8,25 +17,22 @@
 \item 
 \hyperlink{class_state_manager_a05a43504a033f1befad5c5118249ec6f}{$\sim$\+State\+Manager} ()
 \item 
-\hypertarget{class_state_manager_af07740b7ca183d1e07cf4a585aa4d3ad}{void {\bfseries switch\+State} (\hyperlink{class_state}{State} $\ast$)}\label{class_state_manager_af07740b7ca183d1e07cf4a585aa4d3ad}
-
+void \hyperlink{class_state_manager_aa925e9a15bba3cc4b262a08c8024ea3b}{Add\+State} (\hyperlink{class_state}{State} $\ast$)
 \item 
-\hypertarget{class_state_manager_aaec45621ee8f9ad35c5349ad70b64939}{void {\bfseries push\+State} (\hyperlink{class_state}{State} $\ast$)}\label{class_state_manager_aaec45621ee8f9ad35c5349ad70b64939}
-
+void \hyperlink{class_state_manager_a8c14290973150a37afdf365d00ffcbba}{Change\+State} (\hyperlink{class_state}{State} $\ast$)
 \item 
-\hypertarget{class_state_manager_a3c27b312aacfb5033d5a343027b506ae}{\hyperlink{class_state}{State} {\bfseries pop\+State} ()}\label{class_state_manager_a3c27b312aacfb5033d5a343027b506ae}
-
+void \hyperlink{class_state_manager_ac782f24f5c02c27169bc2b3bf7aa3d41}{Remove\+Last\+State} ()
 \item 
-\hypertarget{class_state_manager_ac2b88c90affda4b64631bca549c89815}{\hyperlink{class_state}{State} {\bfseries peek} ()}\label{class_state_manager_ac2b88c90affda4b64631bca549c89815}
-
+bool \hyperlink{class_state_manager_a10042662c52179ea1ad85051562ca4bf}{Handle\+S\+D\+L\+Events} ()
 \item 
-\hypertarget{class_state_manager_a22666f2f72320ea3be46e9253b7530e2}{void {\bfseries draw} ()}\label{class_state_manager_a22666f2f72320ea3be46e9253b7530e2}
-
+void \hyperlink{class_state_manager_a0b430dbaff295c0f96d365da8113fd31}{Update} (float delta\+Time)
 \item 
-\hypertarget{class_state_manager_a81d6c48d941963ab5be7a1e642c26d98}{void {\bfseries update} ()}\label{class_state_manager_a81d6c48d941963ab5be7a1e642c26d98}
-
+void \hyperlink{class_state_manager_a2827f9e10336c53c7957ed5c09cb2a49}{Draw} ()
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_state}{State} manager object. Creates a \hyperlink{class_state}{State} manager object to be inherited. Made using information from \href{http://blog.nuclex-games.com/tutorials/cxx/game-state-management/}{\tt http\+://blog.\+nuclex-\/games.\+com/tutorials/cxx/game-\/state-\/management/} and Peter Allen. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_state_manager_a3e2be96d935eb56813b096a885d58587}{\index{State\+Manager@{State\+Manager}!State\+Manager@{State\+Manager}}
@@ -45,6 +51,70 @@ Constructs a \hyperlink{class_state_manager}{State\+Manager} object Constructs a
 )}}\label{class_state_manager_a05a43504a033f1befad5c5118249ec6f}
 De-\/constructs a \hyperlink{class_state_manager}{State\+Manager} object De-\/constructs the \hyperlink{class_state_manager}{State\+Manager} object 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\subsection{Member Function Documentation}
+\hypertarget{class_state_manager_aa925e9a15bba3cc4b262a08c8024ea3b}{\index{State\+Manager@{State\+Manager}!Add\+State@{Add\+State}}
+\index{Add\+State@{Add\+State}!State\+Manager@{State\+Manager}}
+\subsubsection[{Add\+State}]{\setlength{\rightskip}{0pt plus 5cm}void State\+Manager\+::\+Add\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State} $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}\label{class_state_manager_aa925e9a15bba3cc4b262a08c8024ea3b}
+Adds a new state Adds a new state to the current stack of states 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_state}{State}} & $\ast$ a pointer to the \hyperlink{class_state}{State} in use \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_state_manager_a8c14290973150a37afdf365d00ffcbba}{\index{State\+Manager@{State\+Manager}!Change\+State@{Change\+State}}
+\index{Change\+State@{Change\+State}!State\+Manager@{State\+Manager}}
+\subsubsection[{Change\+State}]{\setlength{\rightskip}{0pt plus 5cm}void State\+Manager\+::\+Change\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State} $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}\label{class_state_manager_a8c14290973150a37afdf365d00ffcbba}
+Changes to a new \hyperlink{class_state}{State} Changes the current \hyperlink{class_state}{State} to a new \hyperlink{class_state}{State} 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_state}{State}} & $\ast$ a pointer to the \hyperlink{class_state}{State} in use \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_state_manager_a2827f9e10336c53c7957ed5c09cb2a49}{\index{State\+Manager@{State\+Manager}!Draw@{Draw}}
+\index{Draw@{Draw}!State\+Manager@{State\+Manager}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void State\+Manager\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_state_manager_a2827f9e10336c53c7957ed5c09cb2a49}
+Draws the current \hyperlink{class_state}{State} The draw function that will allow the equivalent draw function to run in the current \hyperlink{class_state}{State} \hypertarget{class_state_manager_a10042662c52179ea1ad85051562ca4bf}{\index{State\+Manager@{State\+Manager}!Handle\+S\+D\+L\+Events@{Handle\+S\+D\+L\+Events}}
+\index{Handle\+S\+D\+L\+Events@{Handle\+S\+D\+L\+Events}!State\+Manager@{State\+Manager}}
+\subsubsection[{Handle\+S\+D\+L\+Events}]{\setlength{\rightskip}{0pt plus 5cm}bool State\+Manager\+::\+Handle\+S\+D\+L\+Events (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_state_manager_a10042662c52179ea1ad85051562ca4bf}
+Handles the S\+D\+L events The S\+D\+L event handler function that will allow the equivalent S\+D\+L event handler function to run in the current \hyperlink{class_state}{State} \begin{DoxyReturn}{Returns}
+bool if false then quit the application 
+\end{DoxyReturn}
+\hypertarget{class_state_manager_ac782f24f5c02c27169bc2b3bf7aa3d41}{\index{State\+Manager@{State\+Manager}!Remove\+Last\+State@{Remove\+Last\+State}}
+\index{Remove\+Last\+State@{Remove\+Last\+State}!State\+Manager@{State\+Manager}}
+\subsubsection[{Remove\+Last\+State}]{\setlength{\rightskip}{0pt plus 5cm}void State\+Manager\+::\+Remove\+Last\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_state_manager_ac782f24f5c02c27169bc2b3bf7aa3d41}
+Removes the last \hyperlink{class_state}{State} from the vector Removes the last \hyperlink{class_state}{State} from the vector \hypertarget{class_state_manager_a0b430dbaff295c0f96d365da8113fd31}{\index{State\+Manager@{State\+Manager}!Update@{Update}}
+\index{Update@{Update}!State\+Manager@{State\+Manager}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void State\+Manager\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+Time}
+\end{DoxyParamCaption}
+)}}\label{class_state_manager_a0b430dbaff295c0f96d365da8113fd31}
+Updates the current \hyperlink{class_state}{State} The update function that will allow the equivalent update function to run in the current \hyperlink{class_state}{State} 
+\begin{DoxyParams}{Parameters}
+{\em float} & the delta time for use within the update function \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-P\+G\+G\+Assignment1\+S\+D\+L/state\+Manager.\+h\end{DoxyCompactItemize}
+P\+G\+G\+Assignment1\+S\+D\+L/state\+Manager.\+h\item 
+P\+G\+G\+Assignment1\+S\+D\+L/state\+Manager.\+cpp\end{DoxyCompactItemize}

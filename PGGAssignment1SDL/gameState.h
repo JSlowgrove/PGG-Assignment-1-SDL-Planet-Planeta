@@ -1,23 +1,35 @@
-/*Made using information from the following link : http://blog.nuclex-games.com/tutorials/cxx/game-state-management/*/
-
 #pragma once
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 
+#include <time.h>
 #include "state.h"
+#include "stateManager.h"
+#include "texture.h"
+#include "background.h"
+#include "player.h"
 
 /**
-@brief
+@brief Creates a GameState object.
+Creates a GameState object that inherits State
 */
-class GameState : State
+class GameState : public State
 {
 private:
+	/*spritesheets*/
+	Texture * backgrounds;
+	Texture * spritesheet;
+	/*entities*/
+	Background * background;
+	Player * player;
 public:
 	/**
 	Constructs a GameState object
 	Constructs a GameState object
+	@param StateManager * a pointer to the StateManager
+	@param SDL_Renderer * a pointer to the renderer in use.
 	*/
-	GameState();
+	GameState(StateManager *, SDL_Renderer *);
 
 	/**
 	De-constructs a GameState object
@@ -26,23 +38,23 @@ public:
 	~GameState();
 
 	/**
-	Called after the GameState has been placed in the StateManager.
+	A function to handle the SDL events
+	A function to handle the SDL events for use with the GameState
+	@returns bool if false then quit GameState
 	*/
-	void entered();
+	bool HandleSDLEvents();
 
 	/**
-	Called right before the GameState is removed from the StateManager.
+	A function to update the GameState
+	A function to update the GameState to allow the GameState to run
+	@param float the delta time
 	*/
-	void leaving();
+	void Update(float deltaTime);
 
 	/**
-	Called right before another GameState is stacked on top of this one.
+	A function to draw to the screen
+	A function to draw to the screen using the renderer
 	*/
-	void obscuring();
-
-	/**
-	Called after the GameState has become the topmost State on the stack again.
-	*/
-	void revealed();
+	void Draw();
 };
 #endif

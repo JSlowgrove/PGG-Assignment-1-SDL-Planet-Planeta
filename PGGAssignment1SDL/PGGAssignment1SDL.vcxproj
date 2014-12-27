@@ -49,7 +49,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
@@ -84,9 +84,13 @@
     <ClCompile Include="background.cpp" />
     <ClCompile Include="building.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="gameState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="creature.cpp" />
+    <ClCompile Include="menuState.cpp" />
     <ClCompile Include="player.cpp" />
+    <ClCompile Include="state.cpp" />
+    <ClCompile Include="stateManager.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="enemy.cpp" />
   </ItemGroup>

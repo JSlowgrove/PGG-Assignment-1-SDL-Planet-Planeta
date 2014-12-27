@@ -83,57 +83,97 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_state-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">State Class Reference</div>  </div>
+<div class="title">State Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Creates a <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> object. Creates a <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> object to be inherited. Made using information from <a href="http://blog.nuclex-games.com/tutorials/cxx/game-state-management/">http://blog.nuclex-games.com/tutorials/cxx/game-state-management/</a> and Peter Allen.  
+ <a href="class_state.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="state_8h_source.html">state.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for State:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_state.png" usemap="#State_map" alt=""/>
   <map id="State_map" name="State_map">
-<area href="class_game_state.html" alt="GameState" shape="rect" coords="0,56,72,80"/>
-<area href="class_menu_state.html" alt="MenuState" shape="rect" coords="82,56,154,80"/>
+<area href="class_game_state.html" title="Creates a GameState object. Creates a GameState object that inherits State. " alt="GameState" shape="rect" coords="0,56,72,80"/>
+<area href="class_menu_state.html" title="Creates a MenuState object. Creates a MenuState object that inherits State. " alt="MenuState" shape="rect" coords="82,56,154,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab91bb1dd5aa6260ab2a456581daf9ec2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#ab91bb1dd5aa6260ab2a456581daf9ec2">State</a> ()</td></tr>
-<tr class="separator:ab91bb1dd5aa6260ab2a456581daf9ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab438d92b90dc18d194dbd9c9c8bab3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a> ()</td></tr>
+<tr class="memitem:abd80317215e3d5a83becc409050dd22f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#abd80317215e3d5a83becc409050dd22f">State</a> (<a class="el" href="class_state_manager.html">StateManager</a> *, SDL_Renderer *)</td></tr>
+<tr class="separator:abd80317215e3d5a83becc409050dd22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab438d92b90dc18d194dbd9c9c8bab3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a> ()</td></tr>
 <tr class="separator:afab438d92b90dc18d194dbd9c9c8bab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef81b6e3521b704e88bf1e3cf6a5eea2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#aef81b6e3521b704e88bf1e3cf6a5eea2">entered</a> ()</td></tr>
-<tr class="separator:aef81b6e3521b704e88bf1e3cf6a5eea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bd375faa48fc63c7c70ca3e3845a5cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a7bd375faa48fc63c7c70ca3e3845a5cb">leaving</a> ()</td></tr>
-<tr class="separator:a7bd375faa48fc63c7c70ca3e3845a5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8daaaca43cbb3059a6d4afae42287adc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a8daaaca43cbb3059a6d4afae42287adc">obscuring</a> ()</td></tr>
-<tr class="separator:a8daaaca43cbb3059a6d4afae42287adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35fed944f50b9ed0ed0f3ab69a931377"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a35fed944f50b9ed0ed0f3ab69a931377">revealed</a> ()</td></tr>
-<tr class="separator:a35fed944f50b9ed0ed0f3ab69a931377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648d9182cab9aeb914ef778f94e2b437"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a648d9182cab9aeb914ef778f94e2b437">HandleSDLEvents</a> ()=0</td></tr>
+<tr class="separator:a648d9182cab9aeb914ef778f94e2b437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770f40188fdfc64bc95a5166fef12e02"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a770f40188fdfc64bc95a5166fef12e02">Update</a> (float deltaTime)=0</td></tr>
+<tr class="separator:a770f40188fdfc64bc95a5166fef12e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0cdb0e7450a9bb3580a33dfbe4d981"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a8b0cdb0e7450a9bb3580a33dfbe4d981">Draw</a> ()=0</td></tr>
+<tr class="separator:a8b0cdb0e7450a9bb3580a33dfbe4d981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a5d1c1837b4b44b3563897777fcb26"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#ab7a5d1c1837b4b44b3563897777fcb26">GetStateName</a> ()</td></tr>
+<tr class="separator:ab7a5d1c1837b4b44b3563897777fcb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a78388f59b0a570faa4b7ea640fea668e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78388f59b0a570faa4b7ea640fea668e"></a>
+<a class="el" href="class_state_manager.html">StateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>stateManager</b></td></tr>
+<tr class="separator:a78388f59b0a570faa4b7ea640fea668e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79f979055823ec66fb7919e90ddd5c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad79f979055823ec66fb7919e90ddd5c9"></a>
+SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>renderer</b></td></tr>
+<tr class="separator:ad79f979055823ec66fb7919e90ddd5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57f19fd0a86f129840d8739253d2c72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad57f19fd0a86f129840d8739253d2c72"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="separator:ad57f19fd0a86f129840d8739253d2c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab91bb1dd5aa6260ab2a456581daf9ec2"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Creates a <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> object. Creates a <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> object to be inherited. Made using information from <a href="http://blog.nuclex-games.com/tutorials/cxx/game-state-management/">http://blog.nuclex-games.com/tutorials/cxx/game-state-management/</a> and Peter Allen. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="abd80317215e3d5a83becc409050dd22f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">State::State </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_state_manager.html">StateManager</a> *&#160;</td>
+          <td class="paramname"><em>inStateManager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>inRenderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs a <a class="el" href="class_state.html">State</a> object Constructs a <a class="el" href="class_state.html">State</a> object </p>
+<p>Constructs a <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> object Constructs a <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> object </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_state_manager.html" title="Creates a State manager object. Creates a State manager object to be inherited. Made using informatio...">StateManager</a></td><td>* a pointer to the <a class="el" href="class_state_manager.html" title="Creates a State manager object. Creates a State manager object to be inherited. Made using informatio...">StateManager</a> </td></tr>
+    <tr><td class="paramname">SDL_Renderer</td><td>* a pointer to the renderer in use. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <a class="anchor" id="afab438d92b90dc18d194dbd9c9c8bab3"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">State::~State </td>
@@ -142,13 +182,18 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>De-constructs a <a class="el" href="class_state.html">State</a> object De-constructs the <a class="el" href="class_state.html">State</a> object </p>
+<p>A virtual destructor for the <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> object A virtual destructor for the <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> object </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aef81b6e3521b704e88bf1e3cf6a5eea2"></a>
+<a class="anchor" id="a8b0cdb0e7450a9bb3580a33dfbe4d981"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -156,7 +201,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void State::entered </td>
+          <td class="memname">virtual void State::Draw </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -164,17 +209,33 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Called after the <a class="el" href="class_state.html">State</a> has been placed in the <a class="el" href="class_state_manager.html">StateManager</a>. </p>
+<p>A virtual function to draw to the screen A virtual function to draw to the screen using the renderer </p>
 
-<p>Reimplemented in <a class="el" href="class_game_state.html#a74ff91dece6aea2f96ad9e4980b1d08d">GameState</a>, and <a class="el" href="class_menu_state.html#a46418226e09211231edd8aec9cb339c9">MenuState</a>.</p>
+<p>Implemented in <a class="el" href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64">GameState</a>, and <a class="el" href="class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6">MenuState</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7bd375faa48fc63c7c70ca3e3845a5cb"></a>
+<a class="anchor" id="ab7a5d1c1837b4b44b3563897777fcb26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string State::GetStateName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> name </p><dl class="section return"><dt>Returns</dt><dd>the name of the <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a648d9182cab9aeb914ef778f94e2b437"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -182,7 +243,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void State::leaving </td>
+          <td class="memname">virtual bool State::HandleSDLEvents </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -190,17 +251,17 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Called right before the <a class="el" href="class_state.html">State</a> is removed from the <a class="el" href="class_state_manager.html">StateManager</a>. </p>
+<p>A virtual function to handle the SDL events A virtual function to handle the SDL events for use with the <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> </p><dl class="section return"><dt>Returns</dt><dd>bool if false then quit <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> </dd></dl>
 
-<p>Reimplemented in <a class="el" href="class_game_state.html#a604127103f564a3ab1ba6b75ecf5e19a">GameState</a>, and <a class="el" href="class_menu_state.html#a76cb5a0029b67ea326afd46f7f11a6df">MenuState</a>.</p>
+<p>Implemented in <a class="el" href="class_game_state.html#a5e2467775e9a941d482e0489295c363d">GameState</a>, and <a class="el" href="class_menu_state.html#abab3b8017d47c6d6134cbdfb8e0c7580">MenuState</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8daaaca43cbb3059a6d4afae42287adc"></a>
+<a class="anchor" id="a770f40188fdfc64bc95a5166fef12e02"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -208,57 +269,38 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void State::obscuring </td>
+          <td class="memname">virtual void State::Update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>deltaTime</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Called right before another <a class="el" href="class_state.html">State</a> is stacked on top of this one. </p>
+<p>A virtual function to update the <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> A virtual function to update the <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> to allow the <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> to run </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>the delta time </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Reimplemented in <a class="el" href="class_game_state.html#aa64650e6a0d7db95d014135929351e7c">GameState</a>, and <a class="el" href="class_menu_state.html#a457fc15afc90cf97b8a7bba4ee946fc7">MenuState</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a35fed944f50b9ed0ed0f3ab69a931377"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void State::revealed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Called after the <a class="el" href="class_state.html">State</a> has become the topmost <a class="el" href="class_state.html">State</a> on the stack again. </p>
-
-<p>Reimplemented in <a class="el" href="class_game_state.html#a5d616fb3ecae1e94da4db55eae806cfb">GameState</a>, and <a class="el" href="class_menu_state.html#adf42864e4f79ee30d23d1b54847b8dfc">MenuState</a>.</p>
+<p>Implemented in <a class="el" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4">GameState</a>, and <a class="el" href="class_menu_state.html#a2ee9793bd50c42d8c7ce4cab62fbeba6">MenuState</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>PGGAssignment1SDL/<a class="el" href="state_8h_source.html">state.h</a></li>
+<li>PGGAssignment1SDL/state.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 26 2014 22:56:50 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 27 2014 18:46:01 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

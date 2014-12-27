@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['enemy',['Enemy',['../class_enemy.html',1,'Enemy'],['../class_enemy.html#a94f30d348b6d2840fd71675472ba38dd',1,'Enemy::Enemy()']]],
-  ['entered',['entered',['../class_game_state.html#a74ff91dece6aea2f96ad9e4980b1d08d',1,'GameState::entered()'],['../class_menu_state.html#a46418226e09211231edd8aec9cb339c9',1,'MenuState::entered()'],['../class_state.html#aef81b6e3521b704e88bf1e3cf6a5eea2',1,'State::entered()']]],
-  ['entity',['Entity',['../class_entity.html',1,'Entity'],['../class_entity.html#a980f368aa07ce358583982821533a54a',1,'Entity::Entity()']]]
+  ['display',['display',['../class_entity.html#a2224871711ac97a54af338ddefc25ac9',1,'Entity']]],
+  ['draw',['Draw',['../class_game_state.html#ab9330b36c7c74d733c2739c025285c64',1,'GameState::Draw()'],['../class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6',1,'MenuState::Draw()'],['../class_state.html#a8b0cdb0e7450a9bb3580a33dfbe4d981',1,'State::Draw()'],['../class_state_manager.html#a2827f9e10336c53c7957ed5c09cb2a49',1,'StateManager::Draw()']]]
 ];

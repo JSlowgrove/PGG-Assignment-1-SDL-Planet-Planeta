@@ -88,18 +88,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_game_state.html">GameState</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_game_state.html#a74ff91dece6aea2f96ad9e4980b1d08d">entered</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_game_state.html#a4fa0a2bf50315c4a35a3890a0adcee5c">GameState</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_game_state.html#a604127103f564a3ab1ba6b75ecf5e19a">leaving</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_game_state.html#aa64650e6a0d7db95d014135929351e7c">obscuring</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_game_state.html#a5d616fb3ecae1e94da4db55eae806cfb">revealed</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_state.html#ab91bb1dd5aa6260ab2a456581daf9ec2">State</a>()</td><td class="entry"><a class="el" href="class_state.html">State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_game_state.html#ae623df5042cd0c17daa3394fdcb397b3">~GameState</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a>()</td><td class="entry"><a class="el" href="class_state.html">State</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64">Draw</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_game_state.html#a0e812c09d724c03147ad6721b4d7bd73">GameState</a>(StateManager *, SDL_Renderer *)</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state.html#ab7a5d1c1837b4b44b3563897777fcb26">GetStateName</a>()</td><td class="entry"><a class="el" href="class_state.html">State</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_game_state.html#a5e2467775e9a941d482e0489295c363d">HandleSDLEvents</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>name</b> (defined in <a class="el" href="class_state.html">State</a>)</td><td class="entry"><a class="el" href="class_state.html">State</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>renderer</b> (defined in <a class="el" href="class_state.html">State</a>)</td><td class="entry"><a class="el" href="class_state.html">State</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state.html#abd80317215e3d5a83becc409050dd22f">State</a>(StateManager *, SDL_Renderer *)</td><td class="entry"><a class="el" href="class_state.html">State</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>stateManager</b> (defined in <a class="el" href="class_state.html">State</a>)</td><td class="entry"><a class="el" href="class_state.html">State</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4">Update</a>(float deltaTime)</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_game_state.html#ae623df5042cd0c17daa3394fdcb397b3">~GameState</a>()</td><td class="entry"><a class="el" href="class_game_state.html">GameState</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a>()</td><td class="entry"><a class="el" href="class_state.html">State</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 26 2014 22:56:50 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 27 2014 18:46:01 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['creature',['Creature',['../class_creature.html',1,'Creature'],['../class_creature.html#a597cc3b08ee17de46c3e7ec3cf0d9b58',1,'Creature::Creature()']]]
+  ['background',['Background',['../class_background.html',1,'Background'],['../class_background.html#a31d67c19cf5dd14c0f07b91e89c8b1f8',1,'Background::Background()']]],
+  ['building',['Building',['../class_building.html',1,'Building'],['../class_building.html#a87b35657776dd85a29f7aed5f631cf79',1,'Building::Building(Texture *, int, int)'],['../class_building.html#a87b35657776dd85a29f7aed5f631cf79',1,'Building::Building(Texture *, int, int)']]]
 ];

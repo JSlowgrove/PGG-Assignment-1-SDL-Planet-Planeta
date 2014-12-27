@@ -1,11 +1,8 @@
 #include <SDL.h>
 #include <iostream>
-#include <time.h>
 #include "texture.h"
-#include "background.h"
-#include "player.h"
-
-void update(unsigned int &, SDL_Renderer *, Background *, Player *, float, float);
+#include "stateManager.h"
+#include "menuState.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,9 +14,6 @@ int main(int argc, char *argv[])
 		return -1;
 	}
 
-	/*initialize random seed: */
-	srand(time(NULL));
-
 	/*Time Check*/
 	unsigned int lastTime = SDL_GetTicks();
 
@@ -28,101 +22,56 @@ int main(int argc, char *argv[])
 	int winPosY = 100;
 	int winWidth = 640;
 	int winHeight = 480;
-	SDL_Window *window = SDL_CreateWindow("SDL Project",  /*The first parameter is the window title*/
+	SDL_Window *window = SDL_CreateWindow("Planet Planeta",  /*The first parameter is the window title*/
 		winPosX, winPosY,
 		winWidth, winHeight,
 		SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 
 	/*Create Renderer from the window*/
 	SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);
-
-	/*initialise spritesheets*/
-	Texture * backgrounds = new Texture("img/backgrounds231x63.bmp", renderer, false);
-	Texture * spritesheet = new Texture("img/spritesheet21x21.bmp", renderer, true);
-
-	/*initialise entities*/
-	Background * background = new Background(backgrounds, (rand() % 3));
-	Player * player = new Player(spritesheet, 100.0f, 100.0f, 19, 0);
-
-	/*mouseClickPosition*/
-	float x = 100.0f;
-	float y = 100.0f;
-
-	/*set Background velocity TMP*/
-	background->setVelocity(-100.0f);
+	
+	/*setup state manager*/
+	StateManager * stateManager = new StateManager();
+	stateManager->AddState(new MenuState(stateManager, renderer));
 
 	/*Start Game Loop*/
 	bool go = true;
 	while (go)
 	{
-		/*Check for user input*/
-		SDL_Event incomingEvent;
-		while (SDL_PollEvent(&incomingEvent))
+		
+		/*Time Check*/
+		unsigned int current = SDL_GetTicks();
+		float deltaTime = (float)(current - lastTime) / 1000.0f;
+		lastTime = current;
+
+		//handle the current states SDL Events (if state SDL is exit then go is set to false)
+		go = stateManager->HandleSDLEvents();
+
+		//update the current state
+		stateManager->Update(deltaTime);
+
+		/*set draw colour to white*/
+		SDL_SetRenderDrawColor(renderer, 0x00, 0x64, 0x00, 0x00);
+
+		/*Clear the entire screen to the set colour*/
+		SDL_RenderClear(renderer);
+
+		//draw the current state
+		stateManager->Draw();
+
+		/*display renderer*/
+		SDL_RenderPresent(renderer);
+
+		/*Time Limiter*/
+		if (deltaTime < (1.0f / 50.0f))
 		{
-
-			switch (incomingEvent.type)
-			{
-			case SDL_QUIT: /*If player closes the window end the game loop*/
-
-				go = false;
-				break;
-
-			case SDL_MOUSEBUTTONDOWN:
-				if (incomingEvent.button.button == SDL_BUTTON_LEFT)
-				{
-					x = ((float) incomingEvent.motion.x) - 22;
-					y = ((float) incomingEvent.motion.y) - 27;
-				}
-				break;
-
-			case SDL_MOUSEBUTTONUP:
-				if (incomingEvent.button.button == SDL_BUTTON_LEFT)
-				{
-				}
-				break;
-			}
+			SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTime)*1000.0f));
 		}
-
-		update(lastTime, renderer, background, player, x, y); /*Update the Window (pbRef, pbPointer)*/
 	}
-	/*uninitalise data*/
+	/*destroy data*/
+	delete stateManager;
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 
 	return 0;
-}
-
-
-
-/*Update Window (pbRef, pbPointer)*/
-void update(unsigned int &lastTime, SDL_Renderer * renderer, Background * background, Player * player, float x, float y)
-{
-	/*Time Check*/
-	unsigned int current = SDL_GetTicks();
-	float deltaTime = (float)(current - lastTime) / 1000.0f;
-	lastTime = current;
-
-	/*set draw colour to white*/
-	SDL_SetRenderDrawColor(renderer, 0x00, 0x64, 0x00, 0x00);
-
-	/*Clear the entire screen to the set colour*/
-	SDL_RenderClear(renderer);
-
-	/*Update Background*/
-	background->updateX(deltaTime);
-
-	/*display the background*/
-	background->display(renderer);
-
-	/*display the player*/
-	player->display(renderer);
-
-	/*display renderer*/
-	SDL_RenderPresent(renderer);
-
-	/*Time Limiter*/
-	if (deltaTime < (1.0f / 50.0f))
-	{
-		SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTime)*1000.0f));
-	}
 }

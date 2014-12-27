@@ -1,23 +1,31 @@
-/*Made using information from the following link : http://blog.nuclex-games.com/tutorials/cxx/game-state-management/*/
-
 #pragma once
 #ifndef MENUSTATE_H
 #define MENUSTATE_H
 
 #include "state.h"
+#include "stateManager.h"
+#include "texture.h"
 
 /**
-@brief
+@brief Creates a MenuState object.
+Creates a MenuState object that inherits State
 */
-class MenuState : State
+class MenuState : public State
 {
 private:
+	/*background*/
+	Texture * background;
+	/*mouseClickPosition*/
+	float x;
+	float y;
 public:
 	/**
 	Constructs a MenuState object
 	Constructs a MenuState object
+	@param StateManager * a pointer to the StateManager
+	@param SDL_Renderer * a pointer to the renderer in use.
 	*/
-	MenuState();
+	MenuState(StateManager *, SDL_Renderer *);
 
 	/**
 	De-constructs a MenuState object
@@ -26,23 +34,23 @@ public:
 	~MenuState();
 
 	/**
-	Called after the MenuState has been placed in the StateManager.
+	A function to handle the SDL events
+	A function to handle the SDL events for use with the MenuState
+	@returns bool if false then quit MenuState
 	*/
-	void entered();
+	bool HandleSDLEvents();
 
 	/**
-	Called right before the MenuState is removed from the StateManager.
+	A function to update the MenuState
+	A function to update the MenuState to allow the MenuState to run
+	@param float the delta time
 	*/
-	void leaving();
+	void Update(float deltaTime);
 
 	/**
-	Called right before another MenuState is stacked on top of this one.
+	A function to draw to the screen
+	A function to draw to the screen using the renderer
 	*/
-	void obscuring();
-
-	/**
-	Called after the MenuState has become the topmost State on the stack again.
-	*/
-	void revealed();
+	void Draw();
 };
 #endif
