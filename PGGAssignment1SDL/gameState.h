@@ -8,6 +8,7 @@
 #include "texture.h"
 #include "background.h"
 #include "player.h"
+#include "gem.h"
 
 /**
 @brief Creates a GameState object.
@@ -22,6 +23,7 @@ private:
 	/*entities*/
 	Background * background;
 	Player * player;
+	std::vector<Gem *> gems;
 
 	/*input commands*/
 	bool cmdJump, cmdLeft, cmdRight;

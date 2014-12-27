@@ -4,7 +4,7 @@
 /**************************************************************************************************************/
 
 /*Constructs the menu state object*/
-GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer)	: State(inStateManager, inRenderer)
+GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : State(inStateManager, inRenderer)
 {
 	/*set state name*/
 	name = "game";
@@ -14,6 +14,12 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer)	: 
 	/*initialise entities*/
 	background = new Background(backgrounds, (rand() % 3));
 	player = new Player(spritesheet, 100.0f, 100.0f, 19, 0);
+	/*initialise gems*/
+	gems.resize(4);
+	gems[0] = new Gem(spritesheet, 300.0f, 100.0f, 16, 12, 0);
+	gems[1] = new Gem(spritesheet, 400.0f, 100.0f, 16, 12, 1);
+	gems[2] = new Gem(spritesheet, 500.0f, 100.0f, 16, 12, 2);
+	gems[3] = new Gem(spritesheet, 600.0f, 100.0f, 16, 12, 3);
 	/*initialize random seed: */
 	srand((unsigned int)time(NULL));
 
@@ -40,6 +46,10 @@ GameState::~GameState()
 	delete background;
 	delete backgrounds;
 	delete spritesheet;
+	for (int i = 0; i < gems.size(); i++)
+	{
+		delete gems.at(i);
+	}
 }
 
 /**************************************************************************************************************/
@@ -199,4 +209,9 @@ void GameState::Draw()
 	background->display(renderer);
 	/*display the player*/
 	player->display(renderer);
+	/*display the gems*/
+	for (int i = 0; i < gems.size(); i++)
+	{
+		gems[i]->display(renderer);
+	}
 }

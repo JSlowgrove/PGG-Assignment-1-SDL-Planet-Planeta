@@ -20,8 +20,8 @@ public:
 	@param Texture* a pointer to a Texture loaded into memory.
 	@param float initial x position.
 	@param float initial y position.
-	@param float the sprite sheet x number.
-	@param float the sprite sheet y number.
+	@param int the sprite sheet x number.
+	@param int the sprite sheet y number.
 	*/
 	Player(Texture *, float, float, int, int);
 

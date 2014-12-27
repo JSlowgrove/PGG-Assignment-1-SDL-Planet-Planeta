@@ -85,6 +85,7 @@
     <ClCompile Include="building.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="gameState.cpp" />
+    <ClCompile Include="gem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="creature.cpp" />
     <ClCompile Include="menuState.cpp" />
@@ -100,6 +101,7 @@
     <ClInclude Include="entity.h" />
     <ClInclude Include="creature.h" />
     <ClInclude Include="gameState.h" />
+    <ClInclude Include="gem.h" />
     <ClInclude Include="menuState.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="state.h" />
