@@ -67,5 +67,12 @@ public:
 	The draw function that will allow the equivalent draw function to run in the current State
 	*/
 	void Draw();
+
+	/**
+	getter # the name of the current State
+	gets the name of the current State
+	@returns std::string the name of the state
+	*/
+	std::string getName();
 };
 #endif

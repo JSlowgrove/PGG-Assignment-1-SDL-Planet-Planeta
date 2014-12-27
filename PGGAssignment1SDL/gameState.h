@@ -22,6 +22,15 @@ private:
 	/*entities*/
 	Background * background;
 	Player * player;
+
+	/*input commands*/
+	bool cmdJump, cmdLeft, cmdRight;
+
+	/*tmp jump vars*/
+	bool gravity;
+	bool landed;
+	bool jump;
+	float gravityF;
 public:
 	/**
 	Constructs a GameState object

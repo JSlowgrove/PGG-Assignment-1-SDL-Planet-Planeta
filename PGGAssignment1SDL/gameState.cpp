@@ -17,8 +17,17 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer)	: 
 	/*initialize random seed: */
 	srand((unsigned int)time(NULL));
 
+	/*initialise input commands*/
+	cmdJump = cmdLeft = cmdRight = false;
+
 	/*set Background velocity TMP*/
 	background->setVelocity(-100.0f);
+
+	/*initialise tmp jump vars*/
+	gravity = true;
+	landed = false;
+	jump = false;
+	gravityF = 9.81f;
 }
 
 /**************************************************************************************************************/
@@ -58,15 +67,30 @@ bool GameState::HandleSDLEvents()
 				/*change the state to the menu state*/
 				stateManager->ChangeState(new MenuState(stateManager, renderer));
 				break;
+			/*If space is pressed*/
+			case SDLK_SPACE:
+				/*jump is true*/
+				cmdJump = true;
+				break;
+			/*If left is pressed*/
+			case SDLK_LEFT:
+				/*set left true*/
+				cmdLeft = true;
+				break;
+			/*If right is pressed*/
+			case SDLK_RIGHT:
+				/*set right true*/
+				cmdRight = true;
+				break;
 			/*If A is pressed*/
 			case SDLK_a:
-				/*change the players x velocity so it goes to the left*/
-				player->setVelocityX(-100.0f);
+				/*set left true*/
+				cmdLeft = true;
 				break;
 			/*If D is pressed*/
 			case SDLK_d:
-				/*change the players x velocity so it goes to the right*/
-				player->setVelocityX(100.0f);
+				/*set right true*/
+				cmdRight = true;
 				break;
 			}
 			break;
@@ -75,15 +99,30 @@ bool GameState::HandleSDLEvents()
 
 			switch (incomingEvent.key.keysym.sym)
 			{
-			/*If A is released*/
-			case SDLK_a:
-				/*set the player velocity to 0 so the player stops moving*/
-				player->setVelocityX(0.0f);
+				/*If space is released*/
+			case SDLK_SPACE:
+				/*jump is false*/
+				cmdJump = false;
 				break;
-			/*If D is released*/
+				/*If left is released*/
+			case SDLK_LEFT:
+				/*set left false*/
+				cmdLeft = false;
+				break;
+				/*If right is released*/
+			case SDLK_RIGHT:
+				/*set right false*/
+				cmdRight = false;
+				break;
+				/*If A is released*/
+			case SDLK_a:
+				/*set left false*/
+				cmdLeft = false;
+				break;
+				/*If D is released*/
 			case SDLK_d:
-				/*set the player velocity to 0 so the player stops moving*/
-				player->setVelocityX(0.0f);
+				/*set right false*/
+				cmdRight = false;
 				break;
 			}
 
@@ -98,10 +137,57 @@ bool GameState::HandleSDLEvents()
 /*update the state*/
 void GameState::Update(float deltaTime)
 {
+	/*tmp floor test*/
+	if (player->getY() >= (400.0f))
+	{
+		gravity = false;
+		landed = true;
+		player->setVelocityY(0.0f);
+		player->setY(400.0f);
+	}
+	else
+	{
+		landed = false;
+		gravity = true;
+	}
+
+	/*if able to jump, jump*/
+	if (cmdJump && landed)
+	{
+		gravity = false;
+		player->setVelocityY(-350.0f);
+	}
+	/*if left go left*/
+	if (cmdLeft &!cmdRight)
+	{
+		background->setVelocity(100.0f);
+		player->setVelocityX(-100.0f);
+	}
+	/*if right go right*/
+	if (cmdRight &!cmdLeft)
+	{
+		background->setVelocity(-100.0f);
+		player->setVelocityX(100.0f);
+	}
+	/*if not right or left stay still*/
+	if (!cmdRight &!cmdLeft)
+	{
+		background->setVelocity(0.0f);
+		player->setVelocityX(0.0f);
+	}
+
+	/*update gravity*/
+	if (gravity)
+	{
+		player->setVelocityY(player->getVelocityY() + gravityF);
+	}
+
 	/*Update Background*/
 	background->updateX(deltaTime);
+
 	/*Update Player*/
 	player->updateX(deltaTime);
+	player->updateY(deltaTime);
 }
 
 /**************************************************************************************************************/

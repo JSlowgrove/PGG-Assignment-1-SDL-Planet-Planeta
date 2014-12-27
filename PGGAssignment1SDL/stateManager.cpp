@@ -86,3 +86,12 @@ void StateManager::Draw()
 		currentStates.at(i)->Draw();
 	}
 }
+
+/**************************************************************************************************************/
+
+/*getter for the current states name */
+std::string StateManager::getName()
+{
+	/*returns the name of the current state*/
+	return currentStates.back()->GetStateName();
+}
