@@ -82,7 +82,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="background.cpp" />
-    <ClCompile Include="building.cpp" />
+    <ClCompile Include="mapObject.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="gameState.cpp" />
     <ClCompile Include="gem.cpp" />
@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="background.h" />
-    <ClInclude Include="building.h" />
+    <ClInclude Include="mapObject.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="creature.h" />
     <ClInclude Include="gameState.h" />

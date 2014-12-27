@@ -15,12 +15,12 @@ Gem::Gem(Texture * inputTexture, float inputX, float inputY, int spriteSheetNumb
 	x = inputX;
 	y = inputY;
 
-	/*sets the scaled size of the image to be 32x32*/
-	width = 32;
-	height = 32;
-
 	/*sets the type*/
 	type = inType;
+
+	/*sets the collision booleans*/
+	collidable = true;
+	damaging = false;
 }
 
 /**************************************************************************************************************/

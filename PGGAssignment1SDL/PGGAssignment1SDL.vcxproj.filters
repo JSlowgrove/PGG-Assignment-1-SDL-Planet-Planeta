@@ -24,9 +24,6 @@
     <ClCompile Include="entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="building.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,15 +51,15 @@
     <ClCompile Include="gem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mapObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="building.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
@@ -90,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="gem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mapObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
