@@ -20,6 +20,12 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	gems[1] = new Gem(spritesheet, 400.0f, 100.0f, 16, 12, 1);
 	gems[2] = new Gem(spritesheet, 500.0f, 100.0f, 16, 12, 2);
 	gems[3] = new Gem(spritesheet, 600.0f, 100.0f, 16, 12, 3);
+	/*initialise blocks*/
+	blocks.resize(4);
+	blocks[0] = new Block(spritesheet, 100.0f, 400.0f, 3, 0, 0);
+	blocks[1] = new Block(spritesheet, 200.0f, 400.0f, 5, 0, 0);
+	blocks[2] = new Block(spritesheet, 300.0f, 400.0f, 2, 1, 0);
+	blocks[3] = new Block(spritesheet, 400.0f, 400.0f, 3, 1, 0);
 	/*initialize random seed: */
 	srand((unsigned int)time(NULL));
 
@@ -49,6 +55,10 @@ GameState::~GameState()
 	for (int i = 0; i < gems.size(); i++)
 	{
 		delete gems.at(i);
+	}
+	for (int i = 0; i < blocks.size(); i++)
+	{
+		delete blocks.at(i);
 	}
 }
 
@@ -213,5 +223,10 @@ void GameState::Draw()
 	for (int i = 0; i < gems.size(); i++)
 	{
 		gems[i]->display(renderer);
+	}
+	/*display the blocks*/
+	for (int i = 0; i < blocks.size(); i++)
+	{
+		blocks[i]->display(renderer);
 	}
 }

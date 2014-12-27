@@ -9,6 +9,7 @@
 #include "background.h"
 #include "player.h"
 #include "gem.h"
+#include "block.h"
 
 /**
 @brief Creates a GameState object.
@@ -24,6 +25,7 @@ private:
 	Background * background;
 	Player * player;
 	std::vector<Gem *> gems;
+	std::vector<Block *> blocks;
 
 	/*input commands*/
 	bool cmdJump, cmdLeft, cmdRight;

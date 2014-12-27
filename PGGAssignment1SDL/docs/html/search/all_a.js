@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['setcollidable',['setCollidable',['../class_map_object.html#afc35a1271fdb83198e239a548b26337e',1,'MapObject']]],
+  ['setdamaging',['setDamaging',['../class_map_object.html#abcf8499f40944338e194abcbd3294852',1,'MapObject']]],
   ['setlives',['setLives',['../class_player.html#a565d4df3c32d00243b1ef16dfd6e5e03',1,'Player']]],
   ['setscore',['setScore',['../class_player.html#aa054ea95ca73dd19036d2917b29ab021',1,'Player']]],
   ['setvelocity',['setVelocity',['../class_background.html#a9b358e049be63be31b9241410288514f',1,'Background']]],

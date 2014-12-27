@@ -1,0 +1,115 @@
+\hypertarget{class_map_object}{\section{Map\+Object Class Reference}
+\label{class_map_object}\index{Map\+Object@{Map\+Object}}
+}
+
+
+Creates a \hyperlink{class_map_object}{Map\+Object} object that inherits \hyperlink{class_entity}{Entity}.  
+
+
+
+
+{\ttfamily \#include $<$map\+Object.\+h$>$}
+
+Inheritance diagram for Map\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_map_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_object_a568754515cc72ce0861d30c3040d26d2}{Map\+Object} ()
+\item 
+\hyperlink{class_map_object_aa601344267a49df197e841fcbd732209}{$\sim$\+Map\+Object} ()
+\item 
+void \hyperlink{class_map_object_afc35a1271fdb83198e239a548b26337e}{set\+Collidable} (bool)
+\item 
+bool \hyperlink{class_map_object_a5c940048e408308c71b57a78444d155d}{get\+Collidable} ()
+\item 
+void \hyperlink{class_map_object_abcf8499f40944338e194abcbd3294852}{set\+Damaging} (bool)
+\item 
+bool \hyperlink{class_map_object_acaa0fff07bd2550c1f023ca90e2a4b04}{get\+Damaging} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_map_object_a1d900ea8b9825881d5116711569b5e11}{bool {\bfseries collidable}}\label{class_map_object_a1d900ea8b9825881d5116711569b5e11}
+
+\item 
+\hypertarget{class_map_object_aa7f81dc2db7b5cdf0267717dee175d62}{bool {\bfseries damaging}}\label{class_map_object_aa7f81dc2db7b5cdf0267717dee175d62}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_map_object}{Map\+Object} object that inherits \hyperlink{class_entity}{Entity}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_map_object_a568754515cc72ce0861d30c3040d26d2}{\index{Map\+Object@{Map\+Object}!Map\+Object@{Map\+Object}}
+\index{Map\+Object@{Map\+Object}!Map\+Object@{Map\+Object}}
+\subsubsection[{Map\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Map\+Object\+::\+Map\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_a568754515cc72ce0861d30c3040d26d2}
+Constructs \hyperlink{class_map_object}{Map\+Object} object Constructs a \hyperlink{class_map_object}{Map\+Object} object. \hypertarget{class_map_object_aa601344267a49df197e841fcbd732209}{\index{Map\+Object@{Map\+Object}!````~Map\+Object@{$\sim$\+Map\+Object}}
+\index{````~Map\+Object@{$\sim$\+Map\+Object}!Map\+Object@{Map\+Object}}
+\subsubsection[{$\sim$\+Map\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Map\+Object\+::$\sim$\+Map\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_aa601344267a49df197e841fcbd732209}
+De-\/constructs a \hyperlink{class_map_object}{Map\+Object} object De-\/constructs the \hyperlink{class_map_object}{Map\+Object} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_map_object_a5c940048e408308c71b57a78444d155d}{\index{Map\+Object@{Map\+Object}!get\+Collidable@{get\+Collidable}}
+\index{get\+Collidable@{get\+Collidable}!Map\+Object@{Map\+Object}}
+\subsubsection[{get\+Collidable}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+Object\+::get\+Collidable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_a5c940048e408308c71b57a78444d155d}
+Getter \# collidable Gets if the object is collidable \begin{DoxyReturn}{Returns}
+bool if the map\+Object is collidable. 
+\end{DoxyReturn}
+\hypertarget{class_map_object_acaa0fff07bd2550c1f023ca90e2a4b04}{\index{Map\+Object@{Map\+Object}!get\+Damaging@{get\+Damaging}}
+\index{get\+Damaging@{get\+Damaging}!Map\+Object@{Map\+Object}}
+\subsubsection[{get\+Damaging}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+Object\+::get\+Damaging (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_acaa0fff07bd2550c1f023ca90e2a4b04}
+Getter \# damaging \begin{DoxyReturn}{Returns}
+bool if the object causes damaging to the player. 
+\end{DoxyReturn}
+\hypertarget{class_map_object_afc35a1271fdb83198e239a548b26337e}{\index{Map\+Object@{Map\+Object}!set\+Collidable@{set\+Collidable}}
+\index{set\+Collidable@{set\+Collidable}!Map\+Object@{Map\+Object}}
+\subsubsection[{set\+Collidable}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Object\+::set\+Collidable (
+\begin{DoxyParamCaption}
+\item[{bool}]{input\+Collidable}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_afc35a1271fdb83198e239a548b26337e}
+Setter \# collidable Sets if the object is able to be collided with. 
+\begin{DoxyParams}{Parameters}
+{\em bool} & the collision boolean \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_map_object_abcf8499f40944338e194abcbd3294852}{\index{Map\+Object@{Map\+Object}!set\+Damaging@{set\+Damaging}}
+\index{set\+Damaging@{set\+Damaging}!Map\+Object@{Map\+Object}}
+\subsubsection[{set\+Damaging}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Object\+::set\+Damaging (
+\begin{DoxyParamCaption}
+\item[{bool}]{input\+Damaging}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_abcf8499f40944338e194abcbd3294852}
+Setter \# damaging Sets if the object causes damaging to the player. 
+\begin{DoxyParams}{Parameters}
+{\em bool} & the object causes damaging to the player. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+P\+G\+G\+Assignment1\+S\+D\+L/map\+Object.\+h\item 
+P\+G\+G\+Assignment1\+S\+D\+L/map\+Object.\+cpp\end{DoxyCompactItemize}

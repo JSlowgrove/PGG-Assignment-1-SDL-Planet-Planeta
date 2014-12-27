@@ -11,7 +11,7 @@ Gem::Gem(Texture * inputTexture, float inputX, float inputY, int spriteSheetNumb
 	srcX = (23 * (spriteSheetNumberX + inType)) + 2; /*sets the srcX to the x position of the gem sprite*/
 	srcY = (23 * spriteSheetNumberY) + 2; /*sets the srcY to the y position of the gem sprite*/
 
-	/*sets the initial position of the player to the input positions*/
+	/*sets the initial position of the gem to the input positions*/
 	x = inputX;
 	y = inputY;
 
