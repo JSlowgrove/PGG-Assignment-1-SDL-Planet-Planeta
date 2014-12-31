@@ -1,10 +1,12 @@
 var searchData=
 [
   ['gamestate',['GameState',['../class_game_state.html#a0e812c09d724c03147ad6721b4d7bd73',1,'GameState']]],
-  ['gem',['Gem',['../class_gem.html#ab8ba47cbb47eb57fb71b2f351df920af',1,'Gem']]],
+  ['gem',['Gem',['../class_gem.html#a9b964b4eacf579f4e9fa2e6006222ca4',1,'Gem']]],
+  ['getblock',['getBlock',['../class_map_loader.html#a161a0cc6a392abc9baa57e919023f25c',1,'MapLoader']]],
   ['getcollidable',['getCollidable',['../class_map_object.html#a5c940048e408308c71b57a78444d155d',1,'MapObject']]],
   ['getdamaging',['getDamaging',['../class_map_object.html#acaa0fff07bd2550c1f023ca90e2a4b04',1,'MapObject']]],
   ['getdeletable',['getDeletable',['../class_map_object.html#a739bba3a3a50a84bf5e6244d19152a38',1,'MapObject']]],
+  ['getgem',['getGem',['../class_map_loader.html#a9b56fda5f4c27614131b085b449fe183',1,'MapLoader']]],
   ['getheight',['getHeight',['../class_texture.html#a80e143905655b173df5994300088ce35',1,'Texture']]],
   ['getlives',['getLives',['../class_player.html#af56ac33b9b2ebd9f97c8a6f485cf2d47',1,'Player']]],
   ['getname',['getName',['../class_state_manager.html#afc67a8f9404b7c92237a654630eb7516',1,'StateManager']]],
@@ -13,6 +15,8 @@ var searchData=
   ['getscore',['getScore',['../class_player.html#a97e5447778ae6c384eedc532dcd8431d',1,'Player']]],
   ['getstatename',['GetStateName',['../class_state.html#ab7a5d1c1837b4b44b3563897777fcb26',1,'State']]],
   ['gettexture',['getTexture',['../class_texture.html#a77a1ae0043a4b318a60df3b02ef2d3f6',1,'Texture']]],
+  ['gettype',['getType',['../class_background.html#a25e0286050106340c34d91d3f1d0f4df',1,'Background']]],
+  ['getvalue',['getValue',['../class_gem.html#acccf14e79a3e6a9db263081e88e953e1',1,'Gem']]],
   ['getvelocityx',['getVelocityX',['../class_creature.html#a405b16c27bc5617e9c37ac01e166c785',1,'Creature']]],
   ['getvelocityy',['getVelocityY',['../class_creature.html#a0ca2c7cccf8c8182dcad7a3b6737380b',1,'Creature']]],
   ['getwidth',['getWidth',['../class_texture.html#a91a6fd3355bc870194851514194daaab',1,'Texture']]],

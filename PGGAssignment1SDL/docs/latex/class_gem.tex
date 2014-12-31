@@ -19,9 +19,17 @@ Inheritance diagram for Gem\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_gem_ab8ba47cbb47eb57fb71b2f351df920af}{Gem} (\hyperlink{class_texture}{Texture} $\ast$, float, float, int, int, int)
+\hyperlink{class_gem_a9b964b4eacf579f4e9fa2e6006222ca4}{Gem} (\hyperlink{class_texture}{Texture} $\ast$, float, float, int)
 \item 
 \hyperlink{class_gem_a25c24193733a5c4b9c230e4164b08cd4}{$\sim$\+Gem} ()
+\item 
+void \hyperlink{class_gem_a5b88637e9b62fc71af306f58f5c82cef}{type\+Setup} ()
+\item 
+void \hyperlink{class_gem_afb1d9cd03dd88e8d52137d9323f6b808}{set\+Velocity} (float)
+\item 
+void \hyperlink{class_gem_a5db7f34632d18b938d98136f2d5589b8}{update\+X} (float)
+\item 
+int \hyperlink{class_gem_acccf14e79a3e6a9db263081e88e953e1}{get\+Value} ()
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -30,18 +38,16 @@ Inheritance diagram for Gem\+:\begin{figure}[H]
 Creates a \hyperlink{class_gem}{Gem} object that inherits \hyperlink{class_map_object}{Map\+Object}. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_gem_ab8ba47cbb47eb57fb71b2f351df920af}{\index{Gem@{Gem}!Gem@{Gem}}
+\hypertarget{class_gem_a9b964b4eacf579f4e9fa2e6006222ca4}{\index{Gem@{Gem}!Gem@{Gem}}
 \index{Gem@{Gem}!Gem@{Gem}}
 \subsubsection[{Gem}]{\setlength{\rightskip}{0pt plus 5cm}Gem\+::\+Gem (
 \begin{DoxyParamCaption}
 \item[{{\bf Texture} $\ast$}]{input\+Texture, }
 \item[{float}]{input\+X, }
 \item[{float}]{input\+Y, }
-\item[{int}]{sprite\+Sheet\+Number\+X, }
-\item[{int}]{sprite\+Sheet\+Number\+Y, }
 \item[{int}]{in\+Type}
 \end{DoxyParamCaption}
-)}}\label{class_gem_ab8ba47cbb47eb57fb71b2f351df920af}
+)}}\label{class_gem_a9b964b4eacf579f4e9fa2e6006222ca4}
 Constructs a \hyperlink{class_gem}{Gem} object Constructs the \hyperlink{class_gem}{Gem} object. 
 \begin{DoxyParams}{Parameters}
 {\em Texture$\ast$} & a pointer to a \hyperlink{class_texture}{Texture} loaded into memory. \\
@@ -49,10 +55,6 @@ Constructs a \hyperlink{class_gem}{Gem} object Constructs the \hyperlink{class_g
 {\em float} & initial x position. \\
 \hline
 {\em float} & initial y position. \\
-\hline
-{\em int} & the sprite sheet x number. \\
-\hline
-{\em int} & the sprite sheet y number. \\
 \hline
 {\em int} & the \hyperlink{class_gem}{Gem} type. \\
 \hline
@@ -65,6 +67,50 @@ Constructs a \hyperlink{class_gem}{Gem} object Constructs the \hyperlink{class_g
 \end{DoxyParamCaption}
 )}}\label{class_gem_a25c24193733a5c4b9c230e4164b08cd4}
 De-\/constructs a \hyperlink{class_gem}{Gem} object De-\/constructs the \hyperlink{class_gem}{Gem} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gem_acccf14e79a3e6a9db263081e88e953e1}{\index{Gem@{Gem}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Gem@{Gem}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}int Gem\+::get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_gem_acccf14e79a3e6a9db263081e88e953e1}
+Getter \# value \begin{DoxyReturn}{Returns}
+int the value of the gem. 
+\end{DoxyReturn}
+\hypertarget{class_gem_afb1d9cd03dd88e8d52137d9323f6b808}{\index{Gem@{Gem}!set\+Velocity@{set\+Velocity}}
+\index{set\+Velocity@{set\+Velocity}!Gem@{Gem}}
+\subsubsection[{set\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Gem\+::set\+Velocity (
+\begin{DoxyParamCaption}
+\item[{float}]{input\+Velocity}
+\end{DoxyParamCaption}
+)}}\label{class_gem_afb1d9cd03dd88e8d52137d9323f6b808}
+Setter \# velocity Sets the velocity of the \hyperlink{class_gem}{Gem} to the inputed velocity. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the inputed velocity \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gem_a5b88637e9b62fc71af306f58f5c82cef}{\index{Gem@{Gem}!type\+Setup@{type\+Setup}}
+\index{type\+Setup@{type\+Setup}!Gem@{Gem}}
+\subsubsection[{type\+Setup}]{\setlength{\rightskip}{0pt plus 5cm}void Gem\+::type\+Setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_gem_a5b88637e9b62fc71af306f58f5c82cef}
+Sets the type of the \hyperlink{class_gem}{Gem} Uses the value of type to set up initial values for the \hyperlink{class_gem}{Gem} \hypertarget{class_gem_a5db7f34632d18b938d98136f2d5589b8}{\index{Gem@{Gem}!update\+X@{update\+X}}
+\index{update\+X@{update\+X}!Gem@{Gem}}
+\subsubsection[{update\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Gem\+::update\+X (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_gem_a5db7f34632d18b938d98136f2d5589b8}
+Updates the x position of the \hyperlink{class_gem}{Gem} Updates the x position using the velocity and the inputed delta\+Time. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the inputed delta\+Time \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

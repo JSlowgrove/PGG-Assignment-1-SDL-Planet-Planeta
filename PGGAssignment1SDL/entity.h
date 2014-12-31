@@ -27,10 +27,15 @@ protected:
 	float y;
 public:
 	/**
-	Constructs an Entity object
-	Constructs the Entity object
+	Constructs a Entity object
+	Constructs the Entity object.
+	@param Texture* a pointer to a Texture loaded into memory.
+	@param float initial x position.
+	@param float initial y position.
+	@param float initial sprite width.
+	@param float initial sprite height.
 	*/
-	Entity();
+	Entity(Texture *, float, float, int, int);
 
 	/**
 	De-constructs an Entity object

@@ -40,7 +40,7 @@ public:
 
 	/**
 	Getter # lives
-	@returns the number of lives the Player has.
+	@returns int the number of lives the Player has.
 	*/
 	int getLives();
 
@@ -53,7 +53,7 @@ public:
 
 	/**
 	Getter # score
-	@returns the score the Player has.
+	@returns int the score the Player has.
 	*/
 	int getScore();
 };

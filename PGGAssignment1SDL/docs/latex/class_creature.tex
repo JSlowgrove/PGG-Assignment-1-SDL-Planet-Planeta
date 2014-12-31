@@ -19,7 +19,7 @@ Inheritance diagram for Creature\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_creature_a597cc3b08ee17de46c3e7ec3cf0d9b58}{Creature} ()
+\hyperlink{class_creature_a3512b75b90d921f17d098d55cc55a4c0}{Creature} (\hyperlink{class_texture}{Texture} $\ast$, float, float)
 \item 
 \hyperlink{class_creature_aa991b23f4813fbdb6f875204ed49814d}{$\sim$\+Creature} ()
 \item 
@@ -50,14 +50,25 @@ float \hyperlink{class_creature_a0ca2c7cccf8c8182dcad7a3b6737380b}{get\+Velocity
 Creates a \hyperlink{class_creature}{Creature} object that inherits \hyperlink{class_entity}{Entity}. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_creature_a597cc3b08ee17de46c3e7ec3cf0d9b58}{\index{Creature@{Creature}!Creature@{Creature}}
+\hypertarget{class_creature_a3512b75b90d921f17d098d55cc55a4c0}{\index{Creature@{Creature}!Creature@{Creature}}
 \index{Creature@{Creature}!Creature@{Creature}}
 \subsubsection[{Creature}]{\setlength{\rightskip}{0pt plus 5cm}Creature\+::\+Creature (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Texture} $\ast$}]{input\+Texture, }
+\item[{float}]{input\+X, }
+\item[{float}]{input\+Y}
 \end{DoxyParamCaption}
-)}}\label{class_creature_a597cc3b08ee17de46c3e7ec3cf0d9b58}
-Constructs \hyperlink{class_creature}{Creature} object Constructs a \hyperlink{class_creature}{Creature} object. \hypertarget{class_creature_aa991b23f4813fbdb6f875204ed49814d}{\index{Creature@{Creature}!````~Creature@{$\sim$\+Creature}}
+)}}\label{class_creature_a3512b75b90d921f17d098d55cc55a4c0}
+Constructs a \hyperlink{class_creature}{Creature} object Constructs the \hyperlink{class_creature}{Creature} object. 
+\begin{DoxyParams}{Parameters}
+{\em Texture$\ast$} & a pointer to a \hyperlink{class_texture}{Texture} loaded into memory. \\
+\hline
+{\em float} & initial x position. \\
+\hline
+{\em float} & initial y position. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_creature_aa991b23f4813fbdb6f875204ed49814d}{\index{Creature@{Creature}!````~Creature@{$\sim$\+Creature}}
 \index{````~Creature@{$\sim$\+Creature}!Creature@{Creature}}
 \subsubsection[{$\sim$\+Creature}]{\setlength{\rightskip}{0pt plus 5cm}Creature\+::$\sim$\+Creature (
 \begin{DoxyParamCaption}

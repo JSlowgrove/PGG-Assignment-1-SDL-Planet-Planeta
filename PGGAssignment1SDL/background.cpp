@@ -3,11 +3,12 @@
 /**************************************************************************************************************/
 
 /*Constructs the background object*/
-Background::Background(Texture * inputTexture, int backgroundType)
+Background::Background(Texture * inputTexture, int inputBackgroundType) 
+	: Entity(inputTexture, 0.0f, 0.0f, inputTexture->getWidth(), 63)
 {
-	texture = inputTexture; /*sets the texture to the inputed texture*/
-	srcWidth = texture->getWidth(); /*sets the srcWidth to the original width of the texture*/
-	srcHeight = 63; /*sets the srcHeight to the height of one background in the backgrounds sprite sheet*/
+	/*sets the background type, which is which of the 3 background will load so the general setting of the level*/
+	backgroundType = inputBackgroundType;
+
 	srcX = 0; /*sets the srcX to the furthest left of the texture*/
 
 	/*sets the srcY to the position of the inputed background type.	example : for the 2nd background the
@@ -19,10 +20,6 @@ Background::Background(Texture * inputTexture, int backgroundType)
 	scaled to the same aspect ratio to get the height to 480. This has been pre-calculated*/
 	width = 1760;
 	height = 480;
-
-	/*sets the initial position of the background to 0,0*/
-	x = 0.0f;
-	y = 0.0f;
 
 	velocity = 0.0f;/*sets the initial velocity to 0*/
 	maxX = 0;/*sets the maximum x coordinate to 0, so that the background can not go any further to the right*/
@@ -84,4 +81,13 @@ void Background::updateX(float dt)
 		x = (float)maxX;
 	}
 
+}
+
+/**************************************************************************************************************/
+
+/*returns the background type*/
+int Background::getType()
+{
+	/*returns the type*/
+	return backgroundType;
 }

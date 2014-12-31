@@ -19,7 +19,7 @@ Inheritance diagram for Map\+Object\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_map_object_a568754515cc72ce0861d30c3040d26d2}{Map\+Object} ()
+\hyperlink{class_map_object_a1bd76f155f6f90b7d74a06f720bd3b3d}{Map\+Object} (\hyperlink{class_texture}{Texture} $\ast$, float, float)
 \item 
 \hyperlink{class_map_object_aa601344267a49df197e841fcbd732209}{$\sim$\+Map\+Object} ()
 \item 
@@ -53,14 +53,25 @@ bool \hyperlink{class_map_object_a739bba3a3a50a84bf5e6244d19152a38}{get\+Deletab
 Creates a \hyperlink{class_map_object}{Map\+Object} object that inherits \hyperlink{class_entity}{Entity}. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_map_object_a568754515cc72ce0861d30c3040d26d2}{\index{Map\+Object@{Map\+Object}!Map\+Object@{Map\+Object}}
+\hypertarget{class_map_object_a1bd76f155f6f90b7d74a06f720bd3b3d}{\index{Map\+Object@{Map\+Object}!Map\+Object@{Map\+Object}}
 \index{Map\+Object@{Map\+Object}!Map\+Object@{Map\+Object}}
 \subsubsection[{Map\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Map\+Object\+::\+Map\+Object (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Texture} $\ast$}]{input\+Texture, }
+\item[{float}]{input\+X, }
+\item[{float}]{input\+Y}
 \end{DoxyParamCaption}
-)}}\label{class_map_object_a568754515cc72ce0861d30c3040d26d2}
-Constructs \hyperlink{class_map_object}{Map\+Object} object Constructs a \hyperlink{class_map_object}{Map\+Object} object. \hypertarget{class_map_object_aa601344267a49df197e841fcbd732209}{\index{Map\+Object@{Map\+Object}!````~Map\+Object@{$\sim$\+Map\+Object}}
+)}}\label{class_map_object_a1bd76f155f6f90b7d74a06f720bd3b3d}
+Constructs a \hyperlink{class_map_object}{Map\+Object} object Constructs the \hyperlink{class_map_object}{Map\+Object} object. 
+\begin{DoxyParams}{Parameters}
+{\em Texture$\ast$} & a pointer to a \hyperlink{class_texture}{Texture} loaded into memory. \\
+\hline
+{\em float} & initial x position. \\
+\hline
+{\em float} & initial y position. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_map_object_aa601344267a49df197e841fcbd732209}{\index{Map\+Object@{Map\+Object}!````~Map\+Object@{$\sim$\+Map\+Object}}
 \index{````~Map\+Object@{$\sim$\+Map\+Object}!Map\+Object@{Map\+Object}}
 \subsubsection[{$\sim$\+Map\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Map\+Object\+::$\sim$\+Map\+Object (
 \begin{DoxyParamCaption}

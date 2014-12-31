@@ -28,8 +28,10 @@ public:
 	/**
 	Constructs MapLoader object
 	Constructs a MapLoader object.
-	@param std::string the file location*/
-	MapLoader(std::string, Texture *);
+	@param std::string the file location
+	@param Texture * a pointer to the spritesheet
+	@param int the type of background*/
+	MapLoader(std::string, Texture *, int);
 
 	/**
 	De-constructs a MapLoader object
@@ -38,15 +40,17 @@ public:
 
 	/**load the map file
 	load the map file from the location passed in.
-	@param std::string the file location*/
-	void loadMap(std::string);
+	@param std::string the file location
+	@param int the type of background*/
+	void loadMap(std::string, int);
 
 	/**sort the map file object types
 	take in the value of the current loaded type and declare the current map object to its correct type.
 	@param int the type of the object
 	@param int the i index for the x position
-	@param int the j index for the y position*/
-	void sortType(int, int, int);
+	@param int the j index for the y position
+	@param int the type of background*/
+	void sortType(int, int, int, int);
 
 	/**display the Block object
 	display the Block at the position at the array inputed
@@ -71,4 +75,18 @@ public:
 	@returns the number of gems.
 	*/
 	int getNumberofGems();
+
+	/**
+	Getter # a Block from the array
+	@param int the index of the block
+	@returns a pointer to a Block.
+	*/
+	Block * getBlock(int);
+
+	/**
+	Getter # a Block from the array
+	@param int the index of the block
+	@returns a pointer to a Block.
+	*/
+	Gem * getGem(int);
 };

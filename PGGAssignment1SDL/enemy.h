@@ -4,6 +4,8 @@
 
 #include "creature.h"
 
+//TODO
+
 /**
 @brief Creates an Enemy object that inherits Creature which in turn inherits Entity.
 */
@@ -15,7 +17,7 @@ public:
 	Constructs an Enemy object
 	Constructs the Enemy object.
 	*/
-	Enemy();
+	Enemy(Texture *);
 
 	/**
 	De-constructs an Enemy object

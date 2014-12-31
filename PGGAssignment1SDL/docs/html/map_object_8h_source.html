@@ -102,37 +102,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*does the object need to be deleted?*/</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> deleteable;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_map_object.html#a568754515cc72ce0861d30c3040d26d2">MapObject</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_map_object.html#aa601344267a49df197e841fcbd732209">~MapObject</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_object.html#afc35a1271fdb83198e239a548b26337e">setCollidable</a>(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_map_object.html#a5c940048e408308c71b57a78444d155d">getCollidable</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_object.html#abcf8499f40944338e194abcbd3294852">setDamaging</a>(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_map_object.html#acaa0fff07bd2550c1f023ca90e2a4b04">getDamaging</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_object.html#af14721fd27162d9fd0f04f69d8087811">setDeletable</a>(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_map_object.html#a739bba3a3a50a84bf5e6244d19152a38">getDeletable</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_map_object_html_af14721fd27162d9fd0f04f69d8087811"><div class="ttname"><a href="class_map_object.html#af14721fd27162d9fd0f04f69d8087811">MapObject::setDeletable</a></div><div class="ttdeci">void setDeletable(bool)</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:59</div></div>
-<div class="ttc" id="class_map_object_html_abcf8499f40944338e194abcbd3294852"><div class="ttname"><a href="class_map_object.html#abcf8499f40944338e194abcbd3294852">MapObject::setDamaging</a></div><div class="ttdeci">void setDamaging(bool)</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:41</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_map_object.html#a1bd76f155f6f90b7d74a06f720bd3b3d">MapObject</a>(<a class="code" href="class_texture.html">Texture</a> *, <span class="keywordtype">float</span>, <span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_map_object.html#aa601344267a49df197e841fcbd732209">~MapObject</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_object.html#afc35a1271fdb83198e239a548b26337e">setCollidable</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_map_object.html#a5c940048e408308c71b57a78444d155d">getCollidable</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_object.html#abcf8499f40944338e194abcbd3294852">setDamaging</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_map_object.html#acaa0fff07bd2550c1f023ca90e2a4b04">getDamaging</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_object.html#af14721fd27162d9fd0f04f69d8087811">setDeletable</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_map_object.html#a739bba3a3a50a84bf5e6244d19152a38">getDeletable</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_map_object_html_af14721fd27162d9fd0f04f69d8087811"><div class="ttname"><a href="class_map_object.html#af14721fd27162d9fd0f04f69d8087811">MapObject::setDeletable</a></div><div class="ttdeci">void setDeletable(bool)</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:63</div></div>
+<div class="ttc" id="class_map_object_html_a1bd76f155f6f90b7d74a06f720bd3b3d"><div class="ttname"><a href="class_map_object.html#a1bd76f155f6f90b7d74a06f720bd3b3d">MapObject::MapObject</a></div><div class="ttdeci">MapObject(Texture *, float, float)</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:6</div></div>
+<div class="ttc" id="class_map_object_html_abcf8499f40944338e194abcbd3294852"><div class="ttname"><a href="class_map_object.html#abcf8499f40944338e194abcbd3294852">MapObject::setDamaging</a></div><div class="ttdeci">void setDamaging(bool)</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:45</div></div>
 <div class="ttc" id="class_map_object_html"><div class="ttname"><a href="class_map_object.html">MapObject</a></div><div class="ttdoc">Creates a MapObject object that inherits Entity. </div><div class="ttdef"><b>Definition:</b> mapObject.h:10</div></div>
-<div class="ttc" id="class_map_object_html_acaa0fff07bd2550c1f023ca90e2a4b04"><div class="ttname"><a href="class_map_object.html#acaa0fff07bd2550c1f023ca90e2a4b04">MapObject::getDamaging</a></div><div class="ttdeci">bool getDamaging()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:50</div></div>
+<div class="ttc" id="class_map_object_html_acaa0fff07bd2550c1f023ca90e2a4b04"><div class="ttname"><a href="class_map_object.html#acaa0fff07bd2550c1f023ca90e2a4b04">MapObject::getDamaging</a></div><div class="ttdeci">bool getDamaging()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:54</div></div>
 <div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdoc">Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...</div><div class="ttdef"><b>Definition:</b> entity.h:13</div></div>
-<div class="ttc" id="class_map_object_html_aa601344267a49df197e841fcbd732209"><div class="ttname"><a href="class_map_object.html#aa601344267a49df197e841fcbd732209">MapObject::~MapObject</a></div><div class="ttdeci">~MapObject()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:16</div></div>
-<div class="ttc" id="class_map_object_html_a5c940048e408308c71b57a78444d155d"><div class="ttname"><a href="class_map_object.html#a5c940048e408308c71b57a78444d155d">MapObject::getCollidable</a></div><div class="ttdeci">bool getCollidable()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:32</div></div>
-<div class="ttc" id="class_map_object_html_a568754515cc72ce0861d30c3040d26d2"><div class="ttname"><a href="class_map_object.html#a568754515cc72ce0861d30c3040d26d2">MapObject::MapObject</a></div><div class="ttdeci">MapObject()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:6</div></div>
-<div class="ttc" id="class_map_object_html_afc35a1271fdb83198e239a548b26337e"><div class="ttname"><a href="class_map_object.html#afc35a1271fdb83198e239a548b26337e">MapObject::setCollidable</a></div><div class="ttdeci">void setCollidable(bool)</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:23</div></div>
-<div class="ttc" id="class_map_object_html_a739bba3a3a50a84bf5e6244d19152a38"><div class="ttname"><a href="class_map_object.html#a739bba3a3a50a84bf5e6244d19152a38">MapObject::getDeletable</a></div><div class="ttdeci">bool getDeletable()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:68</div></div>
+<div class="ttc" id="class_map_object_html_aa601344267a49df197e841fcbd732209"><div class="ttname"><a href="class_map_object.html#aa601344267a49df197e841fcbd732209">MapObject::~MapObject</a></div><div class="ttdeci">~MapObject()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:20</div></div>
+<div class="ttc" id="class_map_object_html_a5c940048e408308c71b57a78444d155d"><div class="ttname"><a href="class_map_object.html#a5c940048e408308c71b57a78444d155d">MapObject::getCollidable</a></div><div class="ttdeci">bool getCollidable()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:36</div></div>
+<div class="ttc" id="class_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
+<div class="ttc" id="class_map_object_html_afc35a1271fdb83198e239a548b26337e"><div class="ttname"><a href="class_map_object.html#afc35a1271fdb83198e239a548b26337e">MapObject::setCollidable</a></div><div class="ttdeci">void setCollidable(bool)</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:27</div></div>
+<div class="ttc" id="class_map_object_html_a739bba3a3a50a84bf5e6244d19152a38"><div class="ttname"><a href="class_map_object.html#a739bba3a3a50a84bf5e6244d19152a38">MapObject::getDeletable</a></div><div class="ttdeci">bool getDeletable()</div><div class="ttdef"><b>Definition:</b> mapObject.cpp:72</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 31 2014 02:17:57 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 31 2014 18:34:51 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -18,7 +18,10 @@ private:
 	/*position check variables*/
 	int minX;
 	int maxX;
+	/*can the Background move?*/
 	bool moveable;
+	/*Background type*/
+	int backgroundType;
 public:
 	/**
 	Constructs a Background object
@@ -52,5 +55,11 @@ public:
 	@param float the inputed deltaTime
 	*/
 	void updateX(float);
+
+	/**
+	Getter # backgroundType
+	@returns int the type of the Background.
+	*/
+	int getType();
 };
 #endif

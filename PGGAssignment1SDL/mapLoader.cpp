@@ -3,7 +3,7 @@
 /**************************************************************************************************************/
 
 /*Constructs the MapLoader object*/
-MapLoader::MapLoader(std::string fileName, Texture * inTexture)
+MapLoader::MapLoader(std::string fileName, Texture * inTexture, int backgroundType)
 {
 	/*declare the pointer to the texture*/
 	texture = inTexture;
@@ -11,7 +11,7 @@ MapLoader::MapLoader(std::string fileName, Texture * inTexture)
 	numberOfGems = 0;
 	numberOfBlocks = 0;
 	/*load the map*/
-	loadMap(fileName);
+	loadMap(fileName, backgroundType);
 }
 
 /**************************************************************************************************************/
@@ -24,7 +24,7 @@ MapLoader::~MapLoader()
 /**************************************************************************************************************/
 
 /*loads the map into a 2d array*/
-void MapLoader::loadMap(std::string fileName)
+void MapLoader::loadMap(std::string fileName, int backgroundType)
 {
 	/*open the file using a ifstream*/
 	std::ifstream file(fileName);
@@ -55,7 +55,7 @@ void MapLoader::loadMap(std::string fileName)
 			/*set the first value of the row as it doesn't have a comma before it*/
 			loadedMapType = (((int)line[i][0] - '0') * 10) + ((int)line[i][1] - '0');
 			/*sorts the type*/
-			sortType(loadedMapType, i, 0);
+			sortType(loadedMapType, i, 0, backgroundType);
 
 			/*loop for the number of characters in a single line*/
 			for (int j = 0; j < line[i].size(); j++)
@@ -66,7 +66,7 @@ void MapLoader::loadMap(std::string fileName)
 					/*loads in the number of the type of the next map object by converting two chars to a single int*/
 					loadedMapType = (((int)line[i][j + 1] - '0') * 10) + ((int)line[i][j + 2] - '0');
 					/*sorts the type*/
-					sortType(loadedMapType, i, (j + 1) / 3);
+					sortType(loadedMapType, i, (j + 1) / 3, backgroundType);
 				}
 				
 			}
@@ -83,7 +83,7 @@ void MapLoader::loadMap(std::string fileName)
 /**************************************************************************************************************/
 
 /*sort the type of the new map object*/
-void MapLoader::sortType(int type, int i, int j)
+void MapLoader::sortType(int type, int i, int j, int backgroundType)
 {
 	/*KEY: Yellow Gem = 1, Green Gem = 2, Red Gem = 3, Blue Gem = 4, Top Wall = 5, 
 	Top Right Wall = 6, Top Left Wall = 7, Middle Wall = 8, End Goal = 9*/
@@ -92,47 +92,47 @@ void MapLoader::sortType(int type, int i, int j)
 	case 1:/*Yellow Gem*/
 		numberOfGems++;
 		gems.resize(numberOfGems);
-		gems[numberOfGems-1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 16, 12, 0);
+		gems[numberOfGems-1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 0);
 		break;
 	case 2:/*Green Gem*/
 		numberOfGems++;
 		gems.resize(numberOfGems);
-		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 16, 12, 1);
+		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 1);
 		break;
 	case 3:/*Red Gem*/
 		numberOfGems++;
 		gems.resize(numberOfGems);
-		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 16, 12, 2);
+		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 2);
 		break;
 	case 4:/*Blue Gem*/
 		numberOfGems++;
 		gems.resize(numberOfGems);
-		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 16, 12, 3);
+		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 3);
 		break;
 	case 5:/*Top Wall*/
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
-		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 3, 0, 0);
+		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 0, backgroundType);
 		break;
 	case 6:/*Top Right Wall*/
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
-		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 4, 0, 0);
+		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 1, backgroundType);
 		break;
 	case 7:/*Top Left Wall*/
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
-		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 2, 0, 0);
+		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 2, backgroundType);
 		break;
 	case 8:/*Middle Wall*/
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
-		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 2, 1, 0);
+		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 3, backgroundType);
 		break;
 	case 9:/*End Goal*/
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
-		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 10, 4, 0);
+		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 4, backgroundType);
 		break;
 	}
 }
@@ -171,4 +171,22 @@ int MapLoader::getNumberofGems()
 {
 	/*return the number of gems*/
 	return numberOfGems;
+}
+
+/**************************************************************************************************************/
+
+/*get the block*/
+Block * MapLoader::getBlock(int i)
+{
+	/*return the block*/
+	return blocks[i];
+}
+
+/**************************************************************************************************************/
+
+/*get the gem*/
+Gem * MapLoader::getGem(int i)
+{
+	/*return the gem*/
+	return gems[i];
 }

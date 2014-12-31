@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['enemy',['Enemy',['../class_enemy.html',1,'Enemy'],['../class_enemy.html#a94f30d348b6d2840fd71675472ba38dd',1,'Enemy::Enemy()']]],
-  ['entity',['Entity',['../class_entity.html',1,'Entity'],['../class_entity.html#a980f368aa07ce358583982821533a54a',1,'Entity::Entity()']]]
+  ['enemy',['Enemy',['../class_enemy.html',1,'Enemy'],['../class_enemy.html#ada67a3c9b7166fda1c010a8c7432a355',1,'Enemy::Enemy()']]],
+  ['entity',['Entity',['../class_entity.html',1,'Entity'],['../class_entity.html#a8a572d724b689de57d3c0d8bafeff107',1,'Entity::Entity()']]]
 ];

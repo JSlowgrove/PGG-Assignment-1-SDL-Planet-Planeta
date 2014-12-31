@@ -10,15 +10,19 @@
 class Creature : public Entity
 {
 protected:
-	/*velocitys of the Creature*/
+	/*velocities of the Creature*/
 	float velocityX;
 	float velocityY;
 public:
 	/**
-	Constructs Creature object
-	Constructs a Creature object.
+	Constructs a Creature object
+	Constructs the Creature object.
+	@param Texture* a pointer to a Texture loaded into memory.
+	@param float initial x position.
+	@param float initial y position.
 	*/
-	Creature();
+	Creature(Texture *, float, float);
+
 
 	/**
 	De-constructs a Creature object

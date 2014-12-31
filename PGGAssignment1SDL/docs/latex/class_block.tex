@@ -19,9 +19,15 @@ Inheritance diagram for Block\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_block_ae82bbded382f61248fe4ab7f198f66f7}{Block} (\hyperlink{class_texture}{Texture} $\ast$, float, float, int, int, int)
+\hyperlink{class_block_a3891a2f8968642512b5d2eeddc67131a}{Block} (\hyperlink{class_texture}{Texture} $\ast$, float, float, int, int)
 \item 
 \hyperlink{class_block_a19d1bd0e1cef6a865ed2745a2e648405}{$\sim$\+Block} ()
+\item 
+void \hyperlink{class_block_a196ba551e96906126d843bb69399a980}{set\+Velocity} (float)
+\item 
+void \hyperlink{class_block_a439237c91643b204336f75e5cd3721ca}{update\+X} (float)
+\item 
+void \hyperlink{class_block_ae46fc2f3f732a601b6599bdc8250de3f}{type\+Setup} (int)
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -30,18 +36,17 @@ Inheritance diagram for Block\+:\begin{figure}[H]
 Creates a \hyperlink{class_block}{Block} object that inherits \hyperlink{class_map_object}{Map\+Object}. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_block_ae82bbded382f61248fe4ab7f198f66f7}{\index{Block@{Block}!Block@{Block}}
+\hypertarget{class_block_a3891a2f8968642512b5d2eeddc67131a}{\index{Block@{Block}!Block@{Block}}
 \index{Block@{Block}!Block@{Block}}
 \subsubsection[{Block}]{\setlength{\rightskip}{0pt plus 5cm}Block\+::\+Block (
 \begin{DoxyParamCaption}
 \item[{{\bf Texture} $\ast$}]{input\+Texture, }
 \item[{float}]{input\+X, }
 \item[{float}]{input\+Y, }
-\item[{int}]{sprite\+Sheet\+Number\+X, }
-\item[{int}]{sprite\+Sheet\+Number\+Y, }
-\item[{int}]{in\+Type}
+\item[{int}]{in\+Type, }
+\item[{int}]{background\+Type}
 \end{DoxyParamCaption}
-)}}\label{class_block_ae82bbded382f61248fe4ab7f198f66f7}
+)}}\label{class_block_a3891a2f8968642512b5d2eeddc67131a}
 Constructs a \hyperlink{class_block}{Block} object Constructs the \hyperlink{class_block}{Block} object. 
 \begin{DoxyParams}{Parameters}
 {\em Texture$\ast$} & a pointer to a \hyperlink{class_texture}{Texture} loaded into memory. \\
@@ -50,11 +55,9 @@ Constructs a \hyperlink{class_block}{Block} object Constructs the \hyperlink{cla
 \hline
 {\em float} & initial y position. \\
 \hline
-{\em int} & the sprite sheet x number. \\
-\hline
-{\em int} & the sprite sheet y number. \\
-\hline
 {\em int} & the \hyperlink{class_block}{Block} type. \\
+\hline
+{\em int} & the type of background. \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_block_a19d1bd0e1cef6a865ed2745a2e648405}{\index{Block@{Block}!````~Block@{$\sim$\+Block}}
@@ -65,6 +68,45 @@ Constructs a \hyperlink{class_block}{Block} object Constructs the \hyperlink{cla
 \end{DoxyParamCaption}
 )}}\label{class_block_a19d1bd0e1cef6a865ed2745a2e648405}
 De-\/constructs a \hyperlink{class_block}{Block} object De-\/constructs the \hyperlink{class_block}{Block} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_block_a196ba551e96906126d843bb69399a980}{\index{Block@{Block}!set\+Velocity@{set\+Velocity}}
+\index{set\+Velocity@{set\+Velocity}!Block@{Block}}
+\subsubsection[{set\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Block\+::set\+Velocity (
+\begin{DoxyParamCaption}
+\item[{float}]{input\+Velocity}
+\end{DoxyParamCaption}
+)}}\label{class_block_a196ba551e96906126d843bb69399a980}
+Setter \# velocity Sets the velocity of the \hyperlink{class_block}{Block} to the inputed velocity. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the inputed velocity \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_block_ae46fc2f3f732a601b6599bdc8250de3f}{\index{Block@{Block}!type\+Setup@{type\+Setup}}
+\index{type\+Setup@{type\+Setup}!Block@{Block}}
+\subsubsection[{type\+Setup}]{\setlength{\rightskip}{0pt plus 5cm}void Block\+::type\+Setup (
+\begin{DoxyParamCaption}
+\item[{int}]{background\+Type}
+\end{DoxyParamCaption}
+)}}\label{class_block_ae46fc2f3f732a601b6599bdc8250de3f}
+Sets the type of the \hyperlink{class_block}{Block} Uses the value of type to set up initial values for the \hyperlink{class_block}{Block} 
+\begin{DoxyParams}{Parameters}
+{\em int} & the type of background. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_block_a439237c91643b204336f75e5cd3721ca}{\index{Block@{Block}!update\+X@{update\+X}}
+\index{update\+X@{update\+X}!Block@{Block}}
+\subsubsection[{update\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Block\+::update\+X (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_block_a439237c91643b204336f75e5cd3721ca}
+Updates the x position of the \hyperlink{class_block}{Block} Updates the x position using the velocity and the inputed delta\+Time. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the inputed delta\+Time \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

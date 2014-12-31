@@ -13,13 +13,13 @@ a class to load in a map text file
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_map_loader_af1d603fadc9c969743d6373320f1a75b}{Map\+Loader} (std\+::string, \hyperlink{class_texture}{Texture} $\ast$)
+\hyperlink{class_map_loader_a759260eb5a2bcc71f4eb6e03e8d8dead}{Map\+Loader} (std\+::string, \hyperlink{class_texture}{Texture} $\ast$, int)
 \item 
 \hyperlink{class_map_loader_a6055310649b9a926301d7fb2b83cb1b1}{$\sim$\+Map\+Loader} ()
 \item 
-void \hyperlink{class_map_loader_a2b11906f78b6be764323675435457d70}{load\+Map} (std\+::string)
+void \hyperlink{class_map_loader_aa3f95e47879ef5d2ac8f9b4e80602412}{load\+Map} (std\+::string, int)
 \item 
-void \hyperlink{class_map_loader_a809870094c738af7aac61041850777dd}{sort\+Type} (int, int, int)
+void \hyperlink{class_map_loader_a5d094d7c804670f68e04c360cb9b5965}{sort\+Type} (int, int, int, int)
 \item 
 void \hyperlink{class_map_loader_a0430f4acdbe19fd6853a61e3b9f71543}{display\+Block} (int, S\+D\+L\+\_\+\+Renderer $\ast$)
 \item 
@@ -28,6 +28,10 @@ void \hyperlink{class_map_loader_adf524d17cab14e1096341100abfe92b2}{display\+Gem
 int \hyperlink{class_map_loader_a178ca855ceec126f0a3a2264b74f63cc}{get\+Number\+Of\+Blocks} ()
 \item 
 int \hyperlink{class_map_loader_a026a7c38e03cdee9a355b09ca6048daa}{get\+Numberof\+Gems} ()
+\item 
+\hyperlink{class_block}{Block} $\ast$ \hyperlink{class_map_loader_a161a0cc6a392abc9baa57e919023f25c}{get\+Block} (int)
+\item 
+\hyperlink{class_gem}{Gem} $\ast$ \hyperlink{class_map_loader_a9b56fda5f4c27614131b085b449fe183}{get\+Gem} (int)
 \end{DoxyCompactItemize}
 
 
@@ -35,17 +39,22 @@ int \hyperlink{class_map_loader_a026a7c38e03cdee9a355b09ca6048daa}{get\+Numberof
 a class to load in a map text file 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_map_loader_af1d603fadc9c969743d6373320f1a75b}{\index{Map\+Loader@{Map\+Loader}!Map\+Loader@{Map\+Loader}}
+\hypertarget{class_map_loader_a759260eb5a2bcc71f4eb6e03e8d8dead}{\index{Map\+Loader@{Map\+Loader}!Map\+Loader@{Map\+Loader}}
 \index{Map\+Loader@{Map\+Loader}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{Map\+Loader}]{\setlength{\rightskip}{0pt plus 5cm}Map\+Loader\+::\+Map\+Loader (
 \begin{DoxyParamCaption}
 \item[{std\+::string}]{file\+Name, }
-\item[{{\bf Texture} $\ast$}]{in\+Texture}
+\item[{{\bf Texture} $\ast$}]{in\+Texture, }
+\item[{int}]{background\+Type}
 \end{DoxyParamCaption}
-)}}\label{class_map_loader_af1d603fadc9c969743d6373320f1a75b}
+)}}\label{class_map_loader_a759260eb5a2bcc71f4eb6e03e8d8dead}
 Constructs \hyperlink{class_map_loader}{Map\+Loader} object Constructs a \hyperlink{class_map_loader}{Map\+Loader} object. 
 \begin{DoxyParams}{Parameters}
 {\em std\+::string} & the file location \\
+\hline
+{\em \hyperlink{class_texture}{Texture}} & $\ast$ a pointer to the spritesheet \\
+\hline
+{\em int} & the type of background \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_map_loader_a6055310649b9a926301d7fb2b83cb1b1}{\index{Map\+Loader@{Map\+Loader}!````~Map\+Loader@{$\sim$\+Map\+Loader}}
@@ -88,6 +97,36 @@ display the \hyperlink{class_gem}{Gem} object display the \hyperlink{class_gem}{
 {\em S\+D\+L\+\_\+\+Renderer} & $\ast$ a pointer to the renderer \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_map_loader_a161a0cc6a392abc9baa57e919023f25c}{\index{Map\+Loader@{Map\+Loader}!get\+Block@{get\+Block}}
+\index{get\+Block@{get\+Block}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} $\ast$ Map\+Loader\+::get\+Block (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_a161a0cc6a392abc9baa57e919023f25c}
+Getter \# a \hyperlink{class_block}{Block} from the array 
+\begin{DoxyParams}{Parameters}
+{\em int} & the index of the block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a \hyperlink{class_block}{Block}. 
+\end{DoxyReturn}
+\hypertarget{class_map_loader_a9b56fda5f4c27614131b085b449fe183}{\index{Map\+Loader@{Map\+Loader}!get\+Gem@{get\+Gem}}
+\index{get\+Gem@{get\+Gem}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Gem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gem} $\ast$ Map\+Loader\+::get\+Gem (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_a9b56fda5f4c27614131b085b449fe183}
+Getter \# a \hyperlink{class_block}{Block} from the array 
+\begin{DoxyParams}{Parameters}
+{\em int} & the index of the block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a \hyperlink{class_block}{Block}. 
+\end{DoxyReturn}
 \hypertarget{class_map_loader_a178ca855ceec126f0a3a2264b74f63cc}{\index{Map\+Loader@{Map\+Loader}!get\+Number\+Of\+Blocks@{get\+Number\+Of\+Blocks}}
 \index{get\+Number\+Of\+Blocks@{get\+Number\+Of\+Blocks}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{get\+Number\+Of\+Blocks}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Number\+Of\+Blocks (
@@ -108,27 +147,31 @@ the number of blocks.
 Getter \# height \begin{DoxyReturn}{Returns}
 the number of gems. 
 \end{DoxyReturn}
-\hypertarget{class_map_loader_a2b11906f78b6be764323675435457d70}{\index{Map\+Loader@{Map\+Loader}!load\+Map@{load\+Map}}
+\hypertarget{class_map_loader_aa3f95e47879ef5d2ac8f9b4e80602412}{\index{Map\+Loader@{Map\+Loader}!load\+Map@{load\+Map}}
 \index{load\+Map@{load\+Map}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{load\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Loader\+::load\+Map (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{file\+Name}
+\item[{std\+::string}]{file\+Name, }
+\item[{int}]{background\+Type}
 \end{DoxyParamCaption}
-)}}\label{class_map_loader_a2b11906f78b6be764323675435457d70}
+)}}\label{class_map_loader_aa3f95e47879ef5d2ac8f9b4e80602412}
 load the map file load the map file from the location passed in. 
 \begin{DoxyParams}{Parameters}
 {\em std\+::string} & the file location \\
 \hline
+{\em int} & the type of background \\
+\hline
 \end{DoxyParams}
-\hypertarget{class_map_loader_a809870094c738af7aac61041850777dd}{\index{Map\+Loader@{Map\+Loader}!sort\+Type@{sort\+Type}}
+\hypertarget{class_map_loader_a5d094d7c804670f68e04c360cb9b5965}{\index{Map\+Loader@{Map\+Loader}!sort\+Type@{sort\+Type}}
 \index{sort\+Type@{sort\+Type}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{sort\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Loader\+::sort\+Type (
 \begin{DoxyParamCaption}
 \item[{int}]{type, }
 \item[{int}]{i, }
-\item[{int}]{j}
+\item[{int}]{j, }
+\item[{int}]{background\+Type}
 \end{DoxyParamCaption}
-)}}\label{class_map_loader_a809870094c738af7aac61041850777dd}
+)}}\label{class_map_loader_a5d094d7c804670f68e04c360cb9b5965}
 sort the map file object types take in the value of the current loaded type and declare the current map object to its correct type. 
 \begin{DoxyParams}{Parameters}
 {\em int} & the type of the object \\
@@ -136,6 +179,8 @@ sort the map file object types take in the value of the current loaded type and 
 {\em int} & the i index for the x position \\
 \hline
 {\em int} & the j index for the y position \\
+\hline
+{\em int} & the type of background \\
 \hline
 \end{DoxyParams}
 

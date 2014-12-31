@@ -18,10 +18,13 @@ protected:
 	bool deleteable;
 public:
 	/**
-	Constructs MapObject object
-	Constructs a MapObject object.
+	Constructs a MapObject object
+	Constructs the MapObject object.
+	@param Texture* a pointer to a Texture loaded into memory.
+	@param float initial x position.
+	@param float initial y position.
 	*/
-	MapObject();
+	MapObject(Texture *, float, float);
 
 	/**
 	De-constructs a MapObject object

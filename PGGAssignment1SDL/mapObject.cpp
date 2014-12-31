@@ -3,11 +3,15 @@
 /**************************************************************************************************************/
 
 /*Constructs the MapObject object*/
-MapObject::MapObject()
+MapObject::MapObject(Texture * inputTexture, float inputX, float inputY)
+	: Entity(inputTexture, inputX, inputY, 21, 21)
 {
 	/*sets the scaled size of the image to be 32x32*/
 	width = 32;
 	height = 32;
+
+	/*sets the object to not be deleted*/
+	deleteable = false;
 }
 
 /**************************************************************************************************************/

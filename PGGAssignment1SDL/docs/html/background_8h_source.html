@@ -100,28 +100,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">/*position check variables*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> minX;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> maxX;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">bool</span> moveable;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_background.html#a31d67c19cf5dd14c0f07b91e89c8b1f8">Background</a>(<a class="code" href="class_texture.html">Texture</a> *, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_background.html#a36754df1deb720393217ade59da41557">~Background</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_background.html#a9b358e049be63be31b9241410288514f">setVelocity</a>(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">updateX</a>(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">/*can the Background move?*/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> moveable;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">/*Background type*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> backgroundType;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_background.html#a31d67c19cf5dd14c0f07b91e89c8b1f8">Background</a>(<a class="code" href="class_texture.html">Texture</a> *, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_background.html#a36754df1deb720393217ade59da41557">~Background</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_background.html#a9b358e049be63be31b9241410288514f">setVelocity</a>(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">updateX</a>(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_background.html#a25e0286050106340c34d91d3f1d0f4df">getType</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_background_html_a25e0286050106340c34d91d3f1d0f4df"><div class="ttname"><a href="class_background.html#a25e0286050106340c34d91d3f1d0f4df">Background::getType</a></div><div class="ttdeci">int getType()</div><div class="ttdef"><b>Definition:</b> background.cpp:89</div></div>
 <div class="ttc" id="class_background_html"><div class="ttname"><a href="class_background.html">Background</a></div><div class="ttdoc">Creates a Background object that inherits Entity. Creates a Background object with a velocity...</div><div class="ttdef"><b>Definition:</b> background.h:13</div></div>
 <div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdoc">Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...</div><div class="ttdef"><b>Definition:</b> entity.h:13</div></div>
-<div class="ttc" id="class_background_html_a1cb5afc5d8857ec4db6c6d393375a4c2"><div class="ttname"><a href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">Background::updateX</a></div><div class="ttdeci">void updateX(float)</div><div class="ttdef"><b>Definition:</b> background.cpp:55</div></div>
-<div class="ttc" id="class_background_html_a9b358e049be63be31b9241410288514f"><div class="ttname"><a href="class_background.html#a9b358e049be63be31b9241410288514f">Background::setVelocity</a></div><div class="ttdeci">void setVelocity(float)</div><div class="ttdef"><b>Definition:</b> background.cpp:46</div></div>
+<div class="ttc" id="class_background_html_a1cb5afc5d8857ec4db6c6d393375a4c2"><div class="ttname"><a href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">Background::updateX</a></div><div class="ttdeci">void updateX(float)</div><div class="ttdef"><b>Definition:</b> background.cpp:52</div></div>
+<div class="ttc" id="class_background_html_a9b358e049be63be31b9241410288514f"><div class="ttname"><a href="class_background.html#a9b358e049be63be31b9241410288514f">Background::setVelocity</a></div><div class="ttdeci">void setVelocity(float)</div><div class="ttdef"><b>Definition:</b> background.cpp:43</div></div>
 <div class="ttc" id="class_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
-<div class="ttc" id="class_background_html_a36754df1deb720393217ade59da41557"><div class="ttname"><a href="class_background.html#a36754df1deb720393217ade59da41557">Background::~Background</a></div><div class="ttdeci">~Background()</div><div class="ttdef"><b>Definition:</b> background.cpp:39</div></div>
+<div class="ttc" id="class_background_html_a36754df1deb720393217ade59da41557"><div class="ttname"><a href="class_background.html#a36754df1deb720393217ade59da41557">Background::~Background</a></div><div class="ttdeci">~Background()</div><div class="ttdef"><b>Definition:</b> background.cpp:36</div></div>
 <div class="ttc" id="class_background_html_a31d67c19cf5dd14c0f07b91e89c8b1f8"><div class="ttname"><a href="class_background.html#a31d67c19cf5dd14c0f07b91e89c8b1f8">Background::Background</a></div><div class="ttdeci">Background(Texture *, int)</div><div class="ttdef"><b>Definition:</b> background.cpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 31 2014 02:17:56 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 31 2014 18:34:51 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

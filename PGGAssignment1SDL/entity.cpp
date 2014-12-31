@@ -3,8 +3,15 @@
 /**************************************************************************************************************/
 
 /*Constructs the entity object*/
-Entity::Entity()
+Entity::Entity(Texture * inputTexture, float inputX, float inputY, int inputWidth, int inputHeight)
 {
+	texture = inputTexture; /*sets the texture to the inputed texture*/
+	srcWidth = inputWidth; /*sets the srcWidth to the width of the Entities sprite*/
+	srcHeight = inputHeight; /*sets the srcHeight to the width of the Entities sprite*/
+
+	/*sets the initial position of the Entity to the input positions*/
+	x = inputX;
+	y = inputY;
 }
 
 /**************************************************************************************************************/
