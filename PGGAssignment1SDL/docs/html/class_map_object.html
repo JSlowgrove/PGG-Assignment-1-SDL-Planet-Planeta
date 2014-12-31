@@ -120,6 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abcf8499f40944338e194abcbd3294852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa0fff07bd2550c1f023ca90e2a4b04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_object.html#acaa0fff07bd2550c1f023ca90e2a4b04">getDamaging</a> ()</td></tr>
 <tr class="separator:acaa0fff07bd2550c1f023ca90e2a4b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14721fd27162d9fd0f04f69d8087811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_object.html#af14721fd27162d9fd0f04f69d8087811">setDeletable</a> (bool)</td></tr>
+<tr class="separator:af14721fd27162d9fd0f04f69d8087811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739bba3a3a50a84bf5e6244d19152a38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_object.html#a739bba3a3a50a84bf5e6244d19152a38">getDeletable</a> ()</td></tr>
+<tr class="separator:a739bba3a3a50a84bf5e6244d19152a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
 <tr class="memitem:a980f368aa07ce358583982821533a54a inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a> ()</td></tr>
 <tr class="separator:a980f368aa07ce358583982821533a54a inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +148,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>collidable</b></td></
 <tr class="memitem:aa7f81dc2db7b5cdf0267717dee175d62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7f81dc2db7b5cdf0267717dee175d62"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>damaging</b></td></tr>
 <tr class="separator:aa7f81dc2db7b5cdf0267717dee175d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c72b4c12be7a1b9c26adb3cfa10f029"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c72b4c12be7a1b9c26adb3cfa10f029"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>deleteable</b></td></tr>
+<tr class="separator:a9c72b4c12be7a1b9c26adb3cfa10f029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
 <tr class="memitem:a94c6b2b4a46ea4885b5fa5859d7d68e7 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94c6b2b4a46ea4885b5fa5859d7d68e7"></a>
 <a class="el" href="class_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></td></tr>
@@ -241,6 +248,22 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a739bba3a3a50a84bf5e6244d19152a38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MapObject::getDeletable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # deleteable </p><dl class="section return"><dt>Returns</dt><dd>bool does the object need deleting. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="afc35a1271fdb83198e239a548b26337e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -285,6 +308,28 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af14721fd27162d9fd0f04f69d8087811"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapObject::setDeletable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inputDelete</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter # deleteable Sets if the object needs to be deleted. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td>does the object need deleting. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>PGGAssignment1SDL/<a class="el" href="map_object_8h_source.html">mapObject.h</a></li>
 <li>PGGAssignment1SDL/mapObject.cpp</li>
@@ -292,7 +337,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 27 2014 23:22:32 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 31 2014 02:17:57 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

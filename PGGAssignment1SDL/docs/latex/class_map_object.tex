@@ -30,6 +30,10 @@ bool \hyperlink{class_map_object_a5c940048e408308c71b57a78444d155d}{get\+Collida
 void \hyperlink{class_map_object_abcf8499f40944338e194abcbd3294852}{set\+Damaging} (bool)
 \item 
 bool \hyperlink{class_map_object_acaa0fff07bd2550c1f023ca90e2a4b04}{get\+Damaging} ()
+\item 
+void \hyperlink{class_map_object_af14721fd27162d9fd0f04f69d8087811}{set\+Deletable} (bool)
+\item 
+bool \hyperlink{class_map_object_a739bba3a3a50a84bf5e6244d19152a38}{get\+Deletable} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -38,6 +42,9 @@ bool \hyperlink{class_map_object_acaa0fff07bd2550c1f023ca90e2a4b04}{get\+Damagin
 
 \item 
 \hypertarget{class_map_object_aa7f81dc2db7b5cdf0267717dee175d62}{bool {\bfseries damaging}}\label{class_map_object_aa7f81dc2db7b5cdf0267717dee175d62}
+
+\item 
+\hypertarget{class_map_object_a9c72b4c12be7a1b9c26adb3cfa10f029}{bool {\bfseries deleteable}}\label{class_map_object_a9c72b4c12be7a1b9c26adb3cfa10f029}
 
 \end{DoxyCompactItemize}
 
@@ -83,6 +90,16 @@ bool if the map\+Object is collidable.
 Getter \# damaging \begin{DoxyReturn}{Returns}
 bool if the object causes damaging to the player. 
 \end{DoxyReturn}
+\hypertarget{class_map_object_a739bba3a3a50a84bf5e6244d19152a38}{\index{Map\+Object@{Map\+Object}!get\+Deletable@{get\+Deletable}}
+\index{get\+Deletable@{get\+Deletable}!Map\+Object@{Map\+Object}}
+\subsubsection[{get\+Deletable}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+Object\+::get\+Deletable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_a739bba3a3a50a84bf5e6244d19152a38}
+Getter \# deleteable \begin{DoxyReturn}{Returns}
+bool does the object need deleting. 
+\end{DoxyReturn}
 \hypertarget{class_map_object_afc35a1271fdb83198e239a548b26337e}{\index{Map\+Object@{Map\+Object}!set\+Collidable@{set\+Collidable}}
 \index{set\+Collidable@{set\+Collidable}!Map\+Object@{Map\+Object}}
 \subsubsection[{set\+Collidable}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Object\+::set\+Collidable (
@@ -105,6 +122,18 @@ Setter \# collidable Sets if the object is able to be collided with.
 Setter \# damaging Sets if the object causes damaging to the player. 
 \begin{DoxyParams}{Parameters}
 {\em bool} & the object causes damaging to the player. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_map_object_af14721fd27162d9fd0f04f69d8087811}{\index{Map\+Object@{Map\+Object}!set\+Deletable@{set\+Deletable}}
+\index{set\+Deletable@{set\+Deletable}!Map\+Object@{Map\+Object}}
+\subsubsection[{set\+Deletable}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Object\+::set\+Deletable (
+\begin{DoxyParamCaption}
+\item[{bool}]{input\+Delete}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_af14721fd27162d9fd0f04f69d8087811}
+Setter \# deleteable Sets if the object needs to be deleted. 
+\begin{DoxyParams}{Parameters}
+{\em bool} & does the object need deleting. \\
 \hline
 \end{DoxyParams}
 

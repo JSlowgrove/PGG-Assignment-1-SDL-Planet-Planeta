@@ -52,3 +52,21 @@ bool MapObject::getDamaging()
 	/*returns the bool damaging value*/
 	return damaging;
 }
+
+/**************************************************************************************************************/
+
+/*sets if the object is to be deleted*/
+void MapObject::setDeletable(bool inputDelete)
+{
+	/*sets if the object is to be deleted*/
+	deleteable = inputDelete;
+}
+
+/**************************************************************************************************************/
+
+/*returns deleteable*/
+bool MapObject::getDeletable()
+{
+	/*returns the bool deleteable value*/
+	return deleteable;
+}

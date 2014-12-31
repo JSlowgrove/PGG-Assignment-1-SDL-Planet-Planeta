@@ -14,6 +14,8 @@ protected:
 	bool collidable;
 	/*if a collision does the object remove a life?*/
 	bool damaging;
+	/*does the object need to be deleted?*/
+	bool deleteable;
 public:
 	/**
 	Constructs MapObject object
@@ -53,5 +55,18 @@ public:
 	@returns bool if the object causes damaging to the player.
 	*/
 	bool getDamaging();
+
+	/**
+	Setter # deleteable
+	Sets if the object needs to be deleted.
+	@param bool does the object need deleting.
+	*/
+	void setDeletable(bool);
+
+	/**
+	Getter # deleteable
+	@returns bool  does the object need deleting.
+	*/
+	bool getDeletable();
 };
 #endif

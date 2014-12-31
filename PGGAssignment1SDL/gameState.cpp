@@ -14,20 +14,12 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	/*initialise entities*/
 	background = new Background(backgrounds, (rand() % 3));
 	player = new Player(spritesheet, 100.0f, 100.0f, 19, 0);
-	/*initialise gems*/
-	gems.resize(4);
-	gems[0] = new Gem(spritesheet, 300.0f, 100.0f, 16, 12, 0);
-	gems[1] = new Gem(spritesheet, 400.0f, 100.0f, 16, 12, 1);
-	gems[2] = new Gem(spritesheet, 500.0f, 100.0f, 16, 12, 2);
-	gems[3] = new Gem(spritesheet, 600.0f, 100.0f, 16, 12, 3);
-	/*initialise blocks*/
-	blocks.resize(4);
-	blocks[0] = new Block(spritesheet, 100.0f, 400.0f, 3, 0, 0);
-	blocks[1] = new Block(spritesheet, 200.0f, 400.0f, 5, 0, 0);
-	blocks[2] = new Block(spritesheet, 300.0f, 400.0f, 2, 1, 0);
-	blocks[3] = new Block(spritesheet, 400.0f, 400.0f, 3, 1, 0);
+
 	/*initialize random seed: */
 	srand((unsigned int)time(NULL));
+
+	/*load map*/
+	map = new MapLoader("txt/map.txt", spritesheet);
 
 	/*initialise input commands*/
 	cmdJump = cmdLeft = cmdRight = false;
@@ -52,14 +44,6 @@ GameState::~GameState()
 	delete background;
 	delete backgrounds;
 	delete spritesheet;
-	for (int i = 0; i < gems.size(); i++)
-	{
-		delete gems.at(i);
-	}
-	for (int i = 0; i < blocks.size(); i++)
-	{
-		delete blocks.at(i);
-	}
 }
 
 /**************************************************************************************************************/
@@ -219,14 +203,16 @@ void GameState::Draw()
 	background->display(renderer);
 	/*display the player*/
 	player->display(renderer);
-	/*display the gems*/
-	for (int i = 0; i < gems.size(); i++)
+	/*Loop for the number of blocks*/
+	for (int i = 0; i < map->getNumberOfBlocks(); i++)
 	{
-		gems[i]->display(renderer);
-	}
-	/*display the blocks*/
-	for (int i = 0; i < blocks.size(); i++)
+		/*display the block*/
+		map->displayBlock(i, renderer);
+	}	
+	/*loop for the number of gems*/
+	for (int i = 0; i < map->getNumberofGems(); i++)
 	{
-		blocks[i]->display(renderer);
+		/*display the gem*/
+		map->displayGem(i , renderer);
 	}
 }
