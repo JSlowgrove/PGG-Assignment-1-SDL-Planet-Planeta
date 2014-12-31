@@ -25,6 +25,9 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	/*load map*/
 	map = new MapLoader("txt/map.txt", spritesheet, backgroundType);
 
+	/*initilise collision*/
+	collision = new Collision(player, map);
+
 	/*initialise input commands*/
 	cmdJump = cmdLeft = cmdRight = false;
 
@@ -45,6 +48,7 @@ GameState::~GameState()
 	delete background;
 	delete backgrounds;
 	delete spritesheet;
+	delete collision;
 }
 
 /**************************************************************************************************************/
@@ -142,6 +146,9 @@ bool GameState::HandleSDLEvents()
 /*update the state*/
 void GameState::Update(float deltaTime)
 {
+	/*tmp collision test*/
+	collision->playerCollisionTest(deltaTime);
+
 	/*tmp floor test*/
 	if (player->getY() >= (400.0f))
 	{

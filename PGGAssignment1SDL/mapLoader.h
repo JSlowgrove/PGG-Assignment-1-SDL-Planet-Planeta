@@ -15,9 +15,22 @@
 class MapLoader
 {
 private:
+	/*a structue for use with the map array*/
+	struct id
+	{
+		/*the type of entity*/
+		char type;
+		/*the index of the types array*/
+		int index;
+	};
 	/*vectors for the loaded map*/
+	std::vector<std::vector<id>> entities;
 	std::vector<Block *> blocks;
 	std::vector<Gem *> gems;
+	/*number of entities in a row*/
+	int numberOfEntites;
+	/*number of rows in the map*/
+	int numberOfRows;
 	/*number of blocks in the map*/
 	int numberOfBlocks;
 	/*number of gems in the map*/
@@ -89,4 +102,40 @@ public:
 	@returns a pointer to a Block.
 	*/
 	Gem * getGem(int);
+
+	/**
+	Getter # number of Entities in a row
+	@returns the number of Entities in a row.
+	*/
+	int getNumberOfEntities();
+
+	/**
+	Getter # number of rows
+	@returns the number of rows.
+	*/
+	int getNumberOfRows();
+
+	/**
+	Getter # the type of the array
+	@param int i index
+	@param int j index
+	@returns the type of the position in the array.
+	*/
+	char getType(int, int);
+
+	/**
+	Getter # the index of the type array
+	@param int i index
+	@param int j index
+	@returns the type of the index in the types array.
+	*/
+	int getIndex(int, int);
+
+	/**
+	Setter # the contents at the position to blank
+	Sets the content at the [i][j] position in the array to be a empty tile
+	@param int i index
+	@param int j index
+	*/
+	void MapLoader::setEntityBlank(int, int);
 };

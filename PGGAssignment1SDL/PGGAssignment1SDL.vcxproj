@@ -83,6 +83,7 @@
   <ItemGroup>
     <ClCompile Include="background.cpp" />
     <ClCompile Include="block.cpp" />
+    <ClCompile Include="collision.cpp" />
     <ClCompile Include="mapLoader.cpp" />
     <ClCompile Include="mapObject.cpp" />
     <ClCompile Include="entity.cpp" />
@@ -100,6 +101,7 @@
   <ItemGroup>
     <ClInclude Include="background.h" />
     <ClInclude Include="block.h" />
+    <ClInclude Include="collision.h" />
     <ClInclude Include="mapLoader.h" />
     <ClInclude Include="mapObject.h" />
     <ClInclude Include="entity.h" />

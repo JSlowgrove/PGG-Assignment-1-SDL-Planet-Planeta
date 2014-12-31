@@ -11,6 +11,7 @@
 #include "gem.h"
 #include "block.h"
 #include "mapLoader.h"
+#include "collision.h"
 
 /**
 @brief Creates a GameState object.
@@ -26,6 +27,8 @@ private:
 	Background * background;
 	Player * player;
 	MapLoader * map;
+	/*collision*/
+	Collision * collision;
 
 	/*input commands*/
 	bool cmdJump, cmdLeft, cmdRight;

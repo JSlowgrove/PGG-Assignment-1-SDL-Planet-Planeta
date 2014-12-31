@@ -46,16 +46,24 @@ void MapLoader::loadMap(std::string fileName, int backgroundType)
 		}
 		file.close();
 
-		/*for use with declaring the map objects*/
-		int loadedMapType;
+		/*update array sizes*/
+		numberOfRows = line.size();
+		entities.resize(numberOfRows);
+		numberOfEntites = (line[0].size() + 1) / 3;
+		for (int i = 0; i < numberOfRows; i++)
+		{
+			entities[i].resize(numberOfEntites);
+		}
 		
+		int typeSetup;
+
 		/*Loop for the number of lines in the line array*/
 		for (int i = 0; i < line.size(); i++)
 		{
 			/*set the first value of the row as it doesn't have a comma before it*/
-			loadedMapType = (((int)line[i][0] - '0') * 10) + ((int)line[i][1] - '0');
+			typeSetup = (((int)line[i][0] - '0') * 10) + ((int)line[i][1] - '0');
 			/*sorts the type*/
-			sortType(loadedMapType, i, 0, backgroundType);
+			sortType(typeSetup, i, 0, backgroundType);
 
 			/*loop for the number of characters in a single line*/
 			for (int j = 0; j < line[i].size(); j++)
@@ -64,9 +72,9 @@ void MapLoader::loadMap(std::string fileName, int backgroundType)
 				if (line[i][j] == ',')
 				{
 					/*loads in the number of the type of the next map object by converting two chars to a single int*/
-					loadedMapType = (((int)line[i][j + 1] - '0') * 10) + ((int)line[i][j + 2] - '0');
+					typeSetup = (((int)line[i][j + 1] - '0') * 10) + ((int)line[i][j + 2] - '0');
 					/*sorts the type*/
-					sortType(loadedMapType, i, (j + 1) / 3, backgroundType);
+					sortType(typeSetup, i, (j + 1) / 3, backgroundType);
 				}
 				
 			}
@@ -85,51 +93,73 @@ void MapLoader::loadMap(std::string fileName, int backgroundType)
 /*sort the type of the new map object*/
 void MapLoader::sortType(int type, int i, int j, int backgroundType)
 {
-	/*KEY: Yellow Gem = 1, Green Gem = 2, Red Gem = 3, Blue Gem = 4, Top Wall = 5, 
+	/*KEY: Empty tile = 0, Yellow Gem = 1, Green Gem = 2, Red Gem = 3, Blue Gem = 4, Top Wall = 5, 
 	Top Right Wall = 6, Top Left Wall = 7, Middle Wall = 8, End Goal = 9*/
 	switch (type)
 	{
+	case 0:/*Empty tile*/
+		entities[i][j].type = 'X';
+		entities[i][j].index = 0;
+		break;
 	case 1:/*Yellow Gem*/
+		entities[i][j].type = 'G';
+		entities[i][j].index = numberOfGems;
 		numberOfGems++;
 		gems.resize(numberOfGems);
 		gems[numberOfGems-1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 0);
 		break;
 	case 2:/*Green Gem*/
+		entities[i][j].type = 'G';
+		entities[i][j].index = numberOfGems;
 		numberOfGems++;
 		gems.resize(numberOfGems);
 		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 1);
 		break;
 	case 3:/*Red Gem*/
+		entities[i][j].type = 'G';
+		entities[i][j].index = numberOfGems;
 		numberOfGems++;
 		gems.resize(numberOfGems);
 		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 2);
 		break;
 	case 4:/*Blue Gem*/
+		entities[i][j].type = 'G';
+		entities[i][j].index = numberOfGems;
 		numberOfGems++;
 		gems.resize(numberOfGems);
 		gems[numberOfGems - 1] = new Gem(texture, (float)(j * 32), (float)(i * 32), 3);
 		break;
 	case 5:/*Top Wall*/
+		entities[i][j].type = 'B';
+		entities[i][j].index = numberOfBlocks;
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
 		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 0, backgroundType);
 		break;
 	case 6:/*Top Right Wall*/
+		entities[i][j].type = 'B';
+		entities[i][j].index = numberOfBlocks;
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
 		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 1, backgroundType);
 		break;
 	case 7:/*Top Left Wall*/
+		entities[i][j].type = 'B';
+		entities[i][j].index = numberOfBlocks;
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
 		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 2, backgroundType);
 		break;
 	case 8:/*Middle Wall*/
+		entities[i][j].type = 'B';
+		entities[i][j].index = numberOfBlocks;
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
 		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 3, backgroundType);
 		break;
 	case 9:/*End Goal*/
+		entities[i][j].type = 'B';
+		entities[i][j].index = numberOfBlocks;
 		numberOfBlocks++;
 		blocks.resize(numberOfBlocks);
 		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 4, backgroundType);
@@ -189,4 +219,51 @@ Gem * MapLoader::getGem(int i)
 {
 	/*return the gem*/
 	return gems[i];
+}
+
+/**************************************************************************************************************/
+
+/*get the number of entities*/
+int MapLoader::getNumberOfEntities()
+{
+	/*return the number of entities*/
+	return numberOfEntites;
+}
+
+
+/**************************************************************************************************************/
+
+/*get the number of rows*/
+int MapLoader::getNumberOfRows()
+{
+	/*return the number of rows*/
+	return numberOfRows;
+}
+
+/**************************************************************************************************************/
+
+/*get the type of the entity*/
+char MapLoader::getType(int i, int j)
+{
+	/*return the number of entities*/
+	return entities[i][j].type;
+}
+
+/**************************************************************************************************************/
+
+/*get the index of the types array*/
+int MapLoader::getIndex(int i, int j)
+{
+	/*return the index of the position in the types array*/
+	return entities[i][j].index;
+}
+
+/**************************************************************************************************************/
+
+/*sets the content at the [i][j] position in the array to be a empty tile*/
+void MapLoader::setEntityBlank(int i, int j)
+{
+	/*set the value to the value of a blank tile*/
+	entities[i][j].type = 'X';
+	entities[i][j].index = 0;
 }
