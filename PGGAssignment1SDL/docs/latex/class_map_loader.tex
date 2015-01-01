@@ -32,6 +32,16 @@ int \hyperlink{class_map_loader_a026a7c38e03cdee9a355b09ca6048daa}{get\+Numberof
 \hyperlink{class_block}{Block} $\ast$ \hyperlink{class_map_loader_a161a0cc6a392abc9baa57e919023f25c}{get\+Block} (int)
 \item 
 \hyperlink{class_gem}{Gem} $\ast$ \hyperlink{class_map_loader_a9b56fda5f4c27614131b085b449fe183}{get\+Gem} (int)
+\item 
+int \hyperlink{class_map_loader_afb4ddc89be3ef11cf55cedd91796981c}{get\+Number\+Of\+Entities} ()
+\item 
+int \hyperlink{class_map_loader_ae5e282def1789a5f4701c44379b67813}{get\+Number\+Of\+Rows} ()
+\item 
+char \hyperlink{class_map_loader_a8e20a9a3c99f4d86d8db873b4a293352}{get\+Type} (int, int)
+\item 
+int \hyperlink{class_map_loader_a91978c6df4df7c8805ff7b959f2f8f02}{get\+Index} (int, int)
+\item 
+void \hyperlink{class_map_loader_a29c10edfe06895dd0e0f04275d96e5ed}{set\+Entity\+Blank} (int, int)
 \end{DoxyCompactItemize}
 
 
@@ -127,6 +137,24 @@ Getter \# a \hyperlink{class_block}{Block} from the array
 \begin{DoxyReturn}{Returns}
 a pointer to a \hyperlink{class_block}{Block}. 
 \end{DoxyReturn}
+\hypertarget{class_map_loader_a91978c6df4df7c8805ff7b959f2f8f02}{\index{Map\+Loader@{Map\+Loader}!get\+Index@{get\+Index}}
+\index{get\+Index@{get\+Index}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_a91978c6df4df7c8805ff7b959f2f8f02}
+Getter \# the index of the type array 
+\begin{DoxyParams}{Parameters}
+{\em int} & i index \\
+\hline
+{\em int} & j index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the type of the index in the types array. 
+\end{DoxyReturn}
 \hypertarget{class_map_loader_a178ca855ceec126f0a3a2264b74f63cc}{\index{Map\+Loader@{Map\+Loader}!get\+Number\+Of\+Blocks@{get\+Number\+Of\+Blocks}}
 \index{get\+Number\+Of\+Blocks@{get\+Number\+Of\+Blocks}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{get\+Number\+Of\+Blocks}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Number\+Of\+Blocks (
@@ -137,6 +165,16 @@ a pointer to a \hyperlink{class_block}{Block}.
 Getter \# number of blocks \begin{DoxyReturn}{Returns}
 the number of blocks. 
 \end{DoxyReturn}
+\hypertarget{class_map_loader_afb4ddc89be3ef11cf55cedd91796981c}{\index{Map\+Loader@{Map\+Loader}!get\+Number\+Of\+Entities@{get\+Number\+Of\+Entities}}
+\index{get\+Number\+Of\+Entities@{get\+Number\+Of\+Entities}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Number\+Of\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Number\+Of\+Entities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_afb4ddc89be3ef11cf55cedd91796981c}
+Getter \# number of Entities in a row \begin{DoxyReturn}{Returns}
+the number of Entities in a row. 
+\end{DoxyReturn}
 \hypertarget{class_map_loader_a026a7c38e03cdee9a355b09ca6048daa}{\index{Map\+Loader@{Map\+Loader}!get\+Numberof\+Gems@{get\+Numberof\+Gems}}
 \index{get\+Numberof\+Gems@{get\+Numberof\+Gems}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{get\+Numberof\+Gems}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Numberof\+Gems (
@@ -146,6 +184,34 @@ the number of blocks.
 )}}\label{class_map_loader_a026a7c38e03cdee9a355b09ca6048daa}
 Getter \# height \begin{DoxyReturn}{Returns}
 the number of gems. 
+\end{DoxyReturn}
+\hypertarget{class_map_loader_ae5e282def1789a5f4701c44379b67813}{\index{Map\+Loader@{Map\+Loader}!get\+Number\+Of\+Rows@{get\+Number\+Of\+Rows}}
+\index{get\+Number\+Of\+Rows@{get\+Number\+Of\+Rows}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Number\+Of\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Number\+Of\+Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_ae5e282def1789a5f4701c44379b67813}
+Getter \# number of rows \begin{DoxyReturn}{Returns}
+the number of rows. 
+\end{DoxyReturn}
+\hypertarget{class_map_loader_a8e20a9a3c99f4d86d8db873b4a293352}{\index{Map\+Loader@{Map\+Loader}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}char Map\+Loader\+::get\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_a8e20a9a3c99f4d86d8db873b4a293352}
+Getter \# the type of the array 
+\begin{DoxyParams}{Parameters}
+{\em int} & i index \\
+\hline
+{\em int} & j index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the type of the position in the array. 
 \end{DoxyReturn}
 \hypertarget{class_map_loader_aa3f95e47879ef5d2ac8f9b4e80602412}{\index{Map\+Loader@{Map\+Loader}!load\+Map@{load\+Map}}
 \index{load\+Map@{load\+Map}!Map\+Loader@{Map\+Loader}}
@@ -160,6 +226,21 @@ load the map file load the map file from the location passed in.
 {\em std\+::string} & the file location \\
 \hline
 {\em int} & the type of background \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_map_loader_a29c10edfe06895dd0e0f04275d96e5ed}{\index{Map\+Loader@{Map\+Loader}!set\+Entity\+Blank@{set\+Entity\+Blank}}
+\index{set\+Entity\+Blank@{set\+Entity\+Blank}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{set\+Entity\+Blank}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Loader\+::set\+Entity\+Blank (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_a29c10edfe06895dd0e0f04275d96e5ed}
+Setter \# the contents at the position to blank Sets the content at the \mbox{[}i\mbox{]}\mbox{[}j\mbox{]} position in the array to be a empty tile 
+\begin{DoxyParams}{Parameters}
+{\em int} & i index \\
+\hline
+{\em int} & j index \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_map_loader_a5d094d7c804670f68e04c360cb9b5965}{\index{Map\+Loader@{Map\+Loader}!sort\+Type@{sort\+Type}}

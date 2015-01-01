@@ -61,10 +61,10 @@ void Collision::playerCollisionTest(float deltaTime)
 	//if (player->getVelocityX() < 0)
 	//{
 		/*test only the tiles within the maxY and minY tiles*/
-		for (int i = minPlayerMapY; i < maxPlayerMapY; i++)
+		for (int i = minPlayerMapY; i <= maxPlayerMapY; i++)
 		{
 			/*test only the tiles within the 0 and minX tiles*/
-			for (int j = 0; j < minPlayerMapX; j++)
+			for (int j = 0; j <= minPlayerMapX; j++)
 			{
 				/*check if the type of the tile*/
 				switch (map->getType(i, j))
@@ -80,7 +80,7 @@ void Collision::playerCollisionTest(float deltaTime)
 					/*gem tile so do block collision action*/
 					gemAction(map->getIndex(i, j));
 					/*removes the gem from the map*/
-					//map->setEntityBlank(i, j);
+					map->setEntityBlank(i, j);
 					break;
 				}
 			}
@@ -93,7 +93,10 @@ void Collision::playerCollisionTest(float deltaTime)
 /*Performs the action that happens when the player collides with a Gem*/
 void Collision::gemAction(int i)
 {
-	std::cout << "gem" << std::endl;
+	/*adds the value of the gem to the players score*/
+	player->setScore(player->getScore() + map->getGem(i)->getValue());
+	/*sets the gem to be able to be hidden*/
+	map->getGem(i)->setDeletable(true);
 }
 
 /**************************************************************************************************************/
@@ -101,5 +104,5 @@ void Collision::gemAction(int i)
 /*Performs the action that happens when the player collides with a Block*/
 void Collision::blockAction(int i)
 {
-	//std::cout << "block" << std::endl;
+	std::cout << "block" << std::endl;
 }

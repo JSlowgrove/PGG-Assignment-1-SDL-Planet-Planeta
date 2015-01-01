@@ -11,6 +11,7 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	/*initialise spritesheets*/
 	backgrounds = new Texture("img/backgrounds231x63.bmp", renderer, false);
 	spritesheet = new Texture("img/spritesheet21x21.bmp", renderer, true);
+	numbers = new Texture("img/numbers42x42.bmp", renderer, true);
 
 	/*create a random background type between 0 and 2*/
 	int backgroundType = rand() % 3;
@@ -25,7 +26,7 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	/*load map*/
 	map = new MapLoader("txt/map.txt", spritesheet, backgroundType);
 
-	/*initilise collision*/
+	/*initialise collision*/
 	collision = new Collision(player, map);
 
 	/*initialise input commands*/
@@ -36,6 +37,7 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	landed = false;
 	jump = false;
 	gravityF = 9.81f;
+
 }
 
 /**************************************************************************************************************/
@@ -150,12 +152,12 @@ void GameState::Update(float deltaTime)
 	collision->playerCollisionTest(deltaTime);
 
 	/*tmp floor test*/
-	if (player->getY() >= (400.0f))
+	if (player->getY() > (416.0f))
 	{
 		gravity = false;
 		landed = true;
 		player->setVelocityY(0.0f);
-		player->setY(400.0f);
+		player->setY(416.0f);
 	}
 	else
 	{
@@ -270,7 +272,28 @@ void GameState::Draw()
 	/*loop for the number of gems*/
 	for (int i = 0; i < map->getNumberofGems(); i++)
 	{
-		/*display the gem*/
-		map->displayGem(i , renderer);
+		/*check if the gem will be hidden*/
+		if (!map->getGem(i)->getDeletable())
+		{ 
+			/*display the gem*/
+			map->displayGem(i , renderer);
+		}
+	}
+	/*display the score*/
+	displayScore();
+}
+
+/**************************************************************************************************************/
+
+/*draw the score to the screen*/
+void GameState::displayScore()
+{
+	int currentScore = player->getScore();
+	/*Loop for 5 digits*/
+	for (int i = 0; i < 5; i++)
+	{
+		/*display the number*/
+		numbers->pushSpriteToScreen(renderer, 32 * (5 - i), 32, 42 * (currentScore % 10), 0, 42, 42, 32, 32);
+		currentScore = currentScore / 10;
 	}
 }

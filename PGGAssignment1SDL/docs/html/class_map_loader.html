@@ -82,6 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_map_loader-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -116,6 +117,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a161a0cc6a392abc9baa57e919023f25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b56fda5f4c27614131b085b449fe183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_gem.html">Gem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a9b56fda5f4c27614131b085b449fe183">getGem</a> (int)</td></tr>
 <tr class="separator:a9b56fda5f4c27614131b085b449fe183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4ddc89be3ef11cf55cedd91796981c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#afb4ddc89be3ef11cf55cedd91796981c">getNumberOfEntities</a> ()</td></tr>
+<tr class="separator:afb4ddc89be3ef11cf55cedd91796981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e282def1789a5f4701c44379b67813"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#ae5e282def1789a5f4701c44379b67813">getNumberOfRows</a> ()</td></tr>
+<tr class="separator:ae5e282def1789a5f4701c44379b67813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e20a9a3c99f4d86d8db873b4a293352"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a8e20a9a3c99f4d86d8db873b4a293352">getType</a> (int, int)</td></tr>
+<tr class="separator:a8e20a9a3c99f4d86d8db873b4a293352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91978c6df4df7c8805ff7b959f2f8f02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a91978c6df4df7c8805ff7b959f2f8f02">getIndex</a> (int, int)</td></tr>
+<tr class="separator:a91978c6df4df7c8805ff7b959f2f8f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c10edfe06895dd0e0f04275d96e5ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a29c10edfe06895dd0e0f04275d96e5ed">setEntityBlank</a> (int, int)</td></tr>
+<tr class="separator:a29c10edfe06895dd0e0f04275d96e5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>a class to load in a map text file </p>
@@ -289,6 +300,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a91978c6df4df7c8805ff7b959f2f8f02"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MapLoader::getIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # the index of the type array </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>i index </td></tr>
+    <tr><td class="paramname">int</td><td>j index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the type of the index in the types array. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a178ca855ceec126f0a3a2264b74f63cc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -305,6 +350,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afb4ddc89be3ef11cf55cedd91796981c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MapLoader::getNumberOfEntities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # number of Entities in a row </p><dl class="section return"><dt>Returns</dt><dd>the number of Entities in a row. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a026a7c38e03cdee9a355b09ca6048daa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -318,6 +379,56 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Getter # height </p><dl class="section return"><dt>Returns</dt><dd>the number of gems. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae5e282def1789a5f4701c44379b67813"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MapLoader::getNumberOfRows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # number of rows </p><dl class="section return"><dt>Returns</dt><dd>the number of rows. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8e20a9a3c99f4d86d8db873b4a293352"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char MapLoader::getType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # the type of the array </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>i index </td></tr>
+    <tr><td class="paramname">int</td><td>j index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the type of the position in the array. </dd></dl>
 
 </div>
 </div>
@@ -348,6 +459,39 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">std::string</td><td>the file location </td></tr>
     <tr><td class="paramname">int</td><td>the type of background </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a29c10edfe06895dd0e0f04275d96e5ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapLoader::setEntityBlank </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter # the contents at the position to blank Sets the content at the [i][j] position in the array to be a empty tile </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>i index </td></tr>
+    <tr><td class="paramname">int</td><td>j index </td></tr>
   </table>
   </dd>
 </dl>
@@ -408,7 +552,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 31 2014 18:38:19 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 1 2015 16:27:44 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

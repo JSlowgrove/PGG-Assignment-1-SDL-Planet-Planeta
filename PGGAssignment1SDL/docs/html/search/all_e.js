@@ -2,6 +2,7 @@ var searchData=
 [
   ['_7ebackground',['~Background',['../class_background.html#a36754df1deb720393217ade59da41557',1,'Background']]],
   ['_7eblock',['~Block',['../class_block.html#a19d1bd0e1cef6a865ed2745a2e648405',1,'Block']]],
+  ['_7ecollision',['~Collision',['../class_collision.html#a19ae49bcb3b16f4622443a34a171590c',1,'Collision']]],
   ['_7ecreature',['~Creature',['../class_creature.html#aa991b23f4813fbdb6f875204ed49814d',1,'Creature']]],
   ['_7eenemy',['~Enemy',['../class_enemy.html#ac0eec4755e28c02688065f9657150ac3',1,'Enemy']]],
   ['_7eentity',['~Entity',['../class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae',1,'Entity']]],

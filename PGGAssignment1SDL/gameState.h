@@ -23,13 +23,13 @@ private:
 	/*spritesheets*/
 	Texture * backgrounds;
 	Texture * spritesheet;
+	Texture * numbers;
 	/*entities*/
 	Background * background;
 	Player * player;
 	MapLoader * map;
 	/*collision*/
 	Collision * collision;
-
 	/*input commands*/
 	bool cmdJump, cmdLeft, cmdRight;
 
@@ -72,5 +72,11 @@ public:
 	A function to draw to the screen using the renderer
 	*/
 	void Draw();
+
+	/**
+	A function to draw the score to the screen
+	A function to draw the score to the screen using the renderer
+	*/
+	void displayScore();
 };
 #endif
