@@ -20,7 +20,7 @@ Collision::~Collision()
 /**************************************************************************************************************/
 
 /*tests if the player collides with an object*/
-void Collision::playerCollisionTest(float deltaTime)
+void Collision::playerCollisionTest(float deltaTime, char axis)
 {
 	/*the updated value of the position*/
 	float updatedX = player->getX() + (player->getVelocityX() * deltaTime);
@@ -38,17 +38,30 @@ void Collision::playerCollisionTest(float deltaTime)
 	/*workout the map position depending on how it will round*/
 	roundingCheck(updatedY, minPlayerMapY, maxPlayerMapY, 0);
 
-	/*if the player is going left*/
-	if (player->getVelocityX() < 0 || map->getBlock(0)->getVelocity() > 0)
+	switch (axis)
 	{
-		/*run the test for left*/
-		leftTest(updatedX, minPlayerMapX, minPlayerMapY, maxPlayerMapY);
-	}
-	/*if the player is going right*/
-	if (player->getVelocityX() > 0 || map->getBlock(0)->getVelocity() < 0)
-	{
-		/*run the test for left*/
-		rightTest(updatedX, maxPlayerMapX, minPlayerMapY, maxPlayerMapY);
+	case 'x':
+		/*if the player is going left*/
+		if (player->getVelocityX() < 0 || map->getBlock(0)->getVelocity() > 0)
+		{
+			/*run the test for left*/
+			leftTest(updatedX, minPlayerMapX, minPlayerMapY, maxPlayerMapY);
+		}
+		/*if the player is going right*/
+		if (player->getVelocityX() > 0 || map->getBlock(0)->getVelocity() < 0)
+		{
+			/*run the test for left*/
+			rightTest(updatedX, maxPlayerMapX, minPlayerMapY, maxPlayerMapY);
+		}
+		break;
+	case 'y':
+		/*if the player is going down*/
+		if (player->getVelocityY() > 0)
+		{
+			/*run the test for down*/
+			downTest(updatedY, maxPlayerMapY, minPlayerMapX, maxPlayerMapX);
+		}
+		break;
 	}
 }
 
@@ -100,7 +113,7 @@ void Collision::leftTest(float updatedPosition, int minCurrentAxis, int minOppos
 			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getX() + 32 >= updatedPosition)
 			{
 				/*block tile so do block collision action*/
-				blockAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				blockActionX(map->getIndex(closestIIndex[i], closestJIndex[i]));
 			}
 			break;
 		case 'G':
@@ -165,77 +178,12 @@ void Collision::rightTest(float updatedPosition, int maxCurrentAxis, int minOppo
 			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getX() <= updatedPosition + 32)
 			{
 				/*block tile so do block collision action*/
-				blockAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				blockActionX(map->getIndex(closestIIndex[i], closestJIndex[i]));
 			}
 			break;
 		case 'G':
 			/*check if its is interesting*/
 			if (map->getGem(map->getIndex(closestIIndex[i], closestJIndex[i]))->getX() <= updatedPosition + 32)
-			{
-				/*gem tile so do block collision action*/
-				gemAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
-				/*removes the gem from the map*/
-				map->setEntityBlank(closestIIndex[i], closestJIndex[i]);
-			}
-			break;
-		}
-	}
-}
-
-/**************************************************************************************************************/
-
-/*performs the tests for when the player goes up*/
-void Collision::upTest(float updatedPosition, int minCurrentAxis, int minOppositeAxis, int maxOppositeAxis)
-{
-	/*for the closest objects*/
-	std::vector<int> closestIIndex;
-	std::vector<int> closestJIndex;
-	closestIIndex.resize(0);
-	closestJIndex.resize(0);
-
-	/*test only the tiles within the max and min tiles on the opposite axis*/
-	for (int i = minOppositeAxis; i <= maxOppositeAxis; i++)
-	{
-		closestIIndex.resize(closestIIndex.size() + 1);
-		closestJIndex.resize(closestJIndex.size() + 1);
-		/*test only the tiles within the 0 and min tiles on the current axis*/
-		for (int j = 0; j <= minCurrentAxis; j++)
-		{
-			/*check if the type of the tile*/
-			switch (map->getType(i, j))
-			{
-			case 'X':
-				/*empty tile so do nothing*/
-				break;
-			default:
-				/*set as current closest*/
-				closestIIndex[closestIIndex.size() - 1] = i;
-				closestJIndex[closestJIndex.size() - 1] = j;
-				break;
-			}
-		}
-	}
-	/*loop through the closest*/
-	for (int i = 0; i < closestIIndex.size(); i++)
-	{
-
-		/*check if the type of the tile*/
-		switch (map->getType(closestIIndex[i], closestJIndex[i]))
-		{
-		case 'X':
-			/*empty tile so do nothing*/
-			break;
-		case 'B':
-			/*check if its is interesting*/
-			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() + 32 >= updatedPosition)
-			{
-				/*block tile so do block collision action*/
-				blockAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
-			}
-			break;
-		case 'G':
-			/*check if its is interesting*/
-			if (map->getGem(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() + 32 >= updatedPosition)
 			{
 				/*gem tile so do block collision action*/
 				gemAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
@@ -283,7 +231,6 @@ void Collision::downTest(float updatedPosition, int maxCurrentAxis, int minOppos
 	/*loop through the closest*/
 	for (int i = 0; i < closestIIndex.size(); i++)
 	{
-
 		/*check if the type of the tile*/
 		switch (map->getType(closestIIndex[i], closestJIndex[i]))
 		{
@@ -292,15 +239,15 @@ void Collision::downTest(float updatedPosition, int maxCurrentAxis, int minOppos
 			break;
 		case 'B':
 			/*check if its is interesting*/
-			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() <= updatedPosition + 32)
+			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() <= updatedPosition + 34)
 			{
 				/*block tile so do block collision action*/
-				blockAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				blockActionY(map->getIndex(closestIIndex[i], closestJIndex[i]));
 			}
 			break;
 		case 'G':
 			/*check if its is interesting*/
-			if (map->getGem(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() <= updatedPosition + 32)
+			if (map->getGem(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() <= updatedPosition + 34)
 			{
 				/*gem tile so do block collision action*/
 				gemAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
@@ -325,8 +272,8 @@ void Collision::gemAction(int i)
 
 /**************************************************************************************************************/
 
-/*Performs the action that happens when the player collides with a Block*/
-void Collision::blockAction(int i)
+/*Performs the action that happens when the player collides with a Block on the x axis*/
+void Collision::blockActionX(int i)
 {
 	/*stop the player*/
 	player->setVelocityX(0.0f);
@@ -348,6 +295,20 @@ void Collision::blockAction(int i)
 
 /**************************************************************************************************************/
 
+/*Performs the action that happens when the player collides with a Block on the y axis*/
+void Collision::blockActionY(int i)
+{
+	/* make the player land*/
+	player->setGravity(false);
+	player->setLanded(true);
+	player->setVelocityY(0.0f);
+	/*set the player to be 2 pixels above the ground so it does not interfere with the x collisions*/
+	player->setY(map->getBlock(i)->getY() - 34);
+}
+
+
+/**************************************************************************************************************/
+
 /*Checks how the number will be rounded and works out the map position accordingly*/
 void Collision::roundingCheck(float updatedPosition, int &minMapPosition, int &maxMapPosition, float extra)
 {
@@ -365,7 +326,3 @@ void Collision::roundingCheck(float updatedPosition, int &minMapPosition, int &m
 		maxMapPosition = ((updatedPosition - extra) / 32);//rounded up to nearest int
 	}	
 }
-
-
-/*tmp to help with debugging*/
-//tex->pushSpriteToScreen(tmp, (closestJIndex[i] * 32) + backgroundPos, (closestIIndex[i] * 32), 232, 94, 21, 21, 32, 32);

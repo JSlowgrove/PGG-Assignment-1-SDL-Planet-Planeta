@@ -145,26 +145,7 @@ bool GameState::HandleSDLEvents()
 /*update the state*/
 void GameState::Update(float deltaTime)
 {
-	/*tmp floor test*/
-	if (player->getY() > (414.0f))
-	{
-		player->setGravity(false);
-		player->setLanded(true);
-		player->setVelocityY(0.0f);
-		player->setY(414.0f);
-	}
-	else
-	{
-		player->setLanded(false);
-		player->setGravity(true);
-	}
-
-	/*if able to jump, jump*/
-	if (cmdJump && player->getLanded())
-	{
-		player->setGravity(false);
-		player->setVelocityY(-350.0f);
-	}
+	/*x axis collision tests*************************/
 	/*if left go left*/
 	if (cmdLeft &!cmdRight)
 	{
@@ -180,16 +161,63 @@ void GameState::Update(float deltaTime)
 	{
 		updateScene(0.0f);
 	}
+	/*check collisions*/
+	collision->playerCollisionTest(deltaTime, 'x');
 
+	/*check if player is off the screen on the x axis to the left*/
+	if ((player->getX() + (player->getVelocityX() * deltaTime)) <= 0)
+	{
+		/*keep on screen*/
+		player->setVelocityX(0.0f);
+		player->setX(1.0f);
+	}
+	/*check if player is off the screen on the x axis to the right*/
+	if ((player->getX() + (player->getVelocityX() * deltaTime)) + 32 >= 640)
+	{
+		/*keep on screen*/
+		player->setVelocityX(0.0f);
+		player->setX(607.0f);
+	}
+
+	/*y axis collision tests*************************/
+	/*set as if not colliding down*/
+	player->setLanded(false);
+	player->setGravity(true);
+
+	/*check collisions*/
+	collision->playerCollisionTest(deltaTime, 'y');
+
+	/*if able to jump, jump*/
+	if (cmdJump && player->getLanded())
+	{
+		player->setLanded(false);
+		player->setGravity(false);
+		player->setVelocityY(-350.0f);
+	}
 	/*update gravity*/
 	if (player->getGravity())
 	{
 		player->setVelocityY(player->getVelocityY() + player->getGravityF());
 	}
 
-	/*tmp collision test*/
-	collision->playerCollisionTest(deltaTime);
+	/*check if player is off the screen on the y axis up*/
+	if ((player->getY() + (player->getVelocityY() * deltaTime)) <= 0)
+	{
+		/*keep on screen*/
+		player->setVelocityY(0.0f);
+		player->setY(1.0f);
+	}
 
+	/*check if player is off the screen on the y axis down*/
+	if ((player->getY() + (player->getVelocityY() * deltaTime)) + 32 >= 480)
+	{
+		/*keep on screen*/
+		player->setVelocityY(0.0f);
+		player->setY(1.0f);
+		player->setLives(player->getScore() - 1);
+	}
+
+	/*update all positions***************************/
 	/*Update Background*/
 	background->updateX(deltaTime);
 
@@ -267,8 +295,8 @@ void GameState::displayScore()
 /*update the scenes velocity using the inputed velocity*/
 void GameState::updateScene(float velocity)
 {
-	//if (centered && background->getMoveable())
-	///{
+	if (centered && background->getMoveable())
+	{
 		background->setVelocity(-velocity);
 		/*loop for the number of blocks*/
 		for (int i = 0; i < map->getNumberOfBlocks(); i++)
@@ -282,10 +310,10 @@ void GameState::updateScene(float velocity)
 			/*set the gems velocity*/
 			map->getGem(i)->setVelocity(-velocity);
 		}
-	//}
-	//else
-	//{
-		//centered = false;
-		//player->setVelocityX(velocity);
-	//}
+	}
+	else
+	{
+		centered = false;
+		player->setVelocityX(velocity);
+	}
 }

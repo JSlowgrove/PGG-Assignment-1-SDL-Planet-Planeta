@@ -36,8 +36,9 @@ public:
 	Player collision test
 	Tests if the Player collides with an object.
 	@param float the delta time
+	@param char the axis to test
 	*/
-	void playerCollisionTest(float);
+	void playerCollisionTest(float, char);
 
 	/**
 	Gem collision action
@@ -47,19 +48,24 @@ public:
 	void gemAction(int);
 
 	/**
-	Block collision action
-	Performs the action that happens when the player collides with a Block
+	Block collision action on the x xis
+	Performs the action that happens when the player collides with a Block on the x axis
 	@param int the index of the Block that has been collided with
 	*/
-	void blockAction(int);
+	void blockActionX(int);
+
+	/**
+	Block collision action on the y axis
+	Performs the action that happens when the player collides with a Block on the y axis
+	@param int the index of the Block that has been collided with
+	*/
+	void blockActionY(int);
 
 	void roundingCheck(float, int &minMap, int &maxMap, float);
 
 	void leftTest(float, int, int, int);
 
 	void rightTest(float, int, int, int);
-
-	void upTest(float, int, int, int);
 
 	void downTest(float, int, int, int);
 };
