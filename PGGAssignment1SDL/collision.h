@@ -34,8 +34,9 @@ public:
 	Player collision test
 	Tests if the Player collides with an object.
 	@param float the delta time
+	@param float the background position
 	*/
-	void playerCollisionTest(float);
+	void playerCollisionTest(float, float, Texture *, SDL_Renderer *);
 
 	/**
 	Gem collision action
@@ -50,6 +51,8 @@ public:
 	@param int the index of the Block that has been collided with
 	*/
 	void blockAction(int);
+
+	void roundingCheck(float, int &minMap, int &maxMap, float);
 };
 
 #endif

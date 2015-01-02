@@ -10,8 +10,6 @@
 class Gem : public MapObject
 {
 private:
-	/*Gem velocity*/
-	float velocity;
 	/*the type of the Gem*/
 	int type;
 	/*the value of the Gem*/
@@ -38,20 +36,6 @@ public:
 	Uses the value of type to set up initial values for the Gem
 	*/
 	void typeSetup();
-
-	/**
-	Setter # velocity
-	Sets the velocity of the Gem to the inputed velocity.
-	@param float the inputed velocity
-	*/
-	void setVelocity(float);
-
-	/**
-	Updates the x position of the Gem
-	Updates the x position using the velocity and the inputed deltaTime.
-	@param float the inputed deltaTime
-	*/
-	void updateX(float);
 
 	/**
 	Getter # value

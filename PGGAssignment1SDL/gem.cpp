@@ -12,9 +12,6 @@ Gem::Gem(Texture * inputTexture, float inputX, float inputY, int inType)
 	/*set the type details*/
 	typeSetup();
 
-	/*sets the initial velocity to 0*/
-	velocity = 0.0f;
-
 	/*sets the collision booleans*/
 	collidable = true;
 	damaging = false;
@@ -56,24 +53,6 @@ void Gem::typeSetup()
 		value = 100; /*sets the value of the gem*/
 		break;
 	}	
-}
-
-/**************************************************************************************************************/
-
-/*sets the velocity of the gem*/
-void Gem::setVelocity(float inputVelocity)
-{
-	/*sets the velocity to the value of the inputed velocity*/
-	velocity = inputVelocity;
-}
-
-/**************************************************************************************************************/
-
-/*updates x using the velocity*/
-void Gem::updateX(float dt)
-{
-	/*set the x position to value of x added to the velocity * the inputed deltaTime*/
-		x += velocity * dt;
 }
 
 /**************************************************************************************************************/

@@ -16,6 +16,13 @@ protected:
 	bool damaging;
 	/*does the object need to be deleted?*/
 	bool deleteable;
+	/*Gem velocity*/
+	float velocity;
+	/*position check variables*/
+	int minX;
+	int maxX;
+	/*can the Background move?*/
+	bool moveable;
 public:
 	/**
 	Constructs a MapObject object
@@ -68,8 +75,32 @@ public:
 
 	/**
 	Getter # deleteable
-	@returns bool  does the object need deleting.
+	@returns bool does the object need deleting.
 	*/
 	bool getDeletable();
+
+	/**
+	Setter # velocity
+	Sets the velocity of the MapObject to the inputed velocity.
+	@param float the inputed velocity
+	*/
+	void setVelocity(float);
+
+	/**
+	Updates the x position of the MapObject
+	Performers a check on the updated position of the x to see if it within boundaries.
+	If it is within boundaries then it updates the x position using the velocity and the inputed
+	deltaTime.
+	If it is not within boundaries then it resets the x position to the boundaries.
+	@param float the inputed deltaTime
+	*/
+	void updateX(float);
+
+
+	/**
+	Getter # velocity
+	@returns the velocity of the MapObject.
+	*/
+	float getVelocity();
 };
 #endif

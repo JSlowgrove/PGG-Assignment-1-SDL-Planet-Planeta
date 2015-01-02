@@ -24,7 +24,7 @@ Background::Background(Texture * inputTexture, int inputBackgroundType)
 	velocity = 0.0f;/*sets the initial velocity to 0*/
 	maxX = 0;/*sets the maximum x coordinate to 0, so that the background can not go any further to the right*/
 
-	/*sets the maximum x coordinate to 0 - the size of the background width added to the screen width,
+	/*sets the minimum x coordinate to 0 - the size of the background width added to the screen width,
 	so that the background can not go any further to the left than this point*/
 	minX = (0 - width) + 640;
 	moveable = true;/*sets the background to moveable*/
@@ -90,4 +90,13 @@ int Background::getType()
 {
 	/*returns the type*/
 	return backgroundType;
+}
+
+/**************************************************************************************************************/
+
+/*returns if moveable*/
+bool Background::getMoveable()
+{
+	/*returns if moveable*/
+	return moveable;
 }

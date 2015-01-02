@@ -13,15 +13,15 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	spritesheet = new Texture("img/spritesheet21x21.bmp", renderer, true);
 	numbers = new Texture("img/numbers42x42.bmp", renderer, true);
 
+	/*initialize random seed: */
+	srand((unsigned int)time(NULL));
+
 	/*create a random background type between 0 and 2*/
 	int backgroundType = rand() % 3;
 
 	/*initialise entities*/
 	background = new Background(backgrounds, backgroundType);
 	player = new Player(spritesheet, 100.0f, 100.0f, 19, 0);
-
-	/*initialize random seed: */
-	srand((unsigned int)time(NULL));
 
 	/*load map*/
 	map = new MapLoader("txt/map.txt", spritesheet, backgroundType);
@@ -31,6 +31,9 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 
 	/*initialise input commands*/
 	cmdJump = cmdLeft = cmdRight = false;
+
+	/*initialise player position bool*/
+	centered = false;
 
 	/*initialise tmp jump vars*/
 	gravity = true;
@@ -148,8 +151,9 @@ bool GameState::HandleSDLEvents()
 /*update the state*/
 void GameState::Update(float deltaTime)
 {
+	tmp = deltaTime;
 	/*tmp collision test*/
-	collision->playerCollisionTest(deltaTime);
+	//collision->playerCollisionTest(deltaTime, background->getX());
 
 	/*tmp floor test*/
 	if (player->getY() > (416.0f))
@@ -174,56 +178,17 @@ void GameState::Update(float deltaTime)
 	/*if left go left*/
 	if (cmdLeft &!cmdRight)
 	{
-		background->setVelocity(100.0f);
-		/*loop for the number of blocks*/
-		for (int i = 0; i < map->getNumberOfBlocks(); i++)
-		{
-			/*set the blocks velocity*/
-			map->getBlock(i)->setVelocity(100.0f);
-		}
-		/*loop for the number of gems*/
-		for (int i = 0; i < map->getNumberofGems(); i++)
-		{
-			/*set the gems velocity*/
-			map->getGem(i)->setVelocity(100.0f);
-		}
-		player->setVelocityX(-100.0f);
+		updateScene(-100.0f);
 	}
 	/*if right go right*/
 	if (cmdRight &!cmdLeft)
 	{
-		background->setVelocity(-100.0f);
-		/*loop for the number of blocks*/
-		for (int i = 0; i < map->getNumberOfBlocks(); i++)
-		{
-			/*set the blocks velocity*/
-			map->getBlock(i)->setVelocity(-100.0f);
-		}
-		/*loop for the number of gems*/
-		for (int i = 0; i < map->getNumberofGems(); i++)
-		{
-			/*set the gems velocity*/
-			map->getGem(i)->setVelocity(-100.0f);
-		}
-		player->setVelocityX(100.0f);
+		updateScene(100.0f);
 	}
 	/*if not right or left stay still*/
 	if (!cmdRight &!cmdLeft)
 	{
-		background->setVelocity(0.0f);
-		/*loop for the number of blocks*/
-		for (int i = 0; i < map->getNumberOfBlocks(); i++)
-		{
-			/*set the blocks velocity*/
-			map->getBlock(i)->setVelocity(0.0f);
-		}
-		/*loop for the number of gems*/
-		for (int i = 0; i < map->getNumberofGems(); i++)
-		{
-			/*set the gems velocity*/
-			map->getGem(i)->setVelocity(0.0f);
-		}
-		player->setVelocityX(0.0f);
+		updateScene(0.0f);
 	}
 
 	/*update gravity*/
@@ -252,6 +217,12 @@ void GameState::Update(float deltaTime)
 	/*Update Player*/
 	player->updateX(deltaTime);
 	player->updateY(deltaTime);
+
+	/*check if the player is centered*/
+	if (player->getX() <= 310 && player->getX() >= 310 && background->getMoveable())
+	{
+		centered = true;
+	}
 }
 
 /**************************************************************************************************************/
@@ -281,6 +252,7 @@ void GameState::Draw()
 	}
 	/*display the score*/
 	displayScore();
+	collision->playerCollisionTest(tmp, background->getX(), spritesheet, renderer);
 }
 
 /**************************************************************************************************************/
@@ -295,5 +267,33 @@ void GameState::displayScore()
 		/*display the number*/
 		numbers->pushSpriteToScreen(renderer, 32 * (5 - i), 32, 42 * (currentScore % 10), 0, 42, 42, 32, 32);
 		currentScore = currentScore / 10;
+	}
+}
+
+/**************************************************************************************************************/
+
+/*update the scenes velocity using the inputed velocity*/
+void GameState::updateScene(float velocity)
+{
+	if (centered && background->getMoveable())
+	{
+		background->setVelocity(-velocity);
+		/*loop for the number of blocks*/
+		for (int i = 0; i < map->getNumberOfBlocks(); i++)
+		{
+			/*set the blocks velocity*/
+			map->getBlock(i)->setVelocity(-velocity);
+		}
+		/*loop for the number of gems*/
+		for (int i = 0; i < map->getNumberofGems(); i++)
+		{
+			/*set the gems velocity*/
+			map->getGem(i)->setVelocity(-velocity);
+		}
+	}
+	else
+	{
+		centered = false;
+		player->setVelocityX(velocity);
 	}
 }

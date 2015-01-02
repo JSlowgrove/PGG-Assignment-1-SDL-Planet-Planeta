@@ -61,5 +61,11 @@ public:
 	@returns int the type of the Background.
 	*/
 	int getType();
+
+	/**
+	Getter # moveable
+	@returns bool if the Background can move.
+	*/
+	bool getMoveable();
 };
 #endif

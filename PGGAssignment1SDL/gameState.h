@@ -32,6 +32,10 @@ private:
 	Collision * collision;
 	/*input commands*/
 	bool cmdJump, cmdLeft, cmdRight;
+	/*is the player in the middle of the screen*/
+	bool centered;
+
+	int tmp;
 
 	/*tmp jump vars*/
 	bool gravity;
@@ -78,5 +82,11 @@ public:
 	A function to draw the score to the screen using the renderer
 	*/
 	void displayScore();
+
+	/**
+	A function to update the entire scene
+	Updates the scenes velocity using the inputed velocity
+	*/
+	void updateScene(float velocity);
 };
 #endif

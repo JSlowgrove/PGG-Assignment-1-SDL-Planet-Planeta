@@ -230,7 +230,6 @@ int MapLoader::getNumberOfEntities()
 	return numberOfEntites;
 }
 
-
 /**************************************************************************************************************/
 
 /*get the number of rows*/

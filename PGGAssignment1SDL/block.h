@@ -10,8 +10,6 @@
 class Block : public MapObject
 {
 private:
-	/*Block velocity*/
-	float velocity;
 	/*the type of the Block*/
 	int type;
 public:
@@ -31,20 +29,6 @@ public:
 	De-constructs the Block object
 	*/
 	~Block();
-
-	/**
-	Setter # velocity
-	Sets the velocity of the Block to the inputed velocity.
-	@param float the inputed velocity
-	*/
-	void setVelocity(float);
-
-	/**
-	Updates the x position of the Block
-	Updates the x position using the velocity and the inputed deltaTime.
-	@param float the inputed deltaTime
-	*/
-	void updateX(float);
 
 	/**
 	Sets the type of the Block

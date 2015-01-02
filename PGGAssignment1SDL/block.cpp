@@ -9,9 +9,6 @@ Block::Block(Texture * inputTexture, float inputX, float inputY, int inType, int
 	/*sets the type*/
 	type = inType;
 
-	/*sets the initial velocity to 0*/
-	velocity = 0.0f;
-
 	/*sets the collision booleans*/
 	collidable = true;
 	damaging = false;
@@ -26,24 +23,6 @@ Block::Block(Texture * inputTexture, float inputX, float inputY, int inType, int
 Block::~Block()
 {
 
-}
-
-/**************************************************************************************************************/
-
-/*sets the velocity of the block*/
-void Block::setVelocity(float inputVelocity)
-{
-	/*sets the velocity to the value of the inputed velocity*/
-	velocity = inputVelocity;
-}
-
-/**************************************************************************************************************/
-
-/*updates x using the velocity*/
-void Block::updateX(float dt)
-{
-	/*set the x position to value of x added to the velocity * the inputed deltaTime*/
-	x += velocity * dt;
 }
 
 /**************************************************************************************************************/
