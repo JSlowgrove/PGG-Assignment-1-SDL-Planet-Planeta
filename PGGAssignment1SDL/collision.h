@@ -4,6 +4,7 @@
 
 #include "player.h"
 #include "mapLoader.h"
+#include "background.h"
 
 /**
 @brief Creates an Collision object.
@@ -15,6 +16,7 @@ class Collision
 private:
 	Player * player;
 	MapLoader * map;
+	Background * background;
 public:
 	/**
 	Constructs an Collision object
@@ -22,7 +24,7 @@ public:
 	@param Player * pointer to the Player
 	@param MapLoader * pointer to the MapLoader
 	*/
-	Collision(Player *, MapLoader *);
+	Collision(Player *, MapLoader *, Background *);
 
 	/**
 	De-constructs an Collision object
@@ -34,9 +36,8 @@ public:
 	Player collision test
 	Tests if the Player collides with an object.
 	@param float the delta time
-	@param float the background position
 	*/
-	void playerCollisionTest(float, float, Texture *, SDL_Renderer *);
+	void playerCollisionTest(float);
 
 	/**
 	Gem collision action
@@ -54,9 +55,9 @@ public:
 
 	void roundingCheck(float, int &minMap, int &maxMap, float);
 
-	void leftTest(float, int, int, int, int backgroundPos, Texture* tex, SDL_Renderer * tmp);
+	void leftTest(float, int, int, int);
 
-	void rightTest(float, int, int, int, int backgroundPos, Texture* tex, SDL_Renderer * tmp);
+	void rightTest(float, int, int, int);
 
 	void upTest();
 

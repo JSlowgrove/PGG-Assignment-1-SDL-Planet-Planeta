@@ -3,10 +3,11 @@
 /**************************************************************************************************************/
 
 /*Constructs the collision object*/
-Collision::Collision(Player * inputPlayer, MapLoader * inputMap)
+Collision::Collision(Player * inputPlayer, MapLoader * inputMap, Background * inputBackground)
 {
 	player = inputPlayer;
 	map = inputMap;
+	background = inputBackground;
 }
 
 /**************************************************************************************************************/
@@ -19,7 +20,7 @@ Collision::~Collision()
 /**************************************************************************************************************/
 
 /*tests if the player collides with an object*/
-void Collision::playerCollisionTest(float deltaTime, float backgroundPos, Texture* tex, SDL_Renderer * tmp)
+void Collision::playerCollisionTest(float deltaTime)
 {
 	/*the updated value of the position*/
 	float updatedX = player->getX() + (player->getVelocityX() * deltaTime);
@@ -29,7 +30,7 @@ void Collision::playerCollisionTest(float deltaTime, float backgroundPos, Textur
 	int minPlayerMapX = 0;
 	int maxPlayerMapX = 0;
 	/*workout the map position depending on how it will round*/
-	roundingCheck(updatedX, minPlayerMapX, maxPlayerMapX, backgroundPos);
+	roundingCheck(updatedX, minPlayerMapX, maxPlayerMapX, background->getX());
 
 	/*the players position on the map grid*/
 	int minPlayerMapY = 0;
@@ -41,20 +42,20 @@ void Collision::playerCollisionTest(float deltaTime, float backgroundPos, Textur
 	if (player->getVelocityX() < 0 || map->getBlock(0)->getVelocity() > 0)
 	{
 		/*run the test for left*/
-		leftTest(updatedX, minPlayerMapX, minPlayerMapY, maxPlayerMapY, backgroundPos, tex, tmp);
+		leftTest(updatedX, minPlayerMapX, minPlayerMapY, maxPlayerMapY);
 	}
 	/*if the player is going right*/
 	if (player->getVelocityX() > 0 || map->getBlock(0)->getVelocity() < 0)
 	{
 		/*run the test for left*/
-		rightTest(updatedX, maxPlayerMapX, minPlayerMapY, maxPlayerMapY, backgroundPos, tex, tmp);
+		rightTest(updatedX, maxPlayerMapX, minPlayerMapY, maxPlayerMapY);
 	}
 }
 
 /**************************************************************************************************************/
 
 /*performs the tests for when the player goes left*/
-void Collision::leftTest(float updatedPosition, int minCurrentAxis, int minOppositeAxis, int maxOppositeAxis, int backgroundPos, Texture* tex, SDL_Renderer * tmp)
+void Collision::leftTest(float updatedPosition, int minCurrentAxis, int minOppositeAxis, int maxOppositeAxis)
 {
 	/*for the closest objects*/
 	std::vector<int> closestIIndex;
@@ -87,8 +88,6 @@ void Collision::leftTest(float updatedPosition, int minCurrentAxis, int minOppos
 	/*loop through the closest*/
 	for (int i = 0; i < closestIIndex.size(); i++)
 	{
-		/*tmp to help with debugging*/
-		tex->pushSpriteToScreen(tmp, (closestJIndex[i] * 32) + backgroundPos, (closestIIndex[i] * 32), 232, 94, 21, 21, 32, 32);
 
 		/*check if the type of the tile*/
 		switch (map->getType(closestIIndex[i], closestJIndex[i]))
@@ -121,7 +120,7 @@ void Collision::leftTest(float updatedPosition, int minCurrentAxis, int minOppos
 /**************************************************************************************************************/
 
 /*performs the tests for when the player goes right*/
-void Collision::rightTest(float updatedPosition, int maxCurrentAxis, int minOppositeAxis, int maxOppositeAxis, int backgroundPos, Texture* tex, SDL_Renderer * tmp)
+void Collision::rightTest(float updatedPosition, int maxCurrentAxis, int minOppositeAxis, int maxOppositeAxis)
 {
 	/*for the closest objects*/
 	std::vector<int> closestIIndex;
@@ -154,8 +153,6 @@ void Collision::rightTest(float updatedPosition, int maxCurrentAxis, int minOppo
 	/*loop through the closest*/
 	for (int i = 0; i < closestIIndex.size(); i++)
 	{
-		/*tmp to help with debugging*/
-		tex->pushSpriteToScreen(tmp, (closestJIndex[i] * 32) + backgroundPos, (closestIIndex[i] * 32), 232, 94, 21, 21, 32, 32);
 
 		/*check if the type of the tile*/
 		switch (map->getType(closestIIndex[i], closestJIndex[i]))
@@ -202,7 +199,22 @@ void Collision::gemAction(int i)
 /*Performs the action that happens when the player collides with a Block*/
 void Collision::blockAction(int i)
 {
-
+	/*stop the player*/
+	player->setVelocityX(0.0f);
+	/*stop the scenery*/
+	background->setVelocity(0.0f);
+	/*loop for the number of blocks*/
+	for (int i = 0; i < map->getNumberOfBlocks(); i++)
+	{
+		/*set the blocks velocity*/
+		map->getBlock(i)->setVelocity(0.0f);
+	}
+	/*loop for the number of gems*/
+	for (int i = 0; i < map->getNumberofGems(); i++)
+	{
+		/*set the gems velocity*/
+		map->getGem(i)->setVelocity(0.0f);
+	}
 }
 
 /**************************************************************************************************************/
@@ -225,3 +237,6 @@ void Collision::roundingCheck(float updatedPosition, int &minMapPosition, int &m
 	}	
 }
 
+
+/*tmp to help with debugging*/
+//tex->pushSpriteToScreen(tmp, (closestJIndex[i] * 32) + backgroundPos, (closestIIndex[i] * 32), 232, 94, 21, 21, 32, 32);

@@ -35,8 +35,6 @@ private:
 	/*is the player in the middle of the screen*/
 	bool centered;
 
-	int tmp;
-
 	/*tmp jump vars*/
 	bool gravity;
 	bool landed;

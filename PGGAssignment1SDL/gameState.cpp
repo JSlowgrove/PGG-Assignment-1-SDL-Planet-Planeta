@@ -27,7 +27,7 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	map = new MapLoader("txt/map.txt", spritesheet, backgroundType);
 
 	/*initialise collision*/
-	collision = new Collision(player, map);
+	collision = new Collision(player, map, background);
 
 	/*initialise input commands*/
 	cmdJump = cmdLeft = cmdRight = false;
@@ -151,17 +151,13 @@ bool GameState::HandleSDLEvents()
 /*update the state*/
 void GameState::Update(float deltaTime)
 {
-	tmp = deltaTime;
-	/*tmp collision test*/
-	//collision->playerCollisionTest(deltaTime, background->getX());
-
 	/*tmp floor test*/
-	if (player->getY() > (416.0f))
+	if (player->getY() > (414.0f))
 	{
 		gravity = false;
 		landed = true;
 		player->setVelocityY(0.0f);
-		player->setY(416.0f);
+		player->setY(414.0f);
 	}
 	else
 	{
@@ -196,6 +192,9 @@ void GameState::Update(float deltaTime)
 	{
 		player->setVelocityY(player->getVelocityY() + gravityF);
 	}
+
+	/*tmp collision test*/
+	collision->playerCollisionTest(deltaTime);
 
 	/*Update Background*/
 	background->updateX(deltaTime);
@@ -252,7 +251,6 @@ void GameState::Draw()
 	}
 	/*display the score*/
 	displayScore();
-	collision->playerCollisionTest(tmp, background->getX(), spritesheet, renderer);
 }
 
 /**************************************************************************************************************/
@@ -276,7 +274,7 @@ void GameState::displayScore()
 void GameState::updateScene(float velocity)
 {
 	//if (centered && background->getMoveable())
-	//{
+	///{
 		background->setVelocity(-velocity);
 		/*loop for the number of blocks*/
 		for (int i = 0; i < map->getNumberOfBlocks(); i++)
@@ -293,7 +291,7 @@ void GameState::updateScene(float velocity)
 	//}
 	//else
 	//{
-	//	centered = false;
-	//	player->setVelocityX(velocity);
+		//centered = false;
+		//player->setVelocityX(velocity);
 	//}
 }
