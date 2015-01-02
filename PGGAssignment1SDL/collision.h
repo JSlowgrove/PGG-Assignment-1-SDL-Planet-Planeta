@@ -53,6 +53,14 @@ public:
 	void blockAction(int);
 
 	void roundingCheck(float, int &minMap, int &maxMap, float);
+
+	void leftTest(float, int, int, int, int backgroundPos, Texture* tex, SDL_Renderer * tmp);
+
+	void rightTest(float, int, int, int, int backgroundPos, Texture* tex, SDL_Renderer * tmp);
+
+	void upTest();
+
+	void downTest();
 };
 
 #endif

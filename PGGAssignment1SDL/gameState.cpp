@@ -275,8 +275,8 @@ void GameState::displayScore()
 /*update the scenes velocity using the inputed velocity*/
 void GameState::updateScene(float velocity)
 {
-	if (centered && background->getMoveable())
-	{
+	//if (centered && background->getMoveable())
+	//{
 		background->setVelocity(-velocity);
 		/*loop for the number of blocks*/
 		for (int i = 0; i < map->getNumberOfBlocks(); i++)
@@ -290,10 +290,10 @@ void GameState::updateScene(float velocity)
 			/*set the gems velocity*/
 			map->getGem(i)->setVelocity(-velocity);
 		}
-	}
-	else
-	{
-		centered = false;
-		player->setVelocityX(velocity);
-	}
+	//}
+	//else
+	//{
+	//	centered = false;
+	//	player->setVelocityX(velocity);
+	//}
 }
