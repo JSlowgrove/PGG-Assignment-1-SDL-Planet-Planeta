@@ -59,9 +59,9 @@ public:
 
 	void rightTest(float, int, int, int);
 
-	void upTest();
+	void upTest(float, int, int, int);
 
-	void downTest();
+	void downTest(float, int, int, int);
 };
 
 #endif

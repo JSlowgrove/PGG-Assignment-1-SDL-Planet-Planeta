@@ -13,6 +13,11 @@ private:
 	/*the Player details*/
 	int lives;
 	int score;
+	/*jump vars*/
+	bool gravity;
+	bool landed;
+	bool jump;
+	float gravityF;
 public:
 	/**
 	Constructs a Player object
@@ -56,5 +61,50 @@ public:
 	@returns int the score the Player has.
 	*/
 	int getScore();
+
+	/**
+	Setter # gravity
+	Sets if gravity is acting on not.
+	@param bool if gravity is acting.
+	*/
+	void setGravity(bool);
+
+	/**
+	Getter # gravity
+	@returns bool if gravity is acting.
+	*/
+	bool getGravity();
+
+	/**
+	Setter # landed
+	Sets if the Player has landed.
+	@param bool if the Player has landed.
+	*/
+	void setLanded(bool);
+
+	/**
+	Getter # landed
+	@returns bool if the Player has landed.
+	*/
+	bool getLanded();
+
+	/**
+	Setter # jump
+	Sets if the Player is jumping.
+	@param bool if the Player is jumping.
+	*/
+	void setJump(bool);
+
+	/**
+	Getter # jump
+	@returns bool if the Player is jumping.
+	*/
+	bool getJump();
+
+	/**
+	Getter # gravityF
+	@returns float the value of the force gravity.
+	*/
+	float getGravityF();
 };
 #endif

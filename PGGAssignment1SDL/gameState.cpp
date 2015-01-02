@@ -35,12 +35,6 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	/*initialise player position bool*/
 	centered = false;
 
-	/*initialise tmp jump vars*/
-	gravity = true;
-	landed = false;
-	jump = false;
-	gravityF = 9.81f;
-
 }
 
 /**************************************************************************************************************/
@@ -154,21 +148,21 @@ void GameState::Update(float deltaTime)
 	/*tmp floor test*/
 	if (player->getY() > (414.0f))
 	{
-		gravity = false;
-		landed = true;
+		player->setGravity(false);
+		player->setLanded(true);
 		player->setVelocityY(0.0f);
 		player->setY(414.0f);
 	}
 	else
 	{
-		landed = false;
-		gravity = true;
+		player->setLanded(false);
+		player->setGravity(true);
 	}
 
 	/*if able to jump, jump*/
-	if (cmdJump && landed)
+	if (cmdJump && player->getLanded())
 	{
-		gravity = false;
+		player->setGravity(false);
 		player->setVelocityY(-350.0f);
 	}
 	/*if left go left*/
@@ -188,9 +182,9 @@ void GameState::Update(float deltaTime)
 	}
 
 	/*update gravity*/
-	if (gravity)
+	if (player->getGravity())
 	{
-		player->setVelocityY(player->getVelocityY() + gravityF);
+		player->setVelocityY(player->getVelocityY() + player->getGravityF());
 	}
 
 	/*tmp collision test*/

@@ -35,11 +35,6 @@ private:
 	/*is the player in the middle of the screen*/
 	bool centered;
 
-	/*tmp jump vars*/
-	bool gravity;
-	bool landed;
-	bool jump;
-	float gravityF;
 public:
 	/**
 	Constructs a GameState object

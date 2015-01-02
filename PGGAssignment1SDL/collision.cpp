@@ -182,6 +182,135 @@ void Collision::rightTest(float updatedPosition, int maxCurrentAxis, int minOppo
 	}
 }
 
+/**************************************************************************************************************/
+
+/*performs the tests for when the player goes up*/
+void Collision::upTest(float updatedPosition, int minCurrentAxis, int minOppositeAxis, int maxOppositeAxis)
+{
+	/*for the closest objects*/
+	std::vector<int> closestIIndex;
+	std::vector<int> closestJIndex;
+	closestIIndex.resize(0);
+	closestJIndex.resize(0);
+
+	/*test only the tiles within the max and min tiles on the opposite axis*/
+	for (int i = minOppositeAxis; i <= maxOppositeAxis; i++)
+	{
+		closestIIndex.resize(closestIIndex.size() + 1);
+		closestJIndex.resize(closestJIndex.size() + 1);
+		/*test only the tiles within the 0 and min tiles on the current axis*/
+		for (int j = 0; j <= minCurrentAxis; j++)
+		{
+			/*check if the type of the tile*/
+			switch (map->getType(i, j))
+			{
+			case 'X':
+				/*empty tile so do nothing*/
+				break;
+			default:
+				/*set as current closest*/
+				closestIIndex[closestIIndex.size() - 1] = i;
+				closestJIndex[closestJIndex.size() - 1] = j;
+				break;
+			}
+		}
+	}
+	/*loop through the closest*/
+	for (int i = 0; i < closestIIndex.size(); i++)
+	{
+
+		/*check if the type of the tile*/
+		switch (map->getType(closestIIndex[i], closestJIndex[i]))
+		{
+		case 'X':
+			/*empty tile so do nothing*/
+			break;
+		case 'B':
+			/*check if its is interesting*/
+			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() + 32 >= updatedPosition)
+			{
+				/*block tile so do block collision action*/
+				blockAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+			}
+			break;
+		case 'G':
+			/*check if its is interesting*/
+			if (map->getGem(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() + 32 >= updatedPosition)
+			{
+				/*gem tile so do block collision action*/
+				gemAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				/*removes the gem from the map*/
+				map->setEntityBlank(closestIIndex[i], closestJIndex[i]);
+			}
+			break;
+		}
+	}
+}
+
+/**************************************************************************************************************/
+
+/*performs the tests for when the player goes down*/
+void Collision::downTest(float updatedPosition, int maxCurrentAxis, int minOppositeAxis, int maxOppositeAxis)
+{
+	/*for the closest objects*/
+	std::vector<int> closestIIndex;
+	std::vector<int> closestJIndex;
+	closestIIndex.resize(0);
+	closestJIndex.resize(0);
+
+	/*test only the tiles within the max and min tiles on the opposite axis*/
+	for (int j = minOppositeAxis; j <= maxOppositeAxis; j++)
+	{
+		closestIIndex.resize(closestIIndex.size() + 1);
+		closestJIndex.resize(closestJIndex.size() + 1);
+		/*test only the tiles within the 0 and min tiles on the current axis*/
+		for (int i = 14; i >= maxCurrentAxis; i--)
+		{
+			/*check if the type of the tile*/
+			switch (map->getType(i, j))
+			{
+			case 'X':
+				/*empty tile so do nothing*/
+				break;
+			default:
+				/*set as current closest*/
+				closestIIndex[closestIIndex.size() - 1] = i;
+				closestJIndex[closestJIndex.size() - 1] = j;
+				break;
+			}
+		}
+	}
+	/*loop through the closest*/
+	for (int i = 0; i < closestIIndex.size(); i++)
+	{
+
+		/*check if the type of the tile*/
+		switch (map->getType(closestIIndex[i], closestJIndex[i]))
+		{
+		case 'X':
+			/*empty tile so do nothing*/
+			break;
+		case 'B':
+			/*check if its is interesting*/
+			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() <= updatedPosition + 32)
+			{
+				/*block tile so do block collision action*/
+				blockAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+			}
+			break;
+		case 'G':
+			/*check if its is interesting*/
+			if (map->getGem(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() <= updatedPosition + 32)
+			{
+				/*gem tile so do block collision action*/
+				gemAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				/*removes the gem from the map*/
+				map->setEntityBlank(closestIIndex[i], closestJIndex[i]);
+			}
+			break;
+		}
+	}
+}
 
 /**************************************************************************************************************/
 
