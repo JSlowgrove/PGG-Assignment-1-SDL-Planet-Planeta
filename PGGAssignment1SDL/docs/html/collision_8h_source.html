@@ -92,37 +92,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;player.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;mapLoader.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_collision.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_collision.html">Collision</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_player.html">Player</a> * player;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_map_loader.html">MapLoader</a> * map;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_collision.html#a975df63cb6f3b4d746191ff8348598fb">Collision</a>(<a class="code" href="class_player.html">Player</a> *, <a class="code" href="class_map_loader.html">MapLoader</a> *);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_collision.html#a19ae49bcb3b16f4622443a34a171590c">~Collision</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#ac7635cf9b887dcd4ffc3cf15f35e39a9">playerCollisionTest</a>(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#a8a7c7bbaa789c0867559d79ef186dd84">gemAction</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#aaf2c586cbf92070483282ab66090e5dc">blockAction</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_collision_html_ac7635cf9b887dcd4ffc3cf15f35e39a9"><div class="ttname"><a href="class_collision.html#ac7635cf9b887dcd4ffc3cf15f35e39a9">Collision::playerCollisionTest</a></div><div class="ttdeci">void playerCollisionTest(float)</div><div class="ttdef"><b>Definition:</b> collision.cpp:22</div></div>
-<div class="ttc" id="class_collision_html_a975df63cb6f3b4d746191ff8348598fb"><div class="ttname"><a href="class_collision.html#a975df63cb6f3b4d746191ff8348598fb">Collision::Collision</a></div><div class="ttdeci">Collision(Player *, MapLoader *)</div><div class="ttdef"><b>Definition:</b> collision.cpp:6</div></div>
-<div class="ttc" id="class_collision_html_aaf2c586cbf92070483282ab66090e5dc"><div class="ttname"><a href="class_collision.html#aaf2c586cbf92070483282ab66090e5dc">Collision::blockAction</a></div><div class="ttdeci">void blockAction(int)</div><div class="ttdef"><b>Definition:</b> collision.cpp:105</div></div>
-<div class="ttc" id="class_collision_html_a19ae49bcb3b16f4622443a34a171590c"><div class="ttname"><a href="class_collision.html#a19ae49bcb3b16f4622443a34a171590c">Collision::~Collision</a></div><div class="ttdeci">~Collision()</div><div class="ttdef"><b>Definition:</b> collision.cpp:15</div></div>
-<div class="ttc" id="class_collision_html_a8a7c7bbaa789c0867559d79ef186dd84"><div class="ttname"><a href="class_collision.html#a8a7c7bbaa789c0867559d79ef186dd84">Collision::gemAction</a></div><div class="ttdeci">void gemAction(int)</div><div class="ttdef"><b>Definition:</b> collision.cpp:94</div></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;background.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_collision.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_collision.html">Collision</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*pointers to entities used in the tests*/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_player.html">Player</a> * player;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_map_loader.html">MapLoader</a> * map;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_background.html">Background</a> * background;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_collision.html#ad31e4037d453108a21fc186cfc27fec9">Collision</a>(<a class="code" href="class_player.html">Player</a> *, <a class="code" href="class_map_loader.html">MapLoader</a> *, <a class="code" href="class_background.html">Background</a> *);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_collision.html#a19ae49bcb3b16f4622443a34a171590c">~Collision</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#a79a33125bb8ef50a883822b4c80b71ae">playerCollisionTest</a>(<span class="keywordtype">float</span>, <span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#a8a7c7bbaa789c0867559d79ef186dd84">gemAction</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#a8daccc0201f916f571afbbd8da992ffb">blockActionX</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#ac4b2ae74fb5978743580f25ac2760f3a">blockActionY</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#a7b13afe2227a341d094d5bcb5e8e4905">roundingCheck</a>(<span class="keywordtype">float</span>, <span class="keywordtype">int</span> &amp;minMap, <span class="keywordtype">int</span> &amp;maxMap, <span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c">leftTest</a>(<span class="keywordtype">float</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58">rightTest</a>(<span class="keywordtype">float</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e">downTest</a>(<span class="keywordtype">float</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_collision_html_ac4b2ae74fb5978743580f25ac2760f3a"><div class="ttname"><a href="class_collision.html#ac4b2ae74fb5978743580f25ac2760f3a">Collision::blockActionY</a></div><div class="ttdeci">void blockActionY(int)</div><div class="ttdef"><b>Definition:</b> collision.cpp:299</div></div>
+<div class="ttc" id="class_collision_html_a0cd628e6adcb69e216f9b469fa7c029c"><div class="ttname"><a href="class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c">Collision::leftTest</a></div><div class="ttdeci">void leftTest(float, int, int, int)</div><div class="ttdef"><b>Definition:</b> collision.cpp:71</div></div>
+<div class="ttc" id="class_collision_html_a8daccc0201f916f571afbbd8da992ffb"><div class="ttname"><a href="class_collision.html#a8daccc0201f916f571afbbd8da992ffb">Collision::blockActionX</a></div><div class="ttdeci">void blockActionX(int)</div><div class="ttdef"><b>Definition:</b> collision.cpp:276</div></div>
+<div class="ttc" id="class_collision_html_ad31e4037d453108a21fc186cfc27fec9"><div class="ttname"><a href="class_collision.html#ad31e4037d453108a21fc186cfc27fec9">Collision::Collision</a></div><div class="ttdeci">Collision(Player *, MapLoader *, Background *)</div><div class="ttdef"><b>Definition:</b> collision.cpp:6</div></div>
+<div class="ttc" id="class_background_html"><div class="ttname"><a href="class_background.html">Background</a></div><div class="ttdoc">Creates a Background object that inherits Entity. Creates a Background object with a velocity...</div><div class="ttdef"><b>Definition:</b> background.h:13</div></div>
+<div class="ttc" id="class_collision_html_a79a33125bb8ef50a883822b4c80b71ae"><div class="ttname"><a href="class_collision.html#a79a33125bb8ef50a883822b4c80b71ae">Collision::playerCollisionTest</a></div><div class="ttdeci">void playerCollisionTest(float, char)</div><div class="ttdef"><b>Definition:</b> collision.cpp:23</div></div>
+<div class="ttc" id="class_collision_html_a7c33a20a9c111630eeb8f0202605161e"><div class="ttname"><a href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e">Collision::downTest</a></div><div class="ttdeci">void downTest(float, int, int, int)</div><div class="ttdef"><b>Definition:</b> collision.cpp:201</div></div>
+<div class="ttc" id="class_collision_html_a19ae49bcb3b16f4622443a34a171590c"><div class="ttname"><a href="class_collision.html#a19ae49bcb3b16f4622443a34a171590c">Collision::~Collision</a></div><div class="ttdeci">~Collision()</div><div class="ttdef"><b>Definition:</b> collision.cpp:16</div></div>
+<div class="ttc" id="class_collision_html_a8a7c7bbaa789c0867559d79ef186dd84"><div class="ttname"><a href="class_collision.html#a8a7c7bbaa789c0867559d79ef186dd84">Collision::gemAction</a></div><div class="ttdeci">void gemAction(int)</div><div class="ttdef"><b>Definition:</b> collision.cpp:265</div></div>
 <div class="ttc" id="class_map_loader_html"><div class="ttname"><a href="class_map_loader.html">MapLoader</a></div><div class="ttdoc">a class to load in a map text file </div><div class="ttdef"><b>Definition:</b> mapLoader.h:15</div></div>
-<div class="ttc" id="class_collision_html"><div class="ttname"><a href="class_collision.html">Collision</a></div><div class="ttdoc">Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. </div><div class="ttdef"><b>Definition:</b> collision.h:13</div></div>
+<div class="ttc" id="class_collision_html_a7b13afe2227a341d094d5bcb5e8e4905"><div class="ttname"><a href="class_collision.html#a7b13afe2227a341d094d5bcb5e8e4905">Collision::roundingCheck</a></div><div class="ttdeci">void roundingCheck(float, int &amp;minMap, int &amp;maxMap, float)</div><div class="ttdef"><b>Definition:</b> collision.cpp:313</div></div>
+<div class="ttc" id="class_collision_html"><div class="ttname"><a href="class_collision.html">Collision</a></div><div class="ttdoc">Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. </div><div class="ttdef"><b>Definition:</b> collision.h:14</div></div>
 <div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Creates a Player object that inherits Creature which in turn inherits Entity. </div><div class="ttdef"><b>Definition:</b> player.h:10</div></div>
+<div class="ttc" id="class_collision_html_a5aff01e79c9c42e7d71a57de7412dc58"><div class="ttname"><a href="class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58">Collision::rightTest</a></div><div class="ttdeci">void rightTest(float, int, int, int)</div><div class="ttdef"><b>Definition:</b> collision.cpp:136</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 1 2015 16:27:43 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 2 2015 23:09:29 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

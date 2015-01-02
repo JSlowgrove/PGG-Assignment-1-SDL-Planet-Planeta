@@ -13,7 +13,7 @@ private:
 	/*the Player details*/
 	int lives;
 	int score;
-	/*jump vars*/
+	/*jump variables*/
 	bool gravity;
 	bool landed;
 	bool jump;

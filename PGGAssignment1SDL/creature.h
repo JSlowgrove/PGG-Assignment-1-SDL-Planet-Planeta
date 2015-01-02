@@ -23,7 +23,6 @@ public:
 	*/
 	Creature(Texture *, float, float);
 
-
 	/**
 	De-constructs a Creature object
 	De-constructs the Creature object

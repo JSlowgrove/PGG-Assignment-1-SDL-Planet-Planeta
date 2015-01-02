@@ -30,6 +30,20 @@ int \hyperlink{class_player_af56ac33b9b2ebd9f97c8a6f485cf2d47}{get\+Lives} ()
 void \hyperlink{class_player_aa054ea95ca73dd19036d2917b29ab021}{set\+Score} (int)
 \item 
 int \hyperlink{class_player_a97e5447778ae6c384eedc532dcd8431d}{get\+Score} ()
+\item 
+void \hyperlink{class_player_a36a300f4f62fae25747c4301a81c5a10}{set\+Gravity} (bool)
+\item 
+bool \hyperlink{class_player_a7f8e925cef6578c511f0b215f309d814}{get\+Gravity} ()
+\item 
+void \hyperlink{class_player_a3474c047c1495322742b79a43381bc32}{set\+Landed} (bool)
+\item 
+bool \hyperlink{class_player_acda5f8d74dcb44e5ebc12003104ec0ef}{get\+Landed} ()
+\item 
+void \hyperlink{class_player_a282bc0d3c7341a9727bcb16cd902c953}{set\+Jump} (bool)
+\item 
+bool \hyperlink{class_player_a4760bc30c5c2f45c7a858496a395981f}{get\+Jump} ()
+\item 
+float \hyperlink{class_player_ae0ae09987c59e99aa451481bf827093c}{get\+Gravity\+F} ()
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -72,6 +86,46 @@ Constructs a \hyperlink{class_player}{Player} object Constructs the \hyperlink{c
 De-\/constructs a \hyperlink{class_player}{Player} object De-\/constructs the \hyperlink{class_player}{Player} object 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_player_a7f8e925cef6578c511f0b215f309d814}{\index{Player@{Player}!get\+Gravity@{get\+Gravity}}
+\index{get\+Gravity@{get\+Gravity}!Player@{Player}}
+\subsubsection[{get\+Gravity}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\+::get\+Gravity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_a7f8e925cef6578c511f0b215f309d814}
+Getter \# gravity \begin{DoxyReturn}{Returns}
+bool if gravity is acting. 
+\end{DoxyReturn}
+\hypertarget{class_player_ae0ae09987c59e99aa451481bf827093c}{\index{Player@{Player}!get\+Gravity\+F@{get\+Gravity\+F}}
+\index{get\+Gravity\+F@{get\+Gravity\+F}!Player@{Player}}
+\subsubsection[{get\+Gravity\+F}]{\setlength{\rightskip}{0pt plus 5cm}float Player\+::get\+Gravity\+F (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_ae0ae09987c59e99aa451481bf827093c}
+Getter \# gravity\+F \begin{DoxyReturn}{Returns}
+float the value of the force gravity. 
+\end{DoxyReturn}
+\hypertarget{class_player_a4760bc30c5c2f45c7a858496a395981f}{\index{Player@{Player}!get\+Jump@{get\+Jump}}
+\index{get\+Jump@{get\+Jump}!Player@{Player}}
+\subsubsection[{get\+Jump}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\+::get\+Jump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_a4760bc30c5c2f45c7a858496a395981f}
+Getter \# jump \begin{DoxyReturn}{Returns}
+bool if the \hyperlink{class_player}{Player} is jumping. 
+\end{DoxyReturn}
+\hypertarget{class_player_acda5f8d74dcb44e5ebc12003104ec0ef}{\index{Player@{Player}!get\+Landed@{get\+Landed}}
+\index{get\+Landed@{get\+Landed}!Player@{Player}}
+\subsubsection[{get\+Landed}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\+::get\+Landed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_acda5f8d74dcb44e5ebc12003104ec0ef}
+Getter \# landed \begin{DoxyReturn}{Returns}
+bool if the \hyperlink{class_player}{Player} has landed. 
+\end{DoxyReturn}
 \hypertarget{class_player_af56ac33b9b2ebd9f97c8a6f485cf2d47}{\index{Player@{Player}!get\+Lives@{get\+Lives}}
 \index{get\+Lives@{get\+Lives}!Player@{Player}}
 \subsubsection[{get\+Lives}]{\setlength{\rightskip}{0pt plus 5cm}int Player\+::get\+Lives (
@@ -92,6 +146,42 @@ int the number of lives the \hyperlink{class_player}{Player} has.
 Getter \# score \begin{DoxyReturn}{Returns}
 int the score the \hyperlink{class_player}{Player} has. 
 \end{DoxyReturn}
+\hypertarget{class_player_a36a300f4f62fae25747c4301a81c5a10}{\index{Player@{Player}!set\+Gravity@{set\+Gravity}}
+\index{set\+Gravity@{set\+Gravity}!Player@{Player}}
+\subsubsection[{set\+Gravity}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Gravity (
+\begin{DoxyParamCaption}
+\item[{bool}]{input\+Gravity}
+\end{DoxyParamCaption}
+)}}\label{class_player_a36a300f4f62fae25747c4301a81c5a10}
+Setter \# gravity Sets if gravity is acting on not. 
+\begin{DoxyParams}{Parameters}
+{\em bool} & if gravity is acting. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_a282bc0d3c7341a9727bcb16cd902c953}{\index{Player@{Player}!set\+Jump@{set\+Jump}}
+\index{set\+Jump@{set\+Jump}!Player@{Player}}
+\subsubsection[{set\+Jump}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Jump (
+\begin{DoxyParamCaption}
+\item[{bool}]{input\+Jump}
+\end{DoxyParamCaption}
+)}}\label{class_player_a282bc0d3c7341a9727bcb16cd902c953}
+Setter \# jump Sets if the \hyperlink{class_player}{Player} is jumping. 
+\begin{DoxyParams}{Parameters}
+{\em bool} & if the \hyperlink{class_player}{Player} is jumping. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_a3474c047c1495322742b79a43381bc32}{\index{Player@{Player}!set\+Landed@{set\+Landed}}
+\index{set\+Landed@{set\+Landed}!Player@{Player}}
+\subsubsection[{set\+Landed}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Landed (
+\begin{DoxyParamCaption}
+\item[{bool}]{input\+Landing}
+\end{DoxyParamCaption}
+)}}\label{class_player_a3474c047c1495322742b79a43381bc32}
+Setter \# landed Sets if the \hyperlink{class_player}{Player} has landed. 
+\begin{DoxyParams}{Parameters}
+{\em bool} & if the \hyperlink{class_player}{Player} has landed. \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_player_a565d4df3c32d00243b1ef16dfd6e5e03}{\index{Player@{Player}!set\+Lives@{set\+Lives}}
 \index{set\+Lives@{set\+Lives}!Player@{Player}}
 \subsubsection[{set\+Lives}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Lives (

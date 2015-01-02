@@ -15,7 +15,7 @@ Player::Player(Texture * inputTexture, float inputX, float inputY, int spriteShe
 	score = 0;
 	lives = 3;
 
-	/*initialise jump vars*/
+	/*initialise jump varibles*/
 	gravity = true;
 	landed = false;
 	jump = false;

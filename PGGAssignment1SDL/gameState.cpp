@@ -33,7 +33,7 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	cmdJump = cmdLeft = cmdRight = false;
 
 	/*initialise player position bool*/
-	centered = false;
+	//centered = false;
 
 }
 
@@ -240,10 +240,10 @@ void GameState::Update(float deltaTime)
 	player->updateY(deltaTime);
 
 	/*check if the player is centered*/
-	if (player->getX() <= 310 && player->getX() >= 310 && background->getMoveable())
-	{
-		centered = true;
-	}
+	//if (player->getX() <= 310 && player->getX() >= 310 && background->getMoveable())
+	//{
+	//	centered = true;
+	//}
 }
 
 /**************************************************************************************************************/
@@ -273,6 +273,12 @@ void GameState::Draw()
 	}
 	/*display the score*/
 	displayScore();
+	/*display the number of lives the player has left*/
+	for (int i = 1; i <= player->getLives(); i++)
+	{
+		/*display a heart to the screen*/
+		spritesheet->pushSpriteToScreen(renderer, 32 * (7 + i), 32, 301, 278, 21, 21, 32, 32);
+	}
 }
 
 /**************************************************************************************************************/
@@ -295,8 +301,8 @@ void GameState::displayScore()
 /*update the scenes velocity using the inputed velocity*/
 void GameState::updateScene(float velocity)
 {
-	if (centered && background->getMoveable())
-	{
+	//if (centered && background->getMoveable())
+	//{
 		background->setVelocity(-velocity);
 		/*loop for the number of blocks*/
 		for (int i = 0; i < map->getNumberOfBlocks(); i++)
@@ -310,10 +316,10 @@ void GameState::updateScene(float velocity)
 			/*set the gems velocity*/
 			map->getGem(i)->setVelocity(-velocity);
 		}
-	}
-	else
-	{
-		centered = false;
+	//}
+	//else
+	//{
+	//	centered = false;
 		player->setVelocityX(velocity);
-	}
+	//}
 }

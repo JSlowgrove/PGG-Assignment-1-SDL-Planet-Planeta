@@ -13,15 +13,25 @@ Creates an \hyperlink{class_collision}{Collision} object. The \hyperlink{class_c
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_collision_a975df63cb6f3b4d746191ff8348598fb}{Collision} (\hyperlink{class_player}{Player} $\ast$, \hyperlink{class_map_loader}{Map\+Loader} $\ast$)
+\hyperlink{class_collision_ad31e4037d453108a21fc186cfc27fec9}{Collision} (\hyperlink{class_player}{Player} $\ast$, \hyperlink{class_map_loader}{Map\+Loader} $\ast$, \hyperlink{class_background}{Background} $\ast$)
 \item 
 \hyperlink{class_collision_a19ae49bcb3b16f4622443a34a171590c}{$\sim$\+Collision} ()
 \item 
-void \hyperlink{class_collision_ac7635cf9b887dcd4ffc3cf15f35e39a9}{player\+Collision\+Test} (float)
+void \hyperlink{class_collision_a79a33125bb8ef50a883822b4c80b71ae}{player\+Collision\+Test} (float, char)
 \item 
 void \hyperlink{class_collision_a8a7c7bbaa789c0867559d79ef186dd84}{gem\+Action} (int)
 \item 
-void \hyperlink{class_collision_aaf2c586cbf92070483282ab66090e5dc}{block\+Action} (int)
+void \hyperlink{class_collision_a8daccc0201f916f571afbbd8da992ffb}{block\+Action\+X} (int)
+\item 
+void \hyperlink{class_collision_ac4b2ae74fb5978743580f25ac2760f3a}{block\+Action\+Y} (int)
+\item 
+void \hyperlink{class_collision_a7b13afe2227a341d094d5bcb5e8e4905}{rounding\+Check} (float, int \&min\+Map, int \&max\+Map, float)
+\item 
+void \hyperlink{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}{left\+Test} (float, int, int, int)
+\item 
+void \hyperlink{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}{right\+Test} (float, int, int, int)
+\item 
+void \hyperlink{class_collision_a7c33a20a9c111630eeb8f0202605161e}{down\+Test} (float, int, int, int)
 \end{DoxyCompactItemize}
 
 
@@ -29,19 +39,22 @@ void \hyperlink{class_collision_aaf2c586cbf92070483282ab66090e5dc}{block\+Action
 Creates an \hyperlink{class_collision}{Collision} object. The \hyperlink{class_collision}{Collision} object is for use with detecting \hyperlink{class_collision}{Collision}. Used help from \href{http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/}{\tt http\+://higherorderfun.\+com/blog/2012/05/20/the-\/guide-\/to-\/implementing-\/2d-\/platformers/} in the type 2 section. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_collision_a975df63cb6f3b4d746191ff8348598fb}{\index{Collision@{Collision}!Collision@{Collision}}
+\hypertarget{class_collision_ad31e4037d453108a21fc186cfc27fec9}{\index{Collision@{Collision}!Collision@{Collision}}
 \index{Collision@{Collision}!Collision@{Collision}}
 \subsubsection[{Collision}]{\setlength{\rightskip}{0pt plus 5cm}Collision\+::\+Collision (
 \begin{DoxyParamCaption}
 \item[{{\bf Player} $\ast$}]{input\+Player, }
-\item[{{\bf Map\+Loader} $\ast$}]{input\+Map}
+\item[{{\bf Map\+Loader} $\ast$}]{input\+Map, }
+\item[{{\bf Background} $\ast$}]{input\+Background}
 \end{DoxyParamCaption}
-)}}\label{class_collision_a975df63cb6f3b4d746191ff8348598fb}
+)}}\label{class_collision_ad31e4037d453108a21fc186cfc27fec9}
 Constructs an \hyperlink{class_collision}{Collision} object Constructs the \hyperlink{class_collision}{Collision} object. 
 \begin{DoxyParams}{Parameters}
 {\em \hyperlink{class_player}{Player}} & $\ast$ pointer to the \hyperlink{class_player}{Player} \\
 \hline
 {\em \hyperlink{class_map_loader}{Map\+Loader}} & $\ast$ pointer to the \hyperlink{class_map_loader}{Map\+Loader} \\
+\hline
+{\em \hyperlink{class_background}{Background}} & $\ast$ pointer to the \hyperlink{class_background}{Background} \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_collision_a19ae49bcb3b16f4622443a34a171590c}{\index{Collision@{Collision}!````~Collision@{$\sim$\+Collision}}
@@ -54,16 +67,49 @@ Constructs an \hyperlink{class_collision}{Collision} object Constructs the \hype
 De-\/constructs an \hyperlink{class_collision}{Collision} object De-\/constructs the \hyperlink{class_collision}{Collision} object 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_collision_aaf2c586cbf92070483282ab66090e5dc}{\index{Collision@{Collision}!block\+Action@{block\+Action}}
-\index{block\+Action@{block\+Action}!Collision@{Collision}}
-\subsubsection[{block\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::block\+Action (
+\hypertarget{class_collision_a8daccc0201f916f571afbbd8da992ffb}{\index{Collision@{Collision}!block\+Action\+X@{block\+Action\+X}}
+\index{block\+Action\+X@{block\+Action\+X}!Collision@{Collision}}
+\subsubsection[{block\+Action\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::block\+Action\+X (
 \begin{DoxyParamCaption}
 \item[{int}]{i}
 \end{DoxyParamCaption}
-)}}\label{class_collision_aaf2c586cbf92070483282ab66090e5dc}
-\hyperlink{class_block}{Block} collision action Performs the action that happens when the player collides with a \hyperlink{class_block}{Block} 
+)}}\label{class_collision_a8daccc0201f916f571afbbd8da992ffb}
+\hyperlink{class_block}{Block} collision action on the x xis Performs the action that happens when the player collides with a \hyperlink{class_block}{Block} on the x axis 
 \begin{DoxyParams}{Parameters}
 {\em int} & the index of the \hyperlink{class_block}{Block} that has been collided with \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_ac4b2ae74fb5978743580f25ac2760f3a}{\index{Collision@{Collision}!block\+Action\+Y@{block\+Action\+Y}}
+\index{block\+Action\+Y@{block\+Action\+Y}!Collision@{Collision}}
+\subsubsection[{block\+Action\+Y}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::block\+Action\+Y (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_collision_ac4b2ae74fb5978743580f25ac2760f3a}
+\hyperlink{class_block}{Block} collision action on the y axis Performs the action that happens when the player collides with a \hyperlink{class_block}{Block} on the y axis 
+\begin{DoxyParams}{Parameters}
+{\em int} & the index of the \hyperlink{class_block}{Block} that has been collided with \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_a7c33a20a9c111630eeb8f0202605161e}{\index{Collision@{Collision}!down\+Test@{down\+Test}}
+\index{down\+Test@{down\+Test}!Collision@{Collision}}
+\subsubsection[{down\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::down\+Test (
+\begin{DoxyParamCaption}
+\item[{float}]{updated\+Position, }
+\item[{int}]{max\+Current\+Axis, }
+\item[{int}]{min\+Opposite\+Axis, }
+\item[{int}]{max\+Opposite\+Axis}
+\end{DoxyParamCaption}
+)}}\label{class_collision_a7c33a20a9c111630eeb8f0202605161e}
+The test and action to apply if the player is going down This could proberally be converted into a single function along with \hyperlink{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}{right\+Test()} and \hyperlink{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}{left\+Test()}, time permitting. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the updated position \\
+\hline
+{\em int} & the max position along the current axis \\
+\hline
+{\em int} & the min position along the opposite axis \\
+\hline
+{\em int} & the max position along the opposite axis \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_collision_a8a7c7bbaa789c0867559d79ef186dd84}{\index{Collision@{Collision}!gem\+Action@{gem\+Action}}
@@ -78,16 +124,82 @@ De-\/constructs an \hyperlink{class_collision}{Collision} object De-\/constructs
 {\em int} & the index of the \hyperlink{class_gem}{Gem} that has been collided with \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_collision_ac7635cf9b887dcd4ffc3cf15f35e39a9}{\index{Collision@{Collision}!player\+Collision\+Test@{player\+Collision\+Test}}
+\hypertarget{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}{\index{Collision@{Collision}!left\+Test@{left\+Test}}
+\index{left\+Test@{left\+Test}!Collision@{Collision}}
+\subsubsection[{left\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::left\+Test (
+\begin{DoxyParamCaption}
+\item[{float}]{updated\+Position, }
+\item[{int}]{min\+Current\+Axis, }
+\item[{int}]{min\+Opposite\+Axis, }
+\item[{int}]{max\+Opposite\+Axis}
+\end{DoxyParamCaption}
+)}}\label{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}
+The test and action to apply if the player is going left This could proberally be converted into a single function along with \hyperlink{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}{right\+Test()} and \hyperlink{class_collision_a7c33a20a9c111630eeb8f0202605161e}{down\+Test()}, time permitting. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the updated position \\
+\hline
+{\em int} & the max position along the current axis \\
+\hline
+{\em int} & the min position along the opposite axis \\
+\hline
+{\em int} & the max position along the opposite axis \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_a79a33125bb8ef50a883822b4c80b71ae}{\index{Collision@{Collision}!player\+Collision\+Test@{player\+Collision\+Test}}
 \index{player\+Collision\+Test@{player\+Collision\+Test}!Collision@{Collision}}
 \subsubsection[{player\+Collision\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::player\+Collision\+Test (
 \begin{DoxyParamCaption}
-\item[{float}]{delta\+Time}
+\item[{float}]{delta\+Time, }
+\item[{char}]{axis}
 \end{DoxyParamCaption}
-)}}\label{class_collision_ac7635cf9b887dcd4ffc3cf15f35e39a9}
+)}}\label{class_collision_a79a33125bb8ef50a883822b4c80b71ae}
 \hyperlink{class_player}{Player} collision test Tests if the \hyperlink{class_player}{Player} collides with an object. 
 \begin{DoxyParams}{Parameters}
 {\em float} & the delta time \\
+\hline
+{\em char} & the axis to test \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}{\index{Collision@{Collision}!right\+Test@{right\+Test}}
+\index{right\+Test@{right\+Test}!Collision@{Collision}}
+\subsubsection[{right\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::right\+Test (
+\begin{DoxyParamCaption}
+\item[{float}]{updated\+Position, }
+\item[{int}]{max\+Current\+Axis, }
+\item[{int}]{min\+Opposite\+Axis, }
+\item[{int}]{max\+Opposite\+Axis}
+\end{DoxyParamCaption}
+)}}\label{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}
+The test and action to apply if the player is going right This could proberally be converted into a single function along with \hyperlink{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}{left\+Test()} and \hyperlink{class_collision_a7c33a20a9c111630eeb8f0202605161e}{down\+Test()}, time permitting. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the updated position \\
+\hline
+{\em int} & the max position along the current axis \\
+\hline
+{\em int} & the min position along the opposite axis \\
+\hline
+{\em int} & the max position along the opposite axis \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_a7b13afe2227a341d094d5bcb5e8e4905}{\index{Collision@{Collision}!rounding\+Check@{rounding\+Check}}
+\index{rounding\+Check@{rounding\+Check}!Collision@{Collision}}
+\subsubsection[{rounding\+Check}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::rounding\+Check (
+\begin{DoxyParamCaption}
+\item[{float}]{updated\+Position, }
+\item[{int \&}]{min\+Map, }
+\item[{int \&}]{max\+Map, }
+\item[{float}]{extra}
+\end{DoxyParamCaption}
+)}}\label{class_collision_a7b13afe2227a341d094d5bcb5e8e4905}
+Checks which way the position is rounded Checks which way the position is rounded and corrects the numbers accordingly 
+\begin{DoxyParams}{Parameters}
+{\em float} & the updated position \\
+\hline
+{\em int} & a reference to the minimum pap position \\
+\hline
+{\em int} & a reference to the maximum pap position \\
+\hline
+{\em float} & the extra that needs to be added to the map coordinates, this depends on where the background is \\
 \hline
 \end{DoxyParams}
 

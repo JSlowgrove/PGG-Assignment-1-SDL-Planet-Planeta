@@ -33,7 +33,7 @@ private:
 	/*input commands*/
 	bool cmdJump, cmdLeft, cmdRight;
 	/*is the player in the middle of the screen*/
-	bool centered;
+	//bool centered;
 
 public:
 	/**
@@ -79,6 +79,7 @@ public:
 	/**
 	A function to update the entire scene
 	Updates the scenes velocity using the inputed velocity
+	@param float the new velocity
 	*/
 	void updateScene(float velocity);
 };

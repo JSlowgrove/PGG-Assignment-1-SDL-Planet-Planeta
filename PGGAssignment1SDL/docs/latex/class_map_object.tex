@@ -34,6 +34,12 @@ bool \hyperlink{class_map_object_acaa0fff07bd2550c1f023ca90e2a4b04}{get\+Damagin
 void \hyperlink{class_map_object_af14721fd27162d9fd0f04f69d8087811}{set\+Deletable} (bool)
 \item 
 bool \hyperlink{class_map_object_a739bba3a3a50a84bf5e6244d19152a38}{get\+Deletable} ()
+\item 
+void \hyperlink{class_map_object_a45334339657baae05374453254441351}{set\+Velocity} (float)
+\item 
+void \hyperlink{class_map_object_aea8289c05e1c4cd99fabc8cb756535e4}{update\+X} (float)
+\item 
+float \hyperlink{class_map_object_a5a9530b3b098db1e9fe636d0ab92c4ff}{get\+Velocity} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -45,6 +51,18 @@ bool \hyperlink{class_map_object_a739bba3a3a50a84bf5e6244d19152a38}{get\+Deletab
 
 \item 
 \hypertarget{class_map_object_a9c72b4c12be7a1b9c26adb3cfa10f029}{bool {\bfseries deleteable}}\label{class_map_object_a9c72b4c12be7a1b9c26adb3cfa10f029}
+
+\item 
+\hypertarget{class_map_object_ad264ede115023b6580fab8d96c00e707}{float {\bfseries velocity}}\label{class_map_object_ad264ede115023b6580fab8d96c00e707}
+
+\item 
+\hypertarget{class_map_object_a50163ed099aade812e9b00282ce9c14e}{int {\bfseries min\+X}}\label{class_map_object_a50163ed099aade812e9b00282ce9c14e}
+
+\item 
+\hypertarget{class_map_object_a858676fc64011d2421ae2ff6fd5fff79}{int {\bfseries max\+X}}\label{class_map_object_a858676fc64011d2421ae2ff6fd5fff79}
+
+\item 
+\hypertarget{class_map_object_abb5be5d79fe67286a59b6948d9da48ef}{bool {\bfseries moveable}}\label{class_map_object_abb5be5d79fe67286a59b6948d9da48ef}
 
 \end{DoxyCompactItemize}
 
@@ -111,6 +129,16 @@ bool if the object causes damaging to the player.
 Getter \# deleteable \begin{DoxyReturn}{Returns}
 bool does the object need deleting. 
 \end{DoxyReturn}
+\hypertarget{class_map_object_a5a9530b3b098db1e9fe636d0ab92c4ff}{\index{Map\+Object@{Map\+Object}!get\+Velocity@{get\+Velocity}}
+\index{get\+Velocity@{get\+Velocity}!Map\+Object@{Map\+Object}}
+\subsubsection[{get\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}float Map\+Object\+::get\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_a5a9530b3b098db1e9fe636d0ab92c4ff}
+Getter \# velocity \begin{DoxyReturn}{Returns}
+the velocity of the \hyperlink{class_map_object}{Map\+Object}. 
+\end{DoxyReturn}
 \hypertarget{class_map_object_afc35a1271fdb83198e239a548b26337e}{\index{Map\+Object@{Map\+Object}!set\+Collidable@{set\+Collidable}}
 \index{set\+Collidable@{set\+Collidable}!Map\+Object@{Map\+Object}}
 \subsubsection[{set\+Collidable}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Object\+::set\+Collidable (
@@ -145,6 +173,30 @@ Setter \# damaging Sets if the object causes damaging to the player.
 Setter \# deleteable Sets if the object needs to be deleted. 
 \begin{DoxyParams}{Parameters}
 {\em bool} & does the object need deleting. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_map_object_a45334339657baae05374453254441351}{\index{Map\+Object@{Map\+Object}!set\+Velocity@{set\+Velocity}}
+\index{set\+Velocity@{set\+Velocity}!Map\+Object@{Map\+Object}}
+\subsubsection[{set\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Object\+::set\+Velocity (
+\begin{DoxyParamCaption}
+\item[{float}]{input\+Velocity}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_a45334339657baae05374453254441351}
+Setter \# velocity Sets the velocity of the \hyperlink{class_map_object}{Map\+Object} to the inputed velocity. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the inputed velocity \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_map_object_aea8289c05e1c4cd99fabc8cb756535e4}{\index{Map\+Object@{Map\+Object}!update\+X@{update\+X}}
+\index{update\+X@{update\+X}!Map\+Object@{Map\+Object}}
+\subsubsection[{update\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Object\+::update\+X (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_map_object_aea8289c05e1c4cd99fabc8cb756535e4}
+Updates the x position of the \hyperlink{class_map_object}{Map\+Object} Performers a check on the updated position of the x to see if it within boundaries. If it is within boundaries then it updates the x position using the velocity and the inputed delta\+Time. If it is not within boundaries then it resets the x position to the boundaries. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the inputed delta\+Time \\
 \hline
 \end{DoxyParams}
 

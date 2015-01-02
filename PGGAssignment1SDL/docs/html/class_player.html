@@ -118,6 +118,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa054ea95ca73dd19036d2917b29ab021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97e5447778ae6c384eedc532dcd8431d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a97e5447778ae6c384eedc532dcd8431d">getScore</a> ()</td></tr>
 <tr class="separator:a97e5447778ae6c384eedc532dcd8431d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a300f4f62fae25747c4301a81c5a10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a36a300f4f62fae25747c4301a81c5a10">setGravity</a> (bool)</td></tr>
+<tr class="separator:a36a300f4f62fae25747c4301a81c5a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8e925cef6578c511f0b215f309d814"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7f8e925cef6578c511f0b215f309d814">getGravity</a> ()</td></tr>
+<tr class="separator:a7f8e925cef6578c511f0b215f309d814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3474c047c1495322742b79a43381bc32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3474c047c1495322742b79a43381bc32">setLanded</a> (bool)</td></tr>
+<tr class="separator:a3474c047c1495322742b79a43381bc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda5f8d74dcb44e5ebc12003104ec0ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acda5f8d74dcb44e5ebc12003104ec0ef">getLanded</a> ()</td></tr>
+<tr class="separator:acda5f8d74dcb44e5ebc12003104ec0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282bc0d3c7341a9727bcb16cd902c953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a282bc0d3c7341a9727bcb16cd902c953">setJump</a> (bool)</td></tr>
+<tr class="separator:a282bc0d3c7341a9727bcb16cd902c953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4760bc30c5c2f45c7a858496a395981f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4760bc30c5c2f45c7a858496a395981f">getJump</a> ()</td></tr>
+<tr class="separator:a4760bc30c5c2f45c7a858496a395981f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ae09987c59e99aa451481bf827093c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae0ae09987c59e99aa451481bf827093c">getGravityF</a> ()</td></tr>
+<tr class="separator:ae0ae09987c59e99aa451481bf827093c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_creature"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_creature')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_creature.html">Creature</a></td></tr>
 <tr class="memitem:a3512b75b90d921f17d098d55cc55a4c0 inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#a3512b75b90d921f17d098d55cc55a4c0">Creature</a> (<a class="el" href="class_texture.html">Texture</a> *, float, float)</td></tr>
 <tr class="separator:a3512b75b90d921f17d098d55cc55a4c0 inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,6 +277,70 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7f8e925cef6578c511f0b215f309d814"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::getGravity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # gravity </p><dl class="section return"><dt>Returns</dt><dd>bool if gravity is acting. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae0ae09987c59e99aa451481bf827093c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Player::getGravityF </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # gravityF </p><dl class="section return"><dt>Returns</dt><dd>float the value of the force gravity. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4760bc30c5c2f45c7a858496a395981f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::getJump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # jump </p><dl class="section return"><dt>Returns</dt><dd>bool if the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> is jumping. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acda5f8d74dcb44e5ebc12003104ec0ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::getLanded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # landed </p><dl class="section return"><dt>Returns</dt><dd>bool if the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> has landed. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af56ac33b9b2ebd9f97c8a6f485cf2d47"></a>
 <div class="memitem">
 <div class="memproto">
@@ -292,6 +370,72 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Getter # score </p><dl class="section return"><dt>Returns</dt><dd>int the score the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> has. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a36a300f4f62fae25747c4301a81c5a10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setGravity </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inputGravity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter # gravity Sets if gravity is acting on not. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td>if gravity is acting. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a282bc0d3c7341a9727bcb16cd902c953"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setJump </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inputJump</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter # jump Sets if the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> is jumping. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td>if the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> is jumping. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3474c047c1495322742b79a43381bc32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setLanded </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inputLanding</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter # landed Sets if the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> has landed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td>if the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> has landed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -346,7 +490,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 1 2015 16:27:44 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 2 2015 23:09:32 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
