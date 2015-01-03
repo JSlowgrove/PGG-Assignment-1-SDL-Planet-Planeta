@@ -1,5 +1,6 @@
 #include "gameState.h"
 #include "menuState.h"
+#include "helpState.h"
 
 /**************************************************************************************************************/
 
@@ -12,6 +13,7 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	backgrounds = new Texture("img/backgrounds231x63.bmp", renderer, false);
 	spritesheet = new Texture("img/spritesheet21x21.bmp", renderer, true);
 	numbers = new Texture("img/numbers42x42.bmp", renderer, true);
+	gameKeys = new Texture("img/gameKeys197x40.bmp", renderer, true);
 
 	/*initialize random seed: */
 	srand((unsigned int)time(NULL));
@@ -72,8 +74,15 @@ bool GameState::HandleSDLEvents()
 			{
 			/*If Escape is pressed*/
 			case SDLK_ESCAPE:
-				/*change the state to the menu state*/
-				stateManager->ChangeState(new MenuState(stateManager, renderer));
+				/*set all commands to false*/
+				cmdJump = cmdLeft = cmdRight = false;
+				/*open up the help*/
+				stateManager->AddState(new HelpState(stateManager, renderer));
+				break;
+				/*if delete is pressed*/
+			case SDLK_DELETE:
+				/*return to the menu*/
+				stateManager->AddState(new MenuState(stateManager, renderer));
 				break;
 			/*If space is pressed*/
 			case SDLK_SPACE:
@@ -253,8 +262,6 @@ void GameState::Draw()
 {
 	/*display the background*/
 	background->display(renderer);
-	/*display the player*/
-	player->display(renderer);
 	/*Loop for the number of blocks*/
 	for (int i = 0; i < map->getNumberOfBlocks(); i++)
 	{
@@ -277,8 +284,14 @@ void GameState::Draw()
 	for (int i = 1; i <= player->getLives(); i++)
 	{
 		/*display a heart to the screen*/
-		spritesheet->pushSpriteToScreen(renderer, 32 * (7 + i), 32, 301, 278, 21, 21, 32, 32);
+		spritesheet->pushSpriteToScreen(renderer, 32 * (1 + i), 64, 301, 278, 21, 21, 32, 32);
 	}
+	/*display the help game key*/
+	gameKeys->pushSpriteToScreen(renderer, 32 * 8, 32, 0, 0, 197, 40, 157, 32);
+	/*display the quit game key*/
+	gameKeys->pushSpriteToScreen(renderer, 32 * 14, 32, 0, 40, 197, 40, 157, 32);
+	/*display the player*/
+	player->display(renderer);
 }
 
 /**************************************************************************************************************/

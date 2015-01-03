@@ -72,10 +72,12 @@ void Block::typeSetup(int backgroundType)
 		srcY = 25 + setting;
 		break;
 	case 4:/*End Goal*/
+		/*sets the block to not be collidable*/
+		collidable = false;
 		/*sets the srcX to the x position of the block sprite*/
 		srcX = 232;
 		/*sets the srcY to the y position of the block sprite*/
-		srcY = 94;
+		srcY = 232;
 		break;
 	}
 }

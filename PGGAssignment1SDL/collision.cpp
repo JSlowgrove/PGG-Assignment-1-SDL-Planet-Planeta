@@ -112,8 +112,16 @@ void Collision::leftTest(float updatedPosition, int minCurrentAxis, int minOppos
 			/*check if its is interesting*/
 			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getX() + 32 >= updatedPosition)
 			{
-				/*block tile so do block collision action*/
-				blockActionX(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				/*check if the block is collidable*/
+				if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getCollidable())
+				{
+					/*block tile so do block collision action*/
+					blockActionX(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				}
+				else /*if its not collidable then it is the end goal block*/
+				{
+					endGoalAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				}
 			}
 			break;
 		case 'G':
@@ -177,8 +185,16 @@ void Collision::rightTest(float updatedPosition, int maxCurrentAxis, int minOppo
 			/*check if its is interesting*/
 			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getX() <= updatedPosition + 32)
 			{
-				/*block tile so do block collision action*/
-				blockActionX(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				/*check if the block is collidable*/
+				if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getCollidable())
+				{
+					/*block tile so do block collision action*/
+					blockActionX(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				}
+				else /*if its not collidable then it is the end goal block*/
+				{
+					endGoalAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				}
 			}
 			break;
 		case 'G':
@@ -241,8 +257,16 @@ void Collision::downTest(float updatedPosition, int maxCurrentAxis, int minOppos
 			/*check if its is interesting*/
 			if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getY() <= updatedPosition + 34)
 			{
-				/*block tile so do block collision action*/
-				blockActionY(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				/*check if the block is collidable*/
+				if (map->getBlock(map->getIndex(closestIIndex[i], closestJIndex[i]))->getCollidable())
+				{
+					/*block tile so do block collision action*/
+					blockActionY(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				}
+				else /*if its not collidable then it is the end goal block*/
+				{
+					endGoalAction(map->getIndex(closestIIndex[i], closestJIndex[i]));
+				}
 			}
 			break;
 		case 'G':
@@ -306,6 +330,13 @@ void Collision::blockActionY(int i)
 	player->setY(map->getBlock(i)->getY() - 34);
 }
 
+/**************************************************************************************************************/
+
+/*Performs the action that happens when the player collides with the end goal*/
+void Collision::endGoalAction(int i)
+{
+	/*TODO*/
+}
 
 /**************************************************************************************************************/
 

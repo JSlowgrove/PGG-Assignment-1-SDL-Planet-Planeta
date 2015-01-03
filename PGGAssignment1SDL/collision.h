@@ -64,6 +64,13 @@ public:
 	void blockActionY(int);
 
 	/**
+	End goal collision action
+	Performs the action that happens when the player collides with the end goal Block
+	@param int the index of the Block that has been collided with
+	*/
+	void endGoalAction(int);
+
+	/**
 	Checks which way the position is rounded
 	Checks which way the position is rounded and corrects the numbers accordingly
 	@param float the updated position

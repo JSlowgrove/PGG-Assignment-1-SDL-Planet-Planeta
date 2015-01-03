@@ -24,6 +24,7 @@ private:
 	Texture * backgrounds;
 	Texture * spritesheet;
 	Texture * numbers;
+	Texture * gameKeys;
 	/*entities*/
 	Background * background;
 	Player * player;
