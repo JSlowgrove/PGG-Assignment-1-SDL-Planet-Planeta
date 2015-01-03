@@ -1,5 +1,6 @@
 #include "menuState.h"
 #include "gameState.h"
+#include "creditsState.h"
 
 /**************************************************************************************************************/
 
@@ -104,6 +105,8 @@ bool MenuState::HandleSDLEvents()
 					stateManager->ChangeState(new GameState(stateManager, renderer));
 					break;
 				case 2:
+					/*open up the credits*/
+					stateManager->AddState(new CreditsState(stateManager, renderer));
 					break;
 				case 3:
 					/*exit the application*/

@@ -100,8 +100,11 @@ Inheritance diagram for State:</div>
  <div class="center">
   <img src="class_state.png" usemap="#State_map" alt=""/>
   <map id="State_map" name="State_map">
-<area href="class_game_state.html" title="Creates a GameState object. Creates a GameState object that inherits State. " alt="GameState" shape="rect" coords="0,56,72,80"/>
-<area href="class_menu_state.html" title="Creates a MenuState object. Creates a MenuState object that inherits State. " alt="MenuState" shape="rect" coords="82,56,154,80"/>
+<area href="class_credits_state.html" title="Creates a CreditsState object. Creates a CreditsState object that inherits State. ..." alt="CreditsState" shape="rect" coords="0,56,88,80"/>
+<area href="class_game_state.html" title="Creates a GameState object. Creates a GameState object that inherits State. " alt="GameState" shape="rect" coords="98,56,186,80"/>
+<area href="class_help_state.html" title="Creates a HelpState object. Creates a HelpState object that inherits State. " alt="HelpState" shape="rect" coords="196,56,284,80"/>
+<area href="class_menu_state.html" title="Creates a MenuState object. Creates a MenuState object that inherits State. " alt="MenuState" shape="rect" coords="294,56,382,80"/>
+<area href="class_win_lose_state.html" title="Creates a WinLoseState object. Creates a WinLoseState object that inherits State. ..." alt="WinLoseState" shape="rect" coords="392,56,480,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -215,7 +218,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </div><div class="memdoc">
 <p>A virtual function to draw to the screen A virtual function to draw to the screen using the renderer </p>
 
-<p>Implemented in <a class="el" href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64">GameState</a>, and <a class="el" href="class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6">MenuState</a>.</p>
+<p>Implemented in <a class="el" href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64">GameState</a>, <a class="el" href="class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6">MenuState</a>, <a class="el" href="class_win_lose_state.html#a862a5bb9422480b36671acb21cc987ba">WinLoseState</a>, <a class="el" href="class_credits_state.html#a4027aad0c48b505a74faef47470622a1">CreditsState</a>, and <a class="el" href="class_help_state.html#a281d12605303cc444e600b214a8d2161">HelpState</a>.</p>
 
 </div>
 </div>
@@ -257,7 +260,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </div><div class="memdoc">
 <p>A virtual function to handle the SDL events A virtual function to handle the SDL events for use with the <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> </p><dl class="section return"><dt>Returns</dt><dd>bool if false then quit <a class="el" href="class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl...">State</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="class_game_state.html#a5e2467775e9a941d482e0489295c363d">GameState</a>, and <a class="el" href="class_menu_state.html#abab3b8017d47c6d6134cbdfb8e0c7580">MenuState</a>.</p>
+<p>Implemented in <a class="el" href="class_game_state.html#a5e2467775e9a941d482e0489295c363d">GameState</a>, <a class="el" href="class_menu_state.html#abab3b8017d47c6d6134cbdfb8e0c7580">MenuState</a>, <a class="el" href="class_win_lose_state.html#ada8c41baa8011df1aeae4b7b0d9b00f8">WinLoseState</a>, <a class="el" href="class_credits_state.html#a952d9a50d529f1ba4d883b4a37f558d4">CreditsState</a>, and <a class="el" href="class_help_state.html#a7149e10e0129b66a68290d259bce3015">HelpState</a>.</p>
 
 </div>
 </div>
@@ -289,7 +292,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4">GameState</a>, and <a class="el" href="class_menu_state.html#a2ee9793bd50c42d8c7ce4cab62fbeba6">MenuState</a>.</p>
+<p>Implemented in <a class="el" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4">GameState</a>, <a class="el" href="class_menu_state.html#a2ee9793bd50c42d8c7ce4cab62fbeba6">MenuState</a>, <a class="el" href="class_win_lose_state.html#a98e675ce31aa41ad95ba36fd9e77dde6">WinLoseState</a>, <a class="el" href="class_credits_state.html#ab9ad90f4b1c6ddab6ff1234a92c9aec1">CreditsState</a>, and <a class="el" href="class_help_state.html#ac9a45859141cae970629aac1e7a69184">HelpState</a>.</p>
 
 </div>
 </div>
@@ -300,7 +303,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 2 2015 23:09:32 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 3 2015 02:06:55 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

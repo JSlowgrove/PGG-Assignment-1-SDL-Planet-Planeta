@@ -66,6 +66,12 @@
     <ClCompile Include="helpState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="winLoseState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="creditsState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="texture.h">
@@ -114,6 +120,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="helpState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="winLoseState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="creditsState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

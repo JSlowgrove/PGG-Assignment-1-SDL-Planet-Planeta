@@ -15,11 +15,14 @@ Player::Player(Texture * inputTexture, float inputX, float inputY, int spriteShe
 	score = 0;
 	lives = 3;
 
-	/*initialise jump varibles*/
+	/*initialise jump variables*/
 	gravity = true;
 	landed = false;
 	jump = false;
 	gravityF = 9.81f;
+
+	/*initialise level complete variable*/
+	levelComplete = false;
 }
 
 /**************************************************************************************************************/
@@ -126,4 +129,22 @@ float Player::getGravityF()
 {
 	/*returns the value of the force gravity*/
 	return gravityF;
+}
+
+/**************************************************************************************************************/
+
+/*sets if the Player has finished the level*/
+void Player::setLevelComplete(bool inputLevelComplete)
+{
+	/*sets if the Player has finished the level*/
+	levelComplete = inputLevelComplete;
+}
+
+/**************************************************************************************************************/
+
+/*returns if the Player has finished the level*/
+bool Player::getLevelComplete()
+{
+	/*returns if the Player has finished the level*/
+	return levelComplete;
 }

@@ -335,7 +335,8 @@ void Collision::blockActionY(int i)
 /*Performs the action that happens when the player collides with the end goal*/
 void Collision::endGoalAction(int i)
 {
-	/*TODO*/
+	/*Set the player to have completed the level*/
+	player->setLevelComplete(true);
 }
 
 /**************************************************************************************************************/

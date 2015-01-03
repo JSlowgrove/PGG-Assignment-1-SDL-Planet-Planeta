@@ -1,6 +1,7 @@
 #include "gameState.h"
 #include "menuState.h"
 #include "helpState.h"
+#include "winLoseState.h"
 
 /**************************************************************************************************************/
 
@@ -82,7 +83,7 @@ bool GameState::HandleSDLEvents()
 				/*if delete is pressed*/
 			case SDLK_DELETE:
 				/*return to the menu*/
-				stateManager->AddState(new MenuState(stateManager, renderer));
+				stateManager->ChangeState(new MenuState(stateManager, renderer));
 				break;
 			/*If space is pressed*/
 			case SDLK_SPACE:
@@ -253,6 +254,20 @@ void GameState::Update(float deltaTime)
 	//{
 	//	centered = true;
 	//}
+	/*test if the player has lost all their lives*/
+
+	if (player->getLives() <= 0)
+	{
+		/*change to the lose screen*/
+		stateManager->ChangeState(new WinLoseState(stateManager, renderer, false, player->getScore()));
+	}
+
+	/*test if the player has won the level, if so open win*/
+	if (player->getLevelComplete())
+	{
+		/*change to the win screen*/
+		stateManager->ChangeState(new WinLoseState(stateManager, renderer, true, player->getScore()));
+	}
 }
 
 /**************************************************************************************************************/

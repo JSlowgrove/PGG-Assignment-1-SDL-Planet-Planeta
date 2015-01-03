@@ -1,0 +1,125 @@
+\hypertarget{class_win_lose_state}{\section{Win\+Lose\+State Class Reference}
+\label{class_win_lose_state}\index{Win\+Lose\+State@{Win\+Lose\+State}}
+}
+
+
+Creates a \hyperlink{class_win_lose_state}{Win\+Lose\+State} object. Creates a \hyperlink{class_win_lose_state}{Win\+Lose\+State} object that inherits \hyperlink{class_state}{State}.  
+
+
+
+
+{\ttfamily \#include $<$win\+Lose\+State.\+h$>$}
+
+Inheritance diagram for Win\+Lose\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_win_lose_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_win_lose_state_a047ccdc0cc156d65c076eb845398ef84}{Win\+Lose\+State} (\hyperlink{class_state_manager}{State\+Manager} $\ast$, S\+D\+L\+\_\+\+Renderer $\ast$, bool, int)
+\item 
+\hyperlink{class_win_lose_state_ac7ee2a9515081ba03b96cb78c5837d72}{$\sim$\+Win\+Lose\+State} ()
+\item 
+bool \hyperlink{class_win_lose_state_ada8c41baa8011df1aeae4b7b0d9b00f8}{Handle\+S\+D\+L\+Events} ()
+\item 
+void \hyperlink{class_win_lose_state_a98e675ce31aa41ad95ba36fd9e77dde6}{Update} (float delta\+Time)
+\item 
+void \hyperlink{class_win_lose_state_a862a5bb9422480b36671acb21cc987ba}{Draw} ()
+\item 
+void \hyperlink{class_win_lose_state_af7a44a05cae2f79731b9e36ea1ef4f7e}{display\+Score} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Creates a \hyperlink{class_win_lose_state}{Win\+Lose\+State} object. Creates a \hyperlink{class_win_lose_state}{Win\+Lose\+State} object that inherits \hyperlink{class_state}{State}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_win_lose_state_a047ccdc0cc156d65c076eb845398ef84}{\index{Win\+Lose\+State@{Win\+Lose\+State}!Win\+Lose\+State@{Win\+Lose\+State}}
+\index{Win\+Lose\+State@{Win\+Lose\+State}!Win\+Lose\+State@{Win\+Lose\+State}}
+\subsubsection[{Win\+Lose\+State}]{\setlength{\rightskip}{0pt plus 5cm}Win\+Lose\+State\+::\+Win\+Lose\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State\+Manager} $\ast$}]{in\+State\+Manager, }
+\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{in\+Renderer, }
+\item[{bool}]{in\+Win, }
+\item[{int}]{in\+Score}
+\end{DoxyParamCaption}
+)}}\label{class_win_lose_state_a047ccdc0cc156d65c076eb845398ef84}
+Constructs a \hyperlink{class_win_lose_state}{Win\+Lose\+State} object Constructs a \hyperlink{class_win_lose_state}{Win\+Lose\+State} object 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_state_manager}{State\+Manager}} & $\ast$ a pointer to the \hyperlink{class_state_manager}{State\+Manager} \\
+\hline
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$ a pointer to the renderer in use. \\
+\hline
+{\em bool} & if the player won or not \\
+\hline
+{\em int} & the players score \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_win_lose_state_ac7ee2a9515081ba03b96cb78c5837d72}{\index{Win\+Lose\+State@{Win\+Lose\+State}!````~Win\+Lose\+State@{$\sim$\+Win\+Lose\+State}}
+\index{````~Win\+Lose\+State@{$\sim$\+Win\+Lose\+State}!Win\+Lose\+State@{Win\+Lose\+State}}
+\subsubsection[{$\sim$\+Win\+Lose\+State}]{\setlength{\rightskip}{0pt plus 5cm}Win\+Lose\+State\+::$\sim$\+Win\+Lose\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_win_lose_state_ac7ee2a9515081ba03b96cb78c5837d72}
+De-\/constructs a \hyperlink{class_win_lose_state}{Win\+Lose\+State} object De-\/constructs the \hyperlink{class_win_lose_state}{Win\+Lose\+State} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_win_lose_state_af7a44a05cae2f79731b9e36ea1ef4f7e}{\index{Win\+Lose\+State@{Win\+Lose\+State}!display\+Score@{display\+Score}}
+\index{display\+Score@{display\+Score}!Win\+Lose\+State@{Win\+Lose\+State}}
+\subsubsection[{display\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void Win\+Lose\+State\+::display\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_win_lose_state_af7a44a05cae2f79731b9e36ea1ef4f7e}
+A function to draw the score to the screen A function to draw the score to the screen using the renderer \hypertarget{class_win_lose_state_a862a5bb9422480b36671acb21cc987ba}{\index{Win\+Lose\+State@{Win\+Lose\+State}!Draw@{Draw}}
+\index{Draw@{Draw}!Win\+Lose\+State@{Win\+Lose\+State}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Win\+Lose\+State\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_win_lose_state_a862a5bb9422480b36671acb21cc987ba}
+A function to draw to the screen A function to draw to the screen using the renderer 
+
+Implements \hyperlink{class_state_a8b0cdb0e7450a9bb3580a33dfbe4d981}{State}.
+
+\hypertarget{class_win_lose_state_ada8c41baa8011df1aeae4b7b0d9b00f8}{\index{Win\+Lose\+State@{Win\+Lose\+State}!Handle\+S\+D\+L\+Events@{Handle\+S\+D\+L\+Events}}
+\index{Handle\+S\+D\+L\+Events@{Handle\+S\+D\+L\+Events}!Win\+Lose\+State@{Win\+Lose\+State}}
+\subsubsection[{Handle\+S\+D\+L\+Events}]{\setlength{\rightskip}{0pt plus 5cm}bool Win\+Lose\+State\+::\+Handle\+S\+D\+L\+Events (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_win_lose_state_ada8c41baa8011df1aeae4b7b0d9b00f8}
+A function to handle the S\+D\+L events A function to handle the S\+D\+L events for use with the \hyperlink{class_win_lose_state}{Win\+Lose\+State} \begin{DoxyReturn}{Returns}
+bool if false then quit \hyperlink{class_win_lose_state}{Win\+Lose\+State} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_state_a648d9182cab9aeb914ef778f94e2b437}{State}.
+
+\hypertarget{class_win_lose_state_a98e675ce31aa41ad95ba36fd9e77dde6}{\index{Win\+Lose\+State@{Win\+Lose\+State}!Update@{Update}}
+\index{Update@{Update}!Win\+Lose\+State@{Win\+Lose\+State}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Win\+Lose\+State\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_win_lose_state_a98e675ce31aa41ad95ba36fd9e77dde6}
+A function to update the \hyperlink{class_win_lose_state}{Win\+Lose\+State} A function to update the \hyperlink{class_win_lose_state}{Win\+Lose\+State} to allow the \hyperlink{class_win_lose_state}{Win\+Lose\+State} to run 
+\begin{DoxyParams}{Parameters}
+{\em float} & the delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_state_a770f40188fdfc64bc95a5166fef12e02}{State}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+P\+G\+G\+Assignment1\+S\+D\+L/win\+Lose\+State.\+h\item 
+P\+G\+G\+Assignment1\+S\+D\+L/win\+Lose\+State.\+cpp\end{DoxyCompactItemize}

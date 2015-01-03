@@ -18,6 +18,8 @@ private:
 	bool landed;
 	bool jump;
 	float gravityF;
+	/*if the player has beat the level*/
+	bool levelComplete;
 public:
 	/**
 	Constructs a Player object
@@ -106,5 +108,18 @@ public:
 	@returns float the value of the force gravity.
 	*/
 	float getGravityF();
+
+	/**
+	Setter # level complete
+	Sets if the Player has finished the level.
+	@param bool if the Player has finished the level.
+	*/
+	void setLevelComplete(bool);
+
+	/**
+	Getter #  level complete
+	@returns bool if the Player has finished the level.
+	*/
+	bool getLevelComplete();
 };
 #endif

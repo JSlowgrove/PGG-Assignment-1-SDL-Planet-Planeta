@@ -14,6 +14,7 @@ var searchData=
   ['getindex',['getIndex',['../class_map_loader.html#a91978c6df4df7c8805ff7b959f2f8f02',1,'MapLoader']]],
   ['getjump',['getJump',['../class_player.html#a4760bc30c5c2f45c7a858496a395981f',1,'Player']]],
   ['getlanded',['getLanded',['../class_player.html#acda5f8d74dcb44e5ebc12003104ec0ef',1,'Player']]],
+  ['getlevelcomplete',['getLevelComplete',['../class_player.html#a4305af7dca7be99eb5fb8f2002421314',1,'Player']]],
   ['getlives',['getLives',['../class_player.html#af56ac33b9b2ebd9f97c8a6f485cf2d47',1,'Player']]],
   ['getmoveable',['getMoveable',['../class_background.html#a5f3e6259bb294391cf39d776456e7748',1,'Background']]],
   ['getname',['getName',['../class_state_manager.html#afc67a8f9404b7c92237a654630eb7516',1,'StateManager']]],

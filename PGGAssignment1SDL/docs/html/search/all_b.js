@@ -7,6 +7,7 @@ var searchData=
   ['setgravity',['setGravity',['../class_player.html#a36a300f4f62fae25747c4301a81c5a10',1,'Player']]],
   ['setjump',['setJump',['../class_player.html#a282bc0d3c7341a9727bcb16cd902c953',1,'Player']]],
   ['setlanded',['setLanded',['../class_player.html#a3474c047c1495322742b79a43381bc32',1,'Player']]],
+  ['setlevelcomplete',['setLevelComplete',['../class_player.html#a1eb27fc807ef7557979ef23f239a46e5',1,'Player']]],
   ['setlives',['setLives',['../class_player.html#a565d4df3c32d00243b1ef16dfd6e5e03',1,'Player']]],
   ['setscore',['setScore',['../class_player.html#aa054ea95ca73dd19036d2917b29ab021',1,'Player']]],
   ['setvelocity',['setVelocity',['../class_background.html#a9b358e049be63be31b9241410288514f',1,'Background::setVelocity()'],['../class_map_object.html#a45334339657baae05374453254441351',1,'MapObject::setVelocity()']]],
