@@ -12,6 +12,7 @@
 #include "block.h"
 #include "mapLoader.h"
 #include "collision.h"
+#include "enemy.h"
 
 /**
 @brief Creates a GameState object.

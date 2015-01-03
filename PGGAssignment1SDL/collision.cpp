@@ -310,7 +310,7 @@ void Collision::blockActionX(int i)
 		map->getBlock(i)->setVelocity(0.0f);
 	}
 	/*loop for the number of gems*/
-	for (int i = 0; i < map->getNumberofGems(); i++)
+	for (int i = 0; i < map->getNumberOfGems(); i++)
 	{
 		/*set the gems velocity*/
 		map->getGem(i)->setVelocity(0.0f);

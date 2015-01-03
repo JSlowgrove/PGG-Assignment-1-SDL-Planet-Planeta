@@ -10,6 +10,7 @@ MapLoader::MapLoader(std::string fileName, Texture * inTexture, int backgroundTy
 	/*initialise the size of the arrays*/
 	numberOfGems = 0;
 	numberOfBlocks = 0;
+	numberOfEnemies = 0;
 	/*load the map*/
 	loadMap(fileName, backgroundType);
 }
@@ -94,7 +95,7 @@ void MapLoader::loadMap(std::string fileName, int backgroundType)
 void MapLoader::sortType(int type, int i, int j, int backgroundType)
 {
 	/*KEY: Empty tile = 0, Yellow Gem = 1, Green Gem = 2, Red Gem = 3, Blue Gem = 4, Top Wall = 5, 
-	Top Right Wall = 6, Top Left Wall = 7, Middle Wall = 8, End Goal = 9*/
+	Top Right Wall = 6, Top Left Wall = 7, Middle Wall = 8, End Goal = 9, Killer Snail = 10*/
 	switch (type)
 	{
 	case 0:/*Empty tile*/
@@ -164,6 +165,13 @@ void MapLoader::sortType(int type, int i, int j, int backgroundType)
 		blocks.resize(numberOfBlocks);
 		blocks[numberOfBlocks - 1] = new Block(texture, (float)(j * 32), (float)(i * 32), 4, backgroundType);
 		break;
+	case 10: /*Killer Snail*/
+		entities[i][j].type = 'E';
+		entities[i][j].index = numberOfEnemies;
+		numberOfEnemies++;
+		enemies.resize(numberOfEnemies);
+		enemies[numberOfEnemies - 1] = new Enemy(texture, (float)(j * 32), (float)(i * 32), 0);
+		break;
 	}
 }
 
@@ -187,6 +195,15 @@ void MapLoader::displayGem(int i, SDL_Renderer * renderer)
 
 /**************************************************************************************************************/
 
+/*draw the enemy object to the screen*/
+void MapLoader::displayEnemy(int i, SDL_Renderer * renderer)
+{
+	/*display the object*/
+	enemies[i]->display(renderer);
+}
+
+/**************************************************************************************************************/
+
 /*get the number of blocks*/
 int MapLoader::getNumberOfBlocks()
 {
@@ -197,10 +214,19 @@ int MapLoader::getNumberOfBlocks()
 /**************************************************************************************************************/
 
 /*get the number of gems*/
-int MapLoader::getNumberofGems()
+int MapLoader::getNumberOfGems()
 {
 	/*return the number of gems*/
 	return numberOfGems;
+}
+
+/**************************************************************************************************************/
+
+/*get the number of enemies*/
+int MapLoader::getNumberOfEnemies()
+{
+	/*return the number of enemies*/
+	return numberOfEnemies;
 }
 
 /**************************************************************************************************************/
@@ -219,6 +245,15 @@ Gem * MapLoader::getGem(int i)
 {
 	/*return the gem*/
 	return gems[i];
+}
+
+/**************************************************************************************************************/
+
+/*get the enemy*/
+Enemy * MapLoader::getEnemy(int i)
+{
+	/*return the gem*/
+	return enemies[i];
 }
 
 /**************************************************************************************************************/

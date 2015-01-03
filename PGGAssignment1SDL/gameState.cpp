@@ -45,12 +45,17 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 /*destructs the menu state object*/
 GameState::~GameState()
 {
-	/*delete pointers*/
+	/*delete entity pointers*/
 	delete player;
 	delete background;
+	delete map;
+	/*delete collision pointer*/
+	delete collision;
+	/*delete texture pointer*/
 	delete backgrounds;
 	delete spritesheet;
-	delete collision;
+	delete numbers;
+	delete gameKeys;
 }
 
 /**************************************************************************************************************/
@@ -253,7 +258,7 @@ void GameState::Update(float deltaTime)
 	background->updateX(deltaTime);
 
 	/*loop for the number of gems*/
-	for (int i = 0; i < map->getNumberofGems(); i++)
+	for (int i = 0; i < map->getNumberOfGems(); i++)
 	{
 		/*update the gem*/
 		map->getGem(i)->updateX(deltaTime);
@@ -264,6 +269,13 @@ void GameState::Update(float deltaTime)
 	{
 		/*update the block*/
 		map->getBlock(i)->updateX(deltaTime);
+	}
+
+	/*loop for the number of enemies*/
+	for (int i = 0; i < map->getNumberOfEnemies(); i++)
+	{
+		/*update the enemy*/
+		map->getEnemy(i)->updateX(deltaTime);
 	}
 
 	/*Update Player*/
@@ -300,7 +312,7 @@ void GameState::Draw()
 		map->displayBlock(i, renderer);
 	}	
 	/*loop for the number of gems*/
-	for (int i = 0; i < map->getNumberofGems(); i++)
+	for (int i = 0; i < map->getNumberOfGems(); i++)
 	{
 		/*check if the gem will be hidden*/
 		if (!map->getGem(i)->getDeletable())
@@ -308,6 +320,12 @@ void GameState::Draw()
 			/*display the gem*/
 			map->displayGem(i , renderer);
 		}
+	}
+	/*loop for the number of enemies*/
+	for (int i = 0; i < map->getNumberOfEnemies(); i++)
+	{
+		/*display the enemy*/
+		map->displayEnemy(i, renderer);
 	}
 	/*display the score*/
 	displayScore();
@@ -356,10 +374,15 @@ void GameState::updateScene(float velocity, bool moveable)
 			map->getBlock(i)->setVelocity(-velocity);
 		}
 		/*loop for the number of gems*/
-		for (int i = 0; i < map->getNumberofGems(); i++)
+		for (int i = 0; i < map->getNumberOfGems(); i++)
 		{
 			/*set the gems velocity*/
 			map->getGem(i)->setVelocity(-velocity);
+		}
+		for (int i = 0; i < map->getNumberOfEnemies(); i++)
+		{
+			/*set the enemies velocity*/
+			map->getEnemy(i)->setVelocityX(-velocity);
 		}
 		player->setVelocityX(0.0f);
 	}

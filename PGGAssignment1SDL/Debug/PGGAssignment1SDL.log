@@ -1,5 +1,8 @@
-﻿Build started 03/01/2015 15:31:43.
+﻿Build started 03/01/2015 16:54:03.
+     1>Project "C:\Users\Jamie\Documents\Uni Work\Level I [2nd Year]\Assignments\PGG\PGGAssignment1SDL\PGGAssignment1SDL\PGGAssignment1SDL.vcxproj" on node 2 (Clean target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\jamie\documents\uni work\level i [2nd year]\assignments\pgg\pggassignment1sdl\debug\pggassignment1sdl.pdb' because it is being used by another process.
+     1>Done Building Project "C:\Users\Jamie\Documents\Uni Work\Level I [2nd Year]\Assignments\PGG\PGGAssignment1SDL\PGGAssignment1SDL\PGGAssignment1SDL.vcxproj" (Clean target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.16
+Time Elapsed 00:00:00.18

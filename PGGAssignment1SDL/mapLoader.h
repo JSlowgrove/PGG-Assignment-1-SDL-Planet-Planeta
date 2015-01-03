@@ -9,13 +9,14 @@
 #include "mapObject.h"
 #include "block.h"
 #include "gem.h"
+#include "enemy.h"
 
 /**
 @brief a class to load in a map text file*/
 class MapLoader
 {
 private:
-	/*a structue for use with the map array*/
+	/*a structure for use with the map array*/
 	struct id
 	{
 		/*the type of entity*/
@@ -27,6 +28,7 @@ private:
 	std::vector<std::vector<id>> entities;
 	std::vector<Block *> blocks;
 	std::vector<Gem *> gems;
+	std::vector<Enemy *> enemies;
 	/*number of entities in a row*/
 	int numberOfEntites;
 	/*number of rows in the map*/
@@ -35,6 +37,8 @@ private:
 	int numberOfBlocks;
 	/*number of gems in the map*/
 	int numberOfGems;
+	/*number of enemies*/
+	int numberOfEnemies;
 	/*pointer to the spritesheet*/
 	Texture * texture;
 public:
@@ -77,6 +81,12 @@ public:
 	@param SDL_Renderer * a pointer to the renderer*/
 	void displayGem(int, SDL_Renderer *);
 
+	/**display the Enemy object
+	display the Enemy at the position at the array inputed
+	@param int the index of the Enemy array
+	@param SDL_Renderer * a pointer to the renderer*/
+	void displayEnemy(int, SDL_Renderer *);
+
 	/**
 	Getter # number of blocks
 	@returns the number of blocks.
@@ -87,7 +97,13 @@ public:
 	Getter # height
 	@returns the number of gems.
 	*/
-	int getNumberofGems();
+	int getNumberOfGems();
+
+	/**
+	Getter # height
+	@returns the number of enemies.
+	*/
+	int getNumberOfEnemies();
 
 	/**
 	Getter # a Block from the array
@@ -98,10 +114,17 @@ public:
 
 	/**
 	Getter # a Block from the array
-	@param int the index of the block
+	@param int the index of the Block
 	@returns a pointer to a Block.
 	*/
 	Gem * getGem(int);
+
+	/**
+	Getter # a Enemy from the array
+	@param int the index of the Enemy
+	@returns a pointer to a Enemy.
+	*/
+	Enemy * getEnemy(int);
 
 	/**
 	Getter # number of Entities in a row
