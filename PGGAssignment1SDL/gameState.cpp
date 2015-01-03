@@ -161,7 +161,7 @@ bool GameState::HandleSDLEvents()
 void GameState::Update(float deltaTime)
 {
 	/*check if the player is centered*/
-	if (player->getX() <= 301 && player->getX() >= 299)
+	if (player->getX() <= 305 && player->getX() >= 295)
 	{
 		/*check if the player is going left, is centered and the background cant go any further to the right*/
 		if (cmdLeft && !background->getRightMoveable() && centered)
@@ -185,12 +185,12 @@ void GameState::Update(float deltaTime)
 	/*if left go left*/
 	if (cmdLeft &!cmdRight)
 	{
-		updateScene(-100.0f, background->getRightMoveable());
+		updateScene(-200.0f, background->getRightMoveable());
 	}
 	/*if right go right*/
 	if (cmdRight &!cmdLeft)
 	{
-		updateScene(100.0f, background->getLeftMoveable());
+		updateScene(200.0f, background->getLeftMoveable());
 	}
 	/*if not right or left stay still*/
 	if (!cmdRight &!cmdLeft)
@@ -228,7 +228,7 @@ void GameState::Update(float deltaTime)
 	{
 		player->setLanded(false);
 		player->setGravity(false);
-		player->setVelocityY(-350.0f);
+		player->setVelocityY(-450.0f);
 	}
 	/*update gravity*/
 	if (player->getGravity())
@@ -278,23 +278,24 @@ void GameState::Update(float deltaTime)
 		map->getEnemy(i)->updateX(deltaTime);
 	}
 
+	/*player enemy test*/
+	collision->playerCreatureCollisionTest(deltaTime);
+
 	/*Update Player*/
 	player->updateX(deltaTime);
 	player->updateY(deltaTime);
-
-	/*test if the player has lost all their lives*/
-
-	if (player->getLives() <= 0)
-	{
-		/*change to the lose screen*/
-		stateManager->ChangeState(new WinLoseState(stateManager, renderer, false, player->getScore()));
-	}
 
 	/*test if the player has won the level, if so open win*/
 	if (player->getLevelComplete())
 	{
 		/*change to the win screen*/
 		stateManager->ChangeState(new WinLoseState(stateManager, renderer, true, player->getScore()));
+	}
+	/*test if the player has lost all their lives*/
+	else if (player->getLives() <= 0)
+	{
+		/*change to the lose screen*/
+		stateManager->ChangeState(new WinLoseState(stateManager, renderer, false, player->getScore()));
 	}
 }
 
@@ -324,8 +325,12 @@ void GameState::Draw()
 	/*loop for the number of enemies*/
 	for (int i = 0; i < map->getNumberOfEnemies(); i++)
 	{
-		/*display the enemy*/
-		map->displayEnemy(i, renderer);
+		/*check if the gem will be hidden*/
+		if (!map->getEnemy(i)->getDeletable())
+		{
+			/*display the enemy*/
+			map->displayEnemy(i, renderer);
+		}
 	}
 	/*display the score*/
 	displayScore();

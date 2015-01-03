@@ -358,3 +358,29 @@ void Collision::roundingCheck(float updatedPosition, int &minMapPosition, int &m
 		maxMapPosition = ((updatedPosition - extra) / 32);//rounded up to nearest int
 	}	
 }
+
+/**************************************************************************************************************/
+
+/*tests if the player collides with a creature*/
+void Collision::playerCreatureCollisionTest(float deltaTime)
+{
+	/*the updated value of the position*/
+	float updatedX = player->getX() + (player->getVelocityX() * deltaTime);
+	float updatedY = player->getY() + (player->getVelocityY() * deltaTime);
+
+	/*loop for the number of enemies*/
+	for (int i = 0; i < map->getNumberOfEnemies(); i++)
+	{
+		/*if the player intersects with a non-deleted enemy*/
+		if (map->getEnemy(i)->getX() + (map->getEnemy(i)->getVelocityX() * deltaTime) + 32 >= updatedX 
+			&& map->getEnemy(i)->getX() + (map->getEnemy(i)->getVelocityX() * deltaTime) <= updatedX + 32
+			&& map->getEnemy(i)->getY() + (map->getEnemy(i)->getVelocityY() * deltaTime) <= updatedY + 34
+			&& !map->getEnemy(i)->getDeletable())
+		{
+			/*decreases a life*/
+			player->setLives(player->getLives() - 1);
+			/*sets the gem to be able to be hidden*/
+			map->getEnemy(i)->setDeletable(true);
+		}
+	}
+}

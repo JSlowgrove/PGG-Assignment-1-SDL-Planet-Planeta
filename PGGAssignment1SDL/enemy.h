@@ -12,6 +12,8 @@ class Enemy : public Creature
 protected:
 	/*the type of the Enemy*/
 	int type;
+	/*deleteable bool*/
+	bool deleteable;
 public:
 	/**
 	Constructs an Enemy object
@@ -34,5 +36,18 @@ public:
 	Uses the value of type to set up initial values for the Enemy
 	*/
 	void typeSetup();
+
+	/**
+	Setter # deleteable
+	Sets if the object needs to be deleted.
+	@param bool does the object need deleting.
+	*/
+	void setDeletable(bool);
+
+	/**
+	Getter # deleteable
+	@returns bool does the object need deleting.
+	*/
+	bool getDeletable();
 };
 #endif

@@ -109,6 +109,14 @@ public:
 	@param int the max position along the opposite axis
 	*/
 	void downTest(float, int, int, int);
+
+	/**
+	Player creature collision test
+	Tests if the Player collides with a creature.
+	@param float the delta time
+	@param char the axis to test
+	*/
+	void playerCreatureCollisionTest(float);
 };
 
 #endif

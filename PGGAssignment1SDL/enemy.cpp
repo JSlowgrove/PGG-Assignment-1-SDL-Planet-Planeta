@@ -8,7 +8,10 @@ Enemy::Enemy(Texture * inputTexture, float inX, float inY, int inType)
 {
 	/*initialise type*/
 	type = inType;
-	
+
+	/*sets the object to not be deleted*/
+	deleteable = false;
+
 	/*set the type details*/
 	typeSetup();
 }
@@ -33,4 +36,22 @@ void Enemy::typeSetup()
 		//velocityX = 10.0f;
 		break;
 	}
+}
+
+/**************************************************************************************************************/
+
+/*sets if the object is to be deleted*/
+void Enemy::setDeletable(bool inputDelete)
+{
+	/*sets if the object is to be deleted*/
+	deleteable = inputDelete;
+}
+
+/**************************************************************************************************************/
+
+/*returns deleteable*/
+bool Enemy::getDeletable()
+{
+	/*returns the bool deleteable value*/
+	return deleteable;
 }
