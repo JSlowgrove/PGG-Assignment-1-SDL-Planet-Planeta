@@ -20,6 +20,8 @@ private:
 	int maxX;
 	/*can the Background move?*/
 	bool moveable;
+	bool left;
+	bool right;
 	/*Background type*/
 	int backgroundType;
 public:
@@ -67,5 +69,17 @@ public:
 	@returns bool if the Background can move.
 	*/
 	bool getMoveable();
+
+	/**
+	Getter # moveable right
+	@returns bool if the Background can move right.
+	*/
+	bool getRightMoveable();
+
+	/**
+	Getter # moveable left
+	@returns bool if the Background can move left.
+	*/
+	bool getLeftMoveable();
 };
 #endif

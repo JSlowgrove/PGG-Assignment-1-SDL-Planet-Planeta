@@ -36,7 +36,7 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	cmdJump = cmdLeft = cmdRight = false;
 
 	/*initialise player position bool*/
-	//centered = false;
+	centered = false;
 
 }
 
@@ -155,21 +155,42 @@ bool GameState::HandleSDLEvents()
 /*update the state*/
 void GameState::Update(float deltaTime)
 {
+	/*check if the player is centered*/
+	if (player->getX() <= 301 && player->getX() >= 299)
+	{
+		/*check if the player is going left, is centered and the background cant go any further to the right*/
+		if (cmdLeft && !background->getRightMoveable() && centered)
+		{
+			/*the player is not centered so it can move around the left side of the screen*/
+			centered = false;
+		}
+		/*check if the player is going right, is centered and the background cant go any further to the left*/
+		else if (cmdRight && !background->getLeftMoveable() && centered)
+		{
+			/*the player is not centered so it can move around the right side of the screen*/
+			centered = false;
+		}
+		/*the screen can move so the player doesn't*/
+		else
+		{
+			centered = true;
+		}
+	}
 	/*x axis collision tests*************************/
 	/*if left go left*/
 	if (cmdLeft &!cmdRight)
 	{
-		updateScene(-100.0f);
+		updateScene(-100.0f, background->getRightMoveable());
 	}
 	/*if right go right*/
 	if (cmdRight &!cmdLeft)
 	{
-		updateScene(100.0f);
+		updateScene(100.0f, background->getLeftMoveable());
 	}
 	/*if not right or left stay still*/
 	if (!cmdRight &!cmdLeft)
 	{
-		updateScene(0.0f);
+		updateScene(0.0f, background->getMoveable());
 	}
 	/*check collisions*/
 	collision->playerCollisionTest(deltaTime, 'x');
@@ -249,11 +270,6 @@ void GameState::Update(float deltaTime)
 	player->updateX(deltaTime);
 	player->updateY(deltaTime);
 
-	/*check if the player is centered*/
-	//if (player->getX() <= 310 && player->getX() >= 310 && background->getMoveable())
-	//{
-	//	centered = true;
-	//}
 	/*test if the player has lost all their lives*/
 
 	if (player->getLives() <= 0)
@@ -327,10 +343,11 @@ void GameState::displayScore()
 /**************************************************************************************************************/
 
 /*update the scenes velocity using the inputed velocity*/
-void GameState::updateScene(float velocity)
+void GameState::updateScene(float velocity, bool moveable)
 {
-	//if (centered && background->getMoveable())
-	//{
+	/*if the map should move not the player*/
+	if (centered && moveable)
+	{
 		background->setVelocity(-velocity);
 		/*loop for the number of blocks*/
 		for (int i = 0; i < map->getNumberOfBlocks(); i++)
@@ -344,10 +361,11 @@ void GameState::updateScene(float velocity)
 			/*set the gems velocity*/
 			map->getGem(i)->setVelocity(-velocity);
 		}
-	//}
-	//else
-	//{
-	//	centered = false;
+		player->setVelocityX(0.0f);
+	}
+	/*if the player should move not the map*/
+	else
+	{
 		player->setVelocityX(velocity);
-	//}
+	}
 }

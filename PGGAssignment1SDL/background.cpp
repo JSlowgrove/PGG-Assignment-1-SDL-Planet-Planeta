@@ -27,7 +27,10 @@ Background::Background(Texture * inputTexture, int inputBackgroundType)
 	/*sets the minimum x coordinate to 0 - the size of the background width added to the screen width,
 	so that the background can not go any further to the left than this point*/
 	minX = (0 - width) + 640;
-	moveable = true;/*sets the background to moveable*/
+	/*sets the background to moveable*/
+	moveable = true;
+	right = true;
+	left = true;
 }
 
 /**************************************************************************************************************/
@@ -63,6 +66,8 @@ void Background::updateX(float dt)
 	{
 		/*if so set the background to moveable*/
 		moveable = true;
+		right = true;
+		left = true;
 	}
 
 	/*if not check if it had gone pass the minX boundary*/
@@ -70,14 +75,18 @@ void Background::updateX(float dt)
 	{
 		/*if so set the background to not move and the x position to minX*/
 		moveable = false;
+		right = true;
+		left = false;
 		x = (float)minX;
 	}
 
-	/*if not it had gone pass the maxX boundary*/
+	/*it had gone pass the maxX boundary*/
 	else
 	{
 		/*if so set the background to not move and the x position to maxX*/
 		moveable = false;
+		right = false;
+		left = true;
 		x = (float)maxX;
 	}
 
@@ -99,4 +108,22 @@ bool Background::getMoveable()
 {
 	/*returns if moveable*/
 	return moveable;
+}
+
+/**************************************************************************************************************/
+
+/*returns if moveable right*/
+bool Background::getRightMoveable()
+{
+	/*returns if moveable right*/
+	return right;
+}
+
+/**************************************************************************************************************/
+
+/*returns if moveable left*/
+bool Background::getLeftMoveable()
+{
+	/*returns if moveable left*/
+	return left;
 }
