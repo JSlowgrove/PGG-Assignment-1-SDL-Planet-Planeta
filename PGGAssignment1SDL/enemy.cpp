@@ -30,7 +30,7 @@ void Enemy::typeSetup()
 	case 0:/*killer snail*/
 		srcX = 554; /*sets the srcX to the x position of the snail sprite*/
 		srcY = 301; /*sets the srcY to the y position of the snail sprite*/
-		//velocityX = -10.0f;
+		//velocityX = 10.0f;
 		break;
 	}
 }

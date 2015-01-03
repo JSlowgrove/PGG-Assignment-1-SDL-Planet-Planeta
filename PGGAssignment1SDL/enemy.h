@@ -5,7 +5,7 @@
 #include "creature.h"
 
 /**
-@brief Creates an Enemy object that inherits Creature which in turn inherits Entity.
+@brief Creates an Enemy object that inherits MapObject which in turn inherits Creature.
 */
 class Enemy : public Creature
 {
