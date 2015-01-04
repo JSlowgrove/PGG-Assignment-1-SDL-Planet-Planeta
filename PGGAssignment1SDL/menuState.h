@@ -5,6 +5,7 @@
 #include "state.h"
 #include "stateManager.h"
 #include "texture.h"
+#include "audio.h"
 
 /**
 @brief Creates a MenuState object.
@@ -13,6 +14,8 @@ Creates a MenuState object that inherits State
 class MenuState : public State
 {
 private:
+	/*audio*/
+	Audio * music;
 	/*background*/
 	Texture * background;
 	Texture * menuKeys;

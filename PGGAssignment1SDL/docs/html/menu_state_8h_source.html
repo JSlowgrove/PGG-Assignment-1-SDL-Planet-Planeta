@@ -93,47 +93,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;state.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;stateManager.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;texture.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_menu_state.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_menu_state.html">MenuState</a> : <span class="keyword">public</span> <a class="code" href="class_state.html">State</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">/*background*/</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * background;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * menuKeys;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/*mouseClickPosition*/</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">float</span> x;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">float</span> y;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/*int variables for if menu keys are highlighted, can be 0 or 1*/</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> playKey;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> credKey;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> exitKey;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">/*which key is pressed, 0 for none*/</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> pressed;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_menu_state.html#a0cfcaba0ed63cdbcaf2d517e6bfbd2a2">MenuState</a>(<a class="code" href="class_state_manager.html">StateManager</a> *, SDL_Renderer *);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_menu_state.html#a58aea91a44436c5bba575c5de755a5bc">~MenuState</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_menu_state.html#abab3b8017d47c6d6134cbdfb8e0c7580">HandleSDLEvents</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_menu_state.html#a2ee9793bd50c42d8c7ce4cab62fbeba6">Update</a>(<span class="keywordtype">float</span> deltaTime);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6">Draw</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;audio.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_menu_state.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_menu_state.html">MenuState</a> : <span class="keyword">public</span> <a class="code" href="class_state.html">State</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*audio*/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * music;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/*background*/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * background;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * menuKeys;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/*mouseClickPosition*/</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> x;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> y;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/*int variables for if menu keys are highlighted, can be 0 or 1*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> playKey;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> credKey;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> exitKey;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/*which key is pressed, 0 for none*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> pressed;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_menu_state.html#a0cfcaba0ed63cdbcaf2d517e6bfbd2a2">MenuState</a>(<a class="code" href="class_state_manager.html">StateManager</a> *, SDL_Renderer *);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_menu_state.html#a58aea91a44436c5bba575c5de755a5bc">~MenuState</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_menu_state.html#abab3b8017d47c6d6134cbdfb8e0c7580">HandleSDLEvents</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_menu_state.html#a2ee9793bd50c42d8c7ce4cab62fbeba6">Update</a>(<span class="keywordtype">float</span> deltaTime);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6">Draw</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_state_html"><div class="ttname"><a href="class_state.html">State</a></div><div class="ttdoc">Creates a State object. Creates a State object to be inherited. Made using information from http://bl...</div><div class="ttdef"><b>Definition:</b> state.h:17</div></div>
-<div class="ttc" id="class_menu_state_html_a58aea91a44436c5bba575c5de755a5bc"><div class="ttname"><a href="class_menu_state.html#a58aea91a44436c5bba575c5de755a5bc">MenuState::~MenuState</a></div><div class="ttdeci">~MenuState()</div><div class="ttdef"><b>Definition:</b> menuState.cpp:30</div></div>
+<div class="ttc" id="class_menu_state_html_a58aea91a44436c5bba575c5de755a5bc"><div class="ttname"><a href="class_menu_state.html#a58aea91a44436c5bba575c5de755a5bc">MenuState::~MenuState</a></div><div class="ttdeci">~MenuState()</div><div class="ttdef"><b>Definition:</b> menuState.cpp:35</div></div>
 <div class="ttc" id="class_state_manager_html"><div class="ttname"><a href="class_state_manager.html">StateManager</a></div><div class="ttdoc">Creates a State manager object. Creates a State manager object to be inherited. Made using informatio...</div><div class="ttdef"><b>Definition:</b> stateManager.h:13</div></div>
-<div class="ttc" id="class_menu_state_html"><div class="ttname"><a href="class_menu_state.html">MenuState</a></div><div class="ttdoc">Creates a MenuState object. Creates a MenuState object that inherits State. </div><div class="ttdef"><b>Definition:</b> menuState.h:13</div></div>
-<div class="ttc" id="class_menu_state_html_a0fc92c6a39ef316552f1308c188871c6"><div class="ttname"><a href="class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6">MenuState::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> menuState.cpp:133</div></div>
+<div class="ttc" id="class_menu_state_html"><div class="ttname"><a href="class_menu_state.html">MenuState</a></div><div class="ttdoc">Creates a MenuState object. Creates a MenuState object that inherits State. </div><div class="ttdef"><b>Definition:</b> menuState.h:14</div></div>
+<div class="ttc" id="class_menu_state_html_a0fc92c6a39ef316552f1308c188871c6"><div class="ttname"><a href="class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6">MenuState::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> menuState.cpp:144</div></div>
 <div class="ttc" id="class_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
-<div class="ttc" id="class_menu_state_html_a2ee9793bd50c42d8c7ce4cab62fbeba6"><div class="ttname"><a href="class_menu_state.html#a2ee9793bd50c42d8c7ce4cab62fbeba6">MenuState::Update</a></div><div class="ttdeci">void Update(float deltaTime)</div><div class="ttdef"><b>Definition:</b> menuState.cpp:126</div></div>
-<div class="ttc" id="class_menu_state_html_abab3b8017d47c6d6134cbdfb8e0c7580"><div class="ttname"><a href="class_menu_state.html#abab3b8017d47c6d6134cbdfb8e0c7580">MenuState::HandleSDLEvents</a></div><div class="ttdeci">bool HandleSDLEvents()</div><div class="ttdef"><b>Definition:</b> menuState.cpp:40</div></div>
+<div class="ttc" id="class_menu_state_html_a2ee9793bd50c42d8c7ce4cab62fbeba6"><div class="ttname"><a href="class_menu_state.html#a2ee9793bd50c42d8c7ce4cab62fbeba6">MenuState::Update</a></div><div class="ttdeci">void Update(float deltaTime)</div><div class="ttdef"><b>Definition:</b> menuState.cpp:135</div></div>
+<div class="ttc" id="class_menu_state_html_abab3b8017d47c6d6134cbdfb8e0c7580"><div class="ttname"><a href="class_menu_state.html#abab3b8017d47c6d6134cbdfb8e0c7580">MenuState::HandleSDLEvents</a></div><div class="ttdeci">bool HandleSDLEvents()</div><div class="ttdef"><b>Definition:</b> menuState.cpp:49</div></div>
 <div class="ttc" id="class_menu_state_html_a0cfcaba0ed63cdbcaf2d517e6bfbd2a2"><div class="ttname"><a href="class_menu_state.html#a0cfcaba0ed63cdbcaf2d517e6bfbd2a2">MenuState::MenuState</a></div><div class="ttdeci">MenuState(StateManager *, SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> menuState.cpp:8</div></div>
+<div class="ttc" id="class_audio_html"><div class="ttname"><a href="class_audio.html">Audio</a></div><div class="ttdoc">Creates a Audio object to handle the SDL_Mixer. Done using help from http://www.lazyfoo.net/tutorials/SDL/21_sound_effects_and_music/index.php. </div><div class="ttdef"><b>Definition:</b> audio.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 4 2015 01:31:50 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 04:17:31 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

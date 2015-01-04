@@ -96,8 +96,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad31e4037d453108a21fc186cfc27fec9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#ad31e4037d453108a21fc186cfc27fec9">Collision</a> (<a class="el" href="class_player.html">Player</a> *, <a class="el" href="class_map_loader.html">MapLoader</a> *, <a class="el" href="class_background.html">Background</a> *)</td></tr>
-<tr class="separator:ad31e4037d453108a21fc186cfc27fec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68555b1c6f7d02a4af26f538a5422a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#ab68555b1c6f7d02a4af26f538a5422a9">Collision</a> (<a class="el" href="class_player.html">Player</a> *, <a class="el" href="class_map_loader.html">MapLoader</a> *, <a class="el" href="class_background.html">Background</a> *, <a class="el" href="class_audio.html">Audio</a> *, <a class="el" href="class_audio.html">Audio</a> *)</td></tr>
+<tr class="separator:ab68555b1c6f7d02a4af26f538a5422a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19ae49bcb3b16f4622443a34a171590c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#a19ae49bcb3b16f4622443a34a171590c">~Collision</a> ()</td></tr>
 <tr class="separator:a19ae49bcb3b16f4622443a34a171590c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79a33125bb8ef50a883822b4c80b71ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#a79a33125bb8ef50a883822b4c80b71ae">playerCollisionTest</a> (float, char)</td></tr>
@@ -130,7 +130,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates an <a class="el" href="class_collision.html" title="Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. ">Collision</a> object. The <a class="el" href="class_collision.html" title="Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. ">Collision</a> object is for use with detecting <a class="el" href="class_collision.html" title="Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. ">Collision</a>. Used help from <a href="http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/">http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/</a> in the type 2 section. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad31e4037d453108a21fc186cfc27fec9"></a>
+<a class="anchor" id="ab68555b1c6f7d02a4af26f538a5422a9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -150,7 +150,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_background.html">Background</a> *&#160;</td>
-          <td class="paramname"><em>inputBackground</em>&#160;</td>
+          <td class="paramname"><em>inputBackground</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_audio.html">Audio</a> *&#160;</td>
+          <td class="paramname"><em>inGem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_audio.html">Audio</a> *&#160;</td>
+          <td class="paramname"><em>inHurt</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -164,6 +176,8 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname"><a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a></td><td>* pointer to the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> </td></tr>
     <tr><td class="paramname"><a class="el" href="class_map_loader.html" title="a class to load in a map text file ">MapLoader</a></td><td>* pointer to the <a class="el" href="class_map_loader.html" title="a class to load in a map text file ">MapLoader</a> </td></tr>
     <tr><td class="paramname"><a class="el" href="class_background.html" title="Creates a Background object that inherits Entity. Creates a Background object with a velocity...">Background</a></td><td>* pointer to the <a class="el" href="class_background.html" title="Creates a Background object that inherits Entity. Creates a Background object with a velocity...">Background</a> </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_audio.html" title="Creates a Audio object to handle the SDL_Mixer. Done using help from http://www.lazyfoo.net/tutorials/SDL/21_sound_effects_and_music/index.php. ">Audio</a></td><td>* pointer to the <a class="el" href="class_audio.html" title="Creates a Audio object to handle the SDL_Mixer. Done using help from http://www.lazyfoo.net/tutorials/SDL/21_sound_effects_and_music/index.php. ">Audio</a> that plays when a gem is collected </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_audio.html" title="Creates a Audio object to handle the SDL_Mixer. Done using help from http://www.lazyfoo.net/tutorials/SDL/21_sound_effects_and_music/index.php. ">Audio</a></td><td>* pointer to the <a class="el" href="class_audio.html" title="Creates a Audio object to handle the SDL_Mixer. Done using help from http://www.lazyfoo.net/tutorials/SDL/21_sound_effects_and_music/index.php. ">Audio</a> that plays when a life is lost </td></tr>
   </table>
   </dd>
 </dl>
@@ -667,7 +681,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 4 2015 01:31:51 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 04:17:32 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

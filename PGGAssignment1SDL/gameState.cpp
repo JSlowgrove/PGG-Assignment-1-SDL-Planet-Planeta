@@ -5,7 +5,7 @@
 
 /**************************************************************************************************************/
 
-/*Constructs the menu state object*/
+/*Constructs the game state object*/
 GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : State(inStateManager, inRenderer)
 {
 	/*set state name*/
@@ -15,6 +15,12 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	spritesheet = new Texture("img/spritesheet21x21.bmp", renderer, true);
 	numbers = new Texture("img/numbers42x42.bmp", renderer, true);
 	gameKeys = new Texture("img/gameKeys197x40.bmp", renderer, true);
+
+	/*initialise and start the music*/
+	lifeLost = new Audio("aud/jingles_PIZZA05.ogg", false);
+	gemPickup = new Audio("aud/powerUp6.ogg", false);
+	music = new Audio("aud/Electrodoodle.mp3", true);
+	music->startAudio();
 
 	/*initialize random seed: */
 	srand((unsigned int)time(NULL));
@@ -30,7 +36,7 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	map = new MapLoader("txt/map.txt", spritesheet, backgroundType);
 
 	/*initialise collision*/
-	collision = new Collision(player, map, background);
+	collision = new Collision(player, map, background, gemPickup, lifeLost);
 
 	/*initialise input commands*/
 	cmdJump = cmdLeft = cmdRight = false;
@@ -42,9 +48,15 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 
 /**************************************************************************************************************/
 
-/*destructs the menu state object*/
+/*destructs the game state object*/
 GameState::~GameState()
 {
+	/*stop music*/
+	music->stopAudio();
+	/*delete audio pointers*/
+	delete music;
+	delete gemPickup;
+	delete lifeLost;
 	/*delete entity pointers*/
 	delete player;
 	delete background;
@@ -160,6 +172,9 @@ bool GameState::HandleSDLEvents()
 /*update the state*/
 void GameState::Update(float deltaTime)
 {
+	/*check the music is still playing if not start again*/
+	music->startAudio();
+
 	/*check if the player is centered*/
 	if (player->getX() <= 302 && player->getX() >= 298)
 	{

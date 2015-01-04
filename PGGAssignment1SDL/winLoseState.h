@@ -5,6 +5,7 @@
 #include "state.h"
 #include "stateManager.h"
 #include "texture.h"
+#include "audio.h"
 
 /**
 @brief Creates a WinLoseState object.
@@ -13,6 +14,10 @@ Creates a WinLoseState object that inherits State
 class WinLoseState : public State
 {
 private:
+	/*audio*/
+	Audio * winSound;
+	Audio * loseSound;
+	Audio * music;
 	/*background*/
 	Texture * background;
 	Texture * winLoseKeys;

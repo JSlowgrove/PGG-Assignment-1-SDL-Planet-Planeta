@@ -19,6 +19,23 @@ WinLoseState::WinLoseState(StateManager * inStateManager, SDL_Renderer* inRender
 	win = inWin;
 	/*declare the score*/
 	score = inScore;
+	/*initialise and start the sounds*/
+	winSound = new Audio("aud/jingles_HIT01.ogg", false);
+	loseSound = new Audio("aud/jingles_HIT15.ogg", false);
+	music = new Audio("aud/Chipper Doodle.mp3", true);
+	music->startAudio();
+	/*if the player won*/
+	if (win)
+	{
+		/*play the win sound*/
+		winSound->playEffect();
+	}
+	/*if the player lost*/
+	else
+	{
+		/*play the lose sound*/
+		loseSound->playEffect();
+	}
 }
 
 /**************************************************************************************************************/
@@ -26,6 +43,12 @@ WinLoseState::WinLoseState(StateManager * inStateManager, SDL_Renderer* inRender
 /*destructs the win lose state object*/
 WinLoseState::~WinLoseState()
 {
+	/*stop music*/
+	music->stopAudio();
+	/*delete audio pointers*/
+	delete music;
+	delete winSound;
+	delete loseSound;
 	/*delete pointers*/
 	delete background;
 	delete winLoseKeys;
@@ -75,6 +98,8 @@ bool WinLoseState::HandleSDLEvents()
 /*update the state*/
 void WinLoseState::Update(float deltaTime)
 {
+	/*keep the music playing*/
+	music->startAudio();
 }
 
 /**************************************************************************************************************/

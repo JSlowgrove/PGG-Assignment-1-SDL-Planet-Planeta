@@ -16,6 +16,11 @@ MenuState::MenuState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	background = new Texture("img/menu.bmp", renderer, false);
 	/*declare the texture for the menu keys*/
 	menuKeys = new Texture("img/menuKeys205x35.bmp", renderer, true);
+
+	/*initialise and start the music*/
+	music = new Audio("aud/Chipper Doodle.mp3", true);
+	music->startAudio();
+
 	/*set the keys to 0*/
 	playKey = 0;
 	credKey = 0;
@@ -29,6 +34,10 @@ MenuState::MenuState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 /*destructs the menu state object*/
 MenuState::~MenuState()
 {
+	/*stop music*/
+	music->stopAudio();
+	/*delete audio pointers*/
+	delete music;
 	/*delete pointers*/
 	delete background;
 	delete menuKeys;
@@ -125,6 +134,8 @@ bool MenuState::HandleSDLEvents()
 /*update the state*/
 void MenuState::Update(float deltaTime)
 {
+	/*keep the music playing*/
+	music->startAudio();
 }
 
 /**************************************************************************************************************/

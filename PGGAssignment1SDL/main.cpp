@@ -1,4 +1,5 @@
 #include <SDL.h>
+#include <SDL_mixer.h>
 #include <iostream>
 #include "texture.h"
 #include "stateManager.h"
@@ -7,10 +8,17 @@
 int main(int argc, char *argv[])
 {
 	/*Initialise SDL*/
-	if (SDL_Init(SDL_INIT_VIDEO) < 0) /*Check SDL initialisation*/
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) /*Check SDL initialisation*/
 	{
 		/*Failed initialisation*/
 		std::cout << "Failed to initialise SDL" << std::endl;
+		return -1;
+	}
+
+	/*Initialise SDL_mixer*/
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
+	{
+		std::cout << "Failed to initialise SDL Mixer, Error is: " << Mix_GetError() << std::endl;
 		return -1;
 	}
 
@@ -71,6 +79,7 @@ int main(int argc, char *argv[])
 	/*destroy data*/
 	delete stateManager;
 	SDL_DestroyWindow(window);
+	Mix_Quit();
 	SDL_Quit();
 
 	return 0;

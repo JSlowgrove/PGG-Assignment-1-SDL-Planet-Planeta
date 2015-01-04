@@ -13,7 +13,7 @@ Creates an \hyperlink{class_collision}{Collision} object. The \hyperlink{class_c
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_collision_ad31e4037d453108a21fc186cfc27fec9}{Collision} (\hyperlink{class_player}{Player} $\ast$, \hyperlink{class_map_loader}{Map\+Loader} $\ast$, \hyperlink{class_background}{Background} $\ast$)
+\hyperlink{class_collision_ab68555b1c6f7d02a4af26f538a5422a9}{Collision} (\hyperlink{class_player}{Player} $\ast$, \hyperlink{class_map_loader}{Map\+Loader} $\ast$, \hyperlink{class_background}{Background} $\ast$, \hyperlink{class_audio}{Audio} $\ast$, \hyperlink{class_audio}{Audio} $\ast$)
 \item 
 \hyperlink{class_collision_a19ae49bcb3b16f4622443a34a171590c}{$\sim$\+Collision} ()
 \item 
@@ -49,15 +49,17 @@ void \hyperlink{class_collision_aa046c7cf6f057848700d89101953b678}{enemy\+Right\
 Creates an \hyperlink{class_collision}{Collision} object. The \hyperlink{class_collision}{Collision} object is for use with detecting \hyperlink{class_collision}{Collision}. Used help from \href{http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/}{\tt http\+://higherorderfun.\+com/blog/2012/05/20/the-\/guide-\/to-\/implementing-\/2d-\/platformers/} in the type 2 section. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_collision_ad31e4037d453108a21fc186cfc27fec9}{\index{Collision@{Collision}!Collision@{Collision}}
+\hypertarget{class_collision_ab68555b1c6f7d02a4af26f538a5422a9}{\index{Collision@{Collision}!Collision@{Collision}}
 \index{Collision@{Collision}!Collision@{Collision}}
 \subsubsection[{Collision}]{\setlength{\rightskip}{0pt plus 5cm}Collision\+::\+Collision (
 \begin{DoxyParamCaption}
 \item[{{\bf Player} $\ast$}]{input\+Player, }
 \item[{{\bf Map\+Loader} $\ast$}]{input\+Map, }
-\item[{{\bf Background} $\ast$}]{input\+Background}
+\item[{{\bf Background} $\ast$}]{input\+Background, }
+\item[{{\bf Audio} $\ast$}]{in\+Gem, }
+\item[{{\bf Audio} $\ast$}]{in\+Hurt}
 \end{DoxyParamCaption}
-)}}\label{class_collision_ad31e4037d453108a21fc186cfc27fec9}
+)}}\label{class_collision_ab68555b1c6f7d02a4af26f538a5422a9}
 Constructs an \hyperlink{class_collision}{Collision} object Constructs the \hyperlink{class_collision}{Collision} object. 
 \begin{DoxyParams}{Parameters}
 {\em \hyperlink{class_player}{Player}} & $\ast$ pointer to the \hyperlink{class_player}{Player} \\
@@ -65,6 +67,10 @@ Constructs an \hyperlink{class_collision}{Collision} object Constructs the \hype
 {\em \hyperlink{class_map_loader}{Map\+Loader}} & $\ast$ pointer to the \hyperlink{class_map_loader}{Map\+Loader} \\
 \hline
 {\em \hyperlink{class_background}{Background}} & $\ast$ pointer to the \hyperlink{class_background}{Background} \\
+\hline
+{\em \hyperlink{class_audio}{Audio}} & $\ast$ pointer to the \hyperlink{class_audio}{Audio} that plays when a gem is collected \\
+\hline
+{\em \hyperlink{class_audio}{Audio}} & $\ast$ pointer to the \hyperlink{class_audio}{Audio} that plays when a life is lost \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_collision_a19ae49bcb3b16f4622443a34a171590c}{\index{Collision@{Collision}!````~Collision@{$\sim$\+Collision}}

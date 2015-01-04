@@ -17,6 +17,8 @@ var searchData=
   ['setx',['setX',['../class_entity.html#a38e2f110d39426ba4823296b4294dd74',1,'Entity']]],
   ['sety',['setY',['../class_entity.html#a8896110a266bdec69b14d34ec6374df8',1,'Entity']]],
   ['sorttype',['sortType',['../class_map_loader.html#a5d094d7c804670f68e04c360cb9b5965',1,'MapLoader']]],
+  ['startaudio',['startAudio',['../class_audio.html#a15f1ea89039f6dbbb2260bb34f9dabdd',1,'Audio']]],
   ['state',['State',['../class_state.html#abd80317215e3d5a83becc409050dd22f',1,'State']]],
-  ['statemanager',['StateManager',['../class_state_manager.html#a3e2be96d935eb56813b096a885d58587',1,'StateManager']]]
+  ['statemanager',['StateManager',['../class_state_manager.html#a3e2be96d935eb56813b096a885d58587',1,'StateManager']]],
+  ['stopaudio',['stopAudio',['../class_audio.html#a5d73ae24c80b37df5f167016de9c9296',1,'Audio']]]
 ];

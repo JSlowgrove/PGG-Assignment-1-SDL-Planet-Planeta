@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gamestate',['GameState',['../class_game_state.html',1,'']]],
-  ['gem',['Gem',['../class_gem.html',1,'']]]
+  ['enemy',['Enemy',['../class_enemy.html',1,'']]],
+  ['entity',['Entity',['../class_entity.html',1,'']]]
 ];

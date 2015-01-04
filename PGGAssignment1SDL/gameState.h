@@ -13,6 +13,7 @@
 #include "mapLoader.h"
 #include "collision.h"
 #include "enemy.h"
+#include "audio.h"
 
 /**
 @brief Creates a GameState object.
@@ -21,6 +22,10 @@ Creates a GameState object that inherits State
 class GameState : public State
 {
 private:
+	/*audio*/
+	Audio * music;
+	Audio * gemPickup;
+	Audio * lifeLost;
 	/*spritesheets*/
 	Texture * backgrounds;
 	Texture * spritesheet;

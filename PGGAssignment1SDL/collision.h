@@ -5,6 +5,7 @@
 #include "player.h"
 #include "mapLoader.h"
 #include "background.h"
+#include "audio.h"
 
 /**
 @brief Creates an Collision object.
@@ -18,6 +19,9 @@ private:
 	Player * player;
 	MapLoader * map;
 	Background * background;
+	/*pointers to sounds*/
+	Audio * gemPickup;
+	Audio * lifeLost;
 public:
 	/**
 	Constructs an Collision object
@@ -25,8 +29,10 @@ public:
 	@param Player * pointer to the Player
 	@param MapLoader * pointer to the MapLoader
 	@param Background * pointer to the Background
+	@param Audio * pointer to the Audio that plays when a gem is collected
+	@param Audio * pointer to the Audio that plays when a life is lost
 	*/
-	Collision(Player *, MapLoader *, Background *);
+	Collision(Player *, MapLoader *, Background *, Audio *, Audio *);
 
 	/**
 	De-constructs an Collision object

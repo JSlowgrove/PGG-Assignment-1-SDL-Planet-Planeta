@@ -3,11 +3,13 @@
 /**************************************************************************************************************/
 
 /*Constructs the collision object*/
-Collision::Collision(Player * inputPlayer, MapLoader * inputMap, Background * inputBackground)
+Collision::Collision(Player * inputPlayer, MapLoader * inputMap, Background * inputBackground, Audio * inGem, Audio * inHurt)
 {
 	player = inputPlayer;
 	map = inputMap;
 	background = inputBackground;
+	gemPickup = inGem;
+	lifeLost = inHurt;
 }
 
 /**************************************************************************************************************/
@@ -288,6 +290,8 @@ void Collision::downTest(float updatedPosition, int maxCurrentAxis, int minOppos
 /*Performs the action that happens when the player collides with a Gem*/
 void Collision::gemAction(int i)
 {
+	/*plays the gem pickup sound*/
+	gemPickup->playEffect();
 	/*adds the value of the gem to the players score*/
 	player->setScore(player->getScore() + map->getGem(i)->getValue());
 	/*sets the gem to be able to be hidden*/
@@ -384,6 +388,8 @@ void Collision::playerCreatureCollisionTest(float deltaTime)
 			&& map->getEnemy(i)->getY() + (map->getEnemy(i)->getVelocityY() * deltaTime) <= updatedY + 34
 			&& !map->getEnemy(i)->getDeletable())
 		{
+			/*plays the life lost sound*/
+			lifeLost->playEffect();
 			/*decreases a life*/
 			player->setLives(player->getLives() - 1);
 			/*sets the gem to be able to be hidden*/

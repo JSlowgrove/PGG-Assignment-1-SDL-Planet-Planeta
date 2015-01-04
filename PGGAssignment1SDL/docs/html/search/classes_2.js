@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['enemy',['Enemy',['../class_enemy.html',1,'']]],
-  ['entity',['Entity',['../class_entity.html',1,'']]]
+  ['collision',['Collision',['../class_collision.html',1,'']]],
+  ['creature',['Creature',['../class_creature.html',1,'']]],
+  ['creditsstate',['CreditsState',['../class_credits_state.html',1,'']]]
 ];

@@ -93,46 +93,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;state.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;stateManager.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;texture.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_win_lose_state.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_win_lose_state.html">WinLoseState</a> : <span class="keyword">public</span> <a class="code" href="class_state.html">State</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">/*background*/</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * background;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * winLoseKeys;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * afterWinLoseKey;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * numbers;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">/*details*/</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> win;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> score;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_win_lose_state.html#a047ccdc0cc156d65c076eb845398ef84">WinLoseState</a>(<a class="code" href="class_state_manager.html">StateManager</a> *, SDL_Renderer *, <span class="keywordtype">bool</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_win_lose_state.html#ac7ee2a9515081ba03b96cb78c5837d72">~WinLoseState</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_win_lose_state.html#ada8c41baa8011df1aeae4b7b0d9b00f8">HandleSDLEvents</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_win_lose_state.html#a98e675ce31aa41ad95ba36fd9e77dde6">Update</a>(<span class="keywordtype">float</span> deltaTime);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_win_lose_state.html#a862a5bb9422480b36671acb21cc987ba">Draw</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_win_lose_state.html#af7a44a05cae2f79731b9e36ea1ef4f7e">displayScore</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;audio.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_win_lose_state.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_win_lose_state.html">WinLoseState</a> : <span class="keyword">public</span> <a class="code" href="class_state.html">State</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*audio*/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * winSound;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * loseSound;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * music;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">/*background*/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * background;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * winLoseKeys;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * afterWinLoseKey;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * numbers;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">/*details*/</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> win;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> score;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_win_lose_state.html#a047ccdc0cc156d65c076eb845398ef84">WinLoseState</a>(<a class="code" href="class_state_manager.html">StateManager</a> *, SDL_Renderer *, <span class="keywordtype">bool</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_win_lose_state.html#ac7ee2a9515081ba03b96cb78c5837d72">~WinLoseState</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_win_lose_state.html#ada8c41baa8011df1aeae4b7b0d9b00f8">HandleSDLEvents</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_win_lose_state.html#a98e675ce31aa41ad95ba36fd9e77dde6">Update</a>(<span class="keywordtype">float</span> deltaTime);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_win_lose_state.html#a862a5bb9422480b36671acb21cc987ba">Draw</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_win_lose_state.html#af7a44a05cae2f79731b9e36ea1ef4f7e">displayScore</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_win_lose_state_html_a047ccdc0cc156d65c076eb845398ef84"><div class="ttname"><a href="class_win_lose_state.html#a047ccdc0cc156d65c076eb845398ef84">WinLoseState::WinLoseState</a></div><div class="ttdeci">WinLoseState(StateManager *, SDL_Renderer *, bool, int)</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:8</div></div>
 <div class="ttc" id="class_state_html"><div class="ttname"><a href="class_state.html">State</a></div><div class="ttdoc">Creates a State object. Creates a State object to be inherited. Made using information from http://bl...</div><div class="ttdef"><b>Definition:</b> state.h:17</div></div>
-<div class="ttc" id="class_win_lose_state_html_af7a44a05cae2f79731b9e36ea1ef4f7e"><div class="ttname"><a href="class_win_lose_state.html#af7a44a05cae2f79731b9e36ea1ef4f7e">WinLoseState::displayScore</a></div><div class="ttdeci">void displayScore()</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:106</div></div>
+<div class="ttc" id="class_win_lose_state_html_af7a44a05cae2f79731b9e36ea1ef4f7e"><div class="ttname"><a href="class_win_lose_state.html#af7a44a05cae2f79731b9e36ea1ef4f7e">WinLoseState::displayScore</a></div><div class="ttdeci">void displayScore()</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:131</div></div>
 <div class="ttc" id="class_state_manager_html"><div class="ttname"><a href="class_state_manager.html">StateManager</a></div><div class="ttdoc">Creates a State manager object. Creates a State manager object to be inherited. Made using informatio...</div><div class="ttdef"><b>Definition:</b> stateManager.h:13</div></div>
 <div class="ttc" id="class_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
-<div class="ttc" id="class_win_lose_state_html_a98e675ce31aa41ad95ba36fd9e77dde6"><div class="ttname"><a href="class_win_lose_state.html#a98e675ce31aa41ad95ba36fd9e77dde6">WinLoseState::Update</a></div><div class="ttdeci">void Update(float deltaTime)</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:76</div></div>
-<div class="ttc" id="class_win_lose_state_html_ac7ee2a9515081ba03b96cb78c5837d72"><div class="ttname"><a href="class_win_lose_state.html#ac7ee2a9515081ba03b96cb78c5837d72">WinLoseState::~WinLoseState</a></div><div class="ttdeci">~WinLoseState()</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:27</div></div>
-<div class="ttc" id="class_win_lose_state_html_a862a5bb9422480b36671acb21cc987ba"><div class="ttname"><a href="class_win_lose_state.html#a862a5bb9422480b36671acb21cc987ba">WinLoseState::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:83</div></div>
-<div class="ttc" id="class_win_lose_state_html"><div class="ttname"><a href="class_win_lose_state.html">WinLoseState</a></div><div class="ttdoc">Creates a WinLoseState object. Creates a WinLoseState object that inherits State. ...</div><div class="ttdef"><b>Definition:</b> winLoseState.h:13</div></div>
-<div class="ttc" id="class_win_lose_state_html_ada8c41baa8011df1aeae4b7b0d9b00f8"><div class="ttname"><a href="class_win_lose_state.html#ada8c41baa8011df1aeae4b7b0d9b00f8">WinLoseState::HandleSDLEvents</a></div><div class="ttdeci">bool HandleSDLEvents()</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:39</div></div>
+<div class="ttc" id="class_win_lose_state_html_a98e675ce31aa41ad95ba36fd9e77dde6"><div class="ttname"><a href="class_win_lose_state.html#a98e675ce31aa41ad95ba36fd9e77dde6">WinLoseState::Update</a></div><div class="ttdeci">void Update(float deltaTime)</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:99</div></div>
+<div class="ttc" id="class_win_lose_state_html_ac7ee2a9515081ba03b96cb78c5837d72"><div class="ttname"><a href="class_win_lose_state.html#ac7ee2a9515081ba03b96cb78c5837d72">WinLoseState::~WinLoseState</a></div><div class="ttdeci">~WinLoseState()</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:44</div></div>
+<div class="ttc" id="class_win_lose_state_html_a862a5bb9422480b36671acb21cc987ba"><div class="ttname"><a href="class_win_lose_state.html#a862a5bb9422480b36671acb21cc987ba">WinLoseState::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:108</div></div>
+<div class="ttc" id="class_win_lose_state_html"><div class="ttname"><a href="class_win_lose_state.html">WinLoseState</a></div><div class="ttdoc">Creates a WinLoseState object. Creates a WinLoseState object that inherits State. ...</div><div class="ttdef"><b>Definition:</b> winLoseState.h:14</div></div>
+<div class="ttc" id="class_win_lose_state_html_ada8c41baa8011df1aeae4b7b0d9b00f8"><div class="ttname"><a href="class_win_lose_state.html#ada8c41baa8011df1aeae4b7b0d9b00f8">WinLoseState::HandleSDLEvents</a></div><div class="ttdeci">bool HandleSDLEvents()</div><div class="ttdef"><b>Definition:</b> winLoseState.cpp:62</div></div>
+<div class="ttc" id="class_audio_html"><div class="ttname"><a href="class_audio.html">Audio</a></div><div class="ttdoc">Creates a Audio object to handle the SDL_Mixer. Done using help from http://www.lazyfoo.net/tutorials/SDL/21_sound_effects_and_music/index.php. </div><div class="ttdef"><b>Definition:</b> audio.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 4 2015 01:31:51 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 04:17:31 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

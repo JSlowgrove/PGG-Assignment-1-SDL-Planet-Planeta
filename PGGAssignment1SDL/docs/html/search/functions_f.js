@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['_7eanimation',['~Animation',['../class_animation.html#a401b68793d4fbf48d481c030ee4b2a16',1,'Animation']]],
+  ['_7eaudio',['~Audio',['../class_audio.html#ae8f54deecb5f48511aaab469e80294d6',1,'Audio']]],
   ['_7ebackground',['~Background',['../class_background.html#a36754df1deb720393217ade59da41557',1,'Background']]],
   ['_7eblock',['~Block',['../class_block.html#a19d1bd0e1cef6a865ed2745a2e648405',1,'Block']]],
   ['_7ecollision',['~Collision',['../class_collision.html#a19ae49bcb3b16f4622443a34a171590c',1,'Collision']]],
