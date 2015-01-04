@@ -109,14 +109,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0430f4acdbe19fd6853a61e3b9f71543"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf524d17cab14e1096341100abfe92b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#adf524d17cab14e1096341100abfe92b2">displayGem</a> (int, SDL_Renderer *)</td></tr>
 <tr class="separator:adf524d17cab14e1096341100abfe92b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15185be5ed6c623ca56d8719eddabe9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a15185be5ed6c623ca56d8719eddabe9f">displayEnemy</a> (int, SDL_Renderer *)</td></tr>
+<tr class="separator:a15185be5ed6c623ca56d8719eddabe9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a178ca855ceec126f0a3a2264b74f63cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a178ca855ceec126f0a3a2264b74f63cc">getNumberOfBlocks</a> ()</td></tr>
 <tr class="separator:a178ca855ceec126f0a3a2264b74f63cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a026a7c38e03cdee9a355b09ca6048daa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a026a7c38e03cdee9a355b09ca6048daa">getNumberofGems</a> ()</td></tr>
-<tr class="separator:a026a7c38e03cdee9a355b09ca6048daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407a5f1ad238e3048b5aaf0a7555c172"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a407a5f1ad238e3048b5aaf0a7555c172">getNumberOfGems</a> ()</td></tr>
+<tr class="separator:a407a5f1ad238e3048b5aaf0a7555c172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553fdab4c534f6b72764545b01f83005"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a553fdab4c534f6b72764545b01f83005">getNumberOfEnemies</a> ()</td></tr>
+<tr class="separator:a553fdab4c534f6b72764545b01f83005"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a161a0cc6a392abc9baa57e919023f25c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block.html">Block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a161a0cc6a392abc9baa57e919023f25c">getBlock</a> (int)</td></tr>
 <tr class="separator:a161a0cc6a392abc9baa57e919023f25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b56fda5f4c27614131b085b449fe183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_gem.html">Gem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a9b56fda5f4c27614131b085b449fe183">getGem</a> (int)</td></tr>
 <tr class="separator:a9b56fda5f4c27614131b085b449fe183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2680e99acdaf5b74b8116d43ca220df3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy.html">Enemy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#a2680e99acdaf5b74b8116d43ca220df3">getEnemy</a> (int)</td></tr>
+<tr class="separator:a2680e99acdaf5b74b8116d43ca220df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb4ddc89be3ef11cf55cedd91796981c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#afb4ddc89be3ef11cf55cedd91796981c">getNumberOfEntities</a> ()</td></tr>
 <tr class="separator:afb4ddc89be3ef11cf55cedd91796981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e282def1789a5f4701c44379b67813"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_loader.html#ae5e282def1789a5f4701c44379b67813">getNumberOfRows</a> ()</td></tr>
@@ -221,6 +227,39 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a15185be5ed6c623ca56d8719eddabe9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapLoader::displayEnemy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>display the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> object display the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> at the position at the array inputed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>the index of the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> array </td></tr>
+    <tr><td class="paramname">SDL_Renderer</td><td>* a pointer to the renderer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="adf524d17cab14e1096341100abfe92b2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -277,6 +316,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2680e99acdaf5b74b8116d43ca220df3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_enemy.html">Enemy</a> * MapLoader::getEnemy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # a <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> from the array </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>the index of the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to a <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a9b56fda5f4c27614131b085b449fe183"></a>
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +354,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Getter # a <a class="el" href="class_block.html" title="Creates a Block object that inherits MapObject. ">Block</a> from the array </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">int</td><td>the index of the block </td></tr>
+    <tr><td class="paramname">int</td><td>the index of the <a class="el" href="class_block.html" title="Creates a Block object that inherits MapObject. ">Block</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -350,6 +412,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a553fdab4c534f6b72764545b01f83005"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MapLoader::getNumberOfEnemies </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # height </p><dl class="section return"><dt>Returns</dt><dd>the number of enemies. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="afb4ddc89be3ef11cf55cedd91796981c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -366,12 +444,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a026a7c38e03cdee9a355b09ca6048daa"></a>
+<a class="anchor" id="a407a5f1ad238e3048b5aaf0a7555c172"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int MapLoader::getNumberofGems </td>
+          <td class="memname">int MapLoader::getNumberOfGems </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -552,7 +630,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 3 2015 02:06:54 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 00:49:03 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -83,13 +83,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_enemy-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Enemy Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Creates an <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits Creature which in turn inherits Entity. ">Enemy</a> object that inherits <a class="el" href="class_creature.html" title="Creates a Creature object that inherits Entity. ">Creature</a> which in turn inherits <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a>.  
+<p>Creates an <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> object that inherits <a class="el" href="class_map_object.html" title="Creates a MapObject object that inherits Entity. ">MapObject</a> which in turn inherits <a class="el" href="class_creature.html" title="Creates a Creature object that inherits Entity. ">Creature</a>.  
  <a href="class_enemy.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="enemy_8h_source.html">enemy.h</a>&gt;</code></p>
@@ -106,10 +107,20 @@ Inheritance diagram for Enemy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ada67a3c9b7166fda1c010a8c7432a355"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ada67a3c9b7166fda1c010a8c7432a355">Enemy</a> (<a class="el" href="class_texture.html">Texture</a> *)</td></tr>
-<tr class="separator:ada67a3c9b7166fda1c010a8c7432a355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cfc9f39bd776aaf87eee7346945dd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ae9cfc9f39bd776aaf87eee7346945dd4">Enemy</a> (<a class="el" href="class_texture.html">Texture</a> *, float, float, int)</td></tr>
+<tr class="separator:ae9cfc9f39bd776aaf87eee7346945dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0eec4755e28c02688065f9657150ac3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ac0eec4755e28c02688065f9657150ac3">~Enemy</a> ()</td></tr>
 <tr class="separator:ac0eec4755e28c02688065f9657150ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50fe15406592d81e276826425b3000b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ac50fe15406592d81e276826425b3000b">typeSetup</a> ()</td></tr>
+<tr class="separator:ac50fe15406592d81e276826425b3000b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3e1631733e464c755767b894ce3ef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a0b3e1631733e464c755767b894ce3ef4">setDeletable</a> (bool)</td></tr>
+<tr class="separator:a0b3e1631733e464c755767b894ce3ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37e2cff8cfe21a2ce0245bca77fc84e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a37e2cff8cfe21a2ce0245bca77fc84e2">getDeletable</a> ()</td></tr>
+<tr class="separator:a37e2cff8cfe21a2ce0245bca77fc84e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7185349825042de46d16bad7b1c422d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a7185349825042de46d16bad7b1c422d6">setSpeed</a> (float)</td></tr>
+<tr class="separator:a7185349825042de46d16bad7b1c422d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd43fc5766bf7ef886691244e1b66566"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#acd43fc5766bf7ef886691244e1b66566">getSpeed</a> ()</td></tr>
+<tr class="separator:acd43fc5766bf7ef886691244e1b66566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_creature"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_creature')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_creature.html">Creature</a></td></tr>
 <tr class="memitem:a3512b75b90d921f17d098d55cc55a4c0 inherit pub_methods_class_creature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#a3512b75b90d921f17d098d55cc55a4c0">Creature</a> (<a class="el" href="class_texture.html">Texture</a> *, float, float)</td></tr>
 <tr class="separator:a3512b75b90d921f17d098d55cc55a4c0 inherit pub_methods_class_creature"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,8 +154,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6dd7b404c13754202acfe3d2c65c77b inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b">getY</a> ()</td></tr>
 <tr class="separator:ab6dd7b404c13754202acfe3d2c65c77b inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a787a7113c7a5b1119ac3945fb1fb2956"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a787a7113c7a5b1119ac3945fb1fb2956"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr class="separator:a787a7113c7a5b1119ac3945fb1fb2956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcb5629c5c048d9a04125cb1b0c911ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcb5629c5c048d9a04125cb1b0c911ef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>deleteable</b></td></tr>
+<tr class="separator:adcb5629c5c048d9a04125cb1b0c911ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98766d083fc49e746a37d0dc69be09e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98766d083fc49e746a37d0dc69be09e0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
+<tr class="separator:a98766d083fc49e746a37d0dc69be09e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_creature"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_creature')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_creature.html">Creature</a></td></tr>
 <tr class="memitem:a6e857406fb17f893ebace230ff8aa05f inherit pro_attribs_class_creature"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e857406fb17f893ebace230ff8aa05f"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>velocityX</b></td></tr>
@@ -182,9 +202,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 <tr class="separator:af4966f81d91cc8f8d5eb9e9002240c49 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Creates an <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits Creature which in turn inherits Entity. ">Enemy</a> object that inherits <a class="el" href="class_creature.html" title="Creates a Creature object that inherits Entity. ">Creature</a> which in turn inherits <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a>. </p>
+<div class="textblock"><p>Creates an <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> object that inherits <a class="el" href="class_map_object.html" title="Creates a MapObject object that inherits Entity. ">MapObject</a> which in turn inherits <a class="el" href="class_creature.html" title="Creates a Creature object that inherits Entity. ">Creature</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ada67a3c9b7166fda1c010a8c7432a355"></a>
+<a class="anchor" id="ae9cfc9f39bd776aaf87eee7346945dd4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -192,12 +212,42 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
           <td class="memname">Enemy::Enemy </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_texture.html">Texture</a> *&#160;</td>
-          <td class="paramname"><em>inputTexture</em></td><td>)</td>
+          <td class="paramname"><em>inputTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>inX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>inY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>inType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs an <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits Creature which in turn inherits Entity. ">Enemy</a> object Constructs the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits Creature which in turn inherits Entity. ">Enemy</a> object. </p>
+<p>Constructs an <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> object Constructs the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Texture*</td><td>a pointer to a <a class="el" href="class_texture.html" title="Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...">Texture</a> loaded into memory. </td></tr>
+    <tr><td class="paramname">float</td><td>initial x position. </td></tr>
+    <tr><td class="paramname">float</td><td>initial y position. </td></tr>
+    <tr><td class="paramname">int</td><td>the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -213,7 +263,100 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>De-constructs an <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits Creature which in turn inherits Entity. ">Enemy</a> object De-constructs the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits Creature which in turn inherits Entity. ">Enemy</a> object </p>
+<p>De-constructs an <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> object De-constructs the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> object </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a37e2cff8cfe21a2ce0245bca77fc84e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy::getDeletable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # deleteable </p><dl class="section return"><dt>Returns</dt><dd>bool does the object need deleting. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd43fc5766bf7ef886691244e1b66566"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Enemy::getSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter # speed </p><dl class="section return"><dt>Returns</dt><dd>float the enemy's speed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0b3e1631733e464c755767b894ce3ef4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::setDeletable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inputDelete</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter # deleteable Sets if the object needs to be deleted. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td>does the object need deleting. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7185349825042de46d16bad7b1c422d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::setSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>inputSpeed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter # speed Sets the speed of the enemy. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>the new speed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac50fe15406592d81e276826425b3000b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::typeSetup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the type of the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> Uses the value of type to set up initial values for the <a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> </p>
 
 </div>
 </div>
@@ -224,7 +367,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 3 2015 02:06:54 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 00:49:02 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

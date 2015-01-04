@@ -25,13 +25,19 @@ void \hyperlink{class_map_loader_a0430f4acdbe19fd6853a61e3b9f71543}{display\+Blo
 \item 
 void \hyperlink{class_map_loader_adf524d17cab14e1096341100abfe92b2}{display\+Gem} (int, S\+D\+L\+\_\+\+Renderer $\ast$)
 \item 
+void \hyperlink{class_map_loader_a15185be5ed6c623ca56d8719eddabe9f}{display\+Enemy} (int, S\+D\+L\+\_\+\+Renderer $\ast$)
+\item 
 int \hyperlink{class_map_loader_a178ca855ceec126f0a3a2264b74f63cc}{get\+Number\+Of\+Blocks} ()
 \item 
-int \hyperlink{class_map_loader_a026a7c38e03cdee9a355b09ca6048daa}{get\+Numberof\+Gems} ()
+int \hyperlink{class_map_loader_a407a5f1ad238e3048b5aaf0a7555c172}{get\+Number\+Of\+Gems} ()
+\item 
+int \hyperlink{class_map_loader_a553fdab4c534f6b72764545b01f83005}{get\+Number\+Of\+Enemies} ()
 \item 
 \hyperlink{class_block}{Block} $\ast$ \hyperlink{class_map_loader_a161a0cc6a392abc9baa57e919023f25c}{get\+Block} (int)
 \item 
 \hyperlink{class_gem}{Gem} $\ast$ \hyperlink{class_map_loader_a9b56fda5f4c27614131b085b449fe183}{get\+Gem} (int)
+\item 
+\hyperlink{class_enemy}{Enemy} $\ast$ \hyperlink{class_map_loader_a2680e99acdaf5b74b8116d43ca220df3}{get\+Enemy} (int)
 \item 
 int \hyperlink{class_map_loader_afb4ddc89be3ef11cf55cedd91796981c}{get\+Number\+Of\+Entities} ()
 \item 
@@ -92,6 +98,21 @@ display the \hyperlink{class_block}{Block} object display the \hyperlink{class_b
 {\em S\+D\+L\+\_\+\+Renderer} & $\ast$ a pointer to the renderer \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_map_loader_a15185be5ed6c623ca56d8719eddabe9f}{\index{Map\+Loader@{Map\+Loader}!display\+Enemy@{display\+Enemy}}
+\index{display\+Enemy@{display\+Enemy}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{display\+Enemy}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Loader\+::display\+Enemy (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_a15185be5ed6c623ca56d8719eddabe9f}
+display the \hyperlink{class_enemy}{Enemy} object display the \hyperlink{class_enemy}{Enemy} at the position at the array inputed 
+\begin{DoxyParams}{Parameters}
+{\em int} & the index of the \hyperlink{class_enemy}{Enemy} array \\
+\hline
+{\em S\+D\+L\+\_\+\+Renderer} & $\ast$ a pointer to the renderer \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_map_loader_adf524d17cab14e1096341100abfe92b2}{\index{Map\+Loader@{Map\+Loader}!display\+Gem@{display\+Gem}}
 \index{display\+Gem@{display\+Gem}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{display\+Gem}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+Loader\+::display\+Gem (
@@ -122,6 +143,21 @@ Getter \# a \hyperlink{class_block}{Block} from the array
 \begin{DoxyReturn}{Returns}
 a pointer to a \hyperlink{class_block}{Block}. 
 \end{DoxyReturn}
+\hypertarget{class_map_loader_a2680e99acdaf5b74b8116d43ca220df3}{\index{Map\+Loader@{Map\+Loader}!get\+Enemy@{get\+Enemy}}
+\index{get\+Enemy@{get\+Enemy}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Enemy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Enemy} $\ast$ Map\+Loader\+::get\+Enemy (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_a2680e99acdaf5b74b8116d43ca220df3}
+Getter \# a \hyperlink{class_enemy}{Enemy} from the array 
+\begin{DoxyParams}{Parameters}
+{\em int} & the index of the \hyperlink{class_enemy}{Enemy} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a \hyperlink{class_enemy}{Enemy}. 
+\end{DoxyReturn}
 \hypertarget{class_map_loader_a9b56fda5f4c27614131b085b449fe183}{\index{Map\+Loader@{Map\+Loader}!get\+Gem@{get\+Gem}}
 \index{get\+Gem@{get\+Gem}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{get\+Gem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gem} $\ast$ Map\+Loader\+::get\+Gem (
@@ -131,7 +167,7 @@ a pointer to a \hyperlink{class_block}{Block}.
 )}}\label{class_map_loader_a9b56fda5f4c27614131b085b449fe183}
 Getter \# a \hyperlink{class_block}{Block} from the array 
 \begin{DoxyParams}{Parameters}
-{\em int} & the index of the block \\
+{\em int} & the index of the \hyperlink{class_block}{Block} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -165,6 +201,16 @@ the type of the index in the types array.
 Getter \# number of blocks \begin{DoxyReturn}{Returns}
 the number of blocks. 
 \end{DoxyReturn}
+\hypertarget{class_map_loader_a553fdab4c534f6b72764545b01f83005}{\index{Map\+Loader@{Map\+Loader}!get\+Number\+Of\+Enemies@{get\+Number\+Of\+Enemies}}
+\index{get\+Number\+Of\+Enemies@{get\+Number\+Of\+Enemies}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Number\+Of\+Enemies}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Number\+Of\+Enemies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_loader_a553fdab4c534f6b72764545b01f83005}
+Getter \# height \begin{DoxyReturn}{Returns}
+the number of enemies. 
+\end{DoxyReturn}
 \hypertarget{class_map_loader_afb4ddc89be3ef11cf55cedd91796981c}{\index{Map\+Loader@{Map\+Loader}!get\+Number\+Of\+Entities@{get\+Number\+Of\+Entities}}
 \index{get\+Number\+Of\+Entities@{get\+Number\+Of\+Entities}!Map\+Loader@{Map\+Loader}}
 \subsubsection[{get\+Number\+Of\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Number\+Of\+Entities (
@@ -175,13 +221,13 @@ the number of blocks.
 Getter \# number of Entities in a row \begin{DoxyReturn}{Returns}
 the number of Entities in a row. 
 \end{DoxyReturn}
-\hypertarget{class_map_loader_a026a7c38e03cdee9a355b09ca6048daa}{\index{Map\+Loader@{Map\+Loader}!get\+Numberof\+Gems@{get\+Numberof\+Gems}}
-\index{get\+Numberof\+Gems@{get\+Numberof\+Gems}!Map\+Loader@{Map\+Loader}}
-\subsubsection[{get\+Numberof\+Gems}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Numberof\+Gems (
+\hypertarget{class_map_loader_a407a5f1ad238e3048b5aaf0a7555c172}{\index{Map\+Loader@{Map\+Loader}!get\+Number\+Of\+Gems@{get\+Number\+Of\+Gems}}
+\index{get\+Number\+Of\+Gems@{get\+Number\+Of\+Gems}!Map\+Loader@{Map\+Loader}}
+\subsubsection[{get\+Number\+Of\+Gems}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+Loader\+::get\+Number\+Of\+Gems (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_map_loader_a026a7c38e03cdee9a355b09ca6048daa}
+)}}\label{class_map_loader_a407a5f1ad238e3048b5aaf0a7555c172}
 Getter \# height \begin{DoxyReturn}{Returns}
 the number of gems. 
 \end{DoxyReturn}

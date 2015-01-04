@@ -102,35 +102,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> maxX;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">/*can the Background move?*/</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> moveable;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">/*Background type*/</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> backgroundType;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_background.html#a31d67c19cf5dd14c0f07b91e89c8b1f8">Background</a>(<a class="code" href="class_texture.html">Texture</a> *, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_background.html#a36754df1deb720393217ade59da41557">~Background</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_background.html#a9b358e049be63be31b9241410288514f">setVelocity</a>(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">updateX</a>(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_background.html#a25e0286050106340c34d91d3f1d0f4df">getType</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_background.html#a5f3e6259bb294391cf39d776456e7748">getMoveable</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_background_html_a25e0286050106340c34d91d3f1d0f4df"><div class="ttname"><a href="class_background.html#a25e0286050106340c34d91d3f1d0f4df">Background::getType</a></div><div class="ttdeci">int getType()</div><div class="ttdef"><b>Definition:</b> background.cpp:89</div></div>
-<div class="ttc" id="class_background_html_a5f3e6259bb294391cf39d776456e7748"><div class="ttname"><a href="class_background.html#a5f3e6259bb294391cf39d776456e7748">Background::getMoveable</a></div><div class="ttdeci">bool getMoveable()</div><div class="ttdef"><b>Definition:</b> background.cpp:98</div></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> left;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> right;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/*Background type*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> backgroundType;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_background.html#a31d67c19cf5dd14c0f07b91e89c8b1f8">Background</a>(<a class="code" href="class_texture.html">Texture</a> *, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_background.html#a36754df1deb720393217ade59da41557">~Background</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_background.html#a9b358e049be63be31b9241410288514f">setVelocity</a>(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">updateX</a>(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_background.html#a25e0286050106340c34d91d3f1d0f4df">getType</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_background.html#a5f3e6259bb294391cf39d776456e7748">getMoveable</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_background.html#a9e2c4dc2434c8123c1fabceecb53a7c0">getRightMoveable</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_background.html#a6b49b6e383fed26938af98773f0952fa">getLeftMoveable</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_background_html_a6b49b6e383fed26938af98773f0952fa"><div class="ttname"><a href="class_background.html#a6b49b6e383fed26938af98773f0952fa">Background::getLeftMoveable</a></div><div class="ttdeci">bool getLeftMoveable()</div><div class="ttdef"><b>Definition:</b> background.cpp:125</div></div>
+<div class="ttc" id="class_background_html_a25e0286050106340c34d91d3f1d0f4df"><div class="ttname"><a href="class_background.html#a25e0286050106340c34d91d3f1d0f4df">Background::getType</a></div><div class="ttdeci">int getType()</div><div class="ttdef"><b>Definition:</b> background.cpp:98</div></div>
+<div class="ttc" id="class_background_html_a5f3e6259bb294391cf39d776456e7748"><div class="ttname"><a href="class_background.html#a5f3e6259bb294391cf39d776456e7748">Background::getMoveable</a></div><div class="ttdeci">bool getMoveable()</div><div class="ttdef"><b>Definition:</b> background.cpp:107</div></div>
 <div class="ttc" id="class_background_html"><div class="ttname"><a href="class_background.html">Background</a></div><div class="ttdoc">Creates a Background object that inherits Entity. Creates a Background object with a velocity...</div><div class="ttdef"><b>Definition:</b> background.h:13</div></div>
 <div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdoc">Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...</div><div class="ttdef"><b>Definition:</b> entity.h:13</div></div>
-<div class="ttc" id="class_background_html_a1cb5afc5d8857ec4db6c6d393375a4c2"><div class="ttname"><a href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">Background::updateX</a></div><div class="ttdeci">void updateX(float)</div><div class="ttdef"><b>Definition:</b> background.cpp:52</div></div>
-<div class="ttc" id="class_background_html_a9b358e049be63be31b9241410288514f"><div class="ttname"><a href="class_background.html#a9b358e049be63be31b9241410288514f">Background::setVelocity</a></div><div class="ttdeci">void setVelocity(float)</div><div class="ttdef"><b>Definition:</b> background.cpp:43</div></div>
+<div class="ttc" id="class_background_html_a1cb5afc5d8857ec4db6c6d393375a4c2"><div class="ttname"><a href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">Background::updateX</a></div><div class="ttdeci">void updateX(float)</div><div class="ttdef"><b>Definition:</b> background.cpp:55</div></div>
+<div class="ttc" id="class_background_html_a9b358e049be63be31b9241410288514f"><div class="ttname"><a href="class_background.html#a9b358e049be63be31b9241410288514f">Background::setVelocity</a></div><div class="ttdeci">void setVelocity(float)</div><div class="ttdef"><b>Definition:</b> background.cpp:46</div></div>
 <div class="ttc" id="class_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
-<div class="ttc" id="class_background_html_a36754df1deb720393217ade59da41557"><div class="ttname"><a href="class_background.html#a36754df1deb720393217ade59da41557">Background::~Background</a></div><div class="ttdeci">~Background()</div><div class="ttdef"><b>Definition:</b> background.cpp:36</div></div>
+<div class="ttc" id="class_background_html_a9e2c4dc2434c8123c1fabceecb53a7c0"><div class="ttname"><a href="class_background.html#a9e2c4dc2434c8123c1fabceecb53a7c0">Background::getRightMoveable</a></div><div class="ttdeci">bool getRightMoveable()</div><div class="ttdef"><b>Definition:</b> background.cpp:116</div></div>
+<div class="ttc" id="class_background_html_a36754df1deb720393217ade59da41557"><div class="ttname"><a href="class_background.html#a36754df1deb720393217ade59da41557">Background::~Background</a></div><div class="ttdeci">~Background()</div><div class="ttdef"><b>Definition:</b> background.cpp:39</div></div>
 <div class="ttc" id="class_background_html_a31d67c19cf5dd14c0f07b91e89c8b1f8"><div class="ttname"><a href="class_background.html#a31d67c19cf5dd14c0f07b91e89c8b1f8">Background::Background</a></div><div class="ttdeci">Background(Texture *, int)</div><div class="ttdef"><b>Definition:</b> background.cpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 3 2015 02:06:52 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 00:49:02 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

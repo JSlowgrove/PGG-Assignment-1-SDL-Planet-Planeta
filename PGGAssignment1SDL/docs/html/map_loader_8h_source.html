@@ -97,86 +97,100 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;mapObject.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;block.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;gem.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_map_loader.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_map_loader.html">MapLoader</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">/*a structue for use with the map array*/</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">struct </span>id</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">/*the type of entity*/</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">char</span> type;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">/*the index of the types array*/</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> index;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">/*vectors for the loaded map*/</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::vector&lt;std::vector&lt;id&gt;&gt; entities;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::vector&lt;Block *&gt; blocks;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt;Gem *&gt; gems;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">/*number of entities in a row*/</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> numberOfEntites;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/*number of rows in the map*/</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> numberOfRows;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/*number of blocks in the map*/</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> numberOfBlocks;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/*number of gems in the map*/</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> numberOfGems;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">/*pointer to the spritesheet*/</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * texture;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_map_loader.html#a759260eb5a2bcc71f4eb6e03e8d8dead">MapLoader</a>(std::string, <a class="code" href="class_texture.html">Texture</a> *, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_map_loader.html#a6055310649b9a926301d7fb2b83cb1b1">~MapLoader</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#aa3f95e47879ef5d2ac8f9b4e80602412">loadMap</a>(std::string, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#a5d094d7c804670f68e04c360cb9b5965">sortType</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#a0430f4acdbe19fd6853a61e3b9f71543">displayBlock</a>(<span class="keywordtype">int</span>, SDL_Renderer *);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#adf524d17cab14e1096341100abfe92b2">displayGem</a>(<span class="keywordtype">int</span>, SDL_Renderer *);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#a178ca855ceec126f0a3a2264b74f63cc">getNumberOfBlocks</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#a026a7c38e03cdee9a355b09ca6048daa">getNumberofGems</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_block.html">Block</a> * <a class="code" href="class_map_loader.html#a161a0cc6a392abc9baa57e919023f25c">getBlock</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="class_gem.html">Gem</a> * <a class="code" href="class_map_loader.html#a9b56fda5f4c27614131b085b449fe183">getGem</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#afb4ddc89be3ef11cf55cedd91796981c">getNumberOfEntities</a>();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#ae5e282def1789a5f4701c44379b67813">getNumberOfRows</a>();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_map_loader.html#a8e20a9a3c99f4d86d8db873b4a293352">getType</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#a91978c6df4df7c8805ff7b959f2f8f02">getIndex</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#a29c10edfe06895dd0e0f04275d96e5ed">MapLoader::setEntityBlank</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;enemy.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_map_loader.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_map_loader.html">MapLoader</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/*a structure for use with the map array*/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">struct </span>id</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">/*the type of entity*/</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">char</span> type;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">/*the index of the types array*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">int</span> index;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">/*vectors for the loaded map*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::vector&lt;std::vector&lt;id&gt;&gt; entities;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt;Block *&gt; blocks;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::vector&lt;Gem *&gt; gems;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::vector&lt;Enemy *&gt; enemies;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/*number of entities in a row*/</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> numberOfEntites;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/*number of rows in the map*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> numberOfRows;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/*number of blocks in the map*/</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> numberOfBlocks;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">/*number of gems in the map*/</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> numberOfGems;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">/*number of enemies*/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> numberOfEnemies;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">/*pointer to the spritesheet*/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * texture;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_map_loader.html#a759260eb5a2bcc71f4eb6e03e8d8dead">MapLoader</a>(std::string, <a class="code" href="class_texture.html">Texture</a> *, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_map_loader.html#a6055310649b9a926301d7fb2b83cb1b1">~MapLoader</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#aa3f95e47879ef5d2ac8f9b4e80602412">loadMap</a>(std::string, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#a5d094d7c804670f68e04c360cb9b5965">sortType</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#a0430f4acdbe19fd6853a61e3b9f71543">displayBlock</a>(<span class="keywordtype">int</span>, SDL_Renderer *);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#adf524d17cab14e1096341100abfe92b2">displayGem</a>(<span class="keywordtype">int</span>, SDL_Renderer *);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#a15185be5ed6c623ca56d8719eddabe9f">displayEnemy</a>(<span class="keywordtype">int</span>, SDL_Renderer *);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#a178ca855ceec126f0a3a2264b74f63cc">getNumberOfBlocks</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#a407a5f1ad238e3048b5aaf0a7555c172">getNumberOfGems</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#a553fdab4c534f6b72764545b01f83005">getNumberOfEnemies</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="class_block.html">Block</a> * <a class="code" href="class_map_loader.html#a161a0cc6a392abc9baa57e919023f25c">getBlock</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="class_gem.html">Gem</a> * <a class="code" href="class_map_loader.html#a9b56fda5f4c27614131b085b449fe183">getGem</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="class_enemy.html">Enemy</a> * <a class="code" href="class_map_loader.html#a2680e99acdaf5b74b8116d43ca220df3">getEnemy</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#afb4ddc89be3ef11cf55cedd91796981c">getNumberOfEntities</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#ae5e282def1789a5f4701c44379b67813">getNumberOfRows</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_map_loader.html#a8e20a9a3c99f4d86d8db873b4a293352">getType</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_map_loader.html#a91978c6df4df7c8805ff7b959f2f8f02">getIndex</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map_loader.html#a29c10edfe06895dd0e0f04275d96e5ed">MapLoader::setEntityBlank</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;};</div>
 <div class="ttc" id="class_gem_html"><div class="ttname"><a href="class_gem.html">Gem</a></div><div class="ttdoc">Creates a Gem object that inherits MapObject. </div><div class="ttdef"><b>Definition:</b> gem.h:10</div></div>
-<div class="ttc" id="class_map_loader_html_a0430f4acdbe19fd6853a61e3b9f71543"><div class="ttname"><a href="class_map_loader.html#a0430f4acdbe19fd6853a61e3b9f71543">MapLoader::displayBlock</a></div><div class="ttdeci">void displayBlock(int, SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:173</div></div>
-<div class="ttc" id="class_map_loader_html_a9b56fda5f4c27614131b085b449fe183"><div class="ttname"><a href="class_map_loader.html#a9b56fda5f4c27614131b085b449fe183">MapLoader::getGem</a></div><div class="ttdeci">Gem * getGem(int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:218</div></div>
+<div class="ttc" id="class_map_loader_html_a0430f4acdbe19fd6853a61e3b9f71543"><div class="ttname"><a href="class_map_loader.html#a0430f4acdbe19fd6853a61e3b9f71543">MapLoader::displayBlock</a></div><div class="ttdeci">void displayBlock(int, SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:188</div></div>
+<div class="ttc" id="class_map_loader_html_a9b56fda5f4c27614131b085b449fe183"><div class="ttname"><a href="class_map_loader.html#a9b56fda5f4c27614131b085b449fe183">MapLoader::getGem</a></div><div class="ttdeci">Gem * getGem(int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:251</div></div>
 <div class="ttc" id="class_map_loader_html_a759260eb5a2bcc71f4eb6e03e8d8dead"><div class="ttname"><a href="class_map_loader.html#a759260eb5a2bcc71f4eb6e03e8d8dead">MapLoader::MapLoader</a></div><div class="ttdeci">MapLoader(std::string, Texture *, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:6</div></div>
-<div class="ttc" id="class_map_loader_html_a026a7c38e03cdee9a355b09ca6048daa"><div class="ttname"><a href="class_map_loader.html#a026a7c38e03cdee9a355b09ca6048daa">MapLoader::getNumberofGems</a></div><div class="ttdeci">int getNumberofGems()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:200</div></div>
-<div class="ttc" id="class_map_loader_html_a8e20a9a3c99f4d86d8db873b4a293352"><div class="ttname"><a href="class_map_loader.html#a8e20a9a3c99f4d86d8db873b4a293352">MapLoader::getType</a></div><div class="ttdeci">char getType(int, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:245</div></div>
-<div class="ttc" id="class_map_loader_html_a178ca855ceec126f0a3a2264b74f63cc"><div class="ttname"><a href="class_map_loader.html#a178ca855ceec126f0a3a2264b74f63cc">MapLoader::getNumberOfBlocks</a></div><div class="ttdeci">int getNumberOfBlocks()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:191</div></div>
-<div class="ttc" id="class_map_loader_html_a161a0cc6a392abc9baa57e919023f25c"><div class="ttname"><a href="class_map_loader.html#a161a0cc6a392abc9baa57e919023f25c">MapLoader::getBlock</a></div><div class="ttdeci">Block * getBlock(int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:209</div></div>
-<div class="ttc" id="class_map_loader_html_afb4ddc89be3ef11cf55cedd91796981c"><div class="ttname"><a href="class_map_loader.html#afb4ddc89be3ef11cf55cedd91796981c">MapLoader::getNumberOfEntities</a></div><div class="ttdeci">int getNumberOfEntities()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:227</div></div>
-<div class="ttc" id="class_map_loader_html_a91978c6df4df7c8805ff7b959f2f8f02"><div class="ttname"><a href="class_map_loader.html#a91978c6df4df7c8805ff7b959f2f8f02">MapLoader::getIndex</a></div><div class="ttdeci">int getIndex(int, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:254</div></div>
+<div class="ttc" id="class_map_loader_html_a15185be5ed6c623ca56d8719eddabe9f"><div class="ttname"><a href="class_map_loader.html#a15185be5ed6c623ca56d8719eddabe9f">MapLoader::displayEnemy</a></div><div class="ttdeci">void displayEnemy(int, SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:206</div></div>
+<div class="ttc" id="class_map_loader_html_a8e20a9a3c99f4d86d8db873b4a293352"><div class="ttname"><a href="class_map_loader.html#a8e20a9a3c99f4d86d8db873b4a293352">MapLoader::getType</a></div><div class="ttdeci">char getType(int, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:287</div></div>
+<div class="ttc" id="class_map_loader_html_a178ca855ceec126f0a3a2264b74f63cc"><div class="ttname"><a href="class_map_loader.html#a178ca855ceec126f0a3a2264b74f63cc">MapLoader::getNumberOfBlocks</a></div><div class="ttdeci">int getNumberOfBlocks()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:215</div></div>
+<div class="ttc" id="class_map_loader_html_a161a0cc6a392abc9baa57e919023f25c"><div class="ttname"><a href="class_map_loader.html#a161a0cc6a392abc9baa57e919023f25c">MapLoader::getBlock</a></div><div class="ttdeci">Block * getBlock(int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:242</div></div>
+<div class="ttc" id="class_map_loader_html_a553fdab4c534f6b72764545b01f83005"><div class="ttname"><a href="class_map_loader.html#a553fdab4c534f6b72764545b01f83005">MapLoader::getNumberOfEnemies</a></div><div class="ttdeci">int getNumberOfEnemies()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:233</div></div>
+<div class="ttc" id="class_map_loader_html_afb4ddc89be3ef11cf55cedd91796981c"><div class="ttname"><a href="class_map_loader.html#afb4ddc89be3ef11cf55cedd91796981c">MapLoader::getNumberOfEntities</a></div><div class="ttdeci">int getNumberOfEntities()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:269</div></div>
+<div class="ttc" id="class_map_loader_html_a91978c6df4df7c8805ff7b959f2f8f02"><div class="ttname"><a href="class_map_loader.html#a91978c6df4df7c8805ff7b959f2f8f02">MapLoader::getIndex</a></div><div class="ttdeci">int getIndex(int, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:296</div></div>
 <div class="ttc" id="class_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdoc">Creates a Block object that inherits MapObject. </div><div class="ttdef"><b>Definition:</b> block.h:10</div></div>
-<div class="ttc" id="class_map_loader_html_a29c10edfe06895dd0e0f04275d96e5ed"><div class="ttname"><a href="class_map_loader.html#a29c10edfe06895dd0e0f04275d96e5ed">MapLoader::setEntityBlank</a></div><div class="ttdeci">void setEntityBlank(int, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:263</div></div>
-<div class="ttc" id="class_map_loader_html_ae5e282def1789a5f4701c44379b67813"><div class="ttname"><a href="class_map_loader.html#ae5e282def1789a5f4701c44379b67813">MapLoader::getNumberOfRows</a></div><div class="ttdeci">int getNumberOfRows()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:236</div></div>
+<div class="ttc" id="class_map_loader_html_a29c10edfe06895dd0e0f04275d96e5ed"><div class="ttname"><a href="class_map_loader.html#a29c10edfe06895dd0e0f04275d96e5ed">MapLoader::setEntityBlank</a></div><div class="ttdeci">void setEntityBlank(int, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:305</div></div>
+<div class="ttc" id="class_map_loader_html_ae5e282def1789a5f4701c44379b67813"><div class="ttname"><a href="class_map_loader.html#ae5e282def1789a5f4701c44379b67813">MapLoader::getNumberOfRows</a></div><div class="ttdeci">int getNumberOfRows()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:278</div></div>
 <div class="ttc" id="class_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
-<div class="ttc" id="class_map_loader_html_adf524d17cab14e1096341100abfe92b2"><div class="ttname"><a href="class_map_loader.html#adf524d17cab14e1096341100abfe92b2">MapLoader::displayGem</a></div><div class="ttdeci">void displayGem(int, SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:182</div></div>
-<div class="ttc" id="class_map_loader_html"><div class="ttname"><a href="class_map_loader.html">MapLoader</a></div><div class="ttdoc">a class to load in a map text file </div><div class="ttdef"><b>Definition:</b> mapLoader.h:15</div></div>
-<div class="ttc" id="class_map_loader_html_aa3f95e47879ef5d2ac8f9b4e80602412"><div class="ttname"><a href="class_map_loader.html#aa3f95e47879ef5d2ac8f9b4e80602412">MapLoader::loadMap</a></div><div class="ttdeci">void loadMap(std::string, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:27</div></div>
-<div class="ttc" id="class_map_loader_html_a6055310649b9a926301d7fb2b83cb1b1"><div class="ttname"><a href="class_map_loader.html#a6055310649b9a926301d7fb2b83cb1b1">MapLoader::~MapLoader</a></div><div class="ttdeci">~MapLoader()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:20</div></div>
-<div class="ttc" id="class_map_loader_html_a5d094d7c804670f68e04c360cb9b5965"><div class="ttname"><a href="class_map_loader.html#a5d094d7c804670f68e04c360cb9b5965">MapLoader::sortType</a></div><div class="ttdeci">void sortType(int, int, int, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:94</div></div>
+<div class="ttc" id="class_map_loader_html_adf524d17cab14e1096341100abfe92b2"><div class="ttname"><a href="class_map_loader.html#adf524d17cab14e1096341100abfe92b2">MapLoader::displayGem</a></div><div class="ttdeci">void displayGem(int, SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:197</div></div>
+<div class="ttc" id="class_map_loader_html"><div class="ttname"><a href="class_map_loader.html">MapLoader</a></div><div class="ttdoc">a class to load in a map text file </div><div class="ttdef"><b>Definition:</b> mapLoader.h:16</div></div>
+<div class="ttc" id="class_map_loader_html_aa3f95e47879ef5d2ac8f9b4e80602412"><div class="ttname"><a href="class_map_loader.html#aa3f95e47879ef5d2ac8f9b4e80602412">MapLoader::loadMap</a></div><div class="ttdeci">void loadMap(std::string, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:28</div></div>
+<div class="ttc" id="class_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdoc">Creates an Enemy object that inherits MapObject which in turn inherits Creature. </div><div class="ttdef"><b>Definition:</b> enemy.h:10</div></div>
+<div class="ttc" id="class_map_loader_html_a2680e99acdaf5b74b8116d43ca220df3"><div class="ttname"><a href="class_map_loader.html#a2680e99acdaf5b74b8116d43ca220df3">MapLoader::getEnemy</a></div><div class="ttdeci">Enemy * getEnemy(int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:260</div></div>
+<div class="ttc" id="class_map_loader_html_a407a5f1ad238e3048b5aaf0a7555c172"><div class="ttname"><a href="class_map_loader.html#a407a5f1ad238e3048b5aaf0a7555c172">MapLoader::getNumberOfGems</a></div><div class="ttdeci">int getNumberOfGems()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:224</div></div>
+<div class="ttc" id="class_map_loader_html_a6055310649b9a926301d7fb2b83cb1b1"><div class="ttname"><a href="class_map_loader.html#a6055310649b9a926301d7fb2b83cb1b1">MapLoader::~MapLoader</a></div><div class="ttdeci">~MapLoader()</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:21</div></div>
+<div class="ttc" id="class_map_loader_html_a5d094d7c804670f68e04c360cb9b5965"><div class="ttname"><a href="class_map_loader.html#a5d094d7c804670f68e04c360cb9b5965">MapLoader::sortType</a></div><div class="ttdeci">void sortType(int, int, int, int)</div><div class="ttdef"><b>Definition:</b> mapLoader.cpp:95</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 3 2015 02:06:53 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 00:49:02 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

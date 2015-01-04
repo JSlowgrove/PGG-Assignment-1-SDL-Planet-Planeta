@@ -34,6 +34,14 @@ void \hyperlink{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}{left\+Test} (
 void \hyperlink{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}{right\+Test} (float, int, int, int)
 \item 
 void \hyperlink{class_collision_a7c33a20a9c111630eeb8f0202605161e}{down\+Test} (float, int, int, int)
+\item 
+void \hyperlink{class_collision_ac758fa708f12d9121bb2aacc787111e4}{player\+Creature\+Collision\+Test} (float)
+\item 
+void \hyperlink{class_collision_a1c110f14ff463a255694f387eec17d56}{enemy\+Collision} (int index, float delta\+Time)
+\item 
+void \hyperlink{class_collision_a359e9c49d721476b11b43e92d7c61723}{enemy\+Left\+Test} (float, int, int, int, int)
+\item 
+void \hyperlink{class_collision_aa046c7cf6f057848700d89101953b678}{enemy\+Right\+Test} (float, int, int, int, int)
 \end{DoxyCompactItemize}
 
 
@@ -126,6 +134,69 @@ End goal collision action Performs the action that happens when the player colli
 {\em int} & the index of the \hyperlink{class_block}{Block} that has been collided with \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_collision_a1c110f14ff463a255694f387eec17d56}{\index{Collision@{Collision}!enemy\+Collision@{enemy\+Collision}}
+\index{enemy\+Collision@{enemy\+Collision}!Collision@{Collision}}
+\subsubsection[{enemy\+Collision}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::enemy\+Collision (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{float}]{delta\+Time}
+\end{DoxyParamCaption}
+)}}\label{class_collision_a1c110f14ff463a255694f387eec17d56}
+\hyperlink{class_enemy}{Enemy} collision test Tests if the enemy has collided with a wall 
+\begin{DoxyParams}{Parameters}
+{\em float} & the delta time \\
+\hline
+{\em char} & the axis to test \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_a359e9c49d721476b11b43e92d7c61723}{\index{Collision@{Collision}!enemy\+Left\+Test@{enemy\+Left\+Test}}
+\index{enemy\+Left\+Test@{enemy\+Left\+Test}!Collision@{Collision}}
+\subsubsection[{enemy\+Left\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::enemy\+Left\+Test (
+\begin{DoxyParamCaption}
+\item[{float}]{updated\+Position, }
+\item[{int}]{min\+Current\+Axis, }
+\item[{int}]{min\+Opposite\+Axis, }
+\item[{int}]{max\+Opposite\+Axis, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_collision_a359e9c49d721476b11b43e92d7c61723}
+The test and action to apply if the enemy is going left This could be converted into a single function along with all the player and enemy directional test, time permitting. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the updated position \\
+\hline
+{\em int} & the min position along the current axis \\
+\hline
+{\em int} & the min position along the opposite axis \\
+\hline
+{\em int} & the max position along the opposite axis \\
+\hline
+{\em int} & the index of the enemy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_aa046c7cf6f057848700d89101953b678}{\index{Collision@{Collision}!enemy\+Right\+Test@{enemy\+Right\+Test}}
+\index{enemy\+Right\+Test@{enemy\+Right\+Test}!Collision@{Collision}}
+\subsubsection[{enemy\+Right\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::enemy\+Right\+Test (
+\begin{DoxyParamCaption}
+\item[{float}]{updated\+Position, }
+\item[{int}]{max\+Current\+Axis, }
+\item[{int}]{min\+Opposite\+Axis, }
+\item[{int}]{max\+Opposite\+Axis, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_collision_aa046c7cf6f057848700d89101953b678}
+The test and action to apply if the enemy is going right This could be converted into a single function along with all the player and enemy directional test, time permitting. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the updated position \\
+\hline
+{\em int} & the max position along the current axis \\
+\hline
+{\em int} & the min position along the opposite axis \\
+\hline
+{\em int} & the max position along the opposite axis \\
+\hline
+{\em int} & the index of the enemy \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_collision_a8a7c7bbaa789c0867559d79ef186dd84}{\index{Collision@{Collision}!gem\+Action@{gem\+Action}}
 \index{gem\+Action@{gem\+Action}!Collision@{Collision}}
 \subsubsection[{gem\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::gem\+Action (
@@ -148,7 +219,7 @@ End goal collision action Performs the action that happens when the player colli
 \item[{int}]{max\+Opposite\+Axis}
 \end{DoxyParamCaption}
 )}}\label{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}
-The test and action to apply if the player is going left This could proberally be converted into a single function along with \hyperlink{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}{right\+Test()} and \hyperlink{class_collision_a7c33a20a9c111630eeb8f0202605161e}{down\+Test()}, time permitting. 
+The test and action to apply if the player is going left This could be converted into a single function along with \hyperlink{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}{right\+Test()} and \hyperlink{class_collision_a7c33a20a9c111630eeb8f0202605161e}{down\+Test()}, time permitting. 
 \begin{DoxyParams}{Parameters}
 {\em float} & the updated position \\
 \hline
@@ -174,6 +245,20 @@ The test and action to apply if the player is going left This could proberally b
 {\em char} & the axis to test \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_collision_ac758fa708f12d9121bb2aacc787111e4}{\index{Collision@{Collision}!player\+Creature\+Collision\+Test@{player\+Creature\+Collision\+Test}}
+\index{player\+Creature\+Collision\+Test@{player\+Creature\+Collision\+Test}!Collision@{Collision}}
+\subsubsection[{player\+Creature\+Collision\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::player\+Creature\+Collision\+Test (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+Time}
+\end{DoxyParamCaption}
+)}}\label{class_collision_ac758fa708f12d9121bb2aacc787111e4}
+\hyperlink{class_player}{Player} creature collision test Tests if the \hyperlink{class_player}{Player} collides with a creature. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the delta time \\
+\hline
+{\em char} & the axis to test \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}{\index{Collision@{Collision}!right\+Test@{right\+Test}}
 \index{right\+Test@{right\+Test}!Collision@{Collision}}
 \subsubsection[{right\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+::right\+Test (
@@ -184,7 +269,7 @@ The test and action to apply if the player is going left This could proberally b
 \item[{int}]{max\+Opposite\+Axis}
 \end{DoxyParamCaption}
 )}}\label{class_collision_a5aff01e79c9c42e7d71a57de7412dc58}
-The test and action to apply if the player is going right This could proberally be converted into a single function along with \hyperlink{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}{left\+Test()} and \hyperlink{class_collision_a7c33a20a9c111630eeb8f0202605161e}{down\+Test()}, time permitting. 
+The test and action to apply if the player is going right This could be converted into a single function along with \hyperlink{class_collision_a0cd628e6adcb69e216f9b469fa7c029c}{left\+Test()} and \hyperlink{class_collision_a7c33a20a9c111630eeb8f0202605161e}{down\+Test()}, time permitting. 
 \begin{DoxyParams}{Parameters}
 {\em float} & the updated position \\
 \hline

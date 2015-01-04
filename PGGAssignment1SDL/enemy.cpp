@@ -33,7 +33,12 @@ void Enemy::typeSetup()
 	case 0:/*killer snail*/
 		srcX = 554; /*sets the srcX to the x position of the snail sprite*/
 		srcY = 301; /*sets the srcY to the y position of the snail sprite*/
-		//velocityX = 10.0f;
+		speed = -100.0f;/*sets the speed of the snail*/
+		break;
+	case 1:/*evil worm*/
+		srcX = 669; /*sets the srcX to the x position of the worm sprite*/
+		srcY = 324; /*sets the srcY to the y position of the worm sprite*/
+		speed = 0.0f; /*sets the speed of the worm*/
 		break;
 	}
 }
@@ -54,4 +59,22 @@ bool Enemy::getDeletable()
 {
 	/*returns the bool deleteable value*/
 	return deleteable;
+}
+
+/**************************************************************************************************************/
+
+/*returns speed*/
+float Enemy::getSpeed()
+{
+	/*returns the speed value*/
+	return speed;
+}
+
+/**************************************************************************************************************/
+
+/*sets the enemy speed*/
+void Enemy::setSpeed(float inputSpeed)
+{
+	/*sets the enemy speed*/
+	speed = inputSpeed;
 }

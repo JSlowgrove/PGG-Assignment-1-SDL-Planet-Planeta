@@ -170,7 +170,14 @@ void MapLoader::sortType(int type, int i, int j, int backgroundType)
 		entities[i][j].index = numberOfEnemies;
 		numberOfEnemies++;
 		enemies.resize(numberOfEnemies);
-		enemies[numberOfEnemies - 1] = new Enemy(texture, (float)(j * 32), (float)(i * 32), 0);
+		enemies[numberOfEnemies - 1] = new Enemy(texture, (float)(j * 32), (float)(i * 32) - 2, 0);
+		break;
+	case 11: /*Evil Worm*/
+		entities[i][j].type = 'E';
+		entities[i][j].index = numberOfEnemies;
+		numberOfEnemies++;
+		enemies.resize(numberOfEnemies);
+		enemies[numberOfEnemies - 1] = new Enemy(texture, (float)(j * 32), (float)(i * 32), 1);
 		break;
 	}
 }

@@ -155,6 +155,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>displayBlock()
 : <a class="el" href="class_map_loader.html#a0430f4acdbe19fd6853a61e3b9f71543">MapLoader</a>
 </li>
+<li>displayEnemy()
+: <a class="el" href="class_map_loader.html#a15185be5ed6c623ca56d8719eddabe9f">MapLoader</a>
+</li>
 <li>displayGem()
 : <a class="el" href="class_map_loader.html#adf524d17cab14e1096341100abfe92b2">MapLoader</a>
 </li>
@@ -182,7 +185,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_collision.html#aff0b810980a84e644e531da82487d8c8">Collision</a>
 </li>
 <li>Enemy()
-: <a class="el" href="class_enemy.html#ada67a3c9b7166fda1c010a8c7432a355">Enemy</a>
+: <a class="el" href="class_enemy.html#ae9cfc9f39bd776aaf87eee7346945dd4">Enemy</a>
+</li>
+<li>enemyCollision()
+: <a class="el" href="class_collision.html#a1c110f14ff463a255694f387eec17d56">Collision</a>
+</li>
+<li>enemyLeftTest()
+: <a class="el" href="class_collision.html#a359e9c49d721476b11b43e92d7c61723">Collision</a>
+</li>
+<li>enemyRightTest()
+: <a class="el" href="class_collision.html#aa046c7cf6f057848700d89101953b678">Collision</a>
 </li>
 <li>Entity()
 : <a class="el" href="class_entity.html#a8a572d724b689de57d3c0d8bafeff107">Entity</a>
@@ -210,7 +222,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_map_object.html#acaa0fff07bd2550c1f023ca90e2a4b04">MapObject</a>
 </li>
 <li>getDeletable()
-: <a class="el" href="class_map_object.html#a739bba3a3a50a84bf5e6244d19152a38">MapObject</a>
+: <a class="el" href="class_enemy.html#a37e2cff8cfe21a2ce0245bca77fc84e2">Enemy</a>
+, <a class="el" href="class_map_object.html#a739bba3a3a50a84bf5e6244d19152a38">MapObject</a>
+</li>
+<li>getEnemy()
+: <a class="el" href="class_map_loader.html#a2680e99acdaf5b74b8116d43ca220df3">MapLoader</a>
 </li>
 <li>getGem()
 : <a class="el" href="class_map_loader.html#a9b56fda5f4c27614131b085b449fe183">MapLoader</a>
@@ -233,6 +249,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getLanded()
 : <a class="el" href="class_player.html#acda5f8d74dcb44e5ebc12003104ec0ef">Player</a>
 </li>
+<li>getLeftMoveable()
+: <a class="el" href="class_background.html#a6b49b6e383fed26938af98773f0952fa">Background</a>
+</li>
 <li>getLevelComplete()
 : <a class="el" href="class_player.html#a4305af7dca7be99eb5fb8f2002421314">Player</a>
 </li>
@@ -248,17 +267,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getNumberOfBlocks()
 : <a class="el" href="class_map_loader.html#a178ca855ceec126f0a3a2264b74f63cc">MapLoader</a>
 </li>
+<li>getNumberOfEnemies()
+: <a class="el" href="class_map_loader.html#a553fdab4c534f6b72764545b01f83005">MapLoader</a>
+</li>
 <li>getNumberOfEntities()
 : <a class="el" href="class_map_loader.html#afb4ddc89be3ef11cf55cedd91796981c">MapLoader</a>
 </li>
-<li>getNumberofGems()
-: <a class="el" href="class_map_loader.html#a026a7c38e03cdee9a355b09ca6048daa">MapLoader</a>
+<li>getNumberOfGems()
+: <a class="el" href="class_map_loader.html#a407a5f1ad238e3048b5aaf0a7555c172">MapLoader</a>
 </li>
 <li>getNumberOfRows()
 : <a class="el" href="class_map_loader.html#ae5e282def1789a5f4701c44379b67813">MapLoader</a>
 </li>
+<li>getRightMoveable()
+: <a class="el" href="class_background.html#a9e2c4dc2434c8123c1fabceecb53a7c0">Background</a>
+</li>
 <li>getScore()
 : <a class="el" href="class_player.html#a97e5447778ae6c384eedc532dcd8431d">Player</a>
+</li>
+<li>getSpeed()
+: <a class="el" href="class_enemy.html#acd43fc5766bf7ef886691244e1b66566">Enemy</a>
 </li>
 <li>GetStateName()
 : <a class="el" href="class_state.html#ab7a5d1c1837b4b44b3563897777fcb26">State</a>
@@ -340,6 +368,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>playerCollisionTest()
 : <a class="el" href="class_collision.html#a79a33125bb8ef50a883822b4c80b71ae">Collision</a>
 </li>
+<li>playerCreatureCollisionTest()
+: <a class="el" href="class_collision.html#ac758fa708f12d9121bb2aacc787111e4">Collision</a>
+</li>
 <li>pushSpriteToScreen()
 : <a class="el" href="class_texture.html#a703db8963b46b751b8affce1807725b7">Texture</a>
 </li>
@@ -370,7 +401,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_map_object.html#abcf8499f40944338e194abcbd3294852">MapObject</a>
 </li>
 <li>setDeletable()
-: <a class="el" href="class_map_object.html#af14721fd27162d9fd0f04f69d8087811">MapObject</a>
+: <a class="el" href="class_enemy.html#a0b3e1631733e464c755767b894ce3ef4">Enemy</a>
+, <a class="el" href="class_map_object.html#af14721fd27162d9fd0f04f69d8087811">MapObject</a>
 </li>
 <li>setEntityBlank()
 : <a class="el" href="class_map_loader.html#a29c10edfe06895dd0e0f04275d96e5ed">MapLoader</a>
@@ -392,6 +424,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>setScore()
 : <a class="el" href="class_player.html#aa054ea95ca73dd19036d2917b29ab021">Player</a>
+</li>
+<li>setSpeed()
+: <a class="el" href="class_enemy.html#a7185349825042de46d16bad7b1c422d6">Enemy</a>
 </li>
 <li>setVelocity()
 : <a class="el" href="class_background.html#a9b358e049be63be31b9241410288514f">Background</a>
@@ -427,6 +462,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>typeSetup()
 : <a class="el" href="class_block.html#ae46fc2f3f732a601b6599bdc8250de3f">Block</a>
+, <a class="el" href="class_enemy.html#ac50fe15406592d81e276826425b3000b">Enemy</a>
 , <a class="el" href="class_gem.html#a5b88637e9b62fc71af306f58f5c82cef">Gem</a>
 </li>
 </ul>
@@ -443,7 +479,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="class_win_lose_state.html#a98e675ce31aa41ad95ba36fd9e77dde6">WinLoseState</a>
 </li>
 <li>updateScene()
-: <a class="el" href="class_game_state.html#afaaff3946d44a7861ec86025e4665b29">GameState</a>
+: <a class="el" href="class_game_state.html#ab22e8c062ae3d629044b93faba688974">GameState</a>
 </li>
 <li>updateX()
 : <a class="el" href="class_background.html#a1cb5afc5d8857ec4db6c6d393375a4c2">Background</a>
@@ -522,7 +558,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 3 2015 02:06:56 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 00:49:04 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

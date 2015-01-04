@@ -82,7 +82,7 @@ public:
 
 	/**
 	The test and action to apply if the player is going left
-	This could proberally be converted into a single function along with rightTest() and downTest(), time permitting.
+	This could be converted into a single function along with rightTest() and downTest(), time permitting.
 	@param float the updated position
 	@param int the max position along the current axis
 	@param int the min position along the opposite axis
@@ -92,7 +92,7 @@ public:
 
 	/**
 	The test and action to apply if the player is going right
-	This could proberally be converted into a single function along with leftTest() and downTest(), time permitting.
+	This could be converted into a single function along with leftTest() and downTest(), time permitting.
 	@param float the updated position
 	@param int the max position along the current axis
 	@param int the min position along the opposite axis
@@ -117,6 +117,36 @@ public:
 	@param char the axis to test
 	*/
 	void playerCreatureCollisionTest(float);
+
+	/**
+	Enemy collision test
+	Tests if the enemy has collided with a wall
+	@param float the delta time
+	@param char the axis to test
+	*/
+	void enemyCollision(int index, float deltaTime);
+
+	/**
+	The test and action to apply if the enemy is going left
+	This could be converted into a single function along with all the player and enemy directional test, time permitting.
+	@param float the updated position
+	@param int the min position along the current axis
+	@param int the min position along the opposite axis
+	@param int the max position along the opposite axis
+	@param int the index of the enemy
+	*/
+	void enemyLeftTest(float, int, int, int, int);
+
+	/**
+	The test and action to apply if the enemy is going right
+	This could be converted into a single function along with all the player and enemy directional test, time permitting.
+	@param float the updated position
+	@param int the max position along the current axis
+	@param int the min position along the opposite axis
+	@param int the max position along the opposite axis
+	@param int the index of the enemy
+	*/
+	void enemyRightTest(float, int, int, int, int);
 };
 
 #endif

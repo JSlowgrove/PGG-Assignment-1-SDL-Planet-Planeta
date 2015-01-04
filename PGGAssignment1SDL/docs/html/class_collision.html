@@ -118,6 +118,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5aff01e79c9c42e7d71a57de7412dc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c33a20a9c111630eeb8f0202605161e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e">downTest</a> (float, int, int, int)</td></tr>
 <tr class="separator:a7c33a20a9c111630eeb8f0202605161e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac758fa708f12d9121bb2aacc787111e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#ac758fa708f12d9121bb2aacc787111e4">playerCreatureCollisionTest</a> (float)</td></tr>
+<tr class="separator:ac758fa708f12d9121bb2aacc787111e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c110f14ff463a255694f387eec17d56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#a1c110f14ff463a255694f387eec17d56">enemyCollision</a> (int index, float deltaTime)</td></tr>
+<tr class="separator:a1c110f14ff463a255694f387eec17d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359e9c49d721476b11b43e92d7c61723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#a359e9c49d721476b11b43e92d7c61723">enemyLeftTest</a> (float, int, int, int, int)</td></tr>
+<tr class="separator:a359e9c49d721476b11b43e92d7c61723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa046c7cf6f057848700d89101953b678"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#aa046c7cf6f057848700d89101953b678">enemyRightTest</a> (float, int, int, int, int)</td></tr>
+<tr class="separator:aa046c7cf6f057848700d89101953b678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates an <a class="el" href="class_collision.html" title="Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. ">Collision</a> object. The <a class="el" href="class_collision.html" title="Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. ">Collision</a> object is for use with detecting <a class="el" href="class_collision.html" title="Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. ">Collision</a>. Used help from <a href="http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/">http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/</a> in the type 2 section. </p>
@@ -292,6 +300,147 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1c110f14ff463a255694f387eec17d56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Collision::enemyCollision </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>deltaTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. ">Enemy</a> collision test Tests if the enemy has collided with a wall </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>the delta time </td></tr>
+    <tr><td class="paramname">char</td><td>the axis to test </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a359e9c49d721476b11b43e92d7c61723"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Collision::enemyLeftTest </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>updatedPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minCurrentAxis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minOppositeAxis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxOppositeAxis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The test and action to apply if the enemy is going left This could be converted into a single function along with all the player and enemy directional test, time permitting. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>the updated position </td></tr>
+    <tr><td class="paramname">int</td><td>the min position along the current axis </td></tr>
+    <tr><td class="paramname">int</td><td>the min position along the opposite axis </td></tr>
+    <tr><td class="paramname">int</td><td>the max position along the opposite axis </td></tr>
+    <tr><td class="paramname">int</td><td>the index of the enemy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa046c7cf6f057848700d89101953b678"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Collision::enemyRightTest </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>updatedPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxCurrentAxis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minOppositeAxis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxOppositeAxis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The test and action to apply if the enemy is going right This could be converted into a single function along with all the player and enemy directional test, time permitting. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>the updated position </td></tr>
+    <tr><td class="paramname">int</td><td>the max position along the current axis </td></tr>
+    <tr><td class="paramname">int</td><td>the min position along the opposite axis </td></tr>
+    <tr><td class="paramname">int</td><td>the max position along the opposite axis </td></tr>
+    <tr><td class="paramname">int</td><td>the index of the enemy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a8a7c7bbaa789c0867559d79ef186dd84"></a>
 <div class="memitem">
 <div class="memproto">
@@ -349,7 +498,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The test and action to apply if the player is going left This could proberally be converted into a single function along with <a class="el" href="class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58">rightTest()</a> and <a class="el" href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e">downTest()</a>, time permitting. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The test and action to apply if the player is going left This could be converted into a single function along with <a class="el" href="class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58">rightTest()</a> and <a class="el" href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e">downTest()</a>, time permitting. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">float</td><td>the updated position </td></tr>
     <tr><td class="paramname">int</td><td>the max position along the current axis </td></tr>
@@ -394,6 +543,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac758fa708f12d9121bb2aacc787111e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Collision::playerCreatureCollisionTest </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>deltaTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> creature collision test Tests if the <a class="el" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. ">Player</a> collides with a creature. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>the delta time </td></tr>
+    <tr><td class="paramname">char</td><td>the axis to test </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a5aff01e79c9c42e7d71a57de7412dc58"></a>
 <div class="memitem">
 <div class="memproto">
@@ -429,7 +601,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The test and action to apply if the player is going right This could proberally be converted into a single function along with <a class="el" href="class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c">leftTest()</a> and <a class="el" href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e">downTest()</a>, time permitting. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The test and action to apply if the player is going right This could be converted into a single function along with <a class="el" href="class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c">leftTest()</a> and <a class="el" href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e">downTest()</a>, time permitting. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">float</td><td>the updated position </td></tr>
     <tr><td class="paramname">int</td><td>the max position along the current axis </td></tr>
@@ -495,7 +667,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 3 2015 02:06:53 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 00:49:02 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

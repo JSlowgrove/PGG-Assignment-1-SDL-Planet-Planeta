@@ -117,8 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab9330b36c7c74d733c2739c025285c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af45ac6c893265a41b011bba850dc840a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#af45ac6c893265a41b011bba850dc840a">displayScore</a> ()</td></tr>
 <tr class="separator:af45ac6c893265a41b011bba850dc840a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaaff3946d44a7861ec86025e4665b29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#afaaff3946d44a7861ec86025e4665b29">updateScene</a> (float velocity)</td></tr>
-<tr class="separator:afaaff3946d44a7861ec86025e4665b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22e8c062ae3d629044b93faba688974"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ab22e8c062ae3d629044b93faba688974">updateScene</a> (float, bool)</td></tr>
+<tr class="separator:ab22e8c062ae3d629044b93faba688974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_state"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_state')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_state.html">State</a></td></tr>
 <tr class="memitem:abd80317215e3d5a83becc409050dd22f inherit pub_methods_class_state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#abd80317215e3d5a83becc409050dd22f">State</a> (<a class="el" href="class_state_manager.html">StateManager</a> *, SDL_Renderer *)</td></tr>
 <tr class="separator:abd80317215e3d5a83becc409050dd22f inherit pub_methods_class_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,7 +293,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 
 </div>
 </div>
-<a class="anchor" id="afaaff3946d44a7861ec86025e4665b29"></a>
+<a class="anchor" id="ab22e8c062ae3d629044b93faba688974"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -301,14 +301,25 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
           <td class="memname">void GameState::updateScene </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>velocity</em></td><td>)</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>moveable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>A function to update the entire scene Updates the scenes velocity using the inputed velocity </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">float</td><td>the new velocity </td></tr>
+    <tr><td class="paramname">bool</td><td>if moveable </td></tr>
   </table>
   </dd>
 </dl>
@@ -322,7 +333,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 3 2015 02:06:54 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 4 2015 00:49:03 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

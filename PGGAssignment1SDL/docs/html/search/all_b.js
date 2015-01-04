@@ -2,7 +2,7 @@ var searchData=
 [
   ['setcollidable',['setCollidable',['../class_map_object.html#afc35a1271fdb83198e239a548b26337e',1,'MapObject']]],
   ['setdamaging',['setDamaging',['../class_map_object.html#abcf8499f40944338e194abcbd3294852',1,'MapObject']]],
-  ['setdeletable',['setDeletable',['../class_map_object.html#af14721fd27162d9fd0f04f69d8087811',1,'MapObject']]],
+  ['setdeletable',['setDeletable',['../class_enemy.html#a0b3e1631733e464c755767b894ce3ef4',1,'Enemy::setDeletable()'],['../class_map_object.html#af14721fd27162d9fd0f04f69d8087811',1,'MapObject::setDeletable()']]],
   ['setentityblank',['setEntityBlank',['../class_map_loader.html#a29c10edfe06895dd0e0f04275d96e5ed',1,'MapLoader']]],
   ['setgravity',['setGravity',['../class_player.html#a36a300f4f62fae25747c4301a81c5a10',1,'Player']]],
   ['setjump',['setJump',['../class_player.html#a282bc0d3c7341a9727bcb16cd902c953',1,'Player']]],
@@ -10,6 +10,7 @@ var searchData=
   ['setlevelcomplete',['setLevelComplete',['../class_player.html#a1eb27fc807ef7557979ef23f239a46e5',1,'Player']]],
   ['setlives',['setLives',['../class_player.html#a565d4df3c32d00243b1ef16dfd6e5e03',1,'Player']]],
   ['setscore',['setScore',['../class_player.html#aa054ea95ca73dd19036d2917b29ab021',1,'Player']]],
+  ['setspeed',['setSpeed',['../class_enemy.html#a7185349825042de46d16bad7b1c422d6',1,'Enemy']]],
   ['setvelocity',['setVelocity',['../class_background.html#a9b358e049be63be31b9241410288514f',1,'Background::setVelocity()'],['../class_map_object.html#a45334339657baae05374453254441351',1,'MapObject::setVelocity()']]],
   ['setvelocityx',['setVelocityX',['../class_creature.html#ab2ad7544f3c7fd24829c8c28ea5c667f',1,'Creature']]],
   ['setvelocityy',['setVelocityY',['../class_creature.html#a5aa971df9bf484d62fbe6413f01a661b',1,'Creature']]],

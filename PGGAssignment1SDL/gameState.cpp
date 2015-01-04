@@ -182,6 +182,16 @@ void GameState::Update(float deltaTime)
 		}
 	}
 	/*x axis collision tests*************************/
+	/*loop for the number of enemies*/
+	for (int i = 0; i < map->getNumberOfEnemies(); i++)
+	{
+		if (map->getEnemy(i)->getSpeed() != 0)
+		{
+			/*test the enemy collision*/
+			collision->enemyCollision(i, deltaTime);
+		}
+	}
+
 	/*if left go left*/
 	if (cmdLeft &!cmdRight)
 	{
@@ -384,10 +394,14 @@ void GameState::updateScene(float velocity, bool moveable)
 			/*set the gems velocity*/
 			map->getGem(i)->setVelocity(-velocity);
 		}
-		for (int i = 0; i < map->getNumberOfEnemies(); i++)
+		if (background->getMoveable())
 		{
-			/*set the enemies velocity*/
-			map->getEnemy(i)->setVelocityX(-velocity);
+			/*loop for the number of enemies*/
+			for (int i = 0; i < map->getNumberOfEnemies(); i++)
+			{
+				/*set the enemies velocity*/
+				map->getEnemy(i)->setVelocityX(-velocity);
+			}
 		}
 		player->setVelocityX(0.0f);
 	}
@@ -395,5 +409,17 @@ void GameState::updateScene(float velocity, bool moveable)
 	else
 	{
 		player->setVelocityX(velocity);
+		/*loop for the number of enemies*/
+		for (int i = 0; i < map->getNumberOfEnemies(); i++)
+		{
+			/*set the enemies velocity*/
+			map->getEnemy(i)->setVelocityX(0.0f);
+		}
+	}
+	/*move the enemies*/
+	for (int i = 0; i < map->getNumberOfEnemies(); i++)
+	{
+		/*set the enemies velocity*/
+		map->getEnemy(i)->setVelocityX(map->getEnemy(i)->getVelocityX() + map->getEnemy(i)->getSpeed());
 	}
 }

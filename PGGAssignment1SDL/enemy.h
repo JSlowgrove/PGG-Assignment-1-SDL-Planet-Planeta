@@ -14,6 +14,8 @@ protected:
 	int type;
 	/*deleteable bool*/
 	bool deleteable;
+	/*the speed of the enemy*/
+	float speed;
 public:
 	/**
 	Constructs an Enemy object
@@ -49,5 +51,18 @@ public:
 	@returns bool does the object need deleting.
 	*/
 	bool getDeletable();
+
+	/**
+	Setter # speed
+	Sets the speed of the enemy.
+	@param float the new speed.
+	*/
+	void setSpeed(float);
+
+	/**
+	Getter # speed
+	@returns float the enemy's speed.
+	*/
+	float getSpeed();
 };
 #endif
