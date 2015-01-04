@@ -161,7 +161,7 @@ bool GameState::HandleSDLEvents()
 void GameState::Update(float deltaTime)
 {
 	/*check if the player is centered*/
-	if (player->getX() <= 305 && player->getX() >= 295)
+	if (player->getX() <= 302 && player->getX() >= 298)
 	{
 		/*check if the player is going left, is centered and the background cant go any further to the right*/
 		if (cmdLeft && !background->getRightMoveable() && centered)
@@ -280,12 +280,15 @@ void GameState::Update(float deltaTime)
 		/*update the block*/
 		map->getBlock(i)->updateX(deltaTime);
 	}
-
-	/*loop for the number of enemies*/
-	for (int i = 0; i < map->getNumberOfEnemies(); i++)
+	/*fixes the bug that causes the enemy to shift on camera switch*/
+	if (background->getMoveable())
 	{
-		/*update the enemy*/
-		map->getEnemy(i)->updateX(deltaTime);
+		/*loop for the number of enemies*/
+		for (int i = 0; i < map->getNumberOfEnemies(); i++)
+		{
+			/*update the enemy*/
+			map->getEnemy(i)->updateX(deltaTime);
+		}
 	}
 
 	/*player enemy test*/
