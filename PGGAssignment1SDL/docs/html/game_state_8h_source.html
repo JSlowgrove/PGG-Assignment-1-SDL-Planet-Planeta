@@ -102,57 +102,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;collision.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;enemy.h&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;audio.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_game_state.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_game_state.html">GameState</a> : <span class="keyword">public</span> <a class="code" href="class_state.html">State</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/*audio*/</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * music;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * gemPickup;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * lifeLost;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/*spritesheets*/</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * backgrounds;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * spritesheet;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * numbers;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * gameKeys;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/*entities*/</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_background.html">Background</a> * background;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_player.html">Player</a> * player;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_map_loader.html">MapLoader</a> * map;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">/*collision*/</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_collision.html">Collision</a> * collision;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">/*input commands*/</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> cmdJump, cmdLeft, cmdRight;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">/*is the player in the middle of the screen*/</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> centered;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_game_state.html#a0e812c09d724c03147ad6721b4d7bd73">GameState</a>(<a class="code" href="class_state_manager.html">StateManager</a> *, SDL_Renderer *);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_game_state.html#ae623df5042cd0c17daa3394fdcb397b3">~GameState</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game_state.html#a5e2467775e9a941d482e0489295c363d">HandleSDLEvents</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4">Update</a>(<span class="keywordtype">float</span> deltaTime);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64">Draw</a>();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#af45ac6c893265a41b011bba850dc840a">displayScore</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#ab22e8c062ae3d629044b93faba688974">updateScene</a>(<span class="keywordtype">float</span>, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_game_state_html_a2ea32b0cd5f747ef6223d182f415a6c4"><div class="ttname"><a href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4">GameState::Update</a></div><div class="ttdeci">void Update(float deltaTime)</div><div class="ttdef"><b>Definition:</b> gameState.cpp:173</div></div>
-<div class="ttc" id="class_game_state_html_af45ac6c893265a41b011bba850dc840a"><div class="ttname"><a href="class_game_state.html#af45ac6c893265a41b011bba850dc840a">GameState::displayScore</a></div><div class="ttdeci">void displayScore()</div><div class="ttdef"><b>Definition:</b> gameState.cpp:382</div></div>
-<div class="ttc" id="class_game_state_html_ae623df5042cd0c17daa3394fdcb397b3"><div class="ttname"><a href="class_game_state.html#ae623df5042cd0c17daa3394fdcb397b3">GameState::~GameState</a></div><div class="ttdeci">~GameState()</div><div class="ttdef"><b>Definition:</b> gameState.cpp:52</div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;animation.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_game_state.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_game_state.html">GameState</a> : <span class="keyword">public</span> <a class="code" href="class_state.html">State</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">/*Animations*/</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_animation.html">Animation</a> * halfSecond;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_animation.html">Animation</a> * quarterSecond;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/*audio*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * music;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * gemPickup;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_audio.html">Audio</a> * lifeLost;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">/*spritesheets*/</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * backgrounds;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * spritesheet;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * numbers;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_texture.html">Texture</a> * gameKeys;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">/*entities*/</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_background.html">Background</a> * background;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_player.html">Player</a> * player;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_map_loader.html">MapLoader</a> * map;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">/*collision*/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_collision.html">Collision</a> * collision;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">/*input commands*/</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">bool</span> cmdJump, cmdLeft, cmdRight;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">/*is the player in the middle of the screen*/</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> centered;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_game_state.html#a0e812c09d724c03147ad6721b4d7bd73">GameState</a>(<a class="code" href="class_state_manager.html">StateManager</a> *, SDL_Renderer *);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_game_state.html#ae623df5042cd0c17daa3394fdcb397b3">~GameState</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game_state.html#a5e2467775e9a941d482e0489295c363d">HandleSDLEvents</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4">Update</a>(<span class="keywordtype">float</span> deltaTime);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64">Draw</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#af45ac6c893265a41b011bba850dc840a">displayScore</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_state.html#ab22e8c062ae3d629044b93faba688974">updateScene</a>(<span class="keywordtype">float</span>, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_animation_html"><div class="ttname"><a href="class_animation.html">Animation</a></div><div class="ttdoc">Creates a Animation object to handle the animations. </div><div class="ttdef"><b>Definition:</b> animation.h:10</div></div>
+<div class="ttc" id="class_game_state_html_a2ea32b0cd5f747ef6223d182f415a6c4"><div class="ttname"><a href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4">GameState::Update</a></div><div class="ttdeci">void Update(float deltaTime)</div><div class="ttdef"><b>Definition:</b> gameState.cpp:177</div></div>
+<div class="ttc" id="class_game_state_html_af45ac6c893265a41b011bba850dc840a"><div class="ttname"><a href="class_game_state.html#af45ac6c893265a41b011bba850dc840a">GameState::displayScore</a></div><div class="ttdeci">void displayScore()</div><div class="ttdef"><b>Definition:</b> gameState.cpp:427</div></div>
+<div class="ttc" id="class_game_state_html_ae623df5042cd0c17daa3394fdcb397b3"><div class="ttname"><a href="class_game_state.html#ae623df5042cd0c17daa3394fdcb397b3">GameState::~GameState</a></div><div class="ttdeci">~GameState()</div><div class="ttdef"><b>Definition:</b> gameState.cpp:56</div></div>
 <div class="ttc" id="class_state_html"><div class="ttname"><a href="class_state.html">State</a></div><div class="ttdoc">Creates a State object. Creates a State object to be inherited. Made using information from http://bl...</div><div class="ttdef"><b>Definition:</b> state.h:17</div></div>
 <div class="ttc" id="class_game_state_html_a0e812c09d724c03147ad6721b4d7bd73"><div class="ttname"><a href="class_game_state.html#a0e812c09d724c03147ad6721b4d7bd73">GameState::GameState</a></div><div class="ttdeci">GameState(StateManager *, SDL_Renderer *)</div><div class="ttdef"><b>Definition:</b> gameState.cpp:9</div></div>
-<div class="ttc" id="class_game_state_html"><div class="ttname"><a href="class_game_state.html">GameState</a></div><div class="ttdoc">Creates a GameState object. Creates a GameState object that inherits State. </div><div class="ttdef"><b>Definition:</b> gameState.h:22</div></div>
+<div class="ttc" id="class_game_state_html"><div class="ttname"><a href="class_game_state.html">GameState</a></div><div class="ttdoc">Creates a GameState object. Creates a GameState object that inherits State. </div><div class="ttdef"><b>Definition:</b> gameState.h:23</div></div>
 <div class="ttc" id="class_state_manager_html"><div class="ttname"><a href="class_state_manager.html">StateManager</a></div><div class="ttdoc">Creates a State manager object. Creates a State manager object to be inherited. Made using informatio...</div><div class="ttdef"><b>Definition:</b> stateManager.h:13</div></div>
-<div class="ttc" id="class_game_state_html_ab9330b36c7c74d733c2739c025285c64"><div class="ttname"><a href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64">GameState::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> gameState.cpp:333</div></div>
+<div class="ttc" id="class_game_state_html_ab9330b36c7c74d733c2739c025285c64"><div class="ttname"><a href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64">GameState::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> gameState.cpp:378</div></div>
 <div class="ttc" id="class_background_html"><div class="ttname"><a href="class_background.html">Background</a></div><div class="ttdoc">Creates a Background object that inherits Entity. Creates a Background object with a velocity...</div><div class="ttdef"><b>Definition:</b> background.h:13</div></div>
-<div class="ttc" id="class_game_state_html_ab22e8c062ae3d629044b93faba688974"><div class="ttname"><a href="class_game_state.html#ab22e8c062ae3d629044b93faba688974">GameState::updateScene</a></div><div class="ttdeci">void updateScene(float, bool)</div><div class="ttdef"><b>Definition:</b> gameState.cpp:397</div></div>
-<div class="ttc" id="class_game_state_html_a5e2467775e9a941d482e0489295c363d"><div class="ttname"><a href="class_game_state.html#a5e2467775e9a941d482e0489295c363d">GameState::HandleSDLEvents</a></div><div class="ttdeci">bool HandleSDLEvents()</div><div class="ttdef"><b>Definition:</b> gameState.cpp:76</div></div>
+<div class="ttc" id="class_game_state_html_ab22e8c062ae3d629044b93faba688974"><div class="ttname"><a href="class_game_state.html#ab22e8c062ae3d629044b93faba688974">GameState::updateScene</a></div><div class="ttdeci">void updateScene(float, bool)</div><div class="ttdef"><b>Definition:</b> gameState.cpp:442</div></div>
+<div class="ttc" id="class_game_state_html_a5e2467775e9a941d482e0489295c363d"><div class="ttname"><a href="class_game_state.html#a5e2467775e9a941d482e0489295c363d">GameState::HandleSDLEvents</a></div><div class="ttdeci">bool HandleSDLEvents()</div><div class="ttdef"><b>Definition:</b> gameState.cpp:80</div></div>
 <div class="ttc" id="class_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used...</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
 <div class="ttc" id="class_map_loader_html"><div class="ttname"><a href="class_map_loader.html">MapLoader</a></div><div class="ttdoc">a class to load in a map text file </div><div class="ttdef"><b>Definition:</b> mapLoader.h:16</div></div>
 <div class="ttc" id="class_collision_html"><div class="ttname"><a href="class_collision.html">Collision</a></div><div class="ttdoc">Creates an Collision object. The Collision object is for use with detecting Collision. Used help from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/ in the type 2 section. </div><div class="ttdef"><b>Definition:</b> collision.h:15</div></div>
@@ -161,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 4 2015 04:17:31 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 5 2015 02:14:06 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

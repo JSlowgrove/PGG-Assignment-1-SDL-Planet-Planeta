@@ -14,6 +14,7 @@
 #include "collision.h"
 #include "enemy.h"
 #include "audio.h"
+#include "animation.h"
 
 /**
 @brief Creates a GameState object.
@@ -22,6 +23,9 @@ Creates a GameState object that inherits State
 class GameState : public State
 {
 private:
+	/*Animations*/
+	Animation * halfSecond;
+	Animation * quarterSecond;
 	/*audio*/
 	Audio * music;
 	Audio * gemPickup;

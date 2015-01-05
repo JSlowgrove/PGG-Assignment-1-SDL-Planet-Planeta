@@ -81,3 +81,12 @@ void Block::typeSetup(int backgroundType)
 		break;
 	}
 }
+
+/**************************************************************************************************************/
+
+/*returns type*/
+int Block::getType()
+{
+	/*returns the type value*/
+	return type;
+}

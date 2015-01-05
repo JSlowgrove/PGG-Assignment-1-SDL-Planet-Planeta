@@ -95,7 +95,7 @@ void MapLoader::loadMap(std::string fileName, int backgroundType)
 void MapLoader::sortType(int type, int i, int j, int backgroundType)
 {
 	/*KEY: Empty tile = 0, Yellow Gem = 1, Green Gem = 2, Red Gem = 3, Blue Gem = 4, Top Wall = 5, 
-	Top Right Wall = 6, Top Left Wall = 7, Middle Wall = 8, End Goal = 9, Killer Snail = 10*/
+	Top Right Wall = 6, Top Left Wall = 7, Middle Wall = 8, End Goal = 9, Killer Snail = 10, Evil Worm = 11*/
 	switch (type)
 	{
 	case 0:/*Empty tile*/

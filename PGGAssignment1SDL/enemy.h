@@ -64,5 +64,11 @@ public:
 	@returns float the enemy's speed.
 	*/
 	float getSpeed();
+
+	/**
+	Getter # type
+	@returns int the type.
+	*/
+	int getType();
 };
 #endif

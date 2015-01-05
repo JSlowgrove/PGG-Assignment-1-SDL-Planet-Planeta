@@ -75,5 +75,31 @@ public:
 	@returns the y position of the Entity object.
 	*/
 	float getY();
+
+	/**
+	Setter # source x position
+	Sets the source x position of the Entity object to the inputed source x position.
+	@param float the inputed source x position
+	*/
+	void setSrcX(float);
+
+	/**
+	Setter # source y position
+	Sets the source y position of the Entity object to the inputed source y position.
+	@param float the inputed source y position
+	*/
+	void setSrcY(float);
+
+	/**
+	Getter # source x position
+	@returns the source x position of the Entity object.
+	*/
+	float getSrcX();
+
+	/**
+	Getter # source y position
+	@returns the source y position of the Entity object.
+	*/
+	float getSrcY();
 };
 #endif

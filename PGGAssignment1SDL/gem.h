@@ -42,5 +42,11 @@ public:
 	@returns int the value of the gem.
 	*/
 	int getValue();
+
+	/**
+	Getter # type
+	@returns int the type.
+	*/
+	int getType();
 };
 #endif

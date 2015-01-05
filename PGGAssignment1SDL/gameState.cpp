@@ -35,6 +35,10 @@ GameState::GameState(StateManager * inStateManager, SDL_Renderer* inRenderer) : 
 	/*load map*/
 	map = new MapLoader("txt/map.txt", spritesheet, backgroundType);
 
+	/*initialise animations*/
+	halfSecond = new Animation(0.5f);
+	quarterSecond = new Animation(0.25f);
+
 	/*initialise collision*/
 	collision = new Collision(player, map, background, gemPickup, lifeLost);
 
@@ -172,6 +176,39 @@ bool GameState::HandleSDLEvents()
 /*update the state*/
 void GameState::Update(float deltaTime)
 {
+	/*update the animations*************************/
+	/*update the timer*/
+	halfSecond->upadateTimer(deltaTime);
+	quarterSecond->upadateTimer(deltaTime);
+	/*loop for the number of enemies*/
+	for (int i = 0; i < map->getNumberOfEnemies(); i++)
+	{
+		switch (map->getEnemy(i)->getType())
+		{
+		/*animate the worm*/
+		case 1:
+			halfSecond->upadateAnimation('W', map->getEnemy(i));
+			break;
+		}
+	}
+	/*loop for the number of blocks*/
+	for (int i = 0; i < map->getNumberOfBlocks(); i++)
+	{
+		switch (map->getBlock(i)->getType())
+		{
+		/*animate the end goal*/
+		case 4:
+			quarterSecond->upadateAnimation('E', map->getBlock(i));
+			break;
+		}
+	}
+	/*loops through the gems*/
+	for (int i = 0; i < map->getNumberOfGems(); i++)
+	{
+		/*animate the gem*/
+		quarterSecond->gemAnimation(map->getGem(i)->getType(), map->getGem(i));
+	}
+
 	/*check the music is still playing if not start again*/
 	music->startAudio();
 
@@ -202,8 +239,16 @@ void GameState::Update(float deltaTime)
 	{
 		if (map->getEnemy(i)->getSpeed() != 0)
 		{
+			/*set a test for animation the snail*/
+			float test = map->getEnemy(i)->getSpeed();
 			/*test the enemy collision*/
 			collision->enemyCollision(i, deltaTime);
+			/*does it need to animate*/
+			if (test != map->getEnemy(i)->getSpeed())
+			{
+				/*animate the snail*/
+				halfSecond->upadateAnimation('S', map->getEnemy(i));
+			}
 		}
 	}
 

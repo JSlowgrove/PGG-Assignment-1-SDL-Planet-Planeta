@@ -13,9 +13,21 @@ Creates a \hyperlink{class_animation}{Animation} object to handle the animations
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_animation_a83f0a16cef7117f187ad596de38dd9d6}{Animation} ()
+\hyperlink{class_animation_a3937169e447959e16931cf95ea0bea42}{Animation} (float)
 \item 
 \hyperlink{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{$\sim$\+Animation} ()
+\item 
+void \hyperlink{class_animation_aa1b39bd3c7b83eea908d6e15896206ca}{upadate\+Timer} (float)
+\item 
+void \hyperlink{class_animation_a46ac949b21a0aed488953ee0a47ec35f}{upadate\+Animation} (char, \hyperlink{class_entity}{Entity} $\ast$)
+\item 
+void \hyperlink{class_animation_a64378ac8df319e785e93e8e2ff9b4f7d}{snail\+Animation} (\hyperlink{class_entity}{Entity} $\ast$)
+\item 
+void \hyperlink{class_animation_a28698eae748a6bcac0bbbafb1c62f32b}{worm\+Animation} (\hyperlink{class_entity}{Entity} $\ast$)
+\item 
+void \hyperlink{class_animation_aa991142b70b9d07bde2a2b4a934fae16}{end\+Goal\+Animation} (\hyperlink{class_entity}{Entity} $\ast$)
+\item 
+void \hyperlink{class_animation_a988b1ced0cf9d9a64ed3fb0891e3c563}{gem\+Animation} (int, \hyperlink{class_entity}{Entity} $\ast$)
 \end{DoxyCompactItemize}
 
 
@@ -23,14 +35,19 @@ Creates a \hyperlink{class_animation}{Animation} object to handle the animations
 Creates a \hyperlink{class_animation}{Animation} object to handle the animations. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_animation_a83f0a16cef7117f187ad596de38dd9d6}{\index{Animation@{Animation}!Animation@{Animation}}
+\hypertarget{class_animation_a3937169e447959e16931cf95ea0bea42}{\index{Animation@{Animation}!Animation@{Animation}}
 \index{Animation@{Animation}!Animation@{Animation}}
 \subsubsection[{Animation}]{\setlength{\rightskip}{0pt plus 5cm}Animation\+::\+Animation (
 \begin{DoxyParamCaption}
-{}
+\item[{float}]{in\+Length}
 \end{DoxyParamCaption}
-)}}\label{class_animation_a83f0a16cef7117f187ad596de38dd9d6}
-Constructs an \hyperlink{class_animation}{Animation} object Constructs the \hyperlink{class_animation}{Animation} object. \hypertarget{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{\index{Animation@{Animation}!````~Animation@{$\sim$\+Animation}}
+)}}\label{class_animation_a3937169e447959e16931cf95ea0bea42}
+Constructs an \hyperlink{class_animation}{Animation} object Constructs the \hyperlink{class_animation}{Animation} object. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the length of the timer \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{\index{Animation@{Animation}!````~Animation@{$\sim$\+Animation}}
 \index{````~Animation@{$\sim$\+Animation}!Animation@{Animation}}
 \subsubsection[{$\sim$\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}Animation\+::$\sim$\+Animation (
 \begin{DoxyParamCaption}
@@ -38,6 +55,87 @@ Constructs an \hyperlink{class_animation}{Animation} object Constructs the \hype
 \end{DoxyParamCaption}
 )}}\label{class_animation_a401b68793d4fbf48d481c030ee4b2a16}
 De-\/constructs a \hyperlink{class_animation}{Animation} object De-\/constructs the \hyperlink{class_animation}{Animation} object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_animation_aa991142b70b9d07bde2a2b4a934fae16}{\index{Animation@{Animation}!end\+Goal\+Animation@{end\+Goal\+Animation}}
+\index{end\+Goal\+Animation@{end\+Goal\+Animation}!Animation@{Animation}}
+\subsubsection[{end\+Goal\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::end\+Goal\+Animation (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{entity}
+\end{DoxyParamCaption}
+)}}\label{class_animation_aa991142b70b9d07bde2a2b4a934fae16}
+Performs the animation for the end goal 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_entity}{Entity}} & $\ast$ the entity to use the \hyperlink{class_animation}{Animation} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animation_a988b1ced0cf9d9a64ed3fb0891e3c563}{\index{Animation@{Animation}!gem\+Animation@{gem\+Animation}}
+\index{gem\+Animation@{gem\+Animation}!Animation@{Animation}}
+\subsubsection[{gem\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::gem\+Animation (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{{\bf Entity} $\ast$}]{entity}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a988b1ced0cf9d9a64ed3fb0891e3c563}
+Performs the timer test and animation for the \hyperlink{class_gem}{Gem} 
+\begin{DoxyParams}{Parameters}
+{\em int} & the type of \hyperlink{class_gem}{Gem} \\
+\hline
+{\em \hyperlink{class_entity}{Entity}} & $\ast$ the entity to use the \hyperlink{class_animation}{Animation} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animation_a64378ac8df319e785e93e8e2ff9b4f7d}{\index{Animation@{Animation}!snail\+Animation@{snail\+Animation}}
+\index{snail\+Animation@{snail\+Animation}!Animation@{Animation}}
+\subsubsection[{snail\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::snail\+Animation (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{entity}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a64378ac8df319e785e93e8e2ff9b4f7d}
+Performs the animation for the snail 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_entity}{Entity}} & $\ast$ the entity to use the \hyperlink{class_animation}{Animation} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animation_a46ac949b21a0aed488953ee0a47ec35f}{\index{Animation@{Animation}!upadate\+Animation@{upadate\+Animation}}
+\index{upadate\+Animation@{upadate\+Animation}!Animation@{Animation}}
+\subsubsection[{upadate\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::upadate\+Animation (
+\begin{DoxyParamCaption}
+\item[{char}]{type, }
+\item[{{\bf Entity} $\ast$}]{entity}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a46ac949b21a0aed488953ee0a47ec35f}
+Updates the \hyperlink{class_animation}{Animation} If the timer is 0 update the \hyperlink{class_animation}{Animation}. 
+\begin{DoxyParams}{Parameters}
+{\em char} & the type of the \hyperlink{class_animation}{Animation} \\
+\hline
+{\em \hyperlink{class_entity}{Entity}} & $\ast$ the entity to use the \hyperlink{class_animation}{Animation} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animation_aa1b39bd3c7b83eea908d6e15896206ca}{\index{Animation@{Animation}!upadate\+Timer@{upadate\+Timer}}
+\index{upadate\+Timer@{upadate\+Timer}!Animation@{Animation}}
+\subsubsection[{upadate\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::upadate\+Timer (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+Time}
+\end{DoxyParamCaption}
+)}}\label{class_animation_aa1b39bd3c7b83eea908d6e15896206ca}
+Updates the timer Updates the timer using the delta time. If the timer is now greater than 1, then reset the timer to 0. 
+\begin{DoxyParams}{Parameters}
+{\em float} & the delta time \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animation_a28698eae748a6bcac0bbbafb1c62f32b}{\index{Animation@{Animation}!worm\+Animation@{worm\+Animation}}
+\index{worm\+Animation@{worm\+Animation}!Animation@{Animation}}
+\subsubsection[{worm\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::worm\+Animation (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{entity}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a28698eae748a6bcac0bbbafb1c62f32b}
+Performs the animation for the worm 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_entity}{Entity}} & $\ast$ the entity to use the \hyperlink{class_animation}{Animation} \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

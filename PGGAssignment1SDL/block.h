@@ -36,5 +36,11 @@ public:
 	@param int the type of background.
 	*/
 	void typeSetup(int);
+
+	/**
+	Getter # type
+	@returns int the type.
+	*/
+	int getType();
 };
 #endif

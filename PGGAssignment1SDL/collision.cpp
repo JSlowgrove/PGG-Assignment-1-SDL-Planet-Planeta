@@ -101,7 +101,7 @@ void Collision::leftTest(float updatedPosition, int minCurrentAxis, int minOppos
 		}
 	}
 	/*loop through the closest*/
-	for (int i = 0; i < closestIIndex.size(); i++)
+	for (int i = 0; i < (int)closestIIndex.size(); i++)
 	{
 
 		/*check if the type of the tile*/
@@ -174,7 +174,7 @@ void Collision::rightTest(float updatedPosition, int maxCurrentAxis, int minOppo
 		}
 	}
 	/*loop through the closest*/
-	for (int i = 0; i < closestIIndex.size(); i++)
+	for (int i = 0; i < (int)closestIIndex.size(); i++)
 	{
 
 		/*check if the type of the tile*/
@@ -247,7 +247,7 @@ void Collision::downTest(float updatedPosition, int maxCurrentAxis, int minOppos
 		}
 	}
 	/*loop through the closest*/
-	for (int i = 0; i < closestIIndex.size(); i++)
+	for (int i = 0; i < (int)closestIIndex.size(); i++)
 	{
 		/*check if the type of the tile*/
 		switch (map->getType(closestIIndex[i], closestJIndex[i]))
@@ -358,14 +358,14 @@ void Collision::roundingCheck(float updatedPosition, int &minMapPosition, int &m
 	if ((int)(updatedPosition / 32) < updatedPosition / 32)
 	{
 		/*has been rounded down*/
-		minMapPosition = ((updatedPosition - extra) / 32);//rounded down to nearest int
-		maxMapPosition = ((updatedPosition - extra) / 32) + 1;//rounded up to nearest int
+		minMapPosition = (int)((updatedPosition - extra) / 32);//rounded down to nearest int
+		maxMapPosition = (int)((updatedPosition - extra) / 32) + 1;//rounded up to nearest int
 	}
 	else
 	{
 		/*has been rounded up*/
-		minMapPosition = ((updatedPosition - extra) / 32) - 1;//rounded down to nearest int
-		maxMapPosition = ((updatedPosition - extra) / 32);//rounded up to nearest int
+		minMapPosition = (int)((updatedPosition - extra) / 32) - 1;//rounded down to nearest int
+		maxMapPosition = (int)((updatedPosition - extra) / 32);//rounded up to nearest int
 	}	
 }
 
@@ -464,7 +464,7 @@ void Collision::enemyLeftTest(float updatedPosition, int minCurrentAxis, int min
 		}
 	}
 	/*loop through the closest*/
-	for (int i = 0; i < closestIIndex.size(); i++)
+	for (int i = 0; i < (int)closestIIndex.size(); i++)
 	{
 
 		/*check if the type of the tile*/
@@ -524,7 +524,7 @@ void Collision::enemyRightTest(float updatedPosition, int maxCurrentAxis, int mi
 		}
 	}
 	/*loop through the closest*/
-	for (int i = 0; i < closestIIndex.size(); i++)
+	for (int i = 0; i < (int)closestIIndex.size(); i++)
 	{
 
 		/*check if the type of the tile*/

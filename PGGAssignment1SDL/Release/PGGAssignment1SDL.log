@@ -1,4 +1,4 @@
-﻿Build started 04/01/2015 04:10:21.
+﻿Build started 05/01/2015 02:12:34.
      1>Project "C:\Users\Jamie\Documents\Uni Work\Level I [2nd Year]\Assignments\PGG\PGGAssignment1SDL\PGGAssignment1SDL\PGGAssignment1SDL.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Jamie\Documents\Uni Work\Level I [2nd Year]\Assignments\PGG\PGGAssignment1SDL\PGGAssignment1SDL\SDL Mixer\Development\SDL2_mixer-devel-2.0.0-VC\SDL2_mixer-2.0.0\include" /I"C:\SDKs\SDL\SDL2-devel-2.0.3-VC\SDL2-2.0.3\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt animation.cpp background.cpp block.cpp collision.cpp creditsState.cpp helpState.cpp mapLoader.cpp mapObject.cpp entity.cpp gameState.cpp gem.cpp main.cpp creature.cpp menuState.cpp player.cpp audio.cpp state.cpp stateManager.cpp texture.cpp enemy.cpp winLoseState.cpp
@@ -6,15 +6,6 @@
          background.cpp
          block.cpp
          collision.cpp
-     1>collision.cpp(104): warning C4018: '<' : signed/unsigned mismatch
-     1>collision.cpp(177): warning C4018: '<' : signed/unsigned mismatch
-     1>collision.cpp(250): warning C4018: '<' : signed/unsigned mismatch
-     1>collision.cpp(361): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>collision.cpp(362): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>collision.cpp(367): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>collision.cpp(368): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>collision.cpp(467): warning C4018: '<' : signed/unsigned mismatch
-     1>collision.cpp(527): warning C4018: '<' : signed/unsigned mismatch
          creditsState.cpp
          helpState.cpp
          mapLoader.cpp
@@ -23,6 +14,10 @@
          mapObject.cpp
      1>mapObject.cpp(19): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
          entity.cpp
+     1>entity.cpp(75): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>entity.cpp(84): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>entity.cpp(93): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>entity.cpp(102): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
          gameState.cpp
          gem.cpp
          main.cpp
@@ -69,4 +64,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:16.48
+Time Elapsed 00:00:14.88

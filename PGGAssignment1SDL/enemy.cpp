@@ -78,3 +78,12 @@ void Enemy::setSpeed(float inputSpeed)
 	/*sets the enemy speed*/
 	speed = inputSpeed;
 }
+
+/**************************************************************************************************************/
+
+/*returns type*/
+int Enemy::getType()
+{
+	/*returns the type value*/
+	return type;
+}

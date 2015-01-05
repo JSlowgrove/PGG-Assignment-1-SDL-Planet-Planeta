@@ -44,7 +44,7 @@ void Entity::setX(float inputX)
 /*sets the y position of the entity*/
 void Entity::setY(float inputY)
 {
-	/*sets the x position to the value of the inputed x position*/
+	/*sets the y position to the value of the inputed y position*/
 	y = inputY;
 }
 
@@ -64,4 +64,40 @@ float Entity::getY()
 {
 	/*returns the y position*/
 	return y;
+}
+
+/**************************************************************************************************************/
+
+/*sets the source x position of the entity*/
+void Entity::setSrcX(float inputX)
+{
+	/*sets the source x position to the value of the inputed source x position*/
+	srcX = inputX;
+}
+
+/**************************************************************************************************************/
+
+/*sets the source y position of the entity*/
+void Entity::setSrcY(float inputY)
+{
+	/*sets the source source y position to the value of the inputed source y position*/
+	srcY = inputY;
+}
+
+/**************************************************************************************************************/
+
+/*returns the source x position*/
+float Entity::getSrcX()
+{
+	/*returns the source x position*/
+	return srcX;
+}
+
+/**************************************************************************************************************/
+
+/*returns the source y position*/
+float Entity::getSrcY()
+{
+	/*returns the source y position*/
+	return srcY;
 }

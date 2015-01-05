@@ -90,22 +90,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ANIMATION_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ANIMATION_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_animation.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_animation.html">Animation</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_animation.html#a83f0a16cef7117f187ad596de38dd9d6">Animation</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">~Animation</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_animation_html"><div class="ttname"><a href="class_animation.html">Animation</a></div><div class="ttdoc">Creates a Animation object to handle the animations. </div><div class="ttdef"><b>Definition:</b> animation.h:8</div></div>
-<div class="ttc" id="class_animation_html_a83f0a16cef7117f187ad596de38dd9d6"><div class="ttname"><a href="class_animation.html#a83f0a16cef7117f187ad596de38dd9d6">Animation::Animation</a></div><div class="ttdeci">Animation()</div><div class="ttdef"><b>Definition:</b> animation.cpp:6</div></div>
-<div class="ttc" id="class_animation_html_a401b68793d4fbf48d481c030ee4b2a16"><div class="ttname"><a href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">Animation::~Animation</a></div><div class="ttdeci">~Animation()</div><div class="ttdef"><b>Definition:</b> animation.cpp:14</div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;entity.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_animation.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_animation.html">Animation</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">/*the timer float*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">float</span> timer;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">/*the length of the timer float*/</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">float</span> timerLength;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_animation.html#a3937169e447959e16931cf95ea0bea42">Animation</a>(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">~Animation</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animation.html#aa1b39bd3c7b83eea908d6e15896206ca">upadateTimer</a>(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animation.html#a46ac949b21a0aed488953ee0a47ec35f">upadateAnimation</a>(<span class="keywordtype">char</span>, <a class="code" href="class_entity.html">Entity</a> *);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animation.html#a64378ac8df319e785e93e8e2ff9b4f7d">snailAnimation</a>(<a class="code" href="class_entity.html">Entity</a> *);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animation.html#a28698eae748a6bcac0bbbafb1c62f32b">wormAnimation</a>(<a class="code" href="class_entity.html">Entity</a> *);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animation.html#aa991142b70b9d07bde2a2b4a934fae16">endGoalAnimation</a>(<a class="code" href="class_entity.html">Entity</a> *);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animation.html#a988b1ced0cf9d9a64ed3fb0891e3c563">gemAnimation</a>(<span class="keywordtype">int</span>, <a class="code" href="class_entity.html">Entity</a> *);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_animation_html"><div class="ttname"><a href="class_animation.html">Animation</a></div><div class="ttdoc">Creates a Animation object to handle the animations. </div><div class="ttdef"><b>Definition:</b> animation.h:10</div></div>
+<div class="ttc" id="class_animation_html_aa1b39bd3c7b83eea908d6e15896206ca"><div class="ttname"><a href="class_animation.html#aa1b39bd3c7b83eea908d6e15896206ca">Animation::upadateTimer</a></div><div class="ttdeci">void upadateTimer(float)</div><div class="ttdef"><b>Definition:</b> animation.cpp:24</div></div>
+<div class="ttc" id="class_animation_html_a64378ac8df319e785e93e8e2ff9b4f7d"><div class="ttname"><a href="class_animation.html#a64378ac8df319e785e93e8e2ff9b4f7d">Animation::snailAnimation</a></div><div class="ttdeci">void snailAnimation(Entity *)</div><div class="ttdef"><b>Definition:</b> animation.cpp:70</div></div>
+<div class="ttc" id="class_animation_html_aa991142b70b9d07bde2a2b4a934fae16"><div class="ttname"><a href="class_animation.html#aa991142b70b9d07bde2a2b4a934fae16">Animation::endGoalAnimation</a></div><div class="ttdeci">void endGoalAnimation(Entity *)</div><div class="ttdef"><b>Definition:</b> animation.cpp:106</div></div>
+<div class="ttc" id="class_animation_html_a3937169e447959e16931cf95ea0bea42"><div class="ttname"><a href="class_animation.html#a3937169e447959e16931cf95ea0bea42">Animation::Animation</a></div><div class="ttdeci">Animation(float)</div><div class="ttdef"><b>Definition:</b> animation.cpp:6</div></div>
+<div class="ttc" id="class_animation_html_a988b1ced0cf9d9a64ed3fb0891e3c563"><div class="ttname"><a href="class_animation.html#a988b1ced0cf9d9a64ed3fb0891e3c563">Animation::gemAnimation</a></div><div class="ttdeci">void gemAnimation(int, Entity *)</div><div class="ttdef"><b>Definition:</b> animation.cpp:124</div></div>
+<div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdoc">Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...</div><div class="ttdef"><b>Definition:</b> entity.h:13</div></div>
+<div class="ttc" id="class_animation_html_a28698eae748a6bcac0bbbafb1c62f32b"><div class="ttname"><a href="class_animation.html#a28698eae748a6bcac0bbbafb1c62f32b">Animation::wormAnimation</a></div><div class="ttdeci">void wormAnimation(Entity *)</div><div class="ttdef"><b>Definition:</b> animation.cpp:88</div></div>
+<div class="ttc" id="class_animation_html_a401b68793d4fbf48d481c030ee4b2a16"><div class="ttname"><a href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">Animation::~Animation</a></div><div class="ttdeci">~Animation()</div><div class="ttdef"><b>Definition:</b> animation.cpp:16</div></div>
+<div class="ttc" id="class_animation_html_a46ac949b21a0aed488953ee0a47ec35f"><div class="ttname"><a href="class_animation.html#a46ac949b21a0aed488953ee0a47ec35f">Animation::upadateAnimation</a></div><div class="ttdeci">void upadateAnimation(char, Entity *)</div><div class="ttdef"><b>Definition:</b> animation.cpp:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 4 2015 04:17:31 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 5 2015 02:14:06 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

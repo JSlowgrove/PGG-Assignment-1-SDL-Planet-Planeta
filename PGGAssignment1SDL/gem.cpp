@@ -63,3 +63,12 @@ int Gem::getValue()
 	/*returns the value*/
 	return value;
 }
+
+/**************************************************************************************************************/
+
+/*returns type*/
+int Gem::getType()
+{
+	/*returns the type value*/
+	return type;
+}
