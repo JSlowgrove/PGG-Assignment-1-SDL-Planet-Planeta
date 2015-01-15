@@ -80,11 +80,13 @@ bool WinLoseState::HandleSDLEvents()
 			case SDLK_ESCAPE:
 				/*go to menu*/
 				stateManager->ChangeState(new MenuState(stateManager, renderer));
+				return true;
 				break;
 			/*if delete is pressed*/
 			case SDLK_RETURN:
 				/*play again*/
 				stateManager->ChangeState(new GameState(stateManager, renderer));
+				return true;
 				break;
 			}
 			break;

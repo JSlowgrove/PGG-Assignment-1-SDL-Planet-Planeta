@@ -15,7 +15,7 @@ StateManager::StateManager()
 StateManager::~StateManager()
 {
 	/*loops thorough all of the states in the vector and deletes them all*/
-	for (int i = 0; i < currentStates.size(); i++)
+	for (unsigned int i = 0; i < currentStates.size(); i++)
 	{
 		delete currentStates.at(i);
 	}
@@ -36,7 +36,7 @@ void StateManager::ChangeState(State* state)
 {
 
 	/*loops thorough all of the states in the vector and deletes them all*/
-	for (int i = 0; i < currentStates.size(); i++)
+	for (unsigned int i = 0; i < currentStates.size(); i++)
 	{
 		delete currentStates.at(i);
 	}

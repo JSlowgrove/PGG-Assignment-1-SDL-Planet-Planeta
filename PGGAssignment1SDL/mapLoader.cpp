@@ -59,7 +59,7 @@ void MapLoader::loadMap(std::string fileName, int backgroundType)
 		int typeSetup;
 
 		/*Loop for the number of lines in the line array*/
-		for (int i = 0; i < line.size(); i++)
+		for (unsigned int i = 0; i < line.size(); i++)
 		{
 			/*set the first value of the row as it doesn't have a comma before it*/
 			typeSetup = (((int)line[i][0] - '0') * 10) + ((int)line[i][1] - '0');
@@ -67,7 +67,7 @@ void MapLoader::loadMap(std::string fileName, int backgroundType)
 			sortType(typeSetup, i, 0, backgroundType);
 
 			/*loop for the number of characters in a single line*/
-			for (int j = 0; j < line[i].size(); j++)
+			for (unsigned int j = 0; j < line[i].size(); j++)
 			{
 				/*check if a comma then use the data after it to fill the array*/
 				if (line[i][j] == ',')

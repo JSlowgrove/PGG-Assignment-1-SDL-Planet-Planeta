@@ -47,7 +47,6 @@ Audio::~Audio()
 	Mix_FreeChunk(sound);
 	sound = NULL;
 	/*delete the pointer*/
-	delete audio;
 	delete sound;
 }
 

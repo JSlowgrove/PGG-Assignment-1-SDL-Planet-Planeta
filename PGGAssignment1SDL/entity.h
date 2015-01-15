@@ -92,14 +92,14 @@ public:
 
 	/**
 	Getter # source x position
-	@returns the source x position of the Entity object.
+	@returns int the source x position of the Entity object.
 	*/
-	float getSrcX();
+	int getSrcX();
 
 	/**
 	Getter # source y position
-	@returns the source y position of the Entity object.
+	@returns int the source y position of the Entity object.
 	*/
-	float getSrcY();
+	int getSrcY();
 };
 #endif

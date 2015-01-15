@@ -105,6 +105,7 @@ bool GameState::HandleSDLEvents()
 			case SDLK_DELETE:
 				/*return to the menu*/
 				stateManager->ChangeState(new MenuState(stateManager, renderer));
+				return true;
 				break;
 			/*If space is pressed*/
 			case SDLK_SPACE:
@@ -363,12 +364,14 @@ void GameState::Update(float deltaTime)
 	{
 		/*change to the win screen*/
 		stateManager->ChangeState(new WinLoseState(stateManager, renderer, true, player->getScore()));
+		return;
 	}
 	/*test if the player has lost all their lives*/
 	else if (player->getLives() <= 0)
 	{
 		/*change to the lose screen*/
 		stateManager->ChangeState(new WinLoseState(stateManager, renderer, false, player->getScore()));
+		return;
 	}
 }
 

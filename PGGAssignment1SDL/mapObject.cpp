@@ -16,7 +16,7 @@ MapObject::MapObject(Texture * inputTexture, float inputX, float inputY)
 	/*sets the object to not be deleted*/
 	deleteable = false;
 
-	maxX = inputX;/*sets the maximum x coordinate to its initial x, so that the object can not go any further to the right*/
+	maxX = (int) inputX;/*sets the maximum x coordinate to its initial x, so that the object can not go any further to the right*/
 	/*sets the minimum x coordinate to the maximum x coordinate - the size of the map added to the screen width,
 	so that the object can not go any further to the left than this point*/
 	minX = (maxX - 1760) + 640;

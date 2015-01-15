@@ -72,7 +72,7 @@ float Entity::getY()
 void Entity::setSrcX(float inputX)
 {
 	/*sets the source x position to the value of the inputed source x position*/
-	srcX = inputX;
+	srcX = (int) inputX;
 }
 
 /**************************************************************************************************************/
@@ -81,13 +81,13 @@ void Entity::setSrcX(float inputX)
 void Entity::setSrcY(float inputY)
 {
 	/*sets the source source y position to the value of the inputed source y position*/
-	srcY = inputY;
+	srcY = (int) inputY;
 }
 
 /**************************************************************************************************************/
 
 /*returns the source x position*/
-float Entity::getSrcX()
+int Entity::getSrcX()
 {
 	/*returns the source x position*/
 	return srcX;
@@ -96,7 +96,7 @@ float Entity::getSrcX()
 /**************************************************************************************************************/
 
 /*returns the source y position*/
-float Entity::getSrcY()
+int Entity::getSrcY()
 {
 	/*returns the source y position*/
 	return srcY;

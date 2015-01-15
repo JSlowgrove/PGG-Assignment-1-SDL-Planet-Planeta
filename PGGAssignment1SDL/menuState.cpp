@@ -112,6 +112,7 @@ bool MenuState::HandleSDLEvents()
 				case 1:
 					/*go to the game state*/
 					stateManager->ChangeState(new GameState(stateManager, renderer));
+					return true;
 					break;
 				case 2:
 					/*open up the credits*/
