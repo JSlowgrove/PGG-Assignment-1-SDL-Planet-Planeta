@@ -17,9 +17,8 @@ http://creativecommons.org/licenses/by/3.0/
 Licensed under Creative Commons: By Attribution 3.0  
 http://creativecommons.org/licenses/by/3.0/  
   
-Created using SDL 2.0, SLD_Image 2.0 ans SDL_ttf 2.0:  
+Created using SDL 2.0 and SDL_mixer 2.0:  
 https://www.libsdl.org/  
-https://www.libsdl.org/projects/SDL_image/  
-https://www.libsdl.org/projects/SDL_ttf/  
+http://www.libsdl.org/projects/SDL_mixer/  
   
 This is my first PGG Assignment (Planet Planeta).
