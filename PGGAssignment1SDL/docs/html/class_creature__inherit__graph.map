@@ -1,0 +1,5 @@
+<map id="Creature" name="Creature">
+<area shape="rect" id="node3" href="$class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. " alt="" coords="5,674,120,883"/>
+<area shape="rect" id="node4" href="$class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. " alt="" coords="144,637,288,920"/>
+<area shape="rect" id="node2" href="$class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ..." alt="" coords="94,5,183,347"/>
+</map>

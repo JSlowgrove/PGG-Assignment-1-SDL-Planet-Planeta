@@ -1,0 +1,6 @@
+<map id="Animation::endGoalAnimation" name="Animation::endGoalAnimation">
+<area shape="rect" id="node2" href="$class_entity.html#a0b7bd3804adb0a5c4b611bcbef6c12cc" title="Entity::getSrcX" alt="" coords="249,5,358,32"/>
+<area shape="rect" id="node3" href="$class_entity.html#aeaf17603c70755e07dfc32d6bd4e0d2e" title="Entity::getSrcY" alt="" coords="248,56,359,83"/>
+<area shape="rect" id="node4" href="$class_entity.html#ad59969bacea528293341a88a94f845be" title="Entity::setSrcX" alt="" coords="249,107,358,133"/>
+<area shape="rect" id="node5" href="$class_entity.html#a1051f4e046b0de7f4c727e0e0edb3f6f" title="Entity::setSrcY" alt="" coords="248,157,359,184"/>
+</map>

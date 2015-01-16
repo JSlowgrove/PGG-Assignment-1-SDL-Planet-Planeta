@@ -1,0 +1,4 @@
+<map id="GameState" name="GameState">
+<area shape="rect" id="node2" href="$class_state.html" title="Creates a State object. Creates a State object to be inherited. Made using information from http://bl..." alt="" coords="5,263,152,428"/>
+<area shape="rect" id="node3" href="$class_state_manager.html" title="Creates a State manager object. Creates a State manager object to be inherited. Made using informatio..." alt="" coords="5,5,152,200"/>
+</map>

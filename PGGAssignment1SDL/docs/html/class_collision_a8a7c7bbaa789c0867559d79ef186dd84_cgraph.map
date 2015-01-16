@@ -1,0 +1,8 @@
+<map id="Collision::gemAction" name="Collision::gemAction">
+<area shape="rect" id="node2" href="$class_audio.html#aea41cc6feaed4b1ab5957ea499509f55" title="Audio::playEffect" alt="" coords="217,5,337,32"/>
+<area shape="rect" id="node3" href="$class_player.html#aa054ea95ca73dd19036d2917b29ab021" title="Player::setScore" alt="" coords="218,56,337,83"/>
+<area shape="rect" id="node4" href="$class_player.html#a97e5447778ae6c384eedc532dcd8431d" title="Player::getScore" alt="" coords="218,107,337,133"/>
+<area shape="rect" id="node5" href="$class_map_loader.html#a9b56fda5f4c27614131b085b449fe183" title="MapLoader::getGem" alt="" coords="207,157,347,184"/>
+<area shape="rect" id="node6" href="$class_gem.html#acccf14e79a3e6a9db263081e88e953e1" title="Gem::getValue" alt="" coords="223,208,332,235"/>
+<area shape="rect" id="node7" href="$class_map_object.html#af14721fd27162d9fd0f04f69d8087811" title="MapObject::setDeletable" alt="" coords="195,259,360,285"/>
+</map>

@@ -61,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -97,18 +97,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for Entity:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_entity.png" usemap="#Entity_map" alt=""/>
-  <map id="Entity_map" name="Entity_map">
-<area href="class_background.html" title="Creates a Background object that inherits Entity. Creates a Background object with a velocity..." alt="Background" shape="rect" coords="0,56,80,80"/>
-<area href="class_creature.html" title="Creates a Creature object that inherits Entity. " alt="Creature" shape="rect" coords="90,56,170,80"/>
-<area href="class_map_object.html" title="Creates a MapObject object that inherits Entity. " alt="MapObject" shape="rect" coords="270,56,350,80"/>
-<area href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. " alt="Enemy" shape="rect" coords="45,112,125,136"/>
-<area href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. " alt="Player" shape="rect" coords="135,112,215,136"/>
-<area href="class_block.html" title="Creates a Block object that inherits MapObject. " alt="Block" shape="rect" coords="225,112,305,136"/>
-<area href="class_gem.html" title="Creates a Gem object that inherits MapObject. " alt="Gem" shape="rect" coords="315,112,395,136"/>
-</map>
- </div></div>
+<div class="center"><img src="class_entity__inherit__graph.png" border="0" usemap="#_entity_inherit__map" alt="Inheritance graph"/></div>
+<map name="_entity_inherit__map" id="_entity_inherit__map">
+<area shape="rect" id="node2" href="class_background.html" title="Creates a Background object that inherits Entity. Creates a Background object with a velocity..." alt="" coords="5,461,149,641"/><area shape="rect" id="node3" href="class_creature.html" title="Creates a Creature object that inherits Entity. " alt="" coords="174,453,290,648"/><area shape="rect" id="node6" href="class_map_object.html" title="Creates a MapObject object that inherits Entity. " alt="" coords="319,395,438,707"/><area shape="rect" id="node4" href="class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. " alt="" coords="21,791,136,1001"/><area shape="rect" id="node5" href="class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. " alt="" coords="160,755,304,1037"/><area shape="rect" id="node7" href="class_block.html" title="Creates a Block object that inherits MapObject. " alt="" coords="328,835,429,957"/><area shape="rect" id="node8" href="class_gem.html" title="Creates a Gem object that inherits MapObject. " alt="" coords="453,828,555,964"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for Entity:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity__coll__graph.png" border="0" usemap="#_entity_coll__map" alt="Collaboration graph"/></div>
+<map name="_entity_coll__map" id="_entity_coll__map">
+<area shape="rect" id="node2" href="class_texture.html" title="Creates a Texture for use with a renderer Creates a Texture from an image file, this can then be used..." alt="" coords="5,5,164,200"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -259,6 +258,24 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_a2224871711ac97a54af338ddefc25ac9_cgraph.png" border="0" usemap="#class_entity_a2224871711ac97a54af338ddefc25ac9_cgraph" alt=""/></div>
+<map name="class_entity_a2224871711ac97a54af338ddefc25ac9_cgraph" id="class_entity_a2224871711ac97a54af338ddefc25ac9_cgraph">
+<area shape="rect" id="node2" href="class_texture.html#a703db8963b46b751b8affce1807725b7" title="Texture::pushSpriteToScreen" alt="" coords="159,5,349,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_a2224871711ac97a54af338ddefc25ac9_icgraph.png" border="0" usemap="#class_entity_a2224871711ac97a54af338ddefc25ac9_icgraph" alt=""/></div>
+<map name="class_entity_a2224871711ac97a54af338ddefc25ac9_icgraph" id="class_entity_a2224871711ac97a54af338ddefc25ac9_icgraph">
+<area shape="rect" id="node2" href="class_game_state.html#ab9330b36c7c74d733c2739c025285c64" title="GameState::Draw" alt="" coords="159,5,284,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a0b7bd3804adb0a5c4b611bcbef6c12cc"></a>
@@ -274,6 +291,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Getter # source x position </p><dl class="section return"><dt>Returns</dt><dd>int the source x position of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_a0b7bd3804adb0a5c4b611bcbef6c12cc_icgraph.png" border="0" usemap="#class_entity_a0b7bd3804adb0a5c4b611bcbef6c12cc_icgraph" alt=""/></div>
+<map name="class_entity_a0b7bd3804adb0a5c4b611bcbef6c12cc_icgraph" id="class_entity_a0b7bd3804adb0a5c4b611bcbef6c12cc_icgraph">
+<area shape="rect" id="node2" href="class_animation.html#a64378ac8df319e785e93e8e2ff9b4f7d" title="Animation::snailAnimation" alt="" coords="173,5,347,32"/><area shape="rect" id="node5" href="class_animation.html#a28698eae748a6bcac0bbbafb1c62f32b" title="Animation::wormAnimation" alt="" coords="171,56,349,83"/><area shape="rect" id="node6" href="class_animation.html#aa991142b70b9d07bde2a2b4a934fae16" title="Animation::endGoalAnimation" alt="" coords="163,107,357,133"/><area shape="rect" id="node7" href="class_animation.html#a988b1ced0cf9d9a64ed3fb0891e3c563" title="Animation::gemAnimation" alt="" coords="416,132,587,159"/><area shape="rect" id="node3" href="class_animation.html#a46ac949b21a0aed488953ee0a47ec35f" title="Animation::upadateAnimation" alt="" coords="405,69,597,96"/><area shape="rect" id="node4" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="645,101,783,128"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -291,6 +317,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 </div><div class="memdoc">
 <p>Getter # source y position </p><dl class="section return"><dt>Returns</dt><dd>int the source y position of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </dd></dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_aeaf17603c70755e07dfc32d6bd4e0d2e_icgraph.png" border="0" usemap="#class_entity_aeaf17603c70755e07dfc32d6bd4e0d2e_icgraph" alt=""/></div>
+<map name="class_entity_aeaf17603c70755e07dfc32d6bd4e0d2e_icgraph" id="class_entity_aeaf17603c70755e07dfc32d6bd4e0d2e_icgraph">
+<area shape="rect" id="node2" href="class_animation.html#a64378ac8df319e785e93e8e2ff9b4f7d" title="Animation::snailAnimation" alt="" coords="175,5,348,32"/><area shape="rect" id="node5" href="class_animation.html#a28698eae748a6bcac0bbbafb1c62f32b" title="Animation::wormAnimation" alt="" coords="173,56,350,83"/><area shape="rect" id="node6" href="class_animation.html#aa991142b70b9d07bde2a2b4a934fae16" title="Animation::endGoalAnimation" alt="" coords="164,107,359,133"/><area shape="rect" id="node7" href="class_animation.html#a988b1ced0cf9d9a64ed3fb0891e3c563" title="Animation::gemAnimation" alt="" coords="417,132,588,159"/><area shape="rect" id="node3" href="class_animation.html#a46ac949b21a0aed488953ee0a47ec35f" title="Animation::upadateAnimation" alt="" coords="407,69,599,96"/><area shape="rect" id="node4" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="647,101,784,128"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="abc5b6d26c039bf3bf6faa766990768b4"></a>
@@ -307,6 +342,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 </div><div class="memdoc">
 <p>Getter # x position </p><dl class="section return"><dt>Returns</dt><dd>the x position of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </dd></dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_abc5b6d26c039bf3bf6faa766990768b4_icgraph.png" border="0" usemap="#class_entity_abc5b6d26c039bf3bf6faa766990768b4_icgraph" alt=""/></div>
+<map name="class_entity_abc5b6d26c039bf3bf6faa766990768b4_icgraph" id="class_entity_abc5b6d26c039bf3bf6faa766990768b4_icgraph">
+<area shape="rect" id="node2" href="class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="143,5,331,32"/><area shape="rect" id="node3" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="379,85,516,112"/><area shape="rect" id="node4" href="class_collision.html#ac758fa708f12d9121bb2aacc787111e4" title="Collision::playerCreature\lCollisionTest" alt="" coords="155,107,318,149"/><area shape="rect" id="node5" href="class_collision.html#a1c110f14ff463a255694f387eec17d56" title="Collision::enemyCollision" alt="" coords="153,173,320,200"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ab6dd7b404c13754202acfe3d2c65c77b"></a>
@@ -322,6 +366,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Getter # y position </p><dl class="section return"><dt>Returns</dt><dd>the y position of the <a class="el" href="class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ...">Entity</a> object. </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_ab6dd7b404c13754202acfe3d2c65c77b_icgraph.png" border="0" usemap="#class_entity_ab6dd7b404c13754202acfe3d2c65c77b_icgraph" alt=""/></div>
+<map name="class_entity_ab6dd7b404c13754202acfe3d2c65c77b_icgraph" id="class_entity_ab6dd7b404c13754202acfe3d2c65c77b_icgraph">
+<area shape="rect" id="node2" href="class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="559,56,747,83"/><area shape="rect" id="node3" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="795,135,932,161"/><area shape="rect" id="node4" href="class_collision.html#ac4b2ae74fb5978743580f25ac2760f3a" title="Collision::blockActionY" alt="" coords="144,5,300,32"/><area shape="rect" id="node6" href="class_collision.html#ac758fa708f12d9121bb2aacc787111e4" title="Collision::playerCreature\lCollisionTest" alt="" coords="348,158,511,199"/><area shape="rect" id="node7" href="class_collision.html#a1c110f14ff463a255694f387eec17d56" title="Collision::enemyCollision" alt="" coords="569,216,736,243"/><area shape="rect" id="node5" href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e" title="Collision::downTest" alt="" coords="362,5,497,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -345,6 +398,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_ad59969bacea528293341a88a94f845be_icgraph.png" border="0" usemap="#class_entity_ad59969bacea528293341a88a94f845be_icgraph" alt=""/></div>
+<map name="class_entity_ad59969bacea528293341a88a94f845be_icgraph" id="class_entity_ad59969bacea528293341a88a94f845be_icgraph">
+<area shape="rect" id="node2" href="class_animation.html#a64378ac8df319e785e93e8e2ff9b4f7d" title="Animation::snailAnimation" alt="" coords="173,5,347,32"/><area shape="rect" id="node5" href="class_animation.html#a28698eae748a6bcac0bbbafb1c62f32b" title="Animation::wormAnimation" alt="" coords="171,56,349,83"/><area shape="rect" id="node6" href="class_animation.html#aa991142b70b9d07bde2a2b4a934fae16" title="Animation::endGoalAnimation" alt="" coords="163,107,357,133"/><area shape="rect" id="node7" href="class_animation.html#a988b1ced0cf9d9a64ed3fb0891e3c563" title="Animation::gemAnimation" alt="" coords="416,132,587,159"/><area shape="rect" id="node3" href="class_animation.html#a46ac949b21a0aed488953ee0a47ec35f" title="Animation::upadateAnimation" alt="" coords="405,69,597,96"/><area shape="rect" id="node4" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="645,101,783,128"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a1051f4e046b0de7f4c727e0e0edb3f6f"></a>
@@ -366,6 +428,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
   </table>
   </dd>
 </dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_a1051f4e046b0de7f4c727e0e0edb3f6f_icgraph.png" border="0" usemap="#class_entity_a1051f4e046b0de7f4c727e0e0edb3f6f_icgraph" alt=""/></div>
+<map name="class_entity_a1051f4e046b0de7f4c727e0e0edb3f6f_icgraph" id="class_entity_a1051f4e046b0de7f4c727e0e0edb3f6f_icgraph">
+<area shape="rect" id="node2" href="class_animation.html#a64378ac8df319e785e93e8e2ff9b4f7d" title="Animation::snailAnimation" alt="" coords="175,5,348,32"/><area shape="rect" id="node5" href="class_animation.html#a28698eae748a6bcac0bbbafb1c62f32b" title="Animation::wormAnimation" alt="" coords="173,56,350,83"/><area shape="rect" id="node6" href="class_animation.html#aa991142b70b9d07bde2a2b4a934fae16" title="Animation::endGoalAnimation" alt="" coords="164,107,359,133"/><area shape="rect" id="node7" href="class_animation.html#a988b1ced0cf9d9a64ed3fb0891e3c563" title="Animation::gemAnimation" alt="" coords="417,132,588,159"/><area shape="rect" id="node3" href="class_animation.html#a46ac949b21a0aed488953ee0a47ec35f" title="Animation::upadateAnimation" alt="" coords="407,69,599,96"/><area shape="rect" id="node4" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="647,101,784,128"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -389,6 +460,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_a38e2f110d39426ba4823296b4294dd74_icgraph.png" border="0" usemap="#class_entity_a38e2f110d39426ba4823296b4294dd74_icgraph" alt=""/></div>
+<map name="class_entity_a38e2f110d39426ba4823296b4294dd74_icgraph" id="class_entity_a38e2f110d39426ba4823296b4294dd74_icgraph">
+<area shape="rect" id="node2" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="143,5,280,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a8896110a266bdec69b14d34ec6374df8"></a>
@@ -411,6 +491,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_a8896110a266bdec69b14d34ec6374df8_icgraph.png" border="0" usemap="#class_entity_a8896110a266bdec69b14d34ec6374df8_icgraph" alt=""/></div>
+<map name="class_entity_a8896110a266bdec69b14d34ec6374df8_icgraph" id="class_entity_a8896110a266bdec69b14d34ec6374df8_icgraph">
+<area shape="rect" id="node2" href="class_collision.html#ac4b2ae74fb5978743580f25ac2760f3a" title="Collision::blockActionY" alt="" coords="144,5,300,32"/><area shape="rect" id="node5" href="class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="767,31,904,57"/><area shape="rect" id="node3" href="class_collision.html#a7c33a20a9c111630eeb8f0202605161e" title="Collision::downTest" alt="" coords="348,5,483,32"/><area shape="rect" id="node4" href="class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="531,5,719,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -420,7 +509,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 15 2015 17:19:41 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 16 2015 17:55:21 for Jamie Slowgrove - PGG Assignment 1 - SDL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

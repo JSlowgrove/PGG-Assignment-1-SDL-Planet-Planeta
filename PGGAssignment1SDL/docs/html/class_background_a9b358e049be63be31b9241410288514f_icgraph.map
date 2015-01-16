@@ -1,0 +1,8 @@
+<map id="Background::setVelocity" name="Background::setVelocity">
+<area shape="rect" id="node2" href="$class_collision.html#a8daccc0201f916f571afbbd8da992ffb" title="Collision::blockActionX" alt="" coords="217,56,372,83"/>
+<area shape="rect" id="node7" href="$class_game_state.html#ab22e8c062ae3d629044b93faba688974" title="GameState::updateScene" alt="" coords="605,107,777,133"/>
+<area shape="rect" id="node3" href="$class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c" title="Collision::leftTest" alt="" coords="424,5,545,32"/>
+<area shape="rect" id="node6" href="$class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58" title="Collision::rightTest" alt="" coords="420,56,549,83"/>
+<area shape="rect" id="node4" href="$class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="597,56,785,83"/>
+<area shape="rect" id="node5" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="833,81,971,108"/>
+</map>

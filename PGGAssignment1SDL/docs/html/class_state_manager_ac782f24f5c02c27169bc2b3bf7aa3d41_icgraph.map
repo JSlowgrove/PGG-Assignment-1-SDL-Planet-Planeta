@@ -1,0 +1,4 @@
+<map id="StateManager::RemoveLastState" name="StateManager::RemoveLastState">
+<area shape="rect" id="node2" href="$class_credits_state.html#a952d9a50d529f1ba4d883b4a37f558d4" title="CreditsState::HandleSDLEvents" alt="" coords="236,5,443,32"/>
+<area shape="rect" id="node3" href="$class_help_state.html#a7149e10e0129b66a68290d259bce3015" title="HelpState::HandleSDLEvents" alt="" coords="244,56,435,83"/>
+</map>

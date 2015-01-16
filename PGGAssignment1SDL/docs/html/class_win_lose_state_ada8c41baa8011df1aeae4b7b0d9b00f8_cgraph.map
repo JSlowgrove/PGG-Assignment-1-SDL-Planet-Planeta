@@ -1,0 +1,4 @@
+<map id="WinLoseState::HandleSDLEvents" name="WinLoseState::HandleSDLEvents">
+<area shape="rect" id="node2" href="$class_state_manager.html#a8c14290973150a37afdf365d00ffcbba" title="StateManager::ChangeState" alt="" coords="269,5,456,32"/>
+<area shape="rect" id="node3" href="$class_state_manager.html#aa925e9a15bba3cc4b262a08c8024ea3b" title="StateManager::AddState" alt="" coords="504,5,669,32"/>
+</map>

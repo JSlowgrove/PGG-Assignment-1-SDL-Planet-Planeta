@@ -1,0 +1,7 @@
+<map id="State" name="State">
+<area shape="rect" id="node2" href="$class_credits_state.html" title="Creates a CreditsState object. Creates a CreditsState object that inherits State. ..." alt="" coords="5,248,152,384"/>
+<area shape="rect" id="node3" href="$class_game_state.html" title="Creates a GameState object. Creates a GameState object that inherits State. " alt="" coords="176,233,323,399"/>
+<area shape="rect" id="node4" href="$class_help_state.html" title="Creates a HelpState object. Creates a HelpState object that inherits State. " alt="" coords="347,248,493,384"/>
+<area shape="rect" id="node5" href="$class_menu_state.html" title="Creates a MenuState object. Creates a MenuState object that inherits State. " alt="" coords="517,248,664,384"/>
+<area shape="rect" id="node6" href="$class_win_lose_state.html" title="Creates a WinLoseState object. Creates a WinLoseState object that inherits State. ..." alt="" coords="688,241,835,391"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="MapLoader::getIndex" name="MapLoader::getIndex">
+<area shape="rect" id="node2" href="$class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c" title="Collision::leftTest" alt="" coords="222,5,343,32"/>
+<area shape="rect" id="node5" href="$class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58" title="Collision::rightTest" alt="" coords="218,56,347,83"/>
+<area shape="rect" id="node6" href="$class_collision.html#a7c33a20a9c111630eeb8f0202605161e" title="Collision::downTest" alt="" coords="215,107,350,133"/>
+<area shape="rect" id="node7" href="$class_collision.html#a359e9c49d721476b11b43e92d7c61723" title="Collision::enemyLeftTest" alt="" coords="201,157,365,184"/>
+<area shape="rect" id="node9" href="$class_collision.html#aa046c7cf6f057848700d89101953b678" title="Collision::enemyRightTest" alt="" coords="196,208,369,235"/>
+<area shape="rect" id="node3" href="$class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="417,81,605,108"/>
+<area shape="rect" id="node4" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="653,120,791,147"/>
+<area shape="rect" id="node8" href="$class_collision.html#a1c110f14ff463a255694f387eec17d56" title="Collision::enemyCollision" alt="" coords="428,157,595,184"/>
+</map>

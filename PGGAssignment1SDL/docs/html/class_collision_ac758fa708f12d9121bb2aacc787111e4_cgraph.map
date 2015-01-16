@@ -1,0 +1,13 @@
+<map id="Collision::playerCreatureCollisionTest" name="Collision::playerCreatureCollisionTest">
+<area shape="rect" id="node2" href="$class_entity.html#abc5b6d26c039bf3bf6faa766990768b4" title="Entity::getX" alt="" coords="282,5,371,32"/>
+<area shape="rect" id="node3" href="$class_creature.html#a405b16c27bc5617e9c37ac01e166c785" title="Creature::getVelocityX" alt="" coords="251,56,402,83"/>
+<area shape="rect" id="node4" href="$class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b" title="Entity::getY" alt="" coords="281,107,372,133"/>
+<area shape="rect" id="node5" href="$class_creature.html#a0ca2c7cccf8c8182dcad7a3b6737380b" title="Creature::getVelocityY" alt="" coords="250,157,403,184"/>
+<area shape="rect" id="node6" href="$class_map_loader.html#a553fdab4c534f6b72764545b01f83005" title="MapLoader::getNumberOfEnemies" alt="" coords="216,208,437,235"/>
+<area shape="rect" id="node7" href="$class_map_loader.html#a2680e99acdaf5b74b8116d43ca220df3" title="MapLoader::getEnemy" alt="" coords="250,259,403,285"/>
+<area shape="rect" id="node8" href="$class_enemy.html#a37e2cff8cfe21a2ce0245bca77fc84e2" title="Enemy::getDeletable" alt="" coords="255,309,398,336"/>
+<area shape="rect" id="node9" href="$class_audio.html#aea41cc6feaed4b1ab5957ea499509f55" title="Audio::playEffect" alt="" coords="267,360,387,387"/>
+<area shape="rect" id="node10" href="$class_player.html#a565d4df3c32d00243b1ef16dfd6e5e03" title="Player::setLives" alt="" coords="269,411,384,437"/>
+<area shape="rect" id="node11" href="$class_player.html#af56ac33b9b2ebd9f97c8a6f485cf2d47" title="Player::getLives" alt="" coords="269,461,384,488"/>
+<area shape="rect" id="node12" href="$class_enemy.html#a0b3e1631733e464c755767b894ce3ef4" title="Enemy::setDeletable" alt="" coords="255,512,398,539"/>
+</map>

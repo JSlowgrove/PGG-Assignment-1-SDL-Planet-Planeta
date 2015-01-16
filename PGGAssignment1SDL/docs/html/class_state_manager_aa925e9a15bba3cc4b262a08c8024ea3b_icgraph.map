@@ -1,0 +1,7 @@
+<map id="StateManager::AddState" name="StateManager::AddState">
+<area shape="rect" id="node2" href="$class_game_state.html#a5e2467775e9a941d482e0489295c363d" title="GameState::HandleSDLEvents" alt="" coords="461,5,661,32"/>
+<area shape="rect" id="node3" href="$class_menu_state.html#abab3b8017d47c6d6134cbdfb8e0c7580" title="MenuState::HandleSDLEvents" alt="" coords="463,56,660,83"/>
+<area shape="rect" id="node4" href="$class_state_manager.html#a8c14290973150a37afdf365d00ffcbba" title="StateManager::ChangeState" alt="" coords="219,107,405,133"/>
+<area shape="rect" id="node5" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="493,107,630,133"/>
+<area shape="rect" id="node6" href="$class_win_lose_state.html#ada8c41baa8011df1aeae4b7b0d9b00f8" title="WinLoseState::HandleSDLEvents" alt="" coords="453,157,669,184"/>
+</map>

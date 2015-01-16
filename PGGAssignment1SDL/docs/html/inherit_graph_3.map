@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ..." alt="" coords="5,56,61,83"/>
+<area shape="rect" id="node2" href="$class_background.html" title="Creates a Background object that inherits Entity. Creates a Background object with a velocity..." alt="" coords="109,5,200,32"/>
+<area shape="rect" id="node3" href="$class_creature.html" title="Creates a Creature object that inherits Entity. " alt="" coords="119,56,190,83"/>
+<area shape="rect" id="node6" href="$class_map_object.html" title="Creates a MapObject object that inherits Entity. " alt="" coords="112,107,197,133"/>
+<area shape="rect" id="node4" href="$class_enemy.html" title="Creates an Enemy object that inherits MapObject which in turn inherits Creature. " alt="" coords="248,5,311,32"/>
+<area shape="rect" id="node5" href="$class_player.html" title="Creates a Player object that inherits Creature which in turn inherits Entity. " alt="" coords="250,56,309,83"/>
+<area shape="rect" id="node7" href="$class_block.html" title="Creates a Block object that inherits MapObject. " alt="" coords="252,107,307,133"/>
+<area shape="rect" id="node8" href="$class_gem.html" title="Creates a Gem object that inherits MapObject. " alt="" coords="254,157,305,184"/>
+</map>

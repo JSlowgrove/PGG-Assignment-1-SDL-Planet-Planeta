@@ -1,0 +1,4 @@
+<map id="GameState::displayScore" name="GameState::displayScore">
+<area shape="rect" id="node2" href="$class_player.html#a97e5447778ae6c384eedc532dcd8431d" title="Player::getScore" alt="" coords="260,5,379,32"/>
+<area shape="rect" id="node3" href="$class_texture.html#a703db8963b46b751b8affce1807725b7" title="Texture::pushSpriteToScreen" alt="" coords="224,56,415,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Enemy::setSpeed" name="Enemy::setSpeed">
+<area shape="rect" id="node2" href="$class_collision.html#a359e9c49d721476b11b43e92d7c61723" title="Collision::enemyLeftTest" alt="" coords="185,5,349,32"/>
+<area shape="rect" id="node5" href="$class_collision.html#aa046c7cf6f057848700d89101953b678" title="Collision::enemyRightTest" alt="" coords="180,56,353,83"/>
+<area shape="rect" id="node3" href="$class_collision.html#a1c110f14ff463a255694f387eec17d56" title="Collision::enemyCollision" alt="" coords="401,31,568,57"/>
+<area shape="rect" id="node4" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="616,31,753,57"/>
+</map>
