@@ -6,8 +6,16 @@ You can do what you want with the code in this project, however you must credit 
 Font used is Karmatic Arcade Font:  
 http://www.dafont.com/vic-fieger.d852  
   
-Art used is from the Kenney Asset Pack:  
-http://kenney.itch.io/kenney-donation
+Art and sound effects used are from the Kenney Asset Pack:  
+http://kenney.itch.io/kenney-donation  
+  
+Music: 
+[Chipper Doodle] Kevin MacLeod (incompetech.com)  
+Licensed under Creative Commons: By Attribution 3.0  
+http://creativecommons.org/licenses/by/3.0/  
+[Electrodoodle] Kevin MacLeod (incompetech.com)  
+Licensed under Creative Commons: By Attribution 3.0  
+http://creativecommons.org/licenses/by/3.0/  
   
 Created using SDL 2.0, SLD_Image 2.0 ans SDL_ttf 2.0:  
 https://www.libsdl.org/  
