@@ -72,14 +72,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Jamie\Documents\Uni Work\Level I [2nd Year]\Assignments\PGG\PGGAssignment1SDL\PGGAssignment1SDL\SDL Mixer\Development\SDL2_mixer-devel-2.0.0-VC\SDL2_mixer-2.0.0\include;C:\SDKs\SDL\SDL2-devel-2.0.3-VC\SDL2-2.0.3\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SDKs\SDL\SDL2-devel-2.0.3-VC\SDL2-2.0.3\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Jamie\Documents\Uni Work\Level I [2nd Year]\Assignments\PGG\PGGAssignment1SDL\PGGAssignment1SDL\SDL Mixer\Development\SDL2_mixer-devel-2.0.0-VC\SDL2_mixer-2.0.0\lib\x86;C:\SDKs\SDL\SDL2-devel-2.0.3-VC\SDL2-2.0.3\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SDKs\SDL\SDL2-devel-2.0.3-VC\SDL2-2.0.3\lib\x86</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
