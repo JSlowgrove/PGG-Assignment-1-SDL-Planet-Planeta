@@ -1,0 +1,156 @@
+2015-01-16 16:51:49 +0000 - Jamie: Updated the project include directories for the SDL mixer (as they have moved on my hard drive) and put the SDL mixer files into the main folder.
+
+
+2015-01-16 10:32:52 +0000 - Jamie: Updated readme.
+
+
+2015-01-16 05:22:23 +0000 - Jamie: Updated readme formatting.
+
+
+2015-01-16 05:21:35 +0000 - Jamie: Updated readme to include music and sound effects sources.
+
+
+2015-01-16 05:15:48 +0000 - Jamie: Updated readme to include a link to the kenney assets donation page.
+
+
+2015-01-16 02:08:06 +0000 - Jamie: Updated readme.
+
+
+2015-01-15 17:21:13 +0000 - Jamie: Fixed a bug with changing states and I fixed all warnings in the code.
+
+
+2015-01-05 02:20:06 +0000 - Jamie: I have added the animations for the snail, gems, end goal and worms and have fully Doxygened and commented the code. I animate the player however I have realise that I only have the sprites for the player in one direction so cant do animate it correctly. As such I have decided to leave the player un-animated. As I need to write up the rest of the paperwork for the assignment and have other assignments looming I have decided to stop work on the code. I feel that the code is complete enough to hand in and whilst I could always add more to it, I need to stop at some point and this seems as good a time as ever. I have built the code in release mode and the exe from it works (if in a folder with the assets and dlls) . I have also regenerated the documentation.
+
+
+2015-01-04 04:25:16 +0000 - Jamie: Have added audio into the game using an external SDL library called SDL Mixer. I used this to create an audio class which makes either a music sound or a sound effect. I have implemented this into the game full and Doxygen commented and regenerated the documentation. At the moment the linked is looking for SDL mixer in m project folder and I need to find out if there is a way to do that without having to use the whole path and just start from the project directory instead. If I can do that then it should work fine, if not I will need to give instructions on where to place it, in order for it to work. I have also started to work on an animation class to get the sprites to animate.
+
+
+2015-01-04 01:37:04 +0000 - Jamie: Fixed a bug (I think!) that caused the enemy's to shift occasionally when the camera type changes. I have also regenerate the documentation and have created a release build of the game. In order to get it to work in the release folder there is also the assets that the game uses and the sdl dll. This is because it does not work without these and as such they have to be in the folder with the exe. It does run though, which is good!
+
+
+2015-01-04 00:49:24 +0000 - Jamie: Got an enemy to check if it collides with a wall, if so go in the other direction. Whilst I did create more functions in collision to deal with this, I feel that like my other collision code, the majority of these functions could be turned in to one with time. I have also regenerated the documentation. For now I have decided to ignore this as the deadline is looming and with all of the other assignments in around the same time I have to work on them as well. As of current the game (whilst still with some bugs such as the previously mentioned random error and a slight problem with the transition between cameras causing a slight shift of enemies) it is at the stage where it could be handed in as I think it has met at least all of the minimum requirements. It currently has been fully commented, has a player, a score, a life system, a win/lose state, 2 types of enemy(one stationary, one that will patrol between to block edges), collectable gems, collisions, two forms of camera movement(kind of), the player can jump with gravity, an in game help screen, a main menu, a credits screen, random type of scenery and the map is loaded from a text file (so if its edited so is the map in the game making it easier to create levels, although only one works at a time). Hopefully this should be enough to merit a pass but I will be adding to it if I can.
+
+
+2015-01-03 23:08:45 +0000 - Jamie: The enemy can now be collided with. when this happens the enemy gets set to deleted, which means it is not included in the collision detection and is no longer displayed. It also causes the player to lose a life and the game can now be lost.
+
+
+2015-01-03 19:36:50 +0000 - Jamie: Converted the enemy mapObject back into a Creature object for use with collision.
+
+
+2015-01-03 16:56:00 +0000 - Jamie: Included an enemy vector in the map loader. This can currently work with updating and displaying in the game but have not had the collisions attached to it yet.
+
+
+2015-01-03 15:33:27 +0000 - Jamie: I have added a form of camera in the sense that the map will move when the player is in the midle of the screen instead of the player. The player will only move when the map can no longer go in the needed direction.
+
+
+2015-01-03 02:10:36 +0000 - Jamie: Added a win/lose state that happens when the player has either 0 lives or has collided with the end goal. This state displays the score and gives the option to return to the menu or play again. I have also added a credits state which shows the credits of the game with the main menu. I have also regenerated the documentation.
+
+
+2015-01-03 00:34:15 +0000 - Jamie: Added an in game help screen and modified the collision and sprite for the end block so it will be able to have a win when colliding with it.
+
+
+2015-01-02 23:10:47 +0000 - Jamie: Added Lives to the screen and fully commented my code so far (including Doxygen commenting). Also regenerated documentation.
+
+
+2015-01-02 22:03:02 +0000 - Jamie: I have got collision to work fully. whilst the 3 functions that I have used could be converted into 1 with time, I have decided to leave it in this state for now so I can focus on other parts of the code, if I have time I neaten this later. I have also notice that the code seems to randomly cause a break point. This breakpoint seems to always be about a part of the heap being freed prematurely and always seems to relate to a std::vector. I does seem to be random which one however and as such I think it may be to do with vectors destroying themselves early, I may be wrong however but for now I will leave it as it seems only to happen on occasion and I have more important things to get to work first. If I have time I will try and convert them to arrays and see if that helps.
+
+
+2015-01-02 03:56:58 +0000 - Jamie: Moved the variables and function that I need for jumping to player, so they can be used with collision.
+
+
+2015-01-02 03:32:23 +0000 - Jamie: Got the player to stop moving when they collide with a block on there right or left.
+
+
+2015-01-02 03:09:02 +0000 - Jamie: Got collisions to work when going left and right, code is still in working format and still has debug only code in it. I am committing this however so I don't screw up the code and cant come back to this point.
+
+
+2015-01-02 01:24:59 +0000 - Jamie: Got a for of working collision when going left. This code version does include extra lines of code that will be removed but is just being used for debugging purposes at the moment.
+
+
+2015-01-01 16:32:03 +0000 - Jamie: Whilst working on the collisions (which is still not working!) I decided to make it easier for me to see a collision. The code now stops displaying a gem when collected and the players score increases. I have added the score to the screen, as there is no inbuilt SDL text without downloading additional include files I decided to use a sprite for each number. This required me to split the score into individual digits and use these to display them. As such I have made a function to do this and now I have the score being displayed. I also regenerated the documentation.
+
+
+2014-12-31 23:35:08 +0000 - Jamie: Updated the map loaded to include a 2d vector array that uses a structure containing a int for index position and a char for the type. This is for use with the collision which I have started to work on. However the current version of the collision does not work correctly.
+
+
+2014-12-31 18:40:00 +0000 - Jamie: Realised that A file had not deleted correctly so re-deleted it and regenerated the documentation.
+
+
+2014-12-31 18:35:19 +0000 - Jamie: Changed the way that the constructors with inheritance work for a load of the classes, and modified the block class and map loader so that the type of blocks would be in the same setting as the background. This means that the level can be in one of 3 settings: mountain, jungle and castle. The setting has no effect on the level however, other than the look. Also updated the Doxygen and regenerated the documentation accordingly.
+
+
+2014-12-31 02:20:16 +0000 - Jamie: Created a file loader to load in a map from a file and create arrays of objects from them. These objects can currently display to the game, and is fully doxygen commented. The next stage is to include collosions. I have also regenerate the doxygen documentation.
+
+
+2014-12-27 23:23:30 +0000 - Jamie: Added a block class and regenerated Doxygen documentation.
+
+
+2014-12-27 22:56:26 +0000 - Jamie: Changed the building class to a mapObject class which is inherited by gem.
+
+
+2014-12-27 22:20:57 +0000 - Jamie: Added a basic gem class for item collection.
+
+
+2014-12-27 21:18:18 +0000 - Jamie: Regenerated Doxygen documentation.
+
+
+2014-12-27 21:17:28 +0000 - Jamie: Added a version of gravity and jumping to the game state. The floor is currently just a certain y height at the moment, not collision with an object but it is a start. The jump works. I also set the background to move with the player if the background is able to move.
+
+
+2014-12-27 20:49:36 +0000 - Jamie: Improved the menu state so that you use the mouse to start the game when you hover over the key. The exit key also works. I have also added a image sheet for the menu key.
+
+
+2014-12-27 18:47:40 +0000 - Jamie: Finished the setup for the state manager and basic functions of the game state and the menu state, I did this with help from the link in the last commit and information given by Peter Allen. I also added an background image for the menu and renamed the game to be called Planet Planeta (planet in Latin). I also added a set of text files that include the details of the assets that I am using. I also fully Doxygen commented the code and regenerated the Doxygen documentation.
+
+
+2014-12-26 22:57:44 +0000 - Jamie: Stated work on a state system for the game to be used with things such as a menu or pause. Made using help from http://blog.nuclex-games.com/tutorials/cxx/game-state-management/. Also regenerated the Doxygen files for the code.
+
+
+2014-12-26 21:18:45 +0000 - Jamie: Changed the turret class to an enemy class and updated the functions accordingly.
+
+
+2014-12-26 19:44:40 +0000 - Jamie: Updated the player class to inherit creature and contain a score and number of lives for use with the platformer. I also updated the doxygen comments for the return functions and updated main to display the player.
+
+
+2014-12-26 18:57:42 +0000 - Jamie: Modified the Entity class to make it more for a platformer than a strategy game. Also renamed the minion class to creature class for it to be inherited by multiple classes for things such as enemies and the player. Also modified the main and changed the sprite sheet.
+
+
+2014-12-26 18:14:01 +0000 - Jamie: Added a background class for use with the plat former game. It contains one texture that is wider than the screen and will scroll between the max right and left. This so that the map will only go so far however it will also only move (in the future after the rest of the code is implemented) if the player is in the middle of the screen, unless it is at the max/min of the scroll.
+
+
+2014-12-14 19:17:43 +0000 - Jamie: Due to the amount of assignments (Group, MGP, PGG) that I have to do for January I have decided to change the game that I am building to be a platformer. This is unfortunate as I had wanted to build a strategy game but will have to do that at a later date.
+
+
+2014-11-28 00:29:47 +0000 - Jamie: Updated the classes for the entities. Also updated the spritesheet88x108.bmp
+
+
+2014-11-27 13:56:14 +0000 - i7218850: Added entities to display to screen and improved the related classes.
+
+
+2014-11-27 04:30:17 +0000 - Jamie: Updated regenDocs.
+
+
+2014-11-27 04:23:58 +0000 - Jamie: Created a Player class. This contains variables for the number of resources, the amount of power, the number of minions and the maximum number of minions. The class has been Doxygen commented.
+
+
+2014-11-27 03:25:33 +0000 - Jamie: Created a Building class inherits Entity. The class has been Doxygen commented.
+
+
+2014-11-27 03:18:56 +0000 - Jamie: Created a Turret class iInherits Entity and contains variables for the attack and the radius of the turrets visible sight. The class has been Doxygen commented.
+
+
+2014-11-27 03:01:08 +0000 - Jamie: Created a Minion class inherits Entity and contains variables for the x velocity, the y velocity, the attack, the speed and the radius of the minions visible sight. It also has a function to update the x and y position of the sprite using its speed. The class has been Doxygen commented.
+
+
+2014-11-27 02:38:41 +0000 - Jamie: Created an Entity class that contains variables for the texture, the source width for the sprite, the source height for the sprite, the X position for the sprite in the sprite sheet, the Y position for the sprite in the sprite sheet, the width of the sprite, the height of the sprite, the x position of the entity, the y position of the entity, the health of the entity and the cost of the entity. It also has a function to display the sprite. The class has been Doxygen commented.
+
+
+2014-11-22 01:09:07 +0000 - Jamie: Included SDL2.dll to the Debug folder in the GIT repository as was not included in initial GIT commit for some reason.
+
+
+2014-11-21 23:39:39 +0000 - Jamie: Added README.md.
+
+
+2014-11-21 23:33:46 +0000 - Jamie: Created the GIT repository for the project. Have some basic main functions, and a texture class for handling my sprites. The Texture header has been Doxygen commented and I have included the Doxygen files with this commit.
+
+
