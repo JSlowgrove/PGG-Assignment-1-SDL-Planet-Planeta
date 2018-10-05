@@ -1,8 +1,0 @@
-<map id="Entity::setSrcY" name="Entity::setSrcY">
-<area shape="rect" id="node2" href="$class_animation.html#a64378ac8df319e785e93e8e2ff9b4f7d" title="Animation::snailAnimation" alt="" coords="175,5,348,32"/>
-<area shape="rect" id="node5" href="$class_animation.html#a28698eae748a6bcac0bbbafb1c62f32b" title="Animation::wormAnimation" alt="" coords="173,56,350,83"/>
-<area shape="rect" id="node6" href="$class_animation.html#aa991142b70b9d07bde2a2b4a934fae16" title="Animation::endGoalAnimation" alt="" coords="164,107,359,133"/>
-<area shape="rect" id="node7" href="$class_animation.html#a988b1ced0cf9d9a64ed3fb0891e3c563" title="Animation::gemAnimation" alt="" coords="417,132,588,159"/>
-<area shape="rect" id="node3" href="$class_animation.html#a46ac949b21a0aed488953ee0a47ec35f" title="Animation::upadateAnimation" alt="" coords="407,69,599,96"/>
-<area shape="rect" id="node4" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="647,101,784,128"/>
-</map>

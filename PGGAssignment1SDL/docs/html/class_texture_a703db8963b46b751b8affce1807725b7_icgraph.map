@@ -1,8 +1,0 @@
-<map id="Texture::pushSpriteToScreen" name="Texture::pushSpriteToScreen">
-<area shape="rect" id="node2" href="$class_entity.html#a2224871711ac97a54af338ddefc25ac9" title="Entity::display" alt="" coords="285,5,390,32"/>
-<area shape="rect" id="node3" href="$class_game_state.html#ab9330b36c7c74d733c2739c025285c64" title="GameState::Draw" alt="" coords="487,56,612,83"/>
-<area shape="rect" id="node4" href="$class_game_state.html#af45ac6c893265a41b011bba850dc840a" title="GameState::displayScore" alt="" coords="252,107,423,133"/>
-<area shape="rect" id="node5" href="$class_menu_state.html#a0fc92c6a39ef316552f1308c188871c6" title="MenuState::Draw" alt="" coords="276,157,399,184"/>
-<area shape="rect" id="node6" href="$class_win_lose_state.html#a862a5bb9422480b36671acb21cc987ba" title="WinLoseState::Draw" alt="" coords="479,233,620,260"/>
-<area shape="rect" id="node7" href="$class_win_lose_state.html#af7a44a05cae2f79731b9e36ea1ef4f7e" title="WinLoseState::displayScore" alt="" coords="244,259,431,285"/>
-</map>

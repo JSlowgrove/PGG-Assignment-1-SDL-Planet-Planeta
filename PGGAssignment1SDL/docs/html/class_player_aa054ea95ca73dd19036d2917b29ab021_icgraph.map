@@ -1,8 +1,0 @@
-<map id="Player::setScore" name="Player::setScore">
-<area shape="rect" id="node2" href="$class_collision.html#a8a7c7bbaa789c0867559d79ef186dd84" title="Collision::gemAction" alt="" coords="172,56,313,83"/>
-<area shape="rect" id="node3" href="$class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c" title="Collision::leftTest" alt="" coords="368,5,489,32"/>
-<area shape="rect" id="node6" href="$class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58" title="Collision::rightTest" alt="" coords="364,56,493,83"/>
-<area shape="rect" id="node7" href="$class_collision.html#a7c33a20a9c111630eeb8f0202605161e" title="Collision::downTest" alt="" coords="361,107,496,133"/>
-<area shape="rect" id="node4" href="$class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="544,56,732,83"/>
-<area shape="rect" id="node5" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="780,56,917,83"/>
-</map>

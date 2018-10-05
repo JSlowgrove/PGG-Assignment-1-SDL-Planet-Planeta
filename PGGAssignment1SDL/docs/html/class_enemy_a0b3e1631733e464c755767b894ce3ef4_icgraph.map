@@ -1,4 +1,0 @@
-<map id="Enemy::setDeletable" name="Enemy::setDeletable">
-<area shape="rect" id="node2" href="$class_collision.html#ac758fa708f12d9121bb2aacc787111e4" title="Collision::playerCreature\lCollisionTest" alt="" coords="196,5,359,47"/>
-<area shape="rect" id="node3" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="407,13,544,39"/>
-</map>

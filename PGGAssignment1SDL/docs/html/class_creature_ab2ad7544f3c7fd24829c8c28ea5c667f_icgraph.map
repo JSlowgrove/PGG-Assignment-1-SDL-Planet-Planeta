@@ -1,8 +1,0 @@
-<map id="Creature::setVelocityX" name="Creature::setVelocityX">
-<area shape="rect" id="node2" href="$class_collision.html#a8daccc0201f916f571afbbd8da992ffb" title="Collision::blockActionX" alt="" coords="204,56,359,83"/>
-<area shape="rect" id="node5" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="820,107,957,133"/>
-<area shape="rect" id="node7" href="$class_game_state.html#ab22e8c062ae3d629044b93faba688974" title="GameState::updateScene" alt="" coords="592,157,764,184"/>
-<area shape="rect" id="node3" href="$class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c" title="Collision::leftTest" alt="" coords="411,5,532,32"/>
-<area shape="rect" id="node6" href="$class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58" title="Collision::rightTest" alt="" coords="407,56,536,83"/>
-<area shape="rect" id="node4" href="$class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="584,56,772,83"/>
-</map>

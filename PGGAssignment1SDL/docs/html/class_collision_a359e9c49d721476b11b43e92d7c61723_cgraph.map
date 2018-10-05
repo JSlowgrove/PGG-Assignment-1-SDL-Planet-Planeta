@@ -1,8 +1,0 @@
-<map id="Collision::enemyLeftTest" name="Collision::enemyLeftTest">
-<area shape="rect" id="node2" href="$class_map_loader.html#a8e20a9a3c99f4d86d8db873b4a293352" title="MapLoader::getType" alt="" coords="224,5,364,32"/>
-<area shape="rect" id="node3" href="$class_map_loader.html#a161a0cc6a392abc9baa57e919023f25c" title="MapLoader::getBlock" alt="" coords="221,56,367,83"/>
-<area shape="rect" id="node4" href="$class_map_loader.html#a91978c6df4df7c8805ff7b959f2f8f02" title="MapLoader::getIndex" alt="" coords="223,107,365,133"/>
-<area shape="rect" id="node5" href="$class_map_loader.html#a2680e99acdaf5b74b8116d43ca220df3" title="MapLoader::getEnemy" alt="" coords="217,157,371,184"/>
-<area shape="rect" id="node6" href="$class_enemy.html#a7185349825042de46d16bad7b1c422d6" title="Enemy::setSpeed" alt="" coords="231,208,357,235"/>
-<area shape="rect" id="node7" href="$class_enemy.html#acd43fc5766bf7ef886691244e1b66566" title="Enemy::getSpeed" alt="" coords="231,259,357,285"/>
-</map>

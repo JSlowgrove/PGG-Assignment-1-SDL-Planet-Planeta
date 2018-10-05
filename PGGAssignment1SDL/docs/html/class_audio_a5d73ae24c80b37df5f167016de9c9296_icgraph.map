@@ -1,5 +1,0 @@
-<map id="Audio::stopAudio" name="Audio::stopAudio">
-<area shape="rect" id="node2" href="$class_game_state.html#ae623df5042cd0c17daa3394fdcb397b3" title="GameState::~GameState" alt="" coords="191,5,361,32"/>
-<area shape="rect" id="node3" href="$class_menu_state.html#a58aea91a44436c5bba575c5de755a5bc" title="MenuState::~MenuState" alt="" coords="194,56,358,83"/>
-<area shape="rect" id="node4" href="$class_win_lose_state.html#ac7ee2a9515081ba03b96cb78c5837d72" title="WinLoseState::~WinLoseState" alt="" coords="175,107,377,133"/>
-</map>

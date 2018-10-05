@@ -1,8 +1,0 @@
-<map id="Player::setLevelComplete" name="Player::setLevelComplete">
-<area shape="rect" id="node2" href="$class_collision.html#aff0b810980a84e644e531da82487d8c8" title="Collision::endGoalAction" alt="" coords="223,56,387,83"/>
-<area shape="rect" id="node3" href="$class_collision.html#a0cd628e6adcb69e216f9b469fa7c029c" title="Collision::leftTest" alt="" coords="441,5,563,32"/>
-<area shape="rect" id="node6" href="$class_collision.html#a5aff01e79c9c42e7d71a57de7412dc58" title="Collision::rightTest" alt="" coords="437,56,567,83"/>
-<area shape="rect" id="node7" href="$class_collision.html#a7c33a20a9c111630eeb8f0202605161e" title="Collision::downTest" alt="" coords="435,107,569,133"/>
-<area shape="rect" id="node4" href="$class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="617,56,805,83"/>
-<area shape="rect" id="node5" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="853,56,991,83"/>
-</map>

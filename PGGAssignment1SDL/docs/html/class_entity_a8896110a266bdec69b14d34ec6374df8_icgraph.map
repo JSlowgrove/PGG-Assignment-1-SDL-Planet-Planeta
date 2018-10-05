@@ -1,6 +1,0 @@
-<map id="Entity::setY" name="Entity::setY">
-<area shape="rect" id="node2" href="$class_collision.html#ac4b2ae74fb5978743580f25ac2760f3a" title="Collision::blockActionY" alt="" coords="144,5,300,32"/>
-<area shape="rect" id="node5" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="767,31,904,57"/>
-<area shape="rect" id="node3" href="$class_collision.html#a7c33a20a9c111630eeb8f0202605161e" title="Collision::downTest" alt="" coords="348,5,483,32"/>
-<area shape="rect" id="node4" href="$class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="531,5,719,32"/>
-</map>

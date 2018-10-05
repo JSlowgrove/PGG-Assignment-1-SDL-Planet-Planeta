@@ -1,5 +1,0 @@
-<map id="WinLoseState::Draw" name="WinLoseState::Draw">
-<area shape="rect" id="node2" href="$class_texture.html#aec498f1f84eb10bb60d3c3117884e70f" title="Texture::pushToScreen" alt="" coords="210,5,366,32"/>
-<area shape="rect" id="node3" href="$class_texture.html#a703db8963b46b751b8affce1807725b7" title="Texture::pushSpriteToScreen" alt="" coords="429,81,620,108"/>
-<area shape="rect" id="node4" href="$class_win_lose_state.html#af7a44a05cae2f79731b9e36ea1ef4f7e" title="WinLoseState::displayScore" alt="" coords="195,107,381,133"/>
-</map>

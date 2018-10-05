@@ -1,6 +1,0 @@
-<map id="Player::setLanded" name="Player::setLanded">
-<area shape="rect" id="node2" href="$class_collision.html#ac4b2ae74fb5978743580f25ac2760f3a" title="Collision::blockActionY" alt="" coords="180,5,336,32"/>
-<area shape="rect" id="node5" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="803,31,940,57"/>
-<area shape="rect" id="node3" href="$class_collision.html#a7c33a20a9c111630eeb8f0202605161e" title="Collision::downTest" alt="" coords="384,5,519,32"/>
-<area shape="rect" id="node4" href="$class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="567,5,755,32"/>
-</map>

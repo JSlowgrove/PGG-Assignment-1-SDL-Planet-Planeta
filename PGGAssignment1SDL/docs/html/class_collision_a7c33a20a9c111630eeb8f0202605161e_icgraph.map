@@ -1,4 +1,0 @@
-<map id="Collision::downTest" name="Collision::downTest">
-<area shape="rect" id="node2" href="$class_collision.html#a79a33125bb8ef50a883822b4c80b71ae" title="Collision::playerCollisionTest" alt="" coords="188,5,376,32"/>
-<area shape="rect" id="node3" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="424,5,561,32"/>
-</map>

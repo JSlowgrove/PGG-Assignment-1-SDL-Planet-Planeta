@@ -1,9 +1,0 @@
-<map id="Animation::upadateAnimation" name="Animation::upadateAnimation">
-<area shape="rect" id="node2" href="$class_animation.html#a28698eae748a6bcac0bbbafb1c62f32b" title="Animation::wormAnimation" alt="" coords="254,31,431,57"/>
-<area shape="rect" id="node7" href="$class_animation.html#aa991142b70b9d07bde2a2b4a934fae16" title="Animation::endGoalAnimation" alt="" coords="245,81,440,108"/>
-<area shape="rect" id="node8" href="$class_animation.html#a64378ac8df319e785e93e8e2ff9b4f7d" title="Animation::snailAnimation" alt="" coords="256,132,429,159"/>
-<area shape="rect" id="node3" href="$class_entity.html#a0b7bd3804adb0a5c4b611bcbef6c12cc" title="Entity::getSrcX" alt="" coords="489,107,598,133"/>
-<area shape="rect" id="node4" href="$class_entity.html#aeaf17603c70755e07dfc32d6bd4e0d2e" title="Entity::getSrcY" alt="" coords="488,157,599,184"/>
-<area shape="rect" id="node5" href="$class_entity.html#ad59969bacea528293341a88a94f845be" title="Entity::setSrcX" alt="" coords="489,5,598,32"/>
-<area shape="rect" id="node6" href="$class_entity.html#a1051f4e046b0de7f4c727e0e0edb3f6f" title="Entity::setSrcY" alt="" coords="488,56,599,83"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="Gem" name="Gem">
-<area shape="rect" id="node2" href="$class_map_object.html" title="Creates a MapObject object that inherits Entity. " alt="" coords="5,395,124,707"/>
-<area shape="rect" id="node3" href="$class_entity.html" title="Creates an Entity object Creates an Entity object with a Texture (including variables for the source ..." alt="" coords="20,5,109,347"/>
-</map>

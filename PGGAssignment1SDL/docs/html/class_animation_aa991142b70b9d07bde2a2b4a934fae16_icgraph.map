@@ -1,4 +1,0 @@
-<map id="Animation::endGoalAnimation" name="Animation::endGoalAnimation">
-<area shape="rect" id="node2" href="$class_animation.html#a46ac949b21a0aed488953ee0a47ec35f" title="Animation::upadateAnimation" alt="" coords="248,5,440,32"/>
-<area shape="rect" id="node3" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="488,5,625,32"/>
-</map>

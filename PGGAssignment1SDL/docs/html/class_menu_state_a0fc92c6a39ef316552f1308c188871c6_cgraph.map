@@ -1,4 +1,0 @@
-<map id="MenuState::Draw" name="MenuState::Draw">
-<area shape="rect" id="node2" href="$class_texture.html#aec498f1f84eb10bb60d3c3117884e70f" title="Texture::pushToScreen" alt="" coords="193,5,349,32"/>
-<area shape="rect" id="node3" href="$class_texture.html#a703db8963b46b751b8affce1807725b7" title="Texture::pushSpriteToScreen" alt="" coords="176,56,367,83"/>
-</map>

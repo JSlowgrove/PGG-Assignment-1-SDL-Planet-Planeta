@@ -1,4 +1,0 @@
-<map id="Collision::enemyRightTest" name="Collision::enemyRightTest">
-<area shape="rect" id="node2" href="$class_collision.html#a1c110f14ff463a255694f387eec17d56" title="Collision::enemyCollision" alt="" coords="227,5,393,32"/>
-<area shape="rect" id="node3" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="441,5,579,32"/>
-</map>

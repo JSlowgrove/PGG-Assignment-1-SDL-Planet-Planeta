@@ -1,8 +1,0 @@
-<map id="Collision::blockActionY" name="Collision::blockActionY">
-<area shape="rect" id="node2" href="$class_player.html#a36a300f4f62fae25747c4301a81c5a10" title="Player::setGravity" alt="" coords="223,5,349,32"/>
-<area shape="rect" id="node3" href="$class_player.html#a3474c047c1495322742b79a43381bc32" title="Player::setLanded" alt="" coords="223,56,349,83"/>
-<area shape="rect" id="node4" href="$class_creature.html#a5aa971df9bf484d62fbe6413f01a661b" title="Creature::setVelocityY" alt="" coords="209,107,363,133"/>
-<area shape="rect" id="node5" href="$class_entity.html#a8896110a266bdec69b14d34ec6374df8" title="Entity::setY" alt="" coords="241,157,331,184"/>
-<area shape="rect" id="node6" href="$class_map_loader.html#a161a0cc6a392abc9baa57e919023f25c" title="MapLoader::getBlock" alt="" coords="213,208,359,235"/>
-<area shape="rect" id="node7" href="$class_entity.html#ab6dd7b404c13754202acfe3d2c65c77b" title="Entity::getY" alt="" coords="241,259,331,285"/>
-</map>

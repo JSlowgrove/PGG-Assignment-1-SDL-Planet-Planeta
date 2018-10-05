@@ -1,5 +1,0 @@
-<map id="Player::getLives" name="Player::getLives">
-<area shape="rect" id="node2" href="$class_collision.html#ac758fa708f12d9121bb2aacc787111e4" title="Collision::playerCreature\lCollisionTest" alt="" coords="168,5,331,47"/>
-<area shape="rect" id="node3" href="$class_game_state.html#a2ea32b0cd5f747ef6223d182f415a6c4" title="GameState::Update" alt="" coords="379,42,516,69"/>
-<area shape="rect" id="node4" href="$class_game_state.html#ab9330b36c7c74d733c2739c025285c64" title="GameState::Draw" alt="" coords="187,122,312,149"/>
-</map>
